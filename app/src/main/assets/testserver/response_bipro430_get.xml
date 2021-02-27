@@ -1,0 +1,35 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tran="http://www.bipro.net/namespace/transfer" xmlns:bas="http://www.bipro.net/namespace/basis" xmlns:nac="http://www.bipro.net/namespace/nachrichten" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:all="http://www.bipro.net/namespace/allgemein" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:par="http://www.bipro.net/namespace/partner">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <tran:getShipmentResponse>
+            <tran:Response>
+                <nac:Status>
+                    <nac:StatusID>OK</nac:StatusID>
+                    <nac:Meldung>
+                        <nac:ArtID>Hinweis</nac:ArtID>
+                        <nac:MeldungID>04000</nac:MeldungID>
+                        <nac:Text>Transfer (Test) erfolgreich</nac:Text>
+                    </nac:Meldung>
+                </nac:Status>
+                <tran:Lieferung>
+                    <tran:ID>TEST-1234</tran:ID>
+                    <tran:Kategorie>100000000</tran:Kategorie>
+                    <tran:ArtDerLieferung>1004</tran:ArtDerLieferung>
+                    <tran:EnthaeltNurDaten>false</tran:EnthaeltNurDaten>
+                    <tran:PeriodischeLieferung>true</tran:PeriodischeLieferung>
+                    <tran:Sparte>30</tran:Sparte>
+                    <tran:AnzahlTransfers>1</tran:AnzahlTransfers>
+                    <tran:Transfer>
+                        <gevo:Freitext>Testlieferung</gevo:Freitext>
+                        <gevo:Datei>
+                            <all:Dateiname>Testdokument.pdf</all:Dateiname>
+                            <all:Dateityp>pdf</all:Dateityp>
+                            <all:Daten xmime:contentType="application/pdf"><xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href="cid:39e6a760-ea0d-4313-9f1b-b98fa9c918f6-4@www.bipro.net"/></all:Daten>
+                            <all:Kurzbeschreibung>Ein Test-PDF</all:Kurzbeschreibung>
+                        </gevo:Datei>
+                    </tran:Transfer>
+                </tran:Lieferung>
+            </tran:Response>
+        </tran:getShipmentResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

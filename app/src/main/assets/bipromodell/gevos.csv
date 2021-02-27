@@ -1,0 +1,646 @@
+#GeVo;Beschreibung
+100000000;Sonstiges
+100001000;Antragsversand
+100001020;Ergänzung bestehender Vertrag
+100001030;Ersatzantrag
+100001040;Überführung in andere Schicht
+100002000;Eingangsbestätigung
+100002010;Eingangsbestätigung Antrag - Antrag ist eingegangen
+100002020;Eingangsbestätigung Antrag - Antrag ist in Bearbeitung
+100003000;vorläufige Deckungszusage
+100004000;Ablehnung
+100004010;Ablehnung - Vom Antragsteller eingestellt
+100004020;Ablehnung - Vom Versicherer eingestellt
+100004030;Ablehnung - Änderungs-/Erschwernisangebot vom Antragsteller abgelehnt
+100004040;Ablehnung - Änderungs-/Erschwernisangebot vom Versicherer eingestellt
+100004050;Ablehnung - Ablehnung Deckung
+100004060;Ablehnung - Absetzung Antrag
+100004070;Ablehnung - Löschung Antrag
+100004080;Ablehnung - Kollektivbedingungen des Gruppenvertrags nicht erfüllt
+100004090;Ablehnung - fehlende Annahmeerklärung
+100005000;Nachfrage
+100005010;Nachfrage - Anforderung Arztbericht
+100005020;Nachfrage - erneute Gesundheitserklärung
+100005030;Nachfrage - Rückfrage gesundheitlich
+100005040;Nachfrage - Rückfrage technisch/rechtlich/wirtschaftlich
+100005050;Nachfrage - Anforderung zusätzlicher Unterlagen
+100005060;Nachfrage - Anforderung Personenauskünfte (Schufa etc.)
+100005070;Nachfrage - Vorversicherungsanfrage
+100005080;Nachfrage - Sonderwagnisanfrage
+100005081;Nachfrage - Riskovoranfrage
+100005090;Nachfrage - Dynamik offen
+100005100;Anforderung aus Versicherungsbestätigung
+100005100;Anforderung aus Versicherungsbestätigung
+100005110;Erinnerung Annahmeerklärung
+100006000;Antwort auf Nachfrage
+100006001;Antwort auf Nachfrage - Riskovoranfrage
+100007000;Policierung / Dokument erstellt
+100007001;Policierung / Dokument erstellt - abweichende Policierung
+100007002;Policierung / Dokument erstellt - Korrektur Neuvertrag
+100007010;Policierung / Dokument erstellt - spätere Policierung  wegen Vorausdatierung
+100008000;Änderungsangebote
+100008010;Änderungsangebote - Erschwernisangebot / Leistungsausschluss / Risikozuschlag
+100008020;Änderungsangebote - Einschluss von Zusatzversicherungen / Änderungsantrag
+100009000;Annahmebestätigung
+100010000;Widerruf
+110000000;Sonstige Partneränderung
+110000001;Änderung der allgemeinen Partnerdaten
+110000002;Änderung der Partnernummer
+110002000;Eingangsbestätigung
+110008000;Rückmeldung/Nachfrage
+110009000;Geschäftsvorfall erledigt
+110010000;Namensänderung
+110011000;Adressänderung
+110011001;Neue Anschrift
+110011002;Änderung der Anschrift
+110011003;Fortfall der Anschrift
+110012000;Änderung der Kommunikationsdaten
+110012001;Neue Kommunikationsdaten
+110012003;Fortfall der Kommunikationsdaten
+110013000;Änderung persönlicher Daten (Familienstand etc.)
+110014000;Bestandswechsel / Bestandsverlust droht
+110015000;Änderung Werbeerlaubnis
+110016001;Änderung Freistellungsauftrag
+120000000;Sonstige Vertragsänderung
+120001000;Vertrag - Änderung Angebot
+120002000;Eingangsbestätigung
+120004000;Vertrag - Änderung Ablehnung
+120004010;Ablehnung - fehlende Annahmeerklärung
+120008000;Rückmeldung/Nachfrage
+120009000;Geschäftsvorfall erledigt
+120010000;Vertragsumstellung
+120010001;Vertragsumstellung -Altersumstellung / Umstellung auf Erwachsenentarif
+120010002;Vertragsumstellung -SF-Übertragung auf ein weiteres Fahrzeug
+120010003;Vertragsumstellung -Ablauf der Beitragszahlungsdauer
+120010004;Vertragsumstellung -Risikoänderung
+120010005;Kurzfristiger Einschluss oder Änderung der Deckung
+120010006;Vertragssanierung. Eine vom Unternehmen angestoßene Änderung des Vertrages
+120010007;Änderung des Vertragsstatus
+120010008;Vertrag in der Abrufphase
+120010009;Beihilferechtsänderung
+120010010;Rücknahme Vertragssanierung
+120010101;Einschluss expliziter Fahrer
+120010102;Änderung expliziter Fahrer
+120010103;Ausschluss expliziter Fahrer
+120010104;Änderung der Fahrzeugnutzung
+120010105;Änderung der zusätzlichen Partnerdaten
+120010106;Kennzeichenänderung
+120010107;Umstellung Dauer- auf Saison-Kennzeichen
+120010108;Umstellung Saison- auf Dauer-Kennzeichen
+120010109;Änderung des Saison-Zeitraums
+120010110;Änderung des Halters
+120010111;Fahrzeugwechsel
+120010112;Änderung der Tarifierung (z.B. durch Änderung Regionalklasse / Tarifgruppe / Typklasse (KFZ))
+120010113;Änderung der Schadens- oder Leistungsfreiheitseinstufung (auch Einrichtung sowie Änderung)
+120010114;Korrektur der Fahrzeugdaten
+120010115;Änderung der Fahrzeugdaten
+120011000;Anforderung -zusätzlicher Unterlagen
+120012000;Widerspruch -Police
+120013000;Beginnverlegung
+120013001;Änderung der Versicherungsdauer
+120013002;Änderung des Zahltermins
+120014000;Beitragsfreistellung
+120014001;Beitragsfreistellung -Beitragsfreistellung gewünscht
+120014002;Beitragsfreistellung -gewünschte Beitragsfreistellung nicht möglich
+120014003;Verminderter Anfangsbeitrag – Verlängerung der verminderten Phase
+120014004;Beitragsstundung
+120014005;Beitragsreduktion/Beitragsfreistellung
+120014006;Beitragserhöhung
+120014007;Zuzahlung
+120014008;Änderung Finanzierungsart bAV - Shift
+120014009;Änderung Finanzierungsart bAV - Erhöhung
+120015000;Herabsetzung
+120016000;Erhöhung
+120016001;Besuchsauftrag (Mandant hat Beratungsbedarf)
+120017000;Dynamik
+120017001;Dynamik -Dynamikablehnung
+120017002;Dynamik -Dynamikerhöhung
+120017003;Dynamik -Dynamikausschluss
+120017004;Dynamik -Dynamikeinschluss
+120017005;Dynamik -Dynamik
+120017006;Dynamik -Dynamikreduzierung
+120017007;Dynamik proaktiv aussetzen
+120017008;Rücknahme Dynamikwiderspruch
+120017009;Info über finalen Dynamikwiderspruch
+120018000;Änderung der Zahlungsweise
+120019000;Vorauszahlung
+120020000;Abkürzung der Versicherungsdauer durch Zuzahlung
+120020001;Änderung der Versicherungsdauer
+120021000;Änderung Risikozuschlag / Klausel
+120021001;Änderung der Bedingungen
+120022000;Tarifumstellung
+120022001;Änderung der Beiträge (z. B. Beitragsanpassung, bedingungsgemäße Beitragserhöhung)
+120022002;Tarifliche Beitragsumstellung
+120023000;Fondswechsel
+120023001;Fondswechsel - Switch
+120023002;Fondswechsel - Shift
+120023003;Fondswechsel - Information über Fondschließung
+120024000;Änderung der Überschussart
+120025000;Anwartschaft
+120025001;Wegfall des Risikovorlaufs
+120026000;Außerkraftsetzung
+120027000;Wiederinkraftsetzung
+120028000;Wechsel einer versicherten Person
+120028001;Wechsel einer versicherten Person -Vertragstrennung
+120028002;Wechsel einer versicherten Person - Vertragszusammenlegung
+120028003;Wechsel einer versicherten Person -Einrichten eines selbstständigen Vertrages
+120028004;Ausschluss Versicherte Person
+120028005;Einschluss Versicherte Person
+120029000;Neuordnung des Vertrages erforderlich
+120030000;Riester
+120030001;Riester - Zulagenkorrektur
+120030002;Riester -Jahresabrechnung / Infopflichten
+120030003;Riester -Zulagenantrag fehlt / fehlerhaft
+120030004;Riester-Zulagenzahlung
+120030005;Riester - Entnahme für selbstgenutztes Wohneigentum 
+120030006;Riester - Zulagenrückzahlung
+120030007;Riester - Zulagenantrag/Ermittlungsergebnis: Fehlermeldung der ZfA
+120031000;Policendarlehen
+120031001;Policendarlehen -gewünscht
+120031002;Policendarlehen -Ablehnung
+120032000;Ruheversicherung
+120033001;Änderung KH Deckung
+120033002;Einschluss KF Deckung
+120033003;Änderung KF-Deckung
+120033004;Umstellung VK in TK
+120033005;Umstellung TK in VK
+120033006;Ausschluss KF-Deckung
+120033007;Einschluss KU Deckung
+120033008;Änderung KU Deckung
+120033009;Ausschluss KU-Deckung
+120033010;Einschluss Zusatzdeckung
+120033011;Änderung Zusatzdeckung
+120033012;Ausschluss Zusatzdeckung
+120033013;Umstellung in Fahrzeugruheversicherung
+120033014;Umstellung von Fahrzeugruheversicherung in VK
+120033015;Umstellung von Fahrzeugruheversicherung in TK
+120033016;Ausschluss KH-Deckung
+120033017;Einschluss KH-Deckung
+120033100;Einschluss Deckung
+120033101;Ausschluss Deckung
+120033102;Einschluss Gefahr
+120033103;Ausschluss Gefahr
+120033104;Änderung von Versicherungssumme oder Leistung
+120033105;Änderung der Entschädigungsgrenze
+120033106;Änderung der Deckungssumme
+120033107;Änderung der Selbstbeteiligung
+120033108;Änderung des Risikoortes
+120033109;Änderung der Gebäudeart
+120033110;Änderung der Wohnfläche
+120033111;Vereinbarung / Änderung der Sicherungen
+120033112;Änderung des unbewohnten Zeitraums
+120033113;Änderung der Nutzung
+120033114;Änderung der Gefährdung
+120033115;Sanierung des Gebäudes
+120033116;Sonstige Änderung am Gebäude
+120033117;Zusätzliches Nebengebäude
+120033118;Fortfall Nebengebäude
+120033119;Änderung Eigentümer
+120033120;Änderung der Risikoart
+120033121;Einschluss Risiko
+120033122;Ausschluss Risiko
+120033123;Änderung des Risikos
+120033124;Änderung Beruf
+120033125;Einschluss mitversicherte Person
+120033126;Ausschluss mitversicherte Person
+120033127;Änderung der Mitversicherungsart
+120033128;Änderung zum Haushalt
+120033129;Änderung der Hunderasse
+120033130;Änderung der Anzahl der Tiere
+120033131;Änderung der Nutzungsart
+120033132;Änderung der Reitbeteiligung
+120033133;Ausschluss Tier
+120033134;Ausschluss Wagnis
+120033135;Änderung der Bausumme
+120033136;Änderung des Werts der Eigenleistung
+120033137;Änderung der Art der Eigenleistung
+120033138;Änderung der Grundstücksgröße
+120033139;Änderung des Mietwerts
+120033140;Änderung der Anzahl der Wohnungen
+120033141;Änderung der Motorleistung
+120033142;Änderung der Segelfläche
+120033143;Änderung der Bootsdaten
+120033200;Einschluss Leistungsartbereich
+120033201;Ausschluss Leistungsartbereich
+120033202;Ausschluss Leistungsart
+120033301;Einschluss einer Zusatzversicherung
+120033302;Kündigung einer Zusatzversicherung
+120033303;Änderung der Dynamisierung der Hauptversicherung im Leistungsfall
+120033400;Änderung der Beitragsrückgewähr bei Tod
+120034000;Rückstandsverrechnung
+120034001;Rückstandsverrechnung mit Deckungskapital
+120034002;Rückstandsverrechnung mit Überschussanteilen
+120034003;Rückstand-Zahlungsplan vereinbaren
+120035001;Teilrückkauf
+120035002;Entnahme aus Fondsvermögen
+120036001;Änderung der Rentengarantiezeit
+120036002;Änderung Garantie Fondsanlage
+120037001;Änderung des Bezugsrechts
+120039001;Änderung der Beihilfe
+120040001;Änderung der Exkassodaten
+120041001;Hinzunahme von Tarifen
+120041002;Abgang von Tarifen
+120042001;Erhöhung Tagegeld
+120042002;Reduzierung Tagegeld
+120043001;Umstellung in Anwartschaft
+120043002;Umstellung von Anwartschaft in PKV
+120043003;Umstellung in Notlagentarif
+120044001;Erhöhung Beitragsentlastung
+120044002;Senkung Beitragsentlastung
+120045001;Zugang Risikozuschlag
+120046000;Änderung der Hauptfälligkeit
+120048000;Änderung einer Kondition
+120048001;Löschen einer Kondition
+120045002;Abgang Risikozuschlag
+120100000;Meldung von Werten - Allgemein
+120100001;Meldung von Werten zur Haftpflichtversicherung
+120100001;Meldung von Werten zur Haftpflichtversicherung
+120100002;Stichtagsmeldung
+120100002;Stichtagsmeldung
+120100003;Meldung von Erträgen zur Mittleren Feuerbetriebsunterbrechung
+120100003;Meldung von Erträgen zur Mittleren Feuerbetriebsunterbrechung
+120100004;Meldung von Erträgen zur Betriebsunterbrechung
+120100004;Meldung von Erträgen zur Betriebsunterbrechung
+120100005;Meldung von Werten zur Transportversicherung
+120100005;Meldung von Werten zur Transportversicherung
+120100006;Meldung einer Ablaufanfrage
+120100006;Meldung einer Ablaufanfrage
+120100007;Meldung von pauschal versicherten elektronischen Geräten
+120100007;Meldung von pauschal versicherten elektronischen Geräten
+120100008;Meldung von einzelnen elektronischen Geräten
+120100008;Meldung von einzelnen elektronischen Geräten
+120100009;Meldung von Anlagen / Maschinen
+120100009;Meldung von Anlagen / Maschinen
+120110000;Übermittlung von Prüfberichten - Allgemein
+120110001;Übermittlung von Prüfberichten für elektrische Anlagen
+120110001;Übermittlung von Prüfberichten für elektrische Anlagen
+120110002;Übermittlung von Prüfberichten für den technischen Brandschutz
+120110002;Übermittlung von Prüfberichten für den technischen Brandschutz
+120900001;Tod eines Partners
+130000000;Sonstiges
+130002000;Eingangsbestätigung
+130008000;Rückmeldung/Nachfrage
+130008010;Prüfung Vorvertragliche Anzeigepflichtverletzung
+130009000;Geschäftsvorfall erledigt
+130010000;Abtretung
+130010010;Sicherungsschein erstellt
+130010011;Korrektur Sicherungsschein
+130010012;Sicherungsschein erloschen
+130011000;Pfändung
+130012000;Verpfändung
+130013000;Bezugsrecht
+130014000;Bevollmächtigte
+130015000;Vertragspartner-Wechsel
+130016001;Auflösung der Nebenversicherung zu einem Vertrag
+130017000;Vermittlerwechsel Allgemein
+130017001;Zugang wegen Vermittlerwechsel
+130017002;Abgang wegen Vermittlerwechsel
+130017003;Zugang wegen Vermittlernummernwechsel innerhalb einer Vermittlerorganisation
+130017004;Abgang wegen Vermittlernummernwechsel innerhalb einer Vermittlerorganisation
+130017005;Wechsel des Vermittlers wird vom Unternehmen abgelehnt
+130017006;Bestandsverlust droht
+130017007;Abgang wegen Mandatskündigung
+130018001;Neuzugang wegen Übernahme von einem anderen Unternehmen
+130018002;Abgang zu einem anderen Unternehmen
+130019001;Änderung der Unternehmensnummer
+130019002;Änderung der Vertragsnummer
+130020001;Änderung der vertragsbearbeitenden Stelle
+130021001;Unternehmen fordert fehlende Unterlagen zur Bestandsübertragung an
+130100000;Einstellung der Datenlieferung gemäß Code of Conduct
+130100001;Einstellung der Datenlieferung gemäß Code of Conduct - Widerspruch durch Kunde
+130100002;Einstellung der Datenlieferung gemäß Code of Conduct - Widerruf der Maklervollmacht
+130210000;Allgemeiner Vorgang zum Korrespondenzmakler
+130210001;Zugang als Korrespondenzmakler
+130210002;Korrespondenzmakler beendet
+130211000;Allgemeiner Vorgang zum Auskunftsmandat
+130211001;dauerhaftes Auskunftsmandat eingerichtet
+130211002;dauerhaftes Auskunftsmandat abgelehnt
+130211003;einmaliges Auskunftsmandat eingerichtet
+130211004;einmaliges Auskunftsmandat abgelehnt
+130211005;Auskunftsmandat beendet
+130212000;Finale Rückmeldung zur Einreichung bzw. zur Kündigung eines Maklermandates
+130212100;Vollständige Ablehnung des Mandates bzw. der Mandatkündigung
+140000000;Sonstiges
+140002000;Eingangsbestätigung
+140008000;Rückmeldung
+140009000;Geschäftsvorfall erledigt
+140010000;Bankverbindung falsch
+140011000;Bankverbindung fehlt
+140011100;SEPA-Mandat fehlt
+140011110;Unterschriebenes SEPA-Mandat fehlt
+140012000;Beitragsrückstand
+140012001;Beitragsrückstand -Bankretoure
+140012002;Beitragsrückstand -Bankretoure / Erstbeitrag
+140012003;Beitragsrückstand -Bankretoure / Folgebeitrag
+140012004;Beitragsrückstand -Bankretoure, zweite Abbuchung / Folgebeitrag
+140012005;Beitragsrückstand -Bankretoure, erneute Abbuchung / Folgebeitrag
+140012010;Beitragsrückstand -Zahlungserinnerung
+140012011;Beitragsrückstand -Zahlungserinnerung / Erstbeitrag
+140012012;Beitragsrückstand -Zahlungserinnerung / Mahnung nach Zahlungsverzug bei Erstprämie
+140012013;Beitragsrückstand -Zahlungserinnerung / Folgebeitrag
+140012019;Beitragsrückstand -Abgabe ans Mahnverfahren
+140012020;Beitragsrückstand -Mahnung nach Zahlungsverzug bei Erstprämie
+140012021;Beitragsrückstand -Mahnung nach Zahlungsverzug bei Folgeprämie
+140012022;Beitragsrückstand -Mahnung nach Zahlungsverzug bei Folgeprämie nach Abgabe an Inkassobüro
+140012023;Beitragsrückstand -Mahnung nach Zahlungsverzug bei Folgeprämie nach Mahnbescheid
+140012024;Beitragsrückstand -Mahnung nach Zahlungsverzug bei Folgeprämie inkl. Kündigung
+140012025;Beitragsrückstand -Letzte Mahnung
+140012026;Beitragsrückstand - Androhen Notlagentarif 1. Stufe
+140012027;Beitragsrückstand - Androhen Notlagentarif 2. Stufe
+140012028;Beitragsrückstand - Letzte Mahnung nicht kündbar
+140012030;Beitragsrückstand -Letzte Zahlungsaufforderung
+140012031;Beitragsrückstand -Letzte Zahlungsaufforderung vor Abgabe an Inkassobüro
+140012032;Beitragsrückstand - Prüfen Abgabe an das gerichtliche Mahnverfahren
+140012038;Beitragsrückstand -Abgabe an Inkassobüro
+140012039;Beitragsrückstand -Abgabe ans Gerichtliche Mahnverfahren
+140012040;Beitragsrückstand -Mahnbescheid
+140012041;Beitragsrückstand -Mahnbescheid / Erstbeitrag
+140012042;Beitragsrückstand -Mahnbescheid / Folgebeitrag
+140012049;Beitragsrückstand -Mahnende nach Abgabe an Inkassobüro
+140012050;Beitragsrückstand -Kündigungsankündigung
+140012051;Beitragsrückstand -Kündigung / Folgebeitrag
+140012060;Beitragsrückstand -Stornoandrohung
+140012061;Beitragsrückstand -Stornoandrohung / Erstbeitrag
+140012062;Beitragsrückstand -Stornoandrohung / Folgebeitrag
+140012068;Beitragsrückstand -Stornierung und Abrechnung
+140012070;Beitragsrückstand -Ausbuchung Außenstand
+140012080;Beitragsrückstand -Rücktritt Vertragspartner / Erstbeitrag
+140012081;Beitragsrückstand -Rücktritt Unternehmen / Erstbeitrag
+140012090;Beitragsrückstand -Betriebsinformation
+140012091;Beitragsrückstand -Betriebsinformation / Erstbeitrag
+140012092;Beitragsrückstand -Betriebsinformation / Folgebeitrag
+140012093;Beitragsrückstand -Erinnerung der Abrechung
+140012094;Beitragsrückstand -Interne Stornoinformation
+140012095;Beitragsrückstand -Mitteilung Pflegeversicherung
+140012096;Beitragsrückstand - Arbeitgeber zahlt nicht
+140012097;Beitragsrückstand - Info an Gläubiger
+140013000;Beitragsrechnung
+140013001;Beitragsrechnung - Einzelvertrag
+140013002;Beitragsrechnung - Gruppenvertrag / Kollektivvertrag
+140013100;Sollstellung durch Unternehmen (auch Folgesollstellung) - ohne Rechnung
+140013200;Mindestbeitrag
+140013310;Technischer Überschuss
+140013320;Gewinnbeteiligung
+140013330;Jahresrückvergütung
+140013340;Beitragsguthaben
+140013350;Nacherhebung aufgrund einer Vertragsänderung
+140013360;Gutschrift aufgrund einer Vertragsänderung
+140013400;Nebenleistungen
+140013500;Umsatz-/Einzelanmeldung
+140013510;Einzelanmeldung
+140013520;Umsatzanmeldung
+140014000;Änderung der Bankverbindung
+140014001;Neue Bankverbindung
+140014003;Fortfall der Bankverbindung
+140014004;Mandatwiderruf
+140014005;Sonstige Änderungen am Mandat
+140014100;Änderung des elektronischen Bezahlverfahrens
+140014101;Neues elektronisches Bezahlverfahren
+140014103;Fortfall eines elektronischen Bezahlverfahrens
+140015004;Umstellung auf SEPA-Lastschrift (neues Mandat)
+140015005;Umstellung auf SEPA-Lastschrift (bestehendes Mandat)
+140015006;Umstellung von SEPA-Lastschrift auf Rechnung
+140015000;Änderung der Inkassoart
+140015001;Einrichtung einer Einzugsermächtigung mit neuer Bankverbindung
+140015002;Einrichtung einer Einzugsermächtigung zu bestehender Bankverbindung
+140015003;Widerruf der Einzugsermächtigung
+140015003;Widerruf der Einzugsermächtigung
+140015011;Überführung in Unternehmen-Inkasso
+140015012;Überführung in Vermittler-Inkasso
+140016000;Änderung Beitragszahler
+140017000;Ratenzahlung/Stundung
+140017001;Ratenzahlung/Stundung -Ratenzahlung/Stundung einrichten
+140017002;Ratenzahlung/Stundung -Ratenzahlung/Stundung beenden
+140017003;Ratenzahlung/Stundung -Ablehnung Ratenzahlung
+140017004;Ratenzahlung/Stundung -Zahlungsprobleme
+140017005;Anzahlungsrechnung
+140017006;Schlussrechnung
+140018000;SEPA-Notifikation
+150000000;Sonstiges
+150000001;Änderung der Schaden/Leistungs-Nummer
+150002001;Deckungszusage erteilt
+150002002;Deckungszusage abgelehnt
+150002003;Schaden-Reparaturkostenübernahme erteilt
+150008000;Rückmeldung/Nachfrage
+150010000;Ablauf
+150011000;Rente
+150011001;Rente -Altersrente
+150011002;Rente -Rentenänderung
+150011003;Rente -BU-Rente
+150011004;Rente -EU-Rente
+150011005;Rente -Unfallrente
+150011006;Rente -Pflege-Rente
+150011007;Realteilung
+150011008;Vorzeitige in Anspruchnahme der Rente
+150012000;Leistung
+150012001;Leistung -Heirat
+150012002;Leistung -Tod des Versicherten
+150012003;Leistung -Unfalltod des Versicherten
+150012004;Leistung -Tod des Mitversicherten
+150012005;Leistung -Unfalltod des Mitversicherten
+150012006;Leistung -Krankenleistung
+150012007;Leistung-Beitragsrückerstattung
+150012008;Leistung-Pauschalleistung
+150012009;Policendarlehen
+150013010;Schaden - Initiale Schadenmeldung
+150013015;Schaden - Initiale Schadenmeldung nach Regulierung
+150013020;Schaden - Nachmeldung zum Schadenumfang
+150013021;Schaden - Nachmeldung zur Information
+150013025;Schaden - Nachmeldung von Schadeninformationen nach Regulierung
+150013030;Schaden - Rückfrage zur Schadenmeldung
+150013031;Schaden - Erinnerung an Rückfrage zur Schadenmeldung
+150013032;Schaden - Stornierung einer Rückfrage zur Schadenmeldung
+150013035;Schaden - Antwort auf Rückfrage zur Schadenmeldung
+150013100;Schaden - Schadenanlage
+150013101;Änderung Vertragszuordnung
+150013200;Schaden - Schadenänderung
+150013201;Schaden - Schadenänderung mit Zahlung
+150013210;Schaden - Dienstleister beauftragt
+150013220;Schaden - Ermittlungsakte angefordert
+150013230;Schaden - Rechtsstreit
+150013240;Schaden - Wiedereröffnung
+150013300;Schaden - Schadenschließung
+150013301;Schaden - Schadenschließung mit Zahlung
+150013302;Schaden - Ablehnung
+150013400;Schaden - Regress
+160000000;Sonstiges
+160002000;Eingangsbestätigung
+160008000;Rückmeldung/Nachfrage
+160009000;Geschäftsvorfall erledigt
+160010000;Kündigung durch Kunde
+160010001;Kündigung durch Kunde -Bestätigung Kündigungserhalt an Kunden
+160010002;Kündigung durch Kunde -Bestätigung Kündigungsannahme an Kunden
+160010003;Kündigung durch Kunde -Kündigungsablehnung
+160011000;Kündigung durch Gesellschaft
+160011001;Kündigung durch Gesellschaft - Zahlungsverzug bei Erstprämie
+160011002;Kündigung durch Gesellschaft - Zahlungsverzug bei Folgeprämie
+160011003;Kündigung durch Gesellschaft -Anfechtung / Rücktritt wegen  Verletzung vorvertraglicher Anzeigepflicht
+160011004;Kündigung durch Gesellschaft -Kündigung zum Ablauf
+160011007;Kündigung der vorläufigen Deckungszusage
+160012000;Vertragsaufhebung
+160013000;Storno ab Beginn (Nichteinlösung)
+160014000;Kündigungsrücknahme
+160015000;Teilstorno
+160016000;Ablauf Vertrag
+160017000;Erwerberkündigung
+160018000;Risikofortfall
+170000000;Sonstiges
+170002000;Eingangsbestätigung
+170008000;Rückmeldung/Nachfrage
+170009000;Geschäftsvorfall erledigt
+170010000;Vertrag / Deckung
+170010002;Wertmitteilung
+170011000;Erstellung Ersatzpolice
+170012000;Beitrag
+180000000;Sonstiges
+180002000;Eingangsbestätigung
+180008000;Rückmeldung
+180009000;Geschäftsvorfall erledigt
+180010000;Kundenbeschwerde
+180010001;Kundenbeschwerde -Bearbeitung Schaden
+180010002;Kundenbeschwerde -Ablehnung Schaden
+180010003;Kundenbeschwerde -Prozess Schaden
+180010004;Kundenbeschwerde -Beschwerde Vorstand
+180010005;Kundenbeschwerde -Beschwerde Aufsichtsrat
+180010006;Kundenbeschwerde -Beschwerde BaFin
+180010007;Kundenbeschwerde -Beschwerde Ombudsmann
+180011000;Beschwerde von Dritten
+190000000;Sonstiges
+190002000;Eingangsbestätigung
+190008000;Rückmeldung/Nachfrage
+190009000;Geschäftsvorfall erledigt
+190010000;Anfrage
+190010001;Terminvereinbarung
+190011000;Veränderungen Kunde
+190012000;Veränderungen Vertrag
+190013000;Aktionen
+190013010;Aktionen -Vertragsablauf
+190013020;Aktionen -bAV
+190013030;Aktionen -Riester
+190014000;Angebote
+190014010;Angebot - Standard
+190014020;Angebot - ausführlich
+190014021;Ablehnung Anfrage
+190014024;Angebot - Verlängerung Bindefrist
+190014030;Direktumstellung
+190014040;Akquise - Umstellungshinweis aus Vertrag
+190014050;Akquise - Umstellungshinweis aus Schaden
+190015010;Zeichnungsinteresse
+190016010;Anhaltsquotierung
+210000000;Sonstiges
+210001010;Zahlung -Ausgleich
+210001020;Zahlung -Teilzahlung
+210001030;Zahlung -Direktzahlung Vertragspartner an Unternehmen (VM informiert Unternehmen über  erfolgte Direktzahlung)
+210001040;Zahlung -Ratenzahlung
+210001050;Zahlung -a-Konto-Zahlung zum VM (im Feld Versicherungsscheinnummer ist die Geschäftsstelle/Vermittler aus Feld 7 entsprechend zu wiederholen)
+210001060;Zahlung -a-Konto-Zahlung zum Vertragspartner (es muss eine gültige  Versicherungsscheinnummer des Vertragspartner oder ein anderer gültiger Ordnungsbegriff des Unternehmens für den Vertragspartner angegeben werden)
+210001070;Zahlung -a-Konto-Zahlung zum Vertrag -ohne Bezug  eindeutiger Buchungs-ID Unternehmen
+210002000;Abrechnung zum nächsten Termin (verbindliche Zusage der Abrechnung zum...)
+210003000;Prämie noch nicht angefordert bei Vertragspartner (Rechnung noch nicht an Vertragspartner verschickt)
+210004010;Änderung -Änderung Vermittler Beitrag -Provision
+210004020;Änderung -Änderung Provision
+210004030;Änderung -Änderung Vermittler Steuer
+210004040;Änderung -Änderung Vermittler Sonstige
+210004050;Änderung -Vertragsänderung (abrechnungsrelevante Änderung läuft bzw. ist vorgesehen)
+210005000;Normales Storno
+210006010;Mahnverfahren -An führendes VU zum Mahnverfahren zurückgegeben (VM informiert beteiligte Unternehmen)
+210006020;Mahnverfahren -Mahn-Storno
+210006030;Mahnverfahren -Mahnverfahren veranlassen Vertragspartner zahlt nicht)
+210006040;Mahnverfahren -Mahnverfahren unterdrücken  (Mahnverfahren nicht auslösen)
+210006050;Mahnverfahren -Mahnverfahren unterbrechen (Mahnverfahren aussetzen)
+210006060;Mahnverfahren -Mahnverfahren beenden (Vertragspartner hat zwischenzeitlich gezahlt)
+210007000;Sollstellung durch Vermittler
+210008000;Zweitschrift erstellen (Police/Rechung fehlt)
+210009000;Risikofortfall (z.B. Vertragspartner ist verstorben)
+210010000;Buchung klären (Vermittler ist Vorgang/Buchung unbekannt)
+210011000;Rückgabe Dokument (Dokument fehlerhaft)
+210012000;Insolvenzverfahren gegen Vertragspartner (Insolvenzverfahren steht an  bzw. ist gestartet)
+210013000;Vertragspartner unbekannt verzogen (Info nach erfolgloser  Adressermittlung seitens VM)
+210014000;Weitergabedatum VM-VN (Satzart 0400.1/2,  „Weitergabedatum VM-VN“ muss gefüllt werden)
+210015000;Position wird nicht abgerechnet
+210050001;Schaden -Schaden-Akontozahlung
+210050002;Schaden -Schaden-Rest-/ Schlusszahlung
+210050003;Schaden -Schadenzahlung Korrekturbedarf
+210100000;Provisionsabrechnung
+210300000;Anforderung Abrechnung
+210300010;Anforderung Abrechnung – Erste Anforderung
+210300020;Anforderung Abrechnung fehlt/ Erinnerung
+210400000;Bereitstellung Abrechnung
+210500000;Klärungsanfrage Abrechnung
+210500010;Abrechnung in Ordnung,  kein Klärungsbedarf
+210510000;Klärungsanfrage Abrechnung - Abrechnungsposten fehlt
+210520000;Klärungsanfrage Abrechnung - Abrechnung nicht zuzuordnen
+210520010;Klärungsanfrage Abrechnung - Abrechnungszeitraum stimmt nicht
+210520020;Klärungsanfrage Abrechnung - Abrechnungspartner stimmt nicht
+210520030;Klärungsanfrage Abrechnung - Abrechnungsvertragbezug stimmt nicht
+210520040;Klärungsanfrage Abrechnung - Abrechnungsschaden-/-leistungsbezug stimmt nicht
+210530000;Klärungsanfrage Abrechnung - Abrechnungspostendaten falsch
+210530010;Klärungsanfrage Abrechnung - Abrechnungspostenbetrag stimmt nicht mit vereinbartem Betrag überein
+210530020;Klärungsanfrage Abrechnung - Abrechnungsposten-Wertstellungsdatum falsch
+210530030;Klärungsanfrage Abrechnung - Abrechnungsposten-Währungsdifferenzen
+210530040;Klärungsanfrage Abrechnung - Nicht vereinbarte Abrechnungsposten (z.B. Minderungen)
+210530050;Klärungsanfrage Abrechnung - Abrechnungsposten-Betrag stimmt nicht mit dem tatsächlich abgerechnetem Betrag überein
+210540000;Klärungsanfrage Abrechnung - Abrechnungsposten nicht zuzuordnen
+210540010;Klärungsanfrage Abrechnung - Abrechnungspostenzeitraum stimmt nicht
+210540020;Klärungsanfrage Abrechnung - Abrechnungspostenpartner stimmt nicht
+210540030;Klärungsanfrage Abrechnung - Abrechnungspostenvertragsbezug stimmt nicht
+210540040;Klärungsanfrage Abrechnung - Abrechnungspostenschaden-/-leistungsbezug stimmt nicht
+210550000;Klärungsanfrage Abrechnung - Abrechnungsposten-Detaildaten fehlerhaft (z.B. die im beigefügten Vertrag hinterlegte Provisionsvereinbarung u.ä.)
+210600000;Klärungsantwort Abrechnung
+210600010;Klärungsantwort Abrechnung - Änderung gemäß Anfrage erfolgt mit zukünftiger Abrechnung
+210600020;Klärungsantwort Abrechnung - Änderung gemäß Anfrage erfolgt nicht
+210600030;Klärungsantwort Abrechnung - manuelle Klärung erforderlich
+220011007;Basis-Rente - Sonderausgabenabzug ans Finanzamt gemeldet
+220011101;bAV - Jahresabrechnung / Infopflichten
+220012008;Kranken - Sonderausgabenabzug ans Finanzamt gemeldet
+220030001;Riester - Jahresabrechnung / Infopflichten
+220030002;Riester - Förderantrag übermittelt
+220030003;Riester - Zulagen-Ermittlungsergebnis erhalten
+220030004;Riester - Zulagen-Festsetzungsergebnis erhalten
+220030005;Riester - Sonderausgabenabzug ans Finanzamt gemeldet
+220030006;Riester - Sonderausgabenabzug durchgeführt
+230010001;Transaktion - Verkauf
+230010002;Transaktionen - regelmäßiger Verkauf
+230010003;Transaktionen - Kauf
+230010004;Transaktionen-regelmäßiger Kauf
+230010005;Transaktionen-Umtausch
+230010006;Transaktionen - regelmäßiger Umtausch
+230010007;Transaktionen - Umschreibung
+230010008;Transaktionen - Einlieferung (Anteilsübertrag)
+230010009;Transaktionen - Auslieferung (Anteilsübertrag)
+230020001;Corporate Actions - Fusion
+230020002;Corporate Actions - Split
+230020003;Corporate Actions - Liquidation
+230030001;Product Changes - Mitteilungspflichtige Änderungen im Fonds
+230040001;Data Management - ergänzende Informationen zu Vermögenswirksamen - Verträgen
+230040002;Data Management - Nachlass
+230040003;Data Management - Verpfändung
+230040004;Data Management - Pfändung
+230040005;Data Management - steuerliche Freistellung
+230050001;Fondsstamm - Fondsstamm
+230050002;Fondsstamm - Fondspreise
+230060001;KAGen - Stamm
+230070001;Provision - Abrechnungszeitraum
+230070002;Provision - Vermittlungsprovision
+230070003;Provision - lfd. Vermittlungsprovision
+899001000;Schriftwechsel
+999000000;Sonstiges
+999010010;GDV-VU-Vermittler - Gesamtbestand
+999010020;GDV-VU-Vermittler - Änderungen
+999011010;Übermittlung OMDS -VU-Vermittler - Gesamtbestand
+999011020;Übermittlung OMDS -VU-Vermittler - Änderungen
+999020000;GDV-VU-VU
+999030000;GDV- Kfz-Schaden-Service
+999040000;GDV-Antragsdaten
+999050000;GDV-Vermittlerabrechnung
+999060000;GDV-Geschäftsvorfälle
+150002000;Eingangsbestätigung
+150009000;Geschäftsvorfall erledigt
+150013000;Schaden
+150013001;Schaden -Sachschaden
+150013202;Schaden - Schadenänderung ohne Zahlung
+150013303;Schaden - Schadenschließung ohne Zahlung
+150013304;Schaden - Kulanz
+210110000;Abrechnungskorrektur
+210120000;manuelle Provision
+210200000;Buchung als Abgrenzung zu vertragsbezogenen Provisionen

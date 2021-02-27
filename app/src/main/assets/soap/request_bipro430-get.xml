@@ -1,0 +1,12 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tran="http://www.bipro.net/namespace/transfer" xmlns:bas="http://www.bipro.net/namespace/basis" xmlns:nac="http://www.bipro.net/namespace/nachrichten">
+    ${soapHeader}
+    <soapenv:Body>
+        <tran:getShipment>
+                <tran:Request>
+                    <nac:BiPROVersion>2.6.0.1.0</nac:BiPROVersion>
+                    <nac:ConsumerID>Android BiPRO Client</nac:ConsumerID>
+                    <tran:ID>${id}</tran:ID>
+                </tran:Request>
+        </tran:getShipment>
+    </soapenv:Body>
+</soapenv:Envelope>

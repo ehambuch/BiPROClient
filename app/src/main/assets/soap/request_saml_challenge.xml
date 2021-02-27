@@ -1,0 +1,15 @@
+<soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap11:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsa:To>${url}</wsa:To>
+        <wsa:Action>http://docs.oasis-open.org/ws-sx/ws-trust/200512/RSTR/Issue</wsa:Action>
+        <wsa:MessageID>${messageId}</wsa:MessageID>
+        <wsa:RelatesTo>${requestId}</wsa:RelatesTo>
+    </soap11:Header>
+    <soap11:Body>
+        <wst:RequestSecurityTokenResponse Context="${messageId}" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wst14="http://docs.oasis-open.org/ws-sx/ws-trust/200802">
+            <wst14:InteractiveChallengeResponse>
+                <wst14:TextChallengeResponse RefId="http://docs.oasis-open.org/ws-sx/ws-trust/200802/challenge/OTP">${mTAN}</wst14:TextChallengeResponse>
+            </wst14:InteractiveChallengeResponse>
+        </wst:RequestSecurityTokenResponse>
+    </soap11:Body>
+</soap11:Envelope>

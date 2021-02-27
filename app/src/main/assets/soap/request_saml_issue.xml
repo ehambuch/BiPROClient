@@ -1,0 +1,33 @@
+<soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap11:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsa:To>${url}</wsa:To>
+        <wsa:Action>http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/Issue</wsa:Action>
+        <wsa:MessageID>${messageId}</wsa:MessageID>
+        <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+            <wsse:UsernameToken wsu:Id="PartnerId" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+                <wsse:Username>${authUser}</wsse:Username>
+                <wsse:Password>${authPassword}</wsse:Password>
+            </wsse:UsernameToken>
+        </wsse:Security>
+    </soap11:Header>
+    <soap11:Body>
+        <wst:RequestSecurityToken Context="${messageId}" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+            <wst:TokenType>http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0</wst:TokenType>
+            <wst:RequestType>http://docs.oasis-open.org/ws-sx/ws-trust/200512/Issue</wst:RequestType>
+            <wsp:AppliesTo>
+                <wsp:URI>${serviceId}</wsp:URI>
+            </wsp:AppliesTo>
+            <wst:Claims Dialect="urn:oasis:names:tc:SAML:2.0:assertion:AttributeStatementType">
+                <saml2:AttributeStatement xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion">
+                    <saml2:Attribute Name="urn:tgic:names:ISTS:1.0:user:PartnerId" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+                    <saml2:Attribute Name="urn:tgic:names:ISTS:1.0:user:PartnerRolle" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+                    <saml2:Attribute Name="urn:tgic:names:ISTS:1.0:user:EMail" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+                </saml2:AttributeStatement>
+            </wst:Claims>
+            <wst:Lifetime>
+                <wsu:Created>${createdDate}</wsu:Created>
+                <wsu:Expires>${expiresDate}</wsu:Expires>
+            </wst:Lifetime>
+        </wst:RequestSecurityToken>
+    </soap11:Body>
+</soap11:Envelope>

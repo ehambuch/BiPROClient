@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonServiceExtranet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Extranet-Einstieg (Suche)"
+        app:icon="@drawable/ic_web_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonServiceTransfer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Transfer (Dokumente)"
+        app:icon="@drawable/ic_mail_outline_black_24dp"
+        app:layout_constraintEnd_toEndOf="@id/buttonServiceExtranet"
+        app:layout_constraintStart_toStartOf="@id/buttonServiceExtranet"
+        app:layout_constraintTop_toBottomOf="@id/buttonServiceExtranet" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonServiceListPartner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Listen (Partnersuche)"
+        app:icon="@drawable/ic_person_search_black_24dp"
+        app:layout_constraintEnd_toEndOf="@id/buttonServiceExtranet"
+        app:layout_constraintStart_toStartOf="@id/buttonServiceExtranet"
+        app:layout_constraintTop_toBottomOf="@id/buttonServiceTransfer" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonServiceListVertrag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Listen (Vertragssuche)"
+        app:icon="@drawable/ic_manage_search_black_24dp"
+        app:layout_constraintEnd_toEndOf="@id/buttonServiceExtranet"
+        app:layout_constraintStart_toStartOf="@id/buttonServiceExtranet"
+        app:layout_constraintTop_toBottomOf="@id/buttonServiceListPartner" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonServiceVertrag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Vertrag (Auskunft)"
+        app:icon="@drawable/ic_app_registration_black_24dp"
+        app:layout_constraintEnd_toEndOf="@id/buttonServiceExtranet"
+        app:layout_constraintStart_toStartOf="@id/buttonServiceExtranet"
+        app:layout_constraintTop_toBottomOf="@id/buttonServicePartner" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonServicePartner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Partner (Auskunft)"
+        app:icon="@drawable/ic_person_black_24dp"
+        app:layout_constraintEnd_toEndOf="@id/buttonServiceExtranet"
+        app:layout_constraintStart_toStartOf="@id/buttonServiceExtranet"
+        app:layout_constraintTop_toBottomOf="@id/buttonServiceListVertrag" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonServiceSchaden"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Schaden (Auskunft)"
+        app:icon="@drawable/ic_water_damage_black_24dp"
+        app:layout_constraintEnd_toEndOf="@id/buttonServiceExtranet"
+        app:layout_constraintStart_toStartOf="@id/buttonServiceExtranet"
+        app:layout_constraintTop_toBottomOf="@id/buttonServiceVertrag" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonServiceListSchaden"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Listen (Schadensuche)"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/buttonServiceExtranet"
+        app:layout_constraintStart_toStartOf="@id/buttonServiceExtranet"
+        app:layout_constraintTop_toBottomOf="@id/buttonServiceSchaden" />
+</androidx.constraintlayout.widget.ConstraintLayout>

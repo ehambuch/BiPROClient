@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/selectInsuranceFragment"
+    >
+
+    <fragment
+        android:id="@+id/selectInsuranceFragment"
+        android:name="de.erichambuch.biproclient.main.ui.SelectInsuranceFragment"
+        android:label="Versicherung auswählen"
+        tools:layout="@layout/fragment_select_insurance">
+        <action
+            android:id="@+id/actionSelectInsurance"
+            app:destination="@id/selectServiceFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectServiceFragment"
+        android:name="de.erichambuch.biproclient.main.ui.SelectServiceFragment"
+        android:label="Service auswählen"
+        tools:layout="@layout/fragment_select_service">
+        <action
+            android:id="@+id/action_selectServiceFragment_to_extranetServiceFragment"
+            app:destination="@id/extranetServiceSearchFragment" />
+        <action
+            android:id="@+id/action_selectServiceFragment_to_transferServiceFragment"
+            app:destination="@id/transferServiceFragment" />
+        <action
+            android:id="@+id/action_selectServiceFragment_to_vertragServiceFragment"
+            app:destination="@id/vertragServiceFragment" />
+        <action
+            android:id="@+id/action_selectServiceFragment_to_listPartnerFragment"
+            app:destination="@id/listPartnerFragment" />
+        <action
+            android:id="@+id/action_selectServiceFragment_to_listVertragFragment"
+            app:destination="@id/listVertragFragment" />
+        <action
+            android:id="@+id/action_selectServiceFragment_to_partnerServiceFragment"
+            app:destination="@id/partnerServiceFragment" />
+        <action
+            android:id="@+id/action_selectServiceFragment_to_schadenServiceFragment"
+            app:destination="@id/schadenServiceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/extranetServiceSearchFragment"
+        android:name="de.erichambuch.biproclient.ui.extranet.ExtranetServiceSearchFragment"
+        android:label="Suche im Extranet"
+        tools:layout="@layout/fragment_extranet_service_search" >
+        <action
+            android:id="@+id/action_extranetServiceSearchFragment_to_extranetItemFragment"
+            app:destination="@id/extranetItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/extranetItemFragment"
+        android:name="de.erichambuch.biproclient.ui.extranet.ExtranetItemFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list" />
+    <fragment
+        android:id="@+id/transferServiceFragment"
+        android:name="de.erichambuch.biproclient.ui.transfer.TransferServiceFragment"
+        android:label="fragment_transfer_service"
+        tools:layout="@layout/fragment_transfer_service" >
+        <action
+            android:id="@+id/action_transferServiceFragment_to_transferListShipmentItemsFragment"
+            app:destination="@id/transferListShipmentItemsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vertragServiceFragment"
+        android:name="de.erichambuch.biproclient.ui.vertrag.VertragServiceFragment"
+        android:label="fragment_vertrag_service"
+        tools:layout="@layout/fragment_vertrag_service" >
+        <action
+            android:id="@+id/action_vertragServiceFragment_to_vertragFullViewFragment"
+            app:destination="@id/dataFullViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataFullViewFragment"
+        android:name="de.erichambuch.biproclient.ui.vertrag.DataFullViewFragment"
+        android:label="fragment_vertrag_full_view"
+        tools:layout="@layout/fragment_vertrag_full_view" />
+    <fragment
+        android:id="@+id/transferListShipmentItemsFragment"
+        android:name="de.erichambuch.biproclient.ui.transfer.TransferListShipmentItemsFragment"
+        android:label="fragment_transfer_list_shipment_items_list"
+        tools:layout="@layout/fragment_transfer_list_shipment_items_list" >
+        <action
+            android:id="@+id/action_transferListShipmentItemsFragment_to_vertragFullViewFragment"
+            app:destination="@id/dataFullViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listPartnerFragment"
+        android:name="de.erichambuch.biproclient.ui.listen.ListPartnerFragment"
+        android:label="fragment_list_partner"
+        tools:layout="@layout/fragment_list_partner" >
+        <action
+            android:id="@+id/action_listPartnerFragment_to_listenResultItemsFragment"
+            app:destination="@id/listenResultItemsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listVertragFragment"
+        android:name="de.erichambuch.biproclient.ui.listen.ListVertragFragment"
+        android:label="fragment_list_vertrag"
+        tools:layout="@layout/fragment_list_vertrag" >
+        <action
+            android:id="@+id/action_listVertragFragment_to_listenResultItemsFragment"
+            app:destination="@id/listenResultItemsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listenResultItemsFragment"
+        android:name="de.erichambuch.biproclient.ui.listen.ListenResultItemsFragment"
+        android:label="fragment_list_result"
+        tools:layout="@layout/fragment_listen_result_items_list" >
+        <action
+            android:id="@+id/action_listenResultItemsFragment_to_vertragServiceFragment"
+            app:destination="@id/vertragServiceFragment" />
+        <action
+            android:id="@+id/action_listenResultItemsFragment_to_partnerServiceFragment"
+            app:destination="@id/partnerServiceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/partnerServiceFragment"
+        android:name="de.erichambuch.biproclient.ui.partner.PartnerServiceFragment"
+        android:label="fragment_partner_service"
+        tools:layout="@layout/fragment_partner_service" >
+        <action
+            android:id="@+id/action_partnerServiceFragment_to_dataFullViewFragment"
+            app:destination="@id/dataFullViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/schadenServiceFragment"
+        android:name="de.erichambuch.biproclient.ui.schaden.SchadenServiceFragment"
+        android:label="fragment_schaden_service"
+        tools:layout="@layout/fragment_schaden_service" >
+        <action
+            android:id="@+id/action_schadenServiceFragment_to_dataFullViewFragment"
+            app:destination="@id/dataFullViewFragment" />
+    </fragment>
+</navigation>

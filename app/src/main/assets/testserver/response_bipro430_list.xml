@@ -1,0 +1,42 @@
+<soapenv:Envelope xmlns:all="http://www.bipro.net/namespace/allgemein"
+    xmlns:bas="http://www.bipro.net/namespace/basis"
+    xmlns:gevo="http://www.bipro.net/namespace/gevo"
+    xmlns:nac="http://www.bipro.net/namespace/nachrichten"
+    xmlns:par="http://www.bipro.net/namespace/partner"
+    xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:tran="http://www.bipro.net/namespace/transfer"
+    xmlns:xmime="http://www.w3.org/2005/05/xmlmime">
+    <soapenv:Header />
+    <soapenv:Body>
+        <tran:listShipmentsResponse>
+            <tran:Response>
+                <nac:Status>
+                    <nac:StatusID>OK</nac:StatusID>
+                    <nac:Meldung>
+                        <nac:ArtID>Hinweis</nac:ArtID>
+                        <nac:MeldungID>04000</nac:MeldungID>
+                        <nac:Text>Transfer (Test) erfolgreich</nac:Text>
+                    </nac:Meldung>
+                </nac:Status>
+                <tran:Lieferung>
+                    <tran:ID>TEST-1234</tran:ID>
+                    <tran:Kategorie>100002010</tran:Kategorie>
+                    <tran:ArtDerLieferung>1004</tran:ArtDerLieferung>
+                    <tran:EnthaeltNurDaten>false</tran:EnthaeltNurDaten>
+                    <tran:PeriodischeLieferung>true</tran:PeriodischeLieferung>
+                    <tran:Sparte>30</tran:Sparte>
+                    <tran:AnzahlTransfers>1</tran:AnzahlTransfers>
+                </tran:Lieferung>
+                <tran:Lieferung>
+                    <tran:ID>TEST-1235</tran:ID>
+                    <tran:Kategorie>100002020</tran:Kategorie>
+                    <tran:ArtDerLieferung>1004</tran:ArtDerLieferung>
+                    <tran:EnthaeltNurDaten>false</tran:EnthaeltNurDaten>
+                    <tran:PeriodischeLieferung>true</tran:PeriodischeLieferung>
+                    <tran:Sparte>30</tran:Sparte>
+                    <tran:AnzahlTransfers>1</tran:AnzahlTransfers>
+                </tran:Lieferung>
+            </tran:Response>
+        </tran:listShipmentsResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

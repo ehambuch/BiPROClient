@@ -1,0 +1,29 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <enu:EnumerateResponse xmlns:enu="http://www.w3.org/2011/03/ws-enu" xmlns:ns2="http://www.bipro.net/namespace/basis" xmlns:ns3="http://www.bipro.net/namespace/kontext/vertrag" xmlns:ns4="http://www.bipro.net/namespace/allgemein" xmlns:ns5="http://www.bipro.net/namespace/produktmodell" xmlns:ns6="http://www.bipro.net/namespace/partner" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:ns8="http://www.bipro.net/namespace/nachrichten" xmlns:ns9="http://www.bipro.net/namespace/vertrag" xmlns:ns10="http://www.bipro.net/namespace/kontext/partner" xmlns:ns11="http://www.w3.org/2005/08/addressing">
+            <enu:GrantedExpires/>
+            <enu:Items>
+                <ns12:Ergebniseintrag xsi:type="ns3:CT_VertragssucheErgebnis" xmlns:ns12="http://www.bipro.net/namespace/kontext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <ns3:Vertrag>
+                        <ns9:Partner xsi:type="ns6:CT_Person">
+                            <ns6:Anrede>1</ns6:Anrede>
+                            <ns6:Name>Mustermann</ns6:Name>
+                            <ns6:PartnerID>123</ns6:PartnerID>
+                            <ns6:Anschrift>
+                                <ns4:Strasse>Am Kölner Dom 3</ns4:Strasse>
+                                <ns4:Postleitzahl>50648</ns4:Postleitzahl>
+                                <ns4:Ort>Koelle</ns4:Ort>
+                                <ns4:Land>D</ns4:Land>
+                            </ns6:Anschrift>
+                            <ns6:Vorname>Max</ns6:Vorname>
+                            <ns6:Geburtsdatum>1964-01-01</ns6:Geburtsdatum>
+                        </ns9:Partner>
+                        <ns9:Vertragsnummer>
+                            <ns4:Versicherungsscheinnummer>12345678</ns4:Versicherungsscheinnummer>
+                        </ns9:Vertragsnummer>
+                    </ns3:Vertrag>
+                </ns12:Ergebniseintrag>
+            </enu:Items>
+        </enu:EnumerateResponse>
+    </soap:Body>
+</soap:Envelope>

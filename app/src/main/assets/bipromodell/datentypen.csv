@@ -1,0 +1,2660 @@
+#ST-Typ;Wert;Beschreibung
+ST_Abgangsgrund;01;Kuendigung VN zum Ablauf
+ST_Abgangsgrund;02;Kuendigung VN im Schadenfall / allgemeine Differenzen
+ST_Abgangsgrund;03;Kuendigung VN bei Beitragserhoehung / Tarifaktion
+ST_Abgangsgrund;04;Kuendigung VU zum Ablauf
+ST_Abgangsgrund;05;Kuendigung VU im Schadenfall
+ST_Abgangsgrund;06;Kuendigung VU mangels Beitragszahlung (Folgebeitrag § 38 VVG)
+ST_Abgangsgrund;07;Kuendigung Risikofortfall (Besitzerwechsel) / Umzug ins Ausland / Versicherungsfaehigkeit nicht gegeben / Berufsunfaehigkeit / Totalschaden
+ST_Abgangsgrund;08;Ersatzversicherung / Umstellung Einzelversicherung in Gruppenversicherung / Umstellung Gruppenversicherung in Einzelversicherung
+ST_Abgangsgrund;09;Storno zum Ablauf kurzfristiger Vertraege
+ST_Abgangsgrund;10;Vertragsunterbrechung mit Reservierung (spez. KFZ)
+ST_Abgangsgrund;11;Vertragsunterbrechung ohne Reservierung (spez. KFZ)
+ST_Abgangsgrund;12;Nicht in Kraft getretener Vertrag / Storno ab Beginn (§ 37 VVG) (deprecated, siehe auch Schlüssel 39 und 40)
+ST_Abgangsgrund;13;Kuendigung des Erwerbers bei Besitzwechsel
+ST_Abgangsgrund;14;Tod Versicherungsnehmer
+ST_Abgangsgrund;15;Altersablauf / Endalter
+ST_Abgangsgrund;16;Kuendigungsklausel gestrichen
+ST_Abgangsgrund;17;Erlebensfallauszahlung
+ST_Abgangsgrund;18;Abgang aus Rahmenvertrag
+ST_Abgangsgrund;19;Beitragsfreistellung vom VN beantragt
+ST_Abgangsgrund;20;Beitragsfreistellung gemaess § 38 VVG
+ST_Abgangsgrund;21;Vertragsende durch Tod der versicherten Person
+ST_Abgangsgrund;22;Vertragsende durch Ablauf (Vertrag)
+ST_Abgangsgrund;23;Vertragsende durch Heirat (mitversichertes Kind)
+ST_Abgangsgrund;24;Rueckkauf
+ST_Abgangsgrund;25;Verfall
+ST_Abgangsgrund;26;Anbieterwechsel
+ST_Abgangsgrund;27;Wechsel zur Gesetzlichen-Krankenversicherung - pflichtig
+ST_Abgangsgrund;28;Wechsel zur Gesetzlichen-Krankenversicherung - freiwillig
+ST_Abgangsgrund;29;Vertragstrennung / -Zusammenlegung
+ST_Abgangsgrund;30;Agentur und/oder Geschaeftsstellenwechsel
+ST_Abgangsgrund;31;Ruecktritt (z. B. Verletzung der vorvertraglichen Anzeigepflicht / Anfechtung)
+ST_Abgangsgrund;32;Abgang nach Tarifwechsel
+ST_Abgangsgrund;33;Rücktritt vom Vertrag wegen Verletzung der Informationspflicht
+ST_Abgangsgrund;34;Fristlose Kündigung wegen vorsätzlicher oder grob fahrlässiger Verletzung der Anzeigepflicht
+ST_Abgangsgrund;35;Kündigung wegen leicht fahrlässiger oder nicht zu vertretender Verletzung der Anzeigepflicht durch VN
+ST_Abgangsgrund;36;Kündigung VN wegen Ausschluss der Gefahr durch VU
+ST_Abgangsgrund;37;Storno mit Übergang auf anderes VU im Falle einer Fusion bzw. eines Zukaufs
+ST_Abgangsgrund;38;Storno wegen Fortführung unter neuer Versicherungsscheinnummer
+ST_Abgangsgrund;39;Kündigung VU mangels Beitragszahlung (Erstbeitrag)
+ST_Abgangsgrund;40;Widerruf des VN ab Beginn.
+ST_Abgangsgrund;41;Doppelversicherung
+ST_Abgangsgrund;42;Beendigung wegen Aufgabe der im Antrag genannten beruflichen Tätigkeit.
+ST_Abgangsgrund;43;Aufgrund einer Änderung entsteht rechtlich ein neuer Vertrag.
+ST_Abgangsgrund;99;sonstige Stornogruende
+ST_Abrechnungsart;01;Vermittlerabrechnung Gesamtbeitrag (Der Vermittler zieht den Beitrag ein und überweist ohne Abzug der Provision an den Produktgeber)
+ST_Abrechnungsart;02;Vermittlerabrechnung Abrechnungsbetrag (Der Vermittler zieht den Beitrag ein und überweist abzüglich der Provision an den Produktgeber)
+ST_Abrechnungsart;03;Abrechnung In der Abrechnung sind die Posten des Abrechnenden enthalten, die entweder zu einer Forderung oder einer Verbindlichkeit gegenüber dem Abrechnungsempfänger führen und in deren Folge in der Regel eine Finanztransaktion steht. In der Regel werden Abrechnungen turnusmäßig erstellt.
+ST_Abrechnungsart;04;Buchungsnote Die Buchungsnote informiert den Abrechnungsempfänger über die beim Abrechnenden getätigten Buchungen des Abrechnenden (in der Regel Provisionen und Kostenübernahmen, bei Vermittlerinkasso auch Beiträge und ggf. Schadenzahlungen) seit der vorherigen Buchungsnote, die noch nicht abgerechnet wurden. In Abgrenzung zur Abrechnung folgt der Buchungsnote keine Finanztransaktion.
+ST_Abrechnungsart;05;Kontoauszug Der Kontoauszug enthält aus Sicht des Abrechnenden ausschließlich Abrechnungsposten für ein benanntes Konto der Versicherungsnebenbuchhaltung und einen benannten Zeitraum (ggf. eingeschränkt auf bestimmte Postenarten). Darin können sowohl bereits abgerechnete, sowie noch nicht abgerechnete Posten enthalten sein.
+ST_Abrechnungsart;06;OP-Liste Die OP-Liste enthält nur Abrechnungsposten die aus Sicht des Abrechnenden seitens des Abrechnungsempfängers noch zu begleichen sind, in der Regel ist die vertraglich vereinbarte Frist für die Abrechnung überschritten.
+ST_Abrechnungspostenart;01;Brutto-Beitrag
+ST_Abrechnungspostenart;02;Beitrag (ohne Versicherungssteuer)
+ST_Abrechnungspostenart;03;Versicherungssteuer
+ST_Abrechnungspostenart;04;Umsatzsteuer
+ST_Abrechnungspostenart;05;Auslandssteuer
+ST_Abrechnungspostenart;06;Courtage/Provision
+ST_Abrechnungspostenart;07;Führungsprovision
+ST_Abrechnungspostenart;08;Assekuradeursprovision (Provisionsteilung)
+ST_Abrechnungspostenart;09;Vorschuss/Nachschuss
+ST_Abrechnungspostenart;10;Zahlungsverkehrsbuchung/Finanzbuchungen
+ST_Abrechnungspostenart;11;Abschlag/Zuschlag (ob Abschlag oder Zuschlag ergibt sich aus dem Vorzeichen der Betrages sowie aus dem Abrechnendem)
+ST_Abrechnungspostenart;12;Vorauszahlung/Nachzahlung (vertragsbezogen)
+ST_Abrechnungspostenart;13;Berechnete Kosten oder Erstattungen z.B. PC-Mieten Gutachterkosten
+ST_Abrechnungspostenart;14;Bonifikationen und Wettbewerbe
+ST_Abrechnungspostenart;15;Gewinnbeteiligung
+ST_Abrechnungspostenart;16;Vertragsunabhängige Vergütung
+ST_Abrechnungspostenart;17;Zuschuss
+ST_Abrechnungspostenart;18;Pauschale
+ST_Abrechnungspostenart;19;Garantie
+ST_Abrechnungspostenart;20;Stornoreserve
+ST_Abrechnungspostenart;21;Ablösesumme/Provisionsausgleich
+ST_Abrechnungspostenart;22;Darlehen/Kredit
+ST_Abrechnungspostenart;23;Zinsen
+ST_Abrechnungspostenart;24;Bürgschaften
+ST_Abrechnungspostenart;25;Schadenzahlung
+ST_Abrechnungspostenart;26;Schaden-Kulanzzahlung
+ST_Abrechnungspostenart;27;Schaden-Regresszahlung
+ST_Abrechnungspostenart;28;Vergütung aus Dienstleistung
+ST_Abrechnungspostenart;29;Gebühren
+ST_Abrechnungspostenart;30;Rabatt/Skonto
+ST_Abrechnungspostenart;31;Strafzuschlag (Krankenversicherung)
+ST_Abrechnungspostenart;32;Saldo (technische Postenart für übergreifende Salden)
+ST_Abrechnungspostenart;99;Sonderfall - Nicht klassifizierbarer Sonderfall
+ST_Abschlussmodell;Antragsmodell;Der VN muss rechtzeitig vor Vertragsabschluss umfangreich über die vertraglichen Bestimmungen informiert werden. Es müssen alle relevanten Vertragsinformationen inkl. AVB, Produkt- und Verbraucherinformationen vorliegen.
+ST_Abschlussmodell;AntragsmodellMitStellvertreter;
+ST_Abschlussmodell;Invitatiomodell;VN fordert VU zur Abgabe eines verbindlichen Angebotes inkl. der vertraglichen Bestimmungen auf. Ein Vertrag kommt erst mit Unterzeichnung des Angebotes zustande.
+ST_Abschlussmodell;InvitatiomodellMitStellvertreter;
+ST_Abstellort;01;Straße
+ST_Abstellort;02;Stellplatz
+ST_Abstellort;03;Tiefgarage
+ST_Abstellort;04;Einzelgarage
+ST_Abstellort;05;Parkhaus
+ST_Abstellort;06;Hofraum
+ST_Abstellort;07;unbewachter Parkplatz
+ST_Abstellort;08;bewachter Parkplatz
+ST_Adresstyp;geschaeftlich;Bei der Adresse handelt es sich um eine geschaeftliche Adresse
+ST_Adresstyp;privat;Bei der Adresse handelt es sich um eine private Adresse
+ST_AnderweitigerVersicherungsschutz;1;Es besteht kein anderweitiger Versicherungsschutz
+ST_AnderweitigerVersicherungsschutz;2;Es besteht ein anderweitiger Versicherungsschutz
+ST_AnderweitigerVersicherungsschutz;3;Es besteht ein anderweitiger Versicherungsschutz durch den Versicherungsnehmer
+ST_AnderweitigerVersicherungsschutz;4;Es besteht ein anderweitiger Versicherungsschutz durch den Eigentümer
+ST_AnderweitigerVersicherungsschutz;5;Es besteht ein anderweitiger Versicherungsschutz durch den Vermieter
+ST_Anredeschluessel;0;ohne Anrede
+ST_Anredeschluessel;1;Herr
+ST_Anredeschluessel;2;Frau
+ST_Anredeschluessel;3;Firma
+ST_Anredeschluessel;4;Herr und Frau
+ST_Anredeschluessel;5;Fraeulein
+ST_Anschriftart;1;Strassenadresse
+ST_Anschriftart;2;Postfachadresse
+ST_Anschriftart;3;Grosskundenadresse
+ST_AnspruchErhoben;0;nein
+ST_AnspruchErhoben;1;ja, mündlich
+ST_AnspruchErhoben;2;ja, schriftlich
+ST_Anstossbereich;01;vorn Mitte
+ST_Anstossbereich;02;vorn rechts
+ST_Anstossbereich;03;rechte Seite Mitte
+ST_Anstossbereich;04;hinten rechts
+ST_Anstossbereich;05;hinten Mitte
+ST_Anstossbereich;06;hinten links
+ST_Anstossbereich;07;linke Seite Mitte
+ST_Anstossbereich;08;vorn links
+ST_Anstossbereich;09;Dach
+ST_Anstossbereich;10;Boden
+ST_Anstossbereich;11;rundum
+ST_Antragsart;01;Neuantrag
+ST_Antragsart;02;Ersatzantrag
+ST_Antragsart;03;Versichererwechsel
+ST_Antragsart;04;Umstellungsantrag / Tarifwechsel
+ST_Antragsart;05;Fahrzeugwechsel
+ST_Antragsart;06;Überführung in eine andere Schicht. (Schicht 1 = Basisversorgung (z.B. Rürup-Rente), Schicht 2 = kapitalgedeckte Zusatzversorgung (bAV, Riester-Rente), Schicht 3 = Kapitalanlage (z.B. private Rentenversicherung))
+ST_Antragsstatus;1;in Bearbeitung (Das vertragsführende Unternehmen bearbeitet den Antrag.)
+ST_Antragsstatus;2;dokumentiert (Das vertragsführende Unternehmen hat den Antrag dokumentiert.)
+ST_Antragsstatus;3;abgelehnt (Das vertragsführende Unternehmen hat den Antrag abgelehnt.)
+ST_Antragsstatus;4;Warten auf Information (Das vertragsführende Unternehmen wartet auf eine Information vom Antragsteller oder Vermittler, um den Antrag weiter bearbeiten zu können.)
+ST_Antragsstatus;5;geparkt zur späteren Bearbeitung/Neuprüfung (Das vertragsführende Unternehmen hat den Antrag geparkt. Der Antrag wird später erneut geprüft und bearbeitet.)
+ST_Antragsstatus;6;widerrufen (Der Antragsteller hat den Antrag widerrufen.)
+ST_Antragsstatus;7;angenommen, wartet auf Dokumentierung (Das vertragsführende Unternehmen hat die Bearbeitung abgeschlossen und den Antrag angenommen. Die Dokumentierung erfolgt zu gegebener Zeit.)
+ST_Anwartschaft;0;keine Anwartschaft
+ST_Anwartschaft;1;kleine Anwartschaft
+ST_Anwartschaft;2;grosse Anwartschaft
+ST_Anwartschaftsgrund;01;Arbeitslosigkeit
+ST_Anwartschaftsgrund;02;GKV-Übertritt
+ST_Anwartschaftsgrund;03;Freie Heilfürsorge
+ST_Anwartschaftsgrund;04;Kleine Anwartschaft
+ST_Anwartschaftsgrund;05;Wirtschaftliche Notlage
+ST_Anwartschaftsgrund;06;Pflichtversicherung
+ST_Anwartschaftsgrund;07;Soldat/Zivildienst
+ST_Anwartschaftsgrund;08;Auslandsaufenthalt
+ST_Anwartschaftsgrund;09;Zahlungsunfähigkeit
+ST_Anwartschaftsgrund;10;Familienversicherung
+ST_Anwartschaftsgrund;11;Ausbildung/Studium
+ST_Anwartschaftsgrund;99;Sonstige Gründe
+ST_ArtDerBeratung;00;keine Angabe
+ST_ArtDerBeratung;01;persönliches Gespräch
+ST_ArtDerBeratung;02;telefonisch
+ST_ArtDerBeratung;03;per Fax
+ST_ArtDerBeratung;04;per E-Mail
+ST_ArtDerBeratung;05;postalisch / per Brief
+ST_ArtDerBeratung;06;per Internet
+ST_ArtDerBeratung;07;ohne Beratung
+ST_ArtDerLieferung;1001;UC-1 Vertrag
+ST_ArtDerLieferung;1002;UC-2 Vertrag
+ST_ArtDerLieferung;1003;UC-3 Vertrag
+ST_ArtDerLieferung;1004;UC-4 Vertrag
+ST_ArtDerLieferung;1005;UC-5 Vertrag
+ST_ArtDerLieferung;1006;UC-6 Vertrag
+ST_ArtDerLieferung;1103;UC-3 Vertrag + Inkasso
+ST_ArtDerLieferung;1104;UC-4 Vertrag + Inkasso
+ST_ArtDerLieferung;1105;UC-5 Vertrag + Inkasso
+ST_ArtDerLieferung;1203;UC-3 nur Inkasso
+ST_ArtDerLieferung;1204;UC-4 nur Inkasso
+ST_ArtDerLieferung;1205;UC-5 nur Inkasso
+ST_ArtDerLieferung;1303;UC-3 Prämienabrechnung
+ST_ArtDerLieferung;1304;UC-4 Prämienabrechnung
+ST_ArtDerLieferung;1305;UC-5 Prämienabrechnung
+ST_ArtDerLieferung;2001;UC-1 Schaden mit kumulierten Schadenbeträgen
+ST_ArtDerLieferung;2002;UC-2 Schaden mit kumulierten Schadenbeträgen
+ST_ArtDerLieferung;2101;UC-1 Schaden mit einzelnen Regulierungen
+ST_ArtDerLieferung;2102;UC-2 Schaden mit einzelnen Regulierungen
+ST_ArtDerLieferung;2104;UC-4 Schaden
+ST_ArtDerLieferung;2105;UC-5 Schaden
+ST_ArtDerLieferung;2106;UC-6 Schaden
+ST_ArtDerLieferung;2304;UC-4 Schadenabrechnung
+ST_ArtDerLieferung;2305;UC-5 Schadenabrechnung
+ST_ArtDerLieferung;2401;VA Abrechnung
+ST_ArtDerLieferung;2402;VA Klärungsanfrage
+ST_ArtDerLieferung;2403;VA Klärungsantwort
+ST_ArtDerLieferung;2404;VA Abrechnung anfordern
+ST_ArtDerSicherung;01;Fahrradschloss
+ST_ArtDerSicherung;02;Behältnis
+ST_ArtDerSicherung;03;Raum
+ST_ArtDerSicherung;04;Behältnis in Tresor / Schrank
+ST_ArtDerSicherung;05;in verschlossenem Kfz
+ST_ArtDerSicherung;06;in verschlossenem Kfz in Tief- oder Einzelgarage
+ST_ArtDerUmsatzbesteuerung;1;Regelbesteuert
+ST_ArtDerUmsatzbesteuerung;2;Differenzbesteuert
+ST_ArtDerUmsatzbesteuerung;3;Privatmarkt
+ST_ArtDerUnverfallbarkeit;gesetzlich;Gesetzliche Unverfallbarkeit.
+ST_ArtDerUnverfallbarkeit;vertraglich;Vertragliche Unverfallbarkeit.
+ST_ArtDerVorlaeufigenDeckung;1;Ablauf mit Vorlage der Police
+ST_ArtDerVorlaeufigenDeckung;2;Ablauf gemaess Feld "Ablauf der Vorlaeufigen Deckung"
+ST_ArtDerZulassung;01;Tageszulassung
+ST_ArtDerZulassung;02;Werkszulassung
+ST_ArtDerZulassung;03;Sonstige
+ST_ArtDesVorhabens;01;Neubau
+ST_ArtDesVorhabens;02;Umbau mit Eingriff in tragende Konstruktion
+ST_ArtDesVorhabens;03;Umbau ohne Eingriff in tragende Konstruktion
+ST_ArtDesVorhabens;04;Anbau
+ST_ArtDesVorhabens;05;Aufstockung
+ST_ArtDesVorhabens;06;Tief- oder Ingenieursbau
+ST_ArtDesVorhabens;07;mit Tiefgaragen
+ST_ArtDesVorhabens;08;mit Garagen
+ST_ArtDesVorhabens;09;mit Erdwärmenutzung mittels Kollektoren
+ST_ArtDesVorhabens;10;mit Erdwärmenutzung mittels Erdsonde bis 100m
+ST_ArtDesVorhabens;11;mit Erdwärmenutzung mittels Erdsonde bis 400m
+ST_ArtDesVorhabens;12;Neumontage
+ST_ArtDesVorhabens;13;Demontage
+ST_ArtDesVorhabens;14;De- und Remontage
+ST_ArtDesVorhabens;15;Montage und Demontage
+ST_ArtDesVorhabens;16;Reparaturen und Umbauten
+ST_ArtDesVorwurfs;1;Vergehen
+ST_ArtDesVorwurfs;2;Verbrechen
+ST_ArtDesVorwurfs;9;Sonstiges
+ST_ArtTechnischeAnlage;1;Lichtanlage
+ST_ArtTechnischeAnlage;2;Kraftanlage
+ST_ArtVerkehrsrechtsschutz;Fahrer;
+ST_ArtVerkehrsrechtsschutz;Fahrzeug;
+ST_ArtVerkehrsrechtsschutz;Verkehr;
+ST_ArtVermoegenswirksameLeistung;AVWL;Altersvorsorgewirksame Leistung
+ST_ArtVermoegenswirksameLeistung;VWL;Vermögenswirksame Leistung
+ST_ArtVPBeruecksichtigung;0;Keine besondere Beruecksichtigung
+ST_ArtVPBeruecksichtigung;1;Arzt-Kind
+ST_ArtVPBeruecksichtigung;2;Arzt-Ehegatte
+ST_ArtVPBeruecksichtigung;3;Beamten-Kind
+ST_ArtVPBeruecksichtigung;4;Beamten-Ehegatte
+ST_ArtWohnungseigentuemergemeinschaft;1;Sondereigentum
+ST_ArtWohnungseigentuemergemeinschaft;2;Gemeinschaftseigentum
+ST_Aufbewahrungsart;001;Wertschrank C1F
+ST_Aufbewahrungsart;002;Wertschrank C2F
+ST_Aufbewahrungsart;003;Eingemauerter Stahlschrank mit mehrwandiger Tür
+ST_Aufbewahrungsart;004;Mehrwandiger Stahlschrank
+ST_Aufbewahrungsart;005;Mehrwandiger Stahlschrank, mindestens 300 kg
+ST_Aufbewahrungsart;006;Panzer-Geldschrank/gepanzerter Geldschrank
+ST_Aufbewahrungsart;007;Panzer-Geldschrank D1
+ST_Aufbewahrungsart;008;Panzer-Geldschrank D2
+ST_Aufbewahrungsart;009;Panzer-Geldschrank E
+ST_Aufbewahrungsart;010;Panzer-Geldschrank D10
+ST_Aufbewahrungsart;011;Panzer-Geldschrank D20
+ST_Aufbewahrungsart;012;Panzer-Geldschrank E10
+ST_Aufbewahrungsart;013;Einbauschrank (Wertschrank) Widerstandsgrad 0
+ST_Aufbewahrungsart;014;Einbauschrank (Wertschrank) Widerstandsgrad N
+ST_Aufbewahrungsart;015;Einbauschrank (Wertschrank) Widerstandsgrad I (1)
+ST_Aufbewahrungsart;016;Einbauschrank (Wertschrank) Widerstandsgrad II (2)
+ST_Aufbewahrungsart;017;Einbauschrank (Wertschrank) Widerstandsgrad III (3)
+ST_Aufbewahrungsart;020;Tresorraum KT (Kleintresorraum)
+ST_Aufbewahrungsart;021;Tresorraum LT0
+ST_Aufbewahrungsart;022;Tresorraum LT0 mit Kernbohrschutz
+ST_Aufbewahrungsart;023;Tresorraum T1
+ST_Aufbewahrungsart;024;Tresorraum T1 mit Kernbohrschutz
+ST_Aufbewahrungsart;025;Tresorraum T2
+ST_Aufbewahrungsart;026;Tresorraum T2 mit Kernbohrschutz
+ST_Aufbewahrungsart;027;Tresorraum LT1
+ST_Aufbewahrungsart;028;Tresorraum LT1 mit Kernbohrschutz
+ST_Aufbewahrungsart;029;Tresorraum T10
+ST_Aufbewahrungsart;030;Tresorraum T10 mit Kernbohrschutz
+ST_Aufbewahrungsart;031;Tresorraum T20
+ST_Aufbewahrungsart;032;Tresorraum T20 mit Kernbohrschutz
+ST_Aufbewahrungsart;033;Tresorraum alter Bauart
+ST_Aufbewahrungsart;034;Wertschutzschrank Widerstandsgrad N
+ST_Aufbewahrungsart;035;Wertschutzschrank Widerstandsgrad 0
+ST_Aufbewahrungsart;036;Wertschutzschrank Widerstandsgrad I
+ST_Aufbewahrungsart;037;Wertschutzschrank Widerstandsgrad II
+ST_Aufbewahrungsart;038;Wertschutzschrank Widerstandsgrad III
+ST_Aufbewahrungsart;039;Wertschutzschrank Widerstandsgrad IV
+ST_Aufbewahrungsart;040;Wertschutzschrank Widerstandsgrad IV mit CD
+ST_Aufbewahrungsart;041;Wertschutzschrank Widerstandsgrad V
+ST_Aufbewahrungsart;042;Wertschutzschrank Widerstandsgrad V mit CD
+ST_Aufbewahrungsart;043;Wertschutzschrank Widerstandsgrad VI
+ST_Aufbewahrungsart;044;Wertschutzschrank Widerstandsgrad VI mit CD
+ST_Aufbewahrungsart;045;Wertschutzschrank Widerstandsgrad VII
+ST_Aufbewahrungsart;046;Wertschutzschrank Widerstandsgrad VII mit CD
+ST_Aufbewahrungsart;047;Wertschutzschrank Widerstandsgrad VIII
+ST_Aufbewahrungsart;048;Wertschutzschrank Widerstandsgrad VIII mit CD
+ST_Aufbewahrungsart;049;Wertschutzschrank Widerstandsgrad IX
+ST_Aufbewahrungsart;050;Wertschutzschrank Widerstandsgrad IX mit CD
+ST_Aufbewahrungsart;051;Wertschutzschrank Widerstandsgrad X
+ST_Aufbewahrungsart;052;Wertschutzschrank Widerstandsgrad X mit CD
+ST_Aufbewahrungsart;054;Wertschutzraum Widerstandsgrad N
+ST_Aufbewahrungsart;055;Wertschutzraum Widerstandsgrad I
+ST_Aufbewahrungsart;056;Wertschutzraum Widerstandsgrad II
+ST_Aufbewahrungsart;057;Wertschutzraum Widerstandsgrad III
+ST_Aufbewahrungsart;058;Wertschutzraum Widerstandsgrad IV
+ST_Aufbewahrungsart;059;Wertschutzraum Widerstandsgrad V
+ST_Aufbewahrungsart;060;Wertschutzraum Widerstandsgrad VI
+ST_Aufbewahrungsart;061;Wertschutzraum Widerstandsgrad VII
+ST_Aufbewahrungsart;062;Wertschutzraum Widerstandsgrad VIII
+ST_Aufbewahrungsart;063;Wertschutzraum Widerstandsgrad VIII mit CD
+ST_Aufbewahrungsart;064;Wertschutzraum Widerstandsgrad IX
+ST_Aufbewahrungsart;065;Wertschutzraum Widerstandsgrad IX mit CD
+ST_Aufbewahrungsart;066;Wertschutzraum Widerstandsgrad X
+ST_Aufbewahrungsart;067;Wertschutzraum Widerstandsgrad X mit CD
+ST_Aufbewahrungsart;068;Wertschutzraum Widerstandsgrad XI
+ST_Aufbewahrungsart;069;Wertschutzraum Widerstandsgrad XI mit CD
+ST_Aufbewahrungsart;070;Wertschutzraum Widerstandsgrad XII
+ST_Aufbewahrungsart;071;Wertschutzraum Widerstandsgrad XII mit CD
+ST_Aufbewahrungsart;072;Wertschutzraum Widerstandsgrad XIII
+ST_Aufbewahrungsart;073;Wertschutzraum Widerstandsgrad XIII mit CD
+ST_Aufbewahrungsart;075;Panzerraum nach RAL-RG 625/5
+ST_Aufbewahrungsart;076;Geldschrankeinheit RAL-RG 626/3 Geldausgabeautomat
+ST_Aufbewahrungsart;077;unter Verschluss in Behältnissen mit erhöhter Sicherheit
+ST_Aufbewahrungsart;078;unter anderem Verschluss
+ST_Aufbewahrungsart;079;ohne Verschluss / offen in den Versicherungsräumen
+ST_Aufbewahrungsart;080;in verschlossenen und unverschlossen Behältnissen
+ST_Aufbewahrungsart;081;in Wertbehältnis
+ST_Aufbewahrungsart;082;im Freien auf dem Grundstück ohne Zelte / Pavillons
+ST_Aufbewahrungsart;083;in Zelten / Pavillons
+ST_Aufbewahrungsart;084;in verschlossenen Bauwagen auf dem versicherten Grundstück
+ST_Aufbewahrungsart;085;in Containern auf dem versicherten Grundstück
+ST_Aufbewahrungsart;086;in Rohbauten
+ST_Aufbewahrungsart;087;unter Erdgleiche unterhalb der vorgeschriebenen Mindestlagerhöhe von 12 cm
+ST_Aufbewahrungsart;088;in Arzttaschen u -koffern
+ST_Auftraggeber;01;Bauherr privat
+ST_Auftraggeber;02;Bauherr gewerblich
+ST_Auftraggeber;03;Architekt
+ST_Auftraggeber;04;Bauträger
+ST_Auftraggeber;05;Generalunternehmer
+ST_Auftraggeber;06;Besteller
+ST_Auftraggeber;07;Hersteller
+ST_Auftraggeber;08;Montagefirma
+ST_Aufwandsart;01;Versicherungsleistung
+ST_Aufwandsart;02;Zinsen
+ST_Aufwandsart;03;Rentenzahlung
+ST_Aufwandsart;04;Regress
+ST_Aufwandsart;05;Rückzahlung aus Kfz-Schaden
+ST_Aufwandsart;06;Verkaufserlös
+ST_Aufwandsart;07;Kulanzzahlung
+ST_Aufwandsart;99;Sonstiges
+ST_Ausfallvereinbarung;01;Keine Ausfallleistung
+ST_Ausfallvereinbarung;02;Mietwagen
+ST_Ausfallvereinbarung;03;Nutzungsausfall
+ST_Ausfallvereinbarung;04;Mietwagen und Nutzungsausfall
+ST_Ausfallvereinbarung;05;Vorhaltekosten
+ST_AusloeserDesGeschaeftsvorfalls;001;Unternehmen
+ST_AusloeserDesGeschaeftsvorfalls;002;Vertragspartner
+ST_AusloeserDesGeschaeftsvorfalls;003;Versicherte Person
+ST_AusloeserDesGeschaeftsvorfalls;004;Vermittler
+ST_AusloeserDesGeschaeftsvorfalls;005;Beitragszahler
+ST_AusloeserDesGeschaeftsvorfalls;006;Gläubiger
+ST_AusloeserDesGeschaeftsvorfalls;007;wirtschaftlich Berechtigter
+ST_AusloeserDesGeschaeftsvorfalls;008;Postempfänger
+ST_AusloeserDesGeschaeftsvorfalls;009;Bezugsberechtigter
+ST_AusloeserDesGeschaeftsvorfalls;010;Leistungsempfänger
+ST_AusloesungDerLeistung;1;Tod
+ST_AusloesungDerLeistung;2;Endalter
+ST_AusloesungDerLeistung;3;Beitragsrückgewähr
+ST_AusloesungDerLeistung;4;Rückkauf
+ST_AusloesungDerLeistung;5;BU/EU
+ST_AusloesungDerLeistung;6;Unfall
+ST_AusloesungDerLeistung;7;Krankheit (DD)
+ST_AusloesungDerLeistung;8;Pflegefall
+ST_Ausweistyp;1;Personalausweis
+ST_Ausweistyp;2;Reisepass
+ST_Ausweistyp;3;Kinderausweis mit Lichtild
+ST_Ausweistyp;4;Geburtsurkunde (nur bei Kindern)
+ST_Ausweistyp;5;Dienst-, Ministerial- oder Diplomatenpass
+ST_Ausweistyp;6;Aufenthaltsgestattung gemäß §63 Asylverfahrensgesetz
+ST_Ausweistyp;7;Bescheinigung über Aufenthaltsgenehmigung oder Duldung nach §39 Abs.1 AuslG
+ST_Ausweistyp;8;Reisedokument gemäß §39 Abs.2 AuslG (§14 Abs.1 Nr.1 DV AuslG)
+ST_Ausweistyp;9;Reiseausweis als Passersatz gemäß §39 Abs.2 AuslG (§14 Abs.1 Nr.3 DV AuslG)
+ST_Ausweistyp;10;Reiseausweis für Flüchtlinge gemäß §39 Abs.2 AuslG (§14 Abs.2 Nr.1 DV AuslG)
+ST_Ausweistyp;11;Reiseausweis für Staatenlose gemäß §39 Abs.2 AuslG (§14 Abs.2 Nr.2 DV AuslG)
+ST_Ausweistyp;12;Ausweis für Mitglieder und Bedienstete der Organe der Europäischen Gemeinschaften (§14 Abs.2 Nr.3 DV AuslG)
+ST_Ausweistyp;13;Ausweis für Abgeordnete der Parlamentarischen Versammlung des Europarates (§14 Abs.2 Nr.4 DV AuslG)
+ST_Ausweistyp;14;Geneva Convention Identification Card
+ST_BasisDerWerbeerlaubnis;01;Beim Vermittler im Antrag erteilt.
+ST_BasisDerWerbeerlaubnis;02;Beim Unternehmen während der Vertragslaufzeit erteilt.
+ST_BasisDerWerbeerlaubnis;03;Beim Vermittler während der Vertragslaufzeit erteilt.
+ST_BasisDerWerbeerlaubnis;04;Widerruf innerhalb der Widerrufsfrist.
+ST_BasisDerWerbeerlaubnis;05;Werbeverbotsliste (z.B. Robinson)
+ST_Bauartklasse;0;sonstiges / nicht aufgeteilt / Sachen im Freien
+ST_Bauartklasse;1;Bauartklasse I
+ST_Bauartklasse;2;Bauartklasse II
+ST_Bauartklasse;3;Bauartklasse III
+ST_Bauartklasse;4;Bauartklasse IV
+ST_Bauartklasse;5;Bauartklasse V
+ST_Bauartklasse;6;Fertighausgruppe 1
+ST_Bauartklasse;7;Fertighausgruppe 2
+ST_Bauartklasse;8;Fertighausgruppe 3
+ST_BedingungUebergabeform;00;keine Angabe
+ST_BedingungUebergabeform;01;Original-Druckstück
+ST_BedingungUebergabeform;02;Ausdruck
+ST_BedingungUebergabeform;03;E-Mail
+ST_BedingungUebergabeform;04;Download
+ST_BedingungUebergabeform;05;Datenträger
+ST_BedingungUebergabeform;06;vom Kunden nicht gewünscht
+ST_BedingungUebergabeform;07;Aushändigung nicht erfolgt
+ST_BedingungUebergabeform;08;Kundeninformations-CD
+ST_Befestigung;01;lose
+ST_Befestigung;02;fest verbunden (z.B. vollständig verklebt)
+ST_BeginnEntgeltumwandlung;1;Nicht Zeitversetzt. Beginn der Entgeltumwandlung im Monat der Beitragszahlung.
+ST_BeginnEntgeltumwandlung;2;Zeitversetzt. Beginn der Entgeltumwandlung im Monat vor der Beitragszahlung.
+ST_Beihilfestatus;1;Beihilfeberechtigter
+ST_Beihilfestatus;2;Berücksichtigungsfähiger Ehegatte
+ST_Beihilfestatus;3;Berücksichtigungsfähiges Kind
+ST_Beihilfestatus;4;Versorgungsempfänger
+ST_Beihilfestatus;5;Waise / Halbwaise
+ST_Beihilfestatus;6;Freie Heilfürsorge
+ST_Beihilfetraeger;BB;Brandenburg
+ST_Beihilfetraeger;BLO;Berlin Ost
+ST_Beihilfetraeger;BLW;Berlin West
+ST_Beihilfetraeger;BR;Bremen
+ST_Beihilfetraeger;BW;Baden-Wuerttemberg
+ST_Beihilfetraeger;BY;Bayern
+ST_Beihilfetraeger;DP;Post
+ST_Beihilfetraeger;HBG;Hamburg
+ST_Beihilfetraeger;HES;Hessen
+ST_Beihilfetraeger;KVB;Bundesbahn
+ST_Beihilfetraeger;MV;Mecklenburg / Vorpommern
+ST_Beihilfetraeger;NDS;Niedersachsen
+ST_Beihilfetraeger;NW;Nordrhein-Westfalen
+ST_Beihilfetraeger;RP;Rheinland-Pfalz
+ST_Beihilfetraeger;SA;Sachsen-Anhalt
+ST_Beihilfetraeger;SC;Sachsen
+ST_Beihilfetraeger;SH;Schleswig-Holstein
+ST_Beihilfetraeger;SL;Saarland
+ST_Beihilfetraeger;SO;Sonstige
+ST_Beihilfetraeger;TH;Thueringen
+ST_Beihilfetraeger;BDO;Bund Ost
+ST_Beihilfetraeger;BDW;Bund West
+ST_Beitragsrueckgewaehr;01;vor Rentenbeginn
+ST_Beitragsrueckgewaehr;02;nach Rentenbeginn
+ST_Beitragsrueckgewaehr;03;vor und nach Rentenbeginn
+ST_Berechnungseinheit;10;Prozent
+ST_Berechnungseinheit;11;Promille
+ST_Berechnungseinheit;15;Faktor
+ST_Berechnungseinheit;20;Waehrung gem. Waehrunsschluessel
+ST_Berechnungseinheit;21;Mark 1914
+ST_BerechnungseinheitHaftpflicht;001;Personen, Person
+ST_BerechnungseinheitHaftpflicht;002;Lohn-/Gehaltssumme
+ST_BerechnungseinheitHaftpflicht;003;Umsatz
+ST_BerechnungseinheitHaftpflicht;004;Anlagen, Anlage
+ST_BerechnungseinheitHaftpflicht;005;Strahler
+ST_BerechnungseinheitHaftpflicht;006;Bausumme
+ST_BerechnungseinheitHaftpflicht;007;Beitrag
+ST_BerechnungseinheitHaftpflicht;008;Tanks, Tank
+ST_BerechnungseinheitHaftpflicht;010;Apparate, Apparat
+ST_BerechnungseinheitHaftpflicht;011;Megawatt / H
+ST_BerechnungseinheitHaftpflicht;012;km Laenge
+ST_BerechnungseinheitHaftpflicht;014;Anschluesse, Anschluss
+ST_BerechnungseinheitHaftpflicht;015;CBM
+ST_BerechnungseinheitHaftpflicht;016;CBM Inhalt
+ST_BerechnungseinheitHaftpflicht;017;Schlachtungen, Schlachtung
+ST_BerechnungseinheitHaftpflicht;018;Faecher, Fach
+ST_BerechnungseinheitHaftpflicht;019;Agenturen, Agentur
+ST_BerechnungseinheitHaftpflicht;020;Hetar (tariflich)
+ST_BerechnungseinheitHaftpflicht;021;Hektar
+ST_BerechnungseinheitHaftpflicht;022;Spritzen, Spritze
+ST_BerechnungseinheitHaftpflicht;023;Tiere, Tier
+ST_BerechnungseinheitHaftpflicht;024;Raeume, Raum
+ST_BerechnungseinheitHaftpflicht;025;Versicherungssumme
+ST_BerechnungseinheitHaftpflicht;026;Geraete, Geraet
+ST_BerechnungseinheitHaftpflicht;027;Pferde, Pferd
+ST_BerechnungseinheitHaftpflicht;028;Bahnen, Bahn
+ST_BerechnungseinheitHaftpflicht;029;Betten, Bett
+ST_BerechnungseinheitHaftpflicht;030;Ponys, Pony
+ST_BerechnungseinheitHaftpflicht;031;Hengste, Hengst
+ST_BerechnungseinheitHaftpflicht;032;Stiere, Stier
+ST_BerechnungseinheitHaftpflicht;033;Hunde, Hund
+ST_BerechnungseinheitHaftpflicht;034;Voelker, Volk
+ST_BerechnungseinheitHaftpflicht;035;Schafe, Schaf
+ST_BerechnungseinheitHaftpflicht;036;Bagger
+ST_BerechnungseinheitHaftpflicht;038;Honorar
+ST_BerechnungseinheitHaftpflicht;039;Zimmer
+ST_BerechnungseinheitHaftpflicht;040;Fremdenzimmer
+ST_BerechnungseinheitHaftpflicht;041;Schiess-Staende, Schiess-Stand
+ST_BerechnungseinheitHaftpflicht;043;Bloecke, Block
+ST_BerechnungseinheitHaftpflicht;044;Plaetze, Platz
+ST_BerechnungseinheitHaftpflicht;046;Saele, Saal
+ST_BerechnungseinheitHaftpflicht;047;Wirtschaften, Wirtschaft
+ST_BerechnungseinheitHaftpflicht;048;qm Flaeche
+ST_BerechnungseinheitHaftpflicht;049;Lenker
+ST_BerechnungseinheitHaftpflicht;050;qm
+ST_BerechnungseinheitHaftpflicht;051;KFZ
+ST_BerechnungseinheitHaftpflicht;052;Automaten, Automat
+ST_BerechnungseinheitHaftpflicht;054;Spielfelder, Spielfeld
+ST_BerechnungseinheitHaftpflicht;055;Einstellplaetze, Einstellplatz
+ST_BerechnungseinheitHaftpflicht;056;Saeuglinge, Saeugling
+ST_BerechnungseinheitHaftpflicht;057;Schwestern, Schwester
+ST_BerechnungseinheitHaftpflicht;059;Probanden, Proband
+ST_BerechnungseinheitHaftpflicht;060;Besucher
+ST_BerechnungseinheitHaftpflicht;061;Badeeinrichtungen, Badeeinrichtung
+ST_BerechnungseinheitHaftpflicht;062;Fahrzeuge, Fahrzeug
+ST_BerechnungseinheitHaftpflicht;063;m Frontlaenge
+ST_BerechnungseinheitHaftpflicht;064;Wagen
+ST_BerechnungseinheitHaftpflicht;065;Uebergaenge, Uebergang
+ST_BerechnungseinheitHaftpflicht;066;Kreuzungen, Kreuzung
+ST_BerechnungseinheitHaftpflicht;068;Waagen, Waage
+ST_BerechnungseinheitHaftpflicht;070;Wagen / Container
+ST_BerechnungseinheitHaftpflicht;071;Einnahmen
+ST_BerechnungseinheitHaftpflicht;072;KFZ / Geraete, KFZ / Geraet
+ST_BerechnungseinheitHaftpflicht;073;Kraene, Kran
+ST_BerechnungseinheitHaftpflicht;074;Winden, Winde
+ST_BerechnungseinheitHaftpflicht;075;Vorrichtungen, Vorrichtung
+ST_BerechnungseinheitHaftpflicht;076;Teilnehmer
+ST_BerechnungseinheitHaftpflicht;077;Tafeln, Tafel
+ST_BerechnungseinheitHaftpflicht;078;Saeulen, Saeule
+ST_BerechnungseinheitHaftpflicht;079;Abonnenten, Abonnent
+ST_BerechnungseinheitHaftpflicht;080;KFZ-Einstellplaetze, KFZ-Einstellplatz
+ST_BerechnungseinheitHaftpflicht;081;Einstellplaetze fuer Fahrraeder, Einstellplatz fuer Fahrrad
+ST_BerechnungseinheitHaftpflicht;082;Schliessfaecher, Schliessfach
+ST_BerechnungseinheitHaftpflicht;083;Zapfstellen, Zapfstelle
+ST_BerechnungseinheitHaftpflicht;084;Aufbewahrungsscheine, Aufbewahrungsschein
+ST_BerechnungseinheitHaftpflicht;085;Mitglieder, Mitglied
+ST_BerechnungseinheitHaftpflicht;086;Boote, Boot
+ST_BerechnungseinheitHaftpflicht;087;qm Segelflaeche
+ST_BerechnungseinheitHaftpflicht;088;m Bahnlaenge
+ST_BerechnungseinheitHaftpflicht;089;Schanzen, Schanze
+ST_BerechnungseinheitHaftpflicht;091;Kinder, Kind
+ST_BerechnungseinheitHaftpflicht;092;Schuetzen, Schuetze
+ST_BerechnungseinheitHaftpflicht;093;Tiere / Boote / Geraete, Tier / Boot / Geraet
+ST_BerechnungseinheitHaftpflicht;094;Reiter
+ST_BerechnungseinheitHaftpflicht;095;Aussteller
+ST_BerechnungseinheitHaftpflicht;096;Teilnehmer / Besucher
+ST_BerechnungseinheitHaftpflicht;097;Boeller
+ST_BerechnungseinheitHaftpflicht;099;Mietwert
+ST_BerechnungseinheitHaftpflicht;100;Wohnungen, Wohnung
+ST_BerechnungseinheitHaftpflicht;101;Grundstuecke, Grundstueck
+ST_BerechnungseinheitHaftpflicht;102;m Strassenfront
+ST_BerechnungseinheitHaftpflicht;103;Mieter
+ST_BerechnungseinheitHaftpflicht;104;Garagen, Garage
+ST_BerechnungseinheitHaftpflicht;105;Pacht-/Mietwert
+ST_BerechnungseinheitHaftpflicht;107;Aerzte, Arzt
+ST_BerechnungseinheitHaftpflicht;108;Besamungen, Besamung
+ST_BerechnungseinheitHaftpflicht;109;qm Stallungen, qm Stallung
+ST_BerechnungseinheitHaftpflicht;110;Lehrer
+ST_BerechnungseinheitHaftpflicht;111;Schueler
+ST_BerechnungseinheitHaftpflicht;112;Jagdscheine, Jagdschein
+ST_BerechnungseinheitHaftpflicht;113;km Strassenlaenge
+ST_BerechnungseinheitHaftpflicht;115;Einwohner
+ST_BerechnungseinheitHaftpflicht;116;Schiffe, Schiff
+ST_BerechnungseinheitHaftpflicht;117;Schlepper
+ST_BerechnungseinheitHaftpflicht;118;PS
+ST_BerechnungseinheitHaftpflicht;120;BRT
+ST_BerechnungseinheitHaftpflicht;121;kw
+ST_BerechnungseinheitHaftpflicht;122;Versicherungen, Versicherung
+ST_BerechnungseinheitHaftpflicht;123;Warenumsatz
+ST_BerechnungseinheitHaftpflicht;124;Betriebsorte, Betriebsort
+ST_BerechnungseinheitHaftpflicht;126;Staelle, Stall
+ST_BerechnungseinheitHaftpflicht;127;GJ/H
+ST_BerechnungseinheitHaftpflicht;128;Hilfspersonen, Hilfsperson
+ST_BerechnungseinheitHaftpflicht;129;Maschinen, Maschine
+ST_BerechnungseinheitHaftpflicht;999;Sonstige
+ST_Berechnungsgrundlage;0;Einzel
+ST_Berechnungsgrundlage;1;Gruppe
+ST_Berechnungsgrundlage;2;Mitarbeiter
+ST_BeschaedigungKfz;01;Frontscheibe
+ST_BeschaedigungKfz;02;Seitenscheibe
+ST_BeschaedigungKfz;03;Heckscheibe
+ST_BeschaedigungKfz;04;Scheinwerfer
+ST_BeschaedigungKfz;05;Heckleuchte
+ST_BeschaedigungKfz;06;Spiegel
+ST_BeschaedigungKfz;07;Blinker
+ST_Beschaeftigtentyp;01;Vollzeitmitarbeiter
+ST_Beschaeftigtentyp;02;Teilzeitmitarbeiter
+ST_Beschaeftigtentyp;03;Aushilfe
+ST_Beschaeftigtentyp;04;Geringfügig Beschäftigter
+ST_Beschaeftigtentyp;05;Familienangehöriger
+ST_Beschaeftigtentyp;06;Auszubildender
+ST_Beschaeftigtentyp;07;Unentgeltlich
+ST_Beschaeftigtentyp;08;Saisonkraft
+ST_Beschaeftigtentyp;09;Heimarbeiter
+ST_Beschaeftigtentyp;10;Leiharbeiter
+ST_Besitzverhaeltnis;1;Leihe
+ST_Besitzverhaeltnis;2;Miete
+ST_Besitzverhaeltnis;3;Pacht
+ST_Besitzverhaeltnis;4;Verwahrung
+ST_Besitzverhaeltnis;5;Leasing
+ST_Besitzverhaeltnis;6;verbotene Eigenmacht / Diebstahl
+ST_Besitzverhaeltnis;99;Sonstiges
+ST_BesondererVerwendungszweck;1;Hypothekentilgung
+ST_BesondererVerwendungszweck;2;Vermögenswirksame Leistung
+ST_BesondererVerwendungszweck;3;Restschuldversicherung
+ST_BesondererVerwendungszweck;9;sonstiges
+ST_Betriebsstaette;Hauptbetrieb;
+ST_Betriebsstaette;Nebenbetrieb;
+ST_Betriebsstaette;Filiale;
+ST_Bewegungsrisiko;0;nein
+ST_Bewegungsrisiko;1;innerhalb des Versicherungsgrundstücks
+ST_Bewegungsrisiko;2;außerhalb des Versicherungsgrundstücks
+ST_Bewertungsschluessel;1;DAT-EDV-Code
+ST_Bewertungsschluessel;2;Schwacke-Schlüssel-Nr.
+ST_Bewertungsschluessel;9;Sonstige
+ST_Bezugsrecht;1;Versicherungsnehmer
+ST_Bezugsrecht;2;Versicherte Person
+ST_Bezugsrecht;3;Ehepartner zum Zeitpunkt des Leistungsfalls
+ST_Bezugsrecht;4;mitversicherte Person
+ST_Bezugsrecht;5;gesetzliche Erbfolge
+ST_Bezugsrecht;6;Reihenfolge: Ehegatte, Kinder, Eltern, Erben
+ST_Bezugsrecht;7;Leistungsberechtigte im Sinne des § 10 Abs.1, Nr. 2b EStG (Rürup-Rente)
+ST_Bezugsrecht;9;individuell
+ST_Bezugsrecht;10;Lebensgefährte
+ST_Bezugsrecht;11;Kinder
+ST_Bezugsrecht;12;§32 EStG (enger Hinterbliebenenbegriff gemäß BMF-Schreiben 31.03.10)
+ST_BootMotorlage;01;Außenborder
+ST_BootMotorlage;02;Innenborder
+ST_Brandloeschart;1;Wasser
+ST_Brandloeschart;2;Halon
+ST_Brandloeschart;3;CO2
+ST_Brandloeschart;4;Feuerlöscher
+ST_Brandloeschart;9;Sonstiges
+ST_BruttoNetto;Brutto;
+ST_BruttoNetto;Netto;
+ST_BUStaffel;0;default
+ST_BUStaffel;1;50/50
+ST_BUStaffel;2;25/75
+ST_BUStaffel;3;33/66
+ST_BUStaffel;9;siehe Besondere Vereinbarungen
+ST_Dachart;01;Flachdach
+ST_Dachart;02;Giebeldach
+ST_Dachart;99;sonstiges
+ST_Dateiformat;pdf;pdf
+ST_Dateiformat;xml;xml
+ST_Dateiformat;doc;doc
+ST_Dateityp;Dokument;Dokument
+ST_Dateityp;Nettodaten;Nettodaten
+ST_DatenschutzerklaerungKenntnisnahme;Aushaendigung;
+ST_DatenschutzerklaerungKenntnisnahme;Einsicht;
+ST_Dauer;bisTodVP;
+ST_Dauer;bisVertragsende;
+ST_Dauer;unbekannt;
+ST_Dauer;unbegrenzt;
+ST_DeckungsartKU;1;Insassenversicherung nach dem Pauschalsystem außer WKZ 001, 002, 003, 005, 012, 018, 022, 028, 760, 761, 765, 766
+ST_DeckungsartKU;2;Insassenversicherung nach dem Platzsystem außer WKZ 001, 002, 003, 005, 012, 018, 022, 028, 760, 761, 765, 766
+ST_DeckungsartKU;3;Insassenversicherung nach dem Pauschalsystem für WKZ 001, 002, 003, 005, 012, 018, 022, 028, 760, 761, 765, 766
+ST_DeckungsartKU;4;Berufs- und Beifahrerversicherung unter Ausschluss der Kraftradbenutzung
+ST_DeckungsartKU;5;Berufs- und Beifahrerversicherung mit Einschluss der Kraftradbenutzung
+ST_DeckungsartKU;9;Namentliche Unfallversicherung
+ST_DenkmalschutzUmfang;01;Gesamtes Gebäude
+ST_DenkmalschutzUmfang;02;Dach
+ST_DenkmalschutzUmfang;03;Fassade
+ST_DenkmalschutzUmfang;04;Fenster
+ST_DenkmalschutzUmfang;05;Haustür
+ST_DenkmalschutzUmfang;06;Innenliegende Gebäudeteile
+ST_DokumentartID;A-Bescheinigung;Agrarier-Bescheinigung
+ST_DokumentartID;Ablehnungsschreiben;
+ST_DokumentartID;Abnahmebestaetigung;
+ST_DokumentartID;Abrechnung;Kennzeichnet Abrechnungsdokumente
+ST_DokumentartID;Abtretungserklaerung;
+ST_DokumentartID;Aenderungsantrag;Antrag eines Service Consumers zur Änderung von Informationen (z.B. zu einem Partner oder Vertrag) beim Service Provider.
+ST_DokumentartID;Angebot;
+ST_DokumentartID;Angebotsanforderung;Angebotsanforderung=Formular für die Aufforderung zur Abgabe eines verbindlichen Angebotes im Sinne des Invitatiomodells
+ST_DokumentartID;Annahmebestaetigung;
+ST_DokumentartID;Anschaffungsbeleg;
+ST_DokumentartID;Anschreiben;
+ST_DokumentartID;Anschuldigungsschrift;
+ST_DokumentartID;Antrag;Versicherungsantrag ohne der nach VVG und VVG-Infoverordnung relevanten Informationen sowie ohne den Allgemeinen und Besonderen Bedingungen und Klauseln
+ST_DokumentartID;AntragAufZahlungAVWL;Antrag auf Zahlung AVWL
+ST_DokumentartID;AntragFondswechsel;Antragsformular für einen Fondswechsel.
+ST_DokumentartID;AntragVVG;VVG-konformer Versicherungsantrag inkl. der nach VVG und VVG-Infoverordnung relevanten Informationen sowie den Allgemeinen und Besonderen edingungen inkl. Klauseln
+ST_DokumentartID;AntragZuzahlung;Formular für die Zuzahlung zu einem bestehenden Vertrag
+ST_DokumentartID;Arbeitsnachweis;
+ST_DokumentartID;Arztbericht;
+ST_DokumentartID;Attest;
+ST_DokumentartID;Auftrag;
+ST_DokumentartID;AussergerichtlicheKorrespondenz;AussergerichtlicheKorrespondenz
+ST_DokumentartID;AVB;
+ST_DokumentartID;AZV-Belehrung;Anzeigepflichtverletzung-Belehrung
+ST_DokumentartID;B-Bescheinigung;Beamten-Bescheinigung
+ST_DokumentartID;bAVUebertrag;Formular für die Übertragung einer bAV im Rahmen des Übertragungsabkommens (bAV)
+ST_DokumentartID;BeitragsbescheinigungFuerFinanzamt;Beitragsbescheinigung nach Norm ??? Vorschrift Finanzamt
+ST_DokumentartID;Beratungsprotokoll;Dokument, dass die Beratung protokolliert.
+ST_DokumentartID;Berufung;
+ST_DokumentartID;BescheinigungAblaufleistung;Bescheinigung über die Ablaufleistung des Vertrags. Mögliche Inhalte: garantierte Werte (Kapital oder Rente), Werte inklusive angenommener Überschussbeteiligung, Werte zu Beginn der Abrufphase (Tarife mit Abrufoption), Hochrechnung mit gleichmäßiger Wertsteigerung (Investment), Hochrechnung inklusive Überschüsse (Riester).
+ST_DokumentartID;BescheinigungBeitraegeBisRueckkauf;Bescheinigung über die bis zum Rückkauf eingezahlten Beiträge gemäß § 20 Abs. 2 Nr. 6 EStG
+ST_DokumentartID;BescheinigungFuerArbeitsagentur;Information für die Agentur für Arbeit (Jobcenter) über Vertragswert (Rückkaufswert), eingezahlte Beiträge, Beginn und Ablauf/ Rentenbeginn, Ablauf Beitragszahlung, aktueller Beitrag, beitragsfreie Summe gemäß § 60 SGB II.
+ST_DokumentartID;BescheinigungFuerBAfoeGAmt;Bescheinigung zur Vorlage beim Amt für Ausbildungsförderung. Mögliche Inhalte: Altersvorsorgebeitrag, Rückkaufswert, Rentenleistungen und Art und Umfang der Krankenversicherung.
+ST_DokumentartID;BescheinigungFuerSozialamt;Bescheinigung zur Vorlage beim Sozialamt: Mögliche Inhalte: Altersvorsorgebeitrag, Rückkaufswert und Rentenleistungen.
+ST_DokumentartID;BescheinigungRueckkaufswert;Bescheinigung über den Rückkaufswert des Vertrags zum angegebenen Stichtag. Mögliche Inhalte: garantierter Rückkaufswert, Überschüsse, Mindestbeteiligung an den Bewertungsreserven, Kapitalertragssteuer (inkl. Soli).
+ST_DokumentartID;BescheinigungSteuerschaedlicheVerwendungRiester;Bescheinigung über die einbehaltenen und abgeführten Beträge im Rahmen einer steuerschädlichen Verwendung von Riester gemäß § 94 Abs. 1 Satz 4 und § 95 Abs. 1 EStG.
+ST_DokumentartID;BesondereBedingungen;Kontextspezifische Bedingungen, die über die allgemeinen Vertragsbedingungen hinaus gehen.
+ST_DokumentartID;Beweisbeschluss;
+ST_DokumentartID;Datenschutzerklaerung;Bestimmungen zur Speicherung und Verarbeitung sowie der Weitergabe von Daten gem gesetzlichen Datenschutzgesetz
+ST_DokumentartID;Deckungsnote;
+ST_DokumentartID;EigenerSchriftsatz;
+ST_DokumentartID;Eingangsbestaetigung;Bestätigung durch den Service Provider, dass der Request von Service Consumer fehlerfrei empfangen wurde.
+ST_DokumentartID;EinwilligungZurUebermittlungBeiBeamten;Einwilligung zur Übermittlung bei Beamten.
+ST_DokumentartID;EmpfangsbestaetigungVVGDokumente;
+ST_DokumentartID;EntnahmeAntrag;Antrag über die Entnahme von Fonds aus dem Vertrag, die zu einem bestimmten Stichtag verkauft werden.
+ST_DokumentartID;Erinnerung;
+ST_DokumentartID;Ermittlungsakte;
+ST_DokumentartID;Ersatzpolice;Neue Police, d.h. neue Inhaberurkunde
+ST_DokumentartID;Ersatzsteuerbescheinigung;Ersatzbescheinigung über die Kapitalerträge und die dafür bereits abgeführten Steuern eines Kalenderjahres gemäß § 45a Abs. 5 EStG
+ST_DokumentartID;EWSEE;Einwilligungs- / Schweigepflichtentbindungserklärung
+ST_DokumentartID;Fahrzeugbewertung;
+ST_DokumentartID;FATCA;FATCA-Fragebogen für natürliche oder juristische Personen
+ST_DokumentartID;FestsetzungsantragZulagen;Antragsformular für die Korrektur bzw. Festsetzung der Zulage gemäß § 90 Abs. 4 EStG
+ST_DokumentartID;Fondsuebersicht;Aktuelle Übersicht der Fonds, in die investiert werden kann
+ST_DokumentartID;Forderungsschreiben;
+ST_DokumentartID;Foto;
+ST_DokumentartID;Fragebogen;
+ST_DokumentartID;Freistellungsauftrag;Freistellungsauftrag für Kapitalerträge und Antrag auf ehegattenübergreifende/lebenspartnerübergreifende Verlustverrechnung
+ST_DokumentartID;Freistellungsbescheinigung;
+ST_DokumentartID;Fuehrerscheinkopie;Elektronische Kopie eines Führerscheins
+ST_DokumentartID;GerichtlicheVerfuegung;
+ST_DokumentartID;Gutachten;
+ST_DokumentartID;Handlungsanweisung;
+ST_DokumentartID;Identifikation;Formular zur Unterschriftenprobe/Identifikation (getDocument) bzw. Kopie des Ausweises (Request setChange)
+ST_DokumentartID;InfoMeldungAnZfA;Information über die Übermittlung von Daten an die ZfA (z.B. Rentenbezüge, geleistete Beiträge) gemäß § 22a EStG
+ST_DokumentartID;InternesDokumentFuerVermittler;
+ST_DokumentartID;Jahressteuerbescheinigung;Bescheinigung über die Kapitalerträge und die dafür bereits abgeführten Steuern eines Kalenderjahres gemäß § 45a Abs. 2 und 3 EStG
+ST_DokumentartID;JahresbescheinigungBasisRente;Bescheinigung über die Höhe der geleisteten Beiträge für das jeweilige Kalenderjahr gemäß § 10 Abs. 2 Buchstabe a EStG
+ST_DokumentartID;JahresbescheinigungRiester;Bescheinigung über Altersvorsorgebeiträge, Zulagen, Stand des Altersvorsorgevermögens und Stand des Wohnförderkontos gemäß § 92 EStG
+ST_DokumentartID;Jahresinformation;Information des Versicherers an den Versicherungsnehmer gemäß § 155 VVG über den Wertstand des Vertrags mit Werten zum vorgegebenen Stichtag. Dies kann auch die Kopie der Jahresinformation des letzten Jahres sein.
+ST_DokumentartID;Klage;
+ST_DokumentartID;Klauseln;Vertraglich vereinbarte Klausen, die die Bedingungen abändern oder ergänzen.
+ST_DokumentartID;Kompaktvorschlag;Werbliche Übersicht über ein Produkt, die versicherten Leistungen und die entsprechenden Beiträge in Kurzform. Häufig auch Datenblatt genannt.
+ST_DokumentartID;Kostenuebernahmeerklaerung;
+ST_DokumentartID;Kostenvoranschlag;
+ST_DokumentartID;Messprotokoll;
+ST_DokumentartID;Nachtrag;Dokumentierung einer Änderung zu einem Vertrag
+ST_DokumentartID;Nachversichererbescheinigung;Nachversichererbescheinigung zur Vorlage beim Vorversicherer.
+ST_DokumentartID;PiB;Produktinformationsblatt
+ST_DokumentartID;PiBVI;Produktinformationsblatt inkl. Vertragsinformationen
+ST_DokumentartID;Police;
+ST_DokumentartID;Prospekt;Werblich aufbereitete Erläuterung zum Produkt.
+ST_DokumentartID;Protokoll;
+ST_DokumentartID;Pruefbericht;
+ST_DokumentartID;PruefungGWG;Formulare zur GwG Überprüfung des Kunden (juristische oder natürliche Person)
+ST_DokumentartID;Rechnung;
+ST_DokumentartID;Reparaturbestaetigung;
+ST_DokumentartID;RiesterwechselFormular;Riesterwechsel-Formular
+ST_DokumentartID;Risikoanalyse;Fragebogen zur Analyse der zu versichernden Risiken je Sparten
+ST_DokumentartID;Risikofragebogen;Fragebogen zur Erfassung von risikorelevanten Informationen über juristisch eindeutig und im Klartext formulierte Fragen.
+ST_DokumentartID;RuecknahmeAenderung;Formular zur Rücknahme einer Änderung, z.B. Beitragsreduzierung, Kündigung, Beitragsfreistellung
+ST_DokumentartID;Schadenerledigung;
+ST_DokumentartID;Schadenmeldung;
+ST_DokumentartID;SchriftsatzDerGegenseite;
+ST_DokumentartID;SEPAMandatAntrag;Formular zur Beantragung eines SEPA-Mandats
+ST_DokumentartID;SEPAMandatKopie;Kopie eines (unterschriebenen) SEPA-Mandats
+ST_DokumentartID;SEPANotifikation;SEPA-PreNotifikationsschreiben
+ST_DokumentartID;SFR-Uebertragungsformular;Formular zur Übertragung des Schadenfreiheitsrabatts
+ST_DokumentartID;SonstigesDokument;
+ST_DokumentartID;Stehlgutliste;Liste gestohlener Gegenstände bzw. Güter.
+ST_DokumentartID;UnterlagenZurSchadenhoehe;
+ST_DokumentartID;Unterschriftenblatt;Ein standardisiertes Dokument zur Abgabe einer Willenserklärung per Unterschrift
+ST_DokumentartID;Urteil;
+ST_DokumentartID;Vergleich;
+ST_DokumentartID;Verlustbescheinigung;Bescheinigung über die Höhe der nicht ausgeglichenen Verluste gemäß § 43a Abs. 3 Satz 4 EStG
+ST_DokumentartID;Verlusterklaerung;Bei Kündigung oder bei Nichtauffinden des original Versicherungsscheines wird eine Verlusterklärung an den VN gesendet.
+ST_DokumentartID;Versicherungsbestaetigung;
+ST_DokumentartID;VersorgungsausgleichInformation;Information für das Familiengericht über Ehezeit, Ehezeitanteil und Ausgleichswert gemäß § 5 VersAusglG
+ST_DokumentartID;Vertrag;
+ST_DokumentartID;Verwertungsausschluss;Formular zum Schutz vor Pfändung bzw. Insolvenz
+ST_DokumentartID;VI;Vertragsinformationen
+ST_DokumentartID;Video;
+ST_DokumentartID;Vollmacht;Dokument zur Erteilung einer Vollmacht
+ST_DokumentartID;VollstreckbarerTitel;
+ST_DokumentartID;Vorladung;
+ST_DokumentartID;VorlaeufigeDeckung;
+ST_DokumentartID;Vorschlag;Versicherungsvorschlag ohne der nach VVG und VVG-Infoverordnung relevanten Informationen sowie ohne den Allgemeinen und Besonderen Bedingungen und Klauseln
+ST_DokumentartID;VorschlagVVG;VVG-konformer Versicherungsvorschlag inkl. der nach VVG und VVG-Infoverordnung relevanten Informationen sowie den Allgemeinen und Besonderen Bedingungen inkl. Klauseln
+ST_DokumentartID;VZR-Bescheinigung;Bescheinigung des Verkehrszentralregisters
+ST_DokumentartID;WechselVertragspartner;Formular für die Änderung von Vertragspartnern
+ST_DokumentartID;Widerrufsbelehrung;
+ST_DokumentartID;Zahlungsbestaetigung;
+ST_DokumentartID;Zeugenbericht;
+ST_DokumentartID;Zulagenantrag;Formular zur Beantragung von Zulagen gemäß § 89 Abs. 1 EStG
+ST_DokumentartID;Zulassungsbescheinigung;Elektronische Kopie des Fahrzeugscheins oder -briefs
+ST_DokumentartID;Zweitschrift;Beglaubigte Kopie eines Originaldokuments
+ST_Drittrecht;01;Abtretung
+ST_Drittrecht;02;Verpfändung
+ST_Drittrecht;03;Pfändung
+ST_Drittrecht;04;Konkurs
+ST_Drittrecht;05;Vergleich
+ST_Durchfuehrungsweg;Direktversicherung;
+ST_Durchfuehrungsweg;Pensionsfonds;
+ST_Durchfuehrungsweg;Pensionskasse;
+ST_Durchfuehrungsweg;Pensionszusage;
+ST_Durchfuehrungsweg;PrivateRiesterversicherung;
+ST_Durchfuehrungsweg;Unterstuetzungskasse;
+ST_Durchfuehrungsweg;Privat;
+ST_Durchfuehrungsweg;Riesterdirektversicherung;
+ST_DynamikKategorieID;Beitrag;<<Beitragsdynamik>> Hierbei wird die Dynamik auf den Beitrag gerechnet
+ST_DynamikKategorieID;Leistung;<<Leistungsdynamik>> Hierbei wird die Dynamik auf die Leistung (z.B. Versicherungssumme) gerechnet.
+ST_DynamikKategorieID;BeitragUndLeistung;<<Beitrags- und Leistungsdynamik>> Regelmaessige Erhoehung der Beitraege bei gleichzeitiger Erhoehung der Leistungen im gleichen Umfang.
+ST_DynamikKategorieID;Einzahlungen;Regelmäßige Anpassung (Erhöhung, Verminderung) der Einzahlungen.
+ST_Eigenbeitragsart;min;Minimaler Eigenbeitrag bei vollen Zulagen
+ST_Eigenbeitragsart;max;Maximaler Eigenbeitrag
+ST_Eigenbeitragsart;individuell;Individuell festgelegter Eigenbeitrag
+ST_EigenschaftVN;01;Mieter
+ST_EigenschaftVN;02;Vermieter
+ST_EigenschaftVN;03;Eigentümer
+ST_EigenschaftVN;04;Nutzungsberechtigter
+ST_EigenschaftVN;05;Arbeitgeber
+ST_EigenschaftVN;06;Arbeitnehmer
+ST_Eigentumsverhaeltnis;1;Eigentum VN
+ST_Eigentumsverhaeltnis;2;Eigentum / Finanzierung
+ST_Eigentumsverhaeltnis;3;Leasing
+ST_Eigentumsverhaeltnis;4;Mieter
+ST_Eigentumsverhaeltnis;5;Pächter
+ST_Eigentumsverhaeltnis;6;Niessbrauch
+ST_EinbruchmeldeanlageStatus;1;eingeschaltet
+ST_EinbruchmeldeanlageStatus;2;nicht eingeschaltet
+ST_EinbruchmeldeanlageStatus;3;nicht vorhanden
+ST_Einkommensart;1;Einkünfte aus Land- und Forstwirtschaft
+ST_Einkommensart;2;Einkünfte aus Gewerbebetrieb
+ST_Einkommensart;3;Einkünfte aus selbstständiger Arbeit
+ST_Einkommensart;4;Einkünfte aus nichtselbstständiger Arbeit
+ST_Einkommensart;5;Einkünfte aus Kapitalvermögen
+ST_Einkommensart;6;Einkünfte aus Vermietung und Verpachtung
+ST_Einkommensart;7;Sonstige Einkünfte
+ST_Einkommensart;7a;wiederkehrende Bezüge (z.B. Renten)
+ST_Einkommensart;7b;Unterhaltsleistungen Geschiedener und getrennt Lebender
+ST_Einkommensart;7c;Spekulationsgeschäfte
+ST_Einkommensart;7d;Leistungen (z.B. gelegentliche Vermietung körperlicher Gegenstände)
+ST_Einkommensart;7e;Abgeordnetenbezüge
+ST_Elementart;01;Kategorie
+ST_Elementart;02;Ueberschrift
+ST_Elementart;03;Frage
+ST_ErmittlerSchadenkalkulation;1;durch Schadenschnelldienst
+ST_ErmittlerSchadenkalkulation;2;durch Schadenaußendienst
+ST_ErmittlerSchadenkalkulation;3;durch freien Sachverständigen
+ST_ErmittlerSchadenkalkulation;4;durch Handwerker / Werkstatt
+ST_Ermittlungsart;abgelesen;
+ST_Ermittlungsart;geschaetzt;
+ST_Ermittlungsart;angegeben;
+ST_ExtranetZielID;001;Hauptmenü
+ST_ExtranetZielID;002;Stammdaten
+ST_ExtranetZielID;003;Bearbeiten
+ST_ExtranetZielID;004;Verträge
+ST_ExtranetZielID;005;Dokumente
+ST_ExtranetZielID;006;Vorgänge
+ST_ExtranetZielID;007;Schäden
+ST_ExtranetZielID;008;Inkassostand
+ST_ExtranetZielID;009;Angebot
+ST_ExtranetZielID;010;Anfrage
+ST_ExtranetZielID;011;Schadenmeldung
+ST_ExtranetZielID;012;Rückkaufwert
+ST_ExtranetZielID;013;Rabattretter
+ST_ExtranetZielID;014;Vereinbarungen
+ST_ExtranetZielID;015;Produktion
+ST_ExtranetZielID;016;Provision
+ST_ExtranetZielID;017;Ranking
+ST_ExtranetZielID;018;Posteingang
+ST_ExtranetZielID;019;Postausgang
+ST_ExtranetZielID;020;Störfälle
+ST_ExtranetZielID;021;Auswertungen
+ST_ExtranetZielID;022;Rundschreiben
+ST_ExtranetZielID;023;Bestellen
+ST_ExtranetZielID;024;Download
+ST_ExtranetZielID;025;Kontakt
+ST_ExtranetZielID;026;GDV
+ST_ExtranetZielID;027;Partnersuche
+ST_ExtranetZielID;028;Vetragsuche
+ST_ExtranetZielID;029;Schadensuche
+ST_ExtranetZielID;999;sonstige
+ST_Fahrerassistenzsystem;001;Antiblockiersystem (ABS)
+ST_Fahrerassistenzsystem;002;Tempomat (Geschwindigkeitsregelanlage) in Kraftfahrzeugen, der bei der Regelung den Abstand zu einem vorausfahrenden Fahrzeug als zusätzliche Rückführ- und Stellgröße einbezieht.
+ST_Fahrerassistenzsystem;003;Einparkhilfe
+ST_Fahrerassistenzsystem;004;Spurwechselassistent
+ST_Fahrerassistenzsystem;005;Totwinkel-Überwachung
+ST_Fahrerassistenzsystem;006;Spurassistent (warnt den Fahrer eines Fahrzeuges vor dem Verlassen der Fahrspur auf einer Straße)
+ST_Fahrerassistenzsystem;007;Abstand-/Bremsassistent (erkennt die Entfernung des Fahrzeugs von Hindernissen und leitet bei zu geringem Abstand eine Geschwindigkeitsreduktion oder Bremsung ein)
+ST_Fahrerassistenzsystem;008;Nachtsichtassistent (ein optisches System, das Kraftfahrzeugführern eine größere Sichtweite in der Dunkelheit bietet)
+ST_Fahrerassistenzsystem;009;Head-up-Display (ein Anzeigesystem, bei dem der Nutzer seine Kopfhaltung bzw. Blickrichtung beibehalten kann, weil die Informationen in sein Sichtfeld projiziert werden)
+ST_Fahrerassistenzsystem;010;Fahrstabilitäts-System (z.B. ESP)
+ST_Fahrerassistenzsystem;011;Antischlupfregelung (ASR)
+ST_Fahrerassistenzsystem;012;Rückfahrkamera
+ST_Fahrgebiet;00;keine Angabe
+ST_Fahrgebiet;01;Inland, überwiegend bis 100 km Umkreis
+ST_Fahrgebiet;02;ausschließlich im Inland
+ST_Fahrgebiet;03;In- und Ausland
+ST_Fahrgebiet;04;In- und Ausland innerhalb der EU
+ST_Fahrgebiet;99;unbekannt / sonstige
+ST_Fahrzeugart;1;Zwei- oder dreiraedriges oder leichtes vierraedriges Kraftfahrzeug
+ST_Fahrzeugart;2;Personenkraftwagen
+ST_Fahrzeugart;3;Kraftomnibus
+ST_Fahrzeugart;4;Lastkraftwagen
+ST_Fahrzeugart;5;Zugmaschine
+ST_Fahrzeugart;6;Selbstfahrende Arbeitsmaschine
+ST_Fahrzeugart;7;Anhaenger
+ST_Fahrzeugart;8;sonstiges Kraftfahrzeug
+ST_Fahrzeugdachart;0;geschlossen
+ST_Fahrzeugdachart;1;manuelles Schiebedach
+ST_Fahrzeugdachart;2;elektrisches Schiebedach
+ST_Fahrzeugdachart;3;manuelles Faltdach
+ST_Fahrzeugdachart;4;elektrisches Faltdach
+ST_Fahrzeugdachart;5;Hardtop
+ST_Familienstand;1;ledig
+ST_Familienstand;2;verheiratet
+ST_Familienstand;3;geschieden
+ST_Familienstand;4;verwitwet
+ST_Familienstand;5;getrennt lebend
+ST_Familienstand;6;eheähnliche Gemeinschaft
+ST_Familienstand;7;eingetragene Lebenspartnerschaft
+ST_Familienstand;9;sonstiges
+ST_Felgenart;1;Stahlfelgen
+ST_Felgenart;2;Leichtmetallfelgen
+ST_Felgenart;3;verchromte Felgen
+ST_Felgenart;9;Sonstige Felgen
+ST_Fenstergriffe;1;Fenstergriffe abgeschlossen
+ST_Fenstergriffe;2;Fenstergriffe nicht abgeschlossen
+ST_Fenstergriffe;3;keine abschließbaren Fenstergriffe vorhanden
+ST_Fensterstellung;1;geschlossen
+ST_Fensterstellung;2;offen
+ST_Fensterstellung;3;in Kippstellung
+ST_Feuerschaden;1;Feuererscheinung
+ST_Feuerschaden;2;Wärme
+ST_Feuerschaden;3;Glut
+ST_Feuerschaden;4;Rauch/Ruß
+ST_FinanzierungDerZusage;1;Rückdeckungsversicherung
+ST_FinanzierungDerZusage;2;Rückdeckungsversicherung partiell
+ST_FinanzierungDerZusage;3;Rückdeckungsversicherung kongruent
+ST_FinanzierungDerZusage;4;Pensionsfonds
+ST_Foerderungsberechtigung;selbst;Antragsteller ist selbst foerderungsberechtigt
+ST_Foerderungsberechtigung;partner;Antragsteller ist ueber Ehepartner foerderungsberechtigt
+ST_Foerderungsberechtigung;keine;Antragsteller ist nicht foerderungsberechtigt
+ST_Fremdversicherungsart;1;Vorversicherung
+ST_Fremdversicherungsart;2;Nebenversicherung
+ST_Fremdversicherungsart;3;Referenzvertrag
+ST_Fremdversicherungsart;4;Grundvertrag bei Excedentenabschluss
+ST_Fremdversicherungsart;5;sonstiger anzurechnender Vertrag
+ST_Fremdversicherungsart;6;abgelehnter Antrag
+ST_Fremdversicherungsart;7;Erstfahrzeug
+ST_Fuehrerscheinklasse;A;
+ST_Fuehrerscheinklasse;A1;
+ST_Fuehrerscheinklasse;B;
+ST_Fuehrerscheinklasse;BE;
+ST_Fuehrerscheinklasse;C1;
+ST_Fuehrerscheinklasse;C1E;
+ST_Fuehrerscheinklasse;C;
+ST_Fuehrerscheinklasse;CE;
+ST_Fuehrerscheinklasse;D1;
+ST_Fuehrerscheinklasse;D1E;
+ST_Fuehrerscheinklasse;D;
+ST_Fuehrerscheinklasse;DE;
+ST_Fuehrerscheinklasse;L;
+ST_Fuehrerscheinklasse;M;
+ST_Fuehrerscheinklasse;Mofa;
+ST_Fuehrerscheinklasse;S;
+ST_Fuehrerscheinklasse;T;
+ST_Fuehrerscheinklasse;1;
+ST_Fuehrerscheinklasse;1a;
+ST_Fuehrerscheinklasse;1b;
+ST_Fuehrerscheinklasse;2;
+ST_Fuehrerscheinklasse;3;
+ST_Fuehrerscheinklasse;4;
+ST_Fuehrerscheinklasse;5;
+ST_GarantiezeitArt;min;
+ST_GarantiezeitArt;max;
+ST_Gebaeudeart;001;Hauptgebäude
+ST_Gebaeudeart;002;Nebengebäude
+ST_Gebaeudeart;003;Garage
+ST_Gebaeudeart;004;Carport
+ST_Gebaeudeart;005;Gartenhaus
+ST_Gebaeudeart;006;Scheune
+ST_Gebaeudeart;900;Einfamilienhaus, DARF NICHT für TAA genutzt werden.
+ST_Gebaeudeart;901;Mehrfamilienhaus, DARF NICHT für TAA genutzt werden.
+ST_Gebaeudeart;999;sonstiger Gebäudeteil gemäß Beschreibung
+ST_Gebaeudeeigentum;01;Allein-Eigentum
+ST_Gebaeudeeigentum;02;Teil-Eigentum
+ST_Gebaeudeeigentum;03;Eigentumsgemeinschaft
+ST_Gebaeudeeigentum;04;Miete
+ST_Gebaeudeeigentum;05;Nießbrauch
+ST_Gebaeudeeinheit;01;Wohnung
+ST_Gebaeudeeinheit;02;Gewerbeeinheit
+ST_Gebaeudeeinheit;03;Einliegerwohnung
+ST_Gebaeudeeinheit;04;Garage / Abstellplatz
+ST_Gebaeudeeinheit;05;Bootsliegeplatz
+ST_Gebaeudeeinheit;06;Einfamilienhaus
+ST_Gebaeudeoeffnung;1;Gebäudeschädigung
+ST_Gebaeudeoeffnung;2;gekipptes Fenster
+ST_Gebaeudeoeffnung;3;offenes Fenster
+ST_Gebaeudeoeffnung;4;gekippte Tür
+ST_Gebaeudeoeffnung;5;offene Tür
+ST_Gebaeudewertermittlung;01;Wertermittlungsbogen
+ST_Gebaeudewertermittlung;02;Gutachten
+ST_Gebaeudewertermittlung;03;Kaufpreis
+ST_Gebaeudewertermittlung;04;Brandkasse
+ST_Gebaeudewertermittlung;05;Umrechnung des Gebäudeneubauwertes
+ST_Gebaeudewertermittlung;99;Sonstige
+ST_Gebuehrengrundlage;01;Rechtsanwaltsvergütungsgesetz Fassung 01.07.2004
+ST_Gebuehrengrundlage;02;Rechtsanwaltsvergütungsgesetz Fassung 01.08.2013
+ST_Gefahrengruppe;A;Gefahrengruppe A
+ST_Gefahrengruppe;B;Gefahrengruppe B
+ST_Gefahrengruppe;E;Einheitsgefahren
+ST_Gefahrengruppe;F;Frauen, unabhängig davon welche Berufstätigkeit sie ausüben.
+ST_Gefahrengruppe;K;Kind
+ST_Gefahrengruppe;S;Senioren
+ST_Gefahrengruppe;Z;Freizeitunfallversicherung, bei der die berufliche Tätigkeit nicht versichert ist
+ST_Gefahrenzone;000;Tarifzone allgemein
+ST_Gefahrenzone;001;Tarifzone Hausrat
+ST_Gefahrenzone;002;Tarifzone Wohngebaeude
+ST_Gefahrenzone;010;Leitungswasserzone
+ST_Gefahrenzone;011;ED-Zone
+ST_Gefahrenzone;012;Sturmzone
+ST_Gefahrenzone;013;Feuerzone
+ST_Gefahrenzone;020;Erdbebenzone
+ST_Gefahrenzone;021;Gefaehrdungsklasse Elementar
+ST_Gefahrenzone;022;Bach- und Inselzone
+ST_Gefahrenzone;030;Fahrradzone
+ST_Gefahrenzone;040;Überspannung
+ST_Gefahrgut;00;ohne Angabe
+ST_Gefahrgut;01;kein Gefahrgut
+ST_Gefahrgut;02;Gefahrguttransport ohne Genehmigungspflicht
+ST_Gefahrgut;03;Gefahrguttransport mit Genehmigungspflicht
+ST_Gefahrgut;04;Beförderung von Treibstoff und leichtem Heizöl
+ST_Gefahrgut;99;sonstige Gefahrguttransporte
+ST_Geltungsbereich;1;Inland
+ST_Geltungsbereich;2;Ausland (Europa und Mittelmeerstaaten)
+ST_Geltungsbereich;3;Europa und Mittelmeerstaaten
+ST_Geltungsbereich;4;Ausland (weltweit)
+ST_Geltungsbereich;5;Weltweit
+ST_Gerichtstyp;01;Finanzgericht
+ST_Gerichtstyp;02;Verwaltungsgericht
+ST_Geschlecht;1;maennlich
+ST_Geschlecht;2;weiblich
+ST_Getriebeart;0;ohne Getriebe
+ST_Getriebeart;1;Schaltgetriebe
+ST_Getriebeart;2;automatisches Getriebe
+ST_Getriebeart;3;sequentielles Getriebe (z.B. Tiptronic)
+ST_Getriebeart;9;sonstige
+ST_GewerblichPrivat;1;gewerblich
+ST_GewerblichPrivat;2;privat
+ST_Glasrisiko;01;Einfamilienhaus ohne Einliegerwohnung
+ST_Glasrisiko;02;Einfamilienhaus mit Einliegerwohnung
+ST_Glasrisiko;03;Mietwohnung
+ST_Glasrisiko;04;Wohnung moebliert vermietet
+ST_Glasrisiko;05;Mehrfamilienhaus
+ST_Glasrisiko;06;Wohngebaeude
+ST_Glasrisiko;07;Geschaeftsgebaeude
+ST_Glasrisiko;08;Wohn- / Geschaeftsgebaeude
+ST_Glasrisiko;09;Buerogebaeude
+ST_Glasrisiko;10;Geschaefts- / Buerobetrieb
+ST_Glasrisiko;11;Industriebau
+ST_Glasrisiko;12;Glas - Keramik
+ST_Glasrisiko;13;Aquarium
+ST_Glasrisiko;14;Ganzglaskonstruktion
+ST_Glasrisiko;15;Werbeanlagen
+ST_Glasrisiko;16;Kunststoff
+ST_Glasrisiko;17;Inhalt
+ST_Glasrisiko;99;Sonstiges
+ST_Grundstueckart;UnbebautesGrundstueck;unbebautes Grundstück
+ST_Grundstueckart;LandwirtschaftlichesGrundstueck;landwirtschaftliches Grundstück
+ST_Grundstueckart;Gewerbegrundstueck;Gewerbegrundstück
+ST_Grundstueckart;Bootsliegeplatz;
+ST_GruppenvertragspartnerStatus;01;bereits Mitglied
+ST_GruppenvertragspartnerStatus;02;neues Mitglied
+ST_Haftungsgrundlage;01;ADSp (Allgemeine Deutsche Spediteurbedingungen)
+ST_Haftungsgrundlage;02;ADSp Lager (Allgemeine Deutsche Spediteurbedingungen Lager)
+ST_Haftungsgrundlage;03;AGB (Allgemeine Geschäftsbedingungen)
+ST_Haftungsgrundlage;04;ALB (Allgemeine Lagerbedingungen des Deutschen Möbeltransports)
+ST_Haftungsgrundlage;05;BSK (Allgemeine Geschäftsbedingungen der Bundesfachgruppe Schwertransporte und Kranarbeiten (AGB-BSK Kran und Transport))
+ST_Haftungsgrundlage;06;CIM (Übereinkommen über den internationalen Eisenbahnverkehr)
+ST_Haftungsgrundlage;07;CMNI (Budapester Übereinkommens über den Vertrag über die Güterbeförderung in der Binnenschifffahrt)
+ST_Haftungsgrundlage;08;CMR (Übereinkommens über den Beförderungsvertrag im internationalen Straßengüterverkehr)
+ST_Haftungsgrundlage;09;HGB bis 40 SZR/kg (Vierter Abschnitt Frachtgeschäft Handelsgesetzbuch § 449 Abweichende Vereinbarungen über die Haftung)
+ST_Haftungsgrundlage;10;HGB bis 8,33 SZR/kg (Vierter Abschnitt Frachtgeschäft Handelsgesetzbuch § 431 Haftungshöchstbetrag)
+ST_Haftungsgrundlage;11;HGB Lager (Sechster Abschnitt Lagergeschäft Handelsgesetzbuch § 475 Haftung für Verlust oder Beschädigung)
+ST_Haftungsgrundlage;12;HGB Sonstige (Fünfter Abschnitt Speditionsgeschäft Handelsgesetzbuch § 461 Haftung des Spediteurs)
+ST_Haftungsgrundlage;13;HGB Umzug (Vierter Abschnitt Frachtgeschäft Handelsgesetzbuch Beförderung von Umzugsgut § 451e Haftungshöchstbetrag)
+ST_Haftungsgrundlage;14;MÜ (Montrealer Übereinkommen)
+ST_Haftungsgrundlage;15;Multimodal (Vierter Abschnitt Frachtgeschäft Handelsgesetzbuch Beförderung mit verschiedenartigen Beförderungsmitteln § 452)
+ST_Haftungsgrundlage;16;NSAB (Allgemeinen Bestimmungen des Nordischen Spediteurverbands)
+ST_Haftungsgrundlage;17;Seerecht (Haager Regeln, Hague Visby Rules, Hamburg – Regeln sowie anderer maßgeblicher internationaler Abkommen oder nationaler gesetzlicher Bestimmungen für den Seeverkehr)
+ST_Haftungsgrundlage;18;VBGL (Vertragsbedingungen für den Güterkraftverkehrs-, Speditions- und Logistikunternehmer)
+ST_Haftungsgrundlage;19;Vertragliche Vereinbarung (Vertragliche- bzw. Individualvereinbarungen)
+ST_Haftungsgrundlage;20;WA (Warschauer Abkommen)
+ST_Haftungsgrundlage;21;BGB (Bürgerliches Gesetzbuch)
+ST_Haftungsgrundlage;99;Sonstige Haftungsgrundlage
+ST_Herkunft;01;Einzahlung
+ST_Herkunft;02;Einzahlung aus Umschichtung
+ST_Herkunft;03;Auszahlung
+ST_Herkunft;04;Auszahlung zur Umschichtung
+ST_Herkunft;05;Ausschüttung
+ST_Herkunft;06;Zinsen
+ST_Herkunft;07;Gebühr
+ST_Herkunft;08;Steuer
+ST_HistorischerVerlauf;01;Altbestandskunde im eigenen VU
+ST_HistorischerVerlauf;02;Versicherter im Basistaif aus VU-Wechsel soweit kein Altbestandskunde
+ST_Incoterms;EXW;Ex Works / Ab Werk
+ST_Incoterms;FCA;Free Carrier / Frei Frachtführer
+ST_Incoterms;CPT;Carriage Paid To / Frachtfrei
+ST_Incoterms;CIP;Carriage and Insurance Paid to / Frachtfrei versichert
+ST_Incoterms;DAT;Delivered At Terminal / Geliefert Terminal
+ST_Incoterms;DAP;Delivered At Place / Geliefert benannter Ort
+ST_Incoterms;DDP;Delivered Duty Paid / Geliefert verzollt
+ST_Incoterms;FAS;Free Alongside Ship / Frei Längsseite Schiff
+ST_Incoterms;FOB;Free On Board / Frei an Bord
+ST_Incoterms;CFR;Cost and Freight / Kosten und Fracht
+ST_Incoterms;CIF;Cost, Insurance and Freight / Kosten, Versicherung und Fracht
+ST_Informationsart;01;GrunddatenVertrag: skalare Vertragsdaten auf Vertrags- und Tarifebene, keine Stichtagswerte und keine Verläufe.
+ST_Informationsart;02;Beitragsverlauf: kompletter Verlauf der vergangenen Beiträge.
+ST_Informationsart;03;InkassoExkasso: aktuelle Bankdaten und Beitragsrückstände.
+ST_Informationsart;04;Stichtagswerte: Aktuelle Stichtagswerte, d.h. maximal 5 Werktage zurückliegend. DARF NUR in der Sparte Leben verwendet werden.
+ST_Informationsart;05;BeispielModellrechnung: Modellrechnung nach §154 VVG und/oder Beispielrechnung für hochgerechnete Ablaufleistungen. DARF NUR in der Sparte Leben verwendet werden.
+ST_Informationsart;06;Fondskurse: aktuelle Fondskurse, d.h. Schlusskurs des letzten Börsentags. DARF NUR in der Sparte Leben verwendet werden.
+ST_Inkassoart;1;Vermittlerinkasso
+ST_Inkassoart;2;Zentralinkasso, Direktes Inkasso
+ST_Inkassotextart;1;Veränderung
+ST_Inkassotextart;2;Werbung
+ST_Inkassotextart;3;Information
+ST_InvestmentTransaktionsart;Kauf;Kauf eines Investments
+ST_InvestmentTransaktionsart;Verkauf;Verkauf eines Investments
+ST_InvestmentTransaktionsart;Einlieferung;Einlieferung eines Investments in ein Depot
+ST_InvestmentTransaktionsart;Auslieferung;Auslieferung eines Investments aus einem Depot
+ST_JaNeinKeineAntwort;0;Ja
+ST_JaNeinKeineAntwort;1;Nein
+ST_JaNeinKeineAntwort;2;KeineAntwort
+ST_JaNeinKeineAntwort;3;Unbekannt
+ST_JaNeinKeineAntwort;4;Vermutlich ja
+ST_Kalkulationsart;0;Schätzung
+ST_Kalkulationsart;1;Detaillierte Kalkulation
+ST_Kalkulationsart;2;Reparaturrechnung
+ST_Kalkulationsart;3;Kostenvoranschlag
+ST_Kalkulationsart;4;Glasreparatur (kein Austausch)
+ST_Kalkulationsart;5;Gutachten
+ST_Kalkulationsart;6;Prüfergebnis
+ST_Kalkulationsart;7;Glasersatz (Austausch)
+ST_Kapitalanlageart;01;Darlehen
+ST_Kapitalanlageart;02;Depot
+ST_Kapitalanlageart;03;Geschäftsanteile
+ST_Kapitalanlageart;04;Kontokorrent
+ST_Kapitalanlageart;05;Spar
+ST_Kapitalanlageart;06;Termineinlage Festgeld
+ST_Kapitalanlageart;07;Termineinlage Sparbrief
+ST_Kennzeichenart;A;Ausfuhrkennzeichen
+ST_Kennzeichenart;B;Behoerdenkennzeichen
+ST_Kennzeichenart;BS;behoerdliches Saisonkennzeichen
+ST_Kennzeichenart;R;Rotes Kennzeichen
+ST_Kennzeichenart;RK;Kurzzeitkennzeichen
+ST_Kennzeichenart;V;Versicherungskennzeichen
+ST_Kennzeichenart;VR;Rotes Versicherungskennzeichen
+ST_Kennzeichenart;Z;Amtliches Kennzeichen
+ST_Kennzeichenart;ZS;Amtliches Saisonkennzeichen
+ST_Kommunikationstyp;10;Telefonnummer privat
+ST_Kommunikationstyp;20;Telefonnummer geschäftlich
+ST_Kommunikationstyp;30;Telefonnummer mobil
+ST_Kommunikationstyp;31;Telefonnummer mobil privat
+ST_Kommunikationstyp;32;Telefonnummer mobil geschäftlich
+ST_Kommunikationstyp;40;Telefax
+ST_Kommunikationstyp;41;Telefax privat
+ST_Kommunikationstyp;42;Telefax geschäftlich
+ST_Kommunikationstyp;50;E-Mail
+ST_Kommunikationstyp;51;E-Mail privat
+ST_Kommunikationstyp;52;E-Mail geschäftlich
+ST_Kommunikationstyp;60;Website
+ST_Kommunikationstyp;61;Website privat
+ST_Kommunikationstyp;62;Website geschäftlich
+ST_Kommunikationstyp;70;Online-Dienst
+ST_Kommunikationstyp;71;Online-Dienst privat
+ST_Kommunikationstyp;72;Online-Dienst geschäftlich
+ST_Komprimierungstyp;ZIP;ZIP
+ST_Komprimierungstyp;KEINE;Keine Komprimierung
+ST_Konstruktionsteil;01;Bedachung
+ST_Konstruktionsteil;02;Decke
+ST_Konstruktionsteil;03;Deckenverkleidung
+ST_Konstruktionsteil;04;Wand
+ST_Konstruktionsteil;05;Wandverkleidung
+ST_Konstruktionsteil;06;Unterboden
+ST_Konstruktionsteil;07;Bodenbelag
+ST_KrankenTarifart;01;Krankenvollversicherung - Kompakttarife (ambulant, stationär, Zahn)
+ST_KrankenTarifart;02;Ambulant (Vollversicherung)
+ST_KrankenTarifart;03;Stationär (Vollversicherung)
+ST_KrankenTarifart;04;Zahn (Vollversicherung)
+ST_KrankenTarifart;05;Krankentagegeld
+ST_KrankenTarifart;06;Krankenhaustagegeld
+ST_KrankenTarifart;07;Kurversicherung
+ST_KrankenTarifart;08;Stationäre Zusatzversicherung zur gesetzlichen KV
+ST_KrankenTarifart;09;Ergänzungsversicherung zur gesetzlichen KV
+ST_KrankenTarifart;10;Auslandskrankenversicherung
+ST_KrankenTarifart;11;Pflegepflichtversicherung
+ST_KrankenTarifart;12;Pflegezusatzversicherung
+ST_KrankenTarifart;13;Optionstarif
+ST_KrankenTarifart;14;Zusätze zur Vollversicherung, die sich eindeutig anderen Bereichen zuordnen lassen (z.B. Kombination aus Erweiterung der GOÄ, Auslandsgeltung und zusätzliche Heilpraktikerleistung)
+ST_KrankenTarifart;15;Sonst. KV (wenn keine andere Zuordnung möglich ist)
+ST_KrankenTarifart;16;Gesetzlicher Zuschlag
+ST_KrankenTarifart;17;Gruppenversicherung Ausland
+ST_KrankenTarifart;18;GKV pflichtversichert
+ST_KrankenTarifart;19;Zahnersatzversicherung PKV
+ST_KrankenTarifart;20;Zahnzusatztarif
+ST_KrankenTarifart;21;ambulanter Zusatztarif
+ST_KrankenTarifart;22;GKV freiwillig versichert
+ST_KrankenTarifart;23;Beitragsentlastungstarif
+ST_KrankenTarifart;24;Gesetzlicher Zuschlag in der Leistungsphase
+ST_KrankenTarifart;25;Beitragsentlastungstarif in der Leistungsphase
+ST_KrankenTarifart;26;Tarifbonus Beitragsanpassung ( zeitlich befristeter Tarifbonus der zur Limitierung einer Beitragsanpassung gewährt wird.)
+ST_KrankenTarifart;27;Incomingtarife für ausländische Gäste in Deutschland
+ST_KrankenVersicherungsschutz;1;Vollversicherung
+ST_KrankenVersicherungsschutz;2;Zusatzversicherung
+ST_KrankenVersicherungsschutz;3;Sonstiges
+ST_KrankenVorversicherungsschutz;01;gesetzlich freiwillig krankenversichert
+ST_KrankenVorversicherungsschutz;02;gesetzlich pflichtig krankenversichert
+ST_KrankenVorversicherungsschutz;03;gesetzlich krankenversichert (ohne nähere Zuordnung)
+ST_KrankenVorversicherungsschutz;04;privat krankenversichert
+ST_KrankenVorversicherungsschutz;05;freie Heilfürsorge
+ST_KrankenVorversicherungsschutz;06;ausländisch gesetzlich krankenversichert
+ST_KrankenVorversicherungsschutz;07;ausländisch privat krankenversichert
+ST_KrankenVorversicherungsschutz;99;keine Vorversicherung
+ST_Laenderkennzeichen;997;Mehrstaaten
+ST_Laenderkennzeichen;998;Sonstige
+ST_Laenderkennzeichen;999;unbekannt
+ST_Laenderkennzeichen;A;Österreich
+ST_Laenderkennzeichen;AFG;Afghanistan
+ST_Laenderkennzeichen;AL;Albanien
+ST_Laenderkennzeichen;AND;Andorra
+ST_Laenderkennzeichen;AM;Armenien
+ST_Laenderkennzeichen;AUS;Australien
+ST_Laenderkennzeichen;AZ;Aserbaidschan
+ST_Laenderkennzeichen;B;Belgien
+ST_Laenderkennzeichen;BD;Bangladesch
+ST_Laenderkennzeichen;BDS;Barbados
+ST_Laenderkennzeichen;BF;Burkina Faso
+ST_Laenderkennzeichen;BG;Bulgarien
+ST_Laenderkennzeichen;BIH;Bosnien und Herzegowina
+ST_Laenderkennzeichen;DY;Benin
+ST_Laenderkennzeichen;BOL;Bolivien
+ST_Laenderkennzeichen;BR;Brasilien
+ST_Laenderkennzeichen;BRN;Bahrain
+ST_Laenderkennzeichen;BRU;Brunei
+ST_Laenderkennzeichen;BS;Bahamas
+ST_Laenderkennzeichen;BY;Weißrussland
+ST_Laenderkennzeichen;BH;Belize
+ST_Laenderkennzeichen;BW;Botswana
+ST_Laenderkennzeichen;BVI;Jungferninseln
+ST_Laenderkennzeichen;CU;Kuba
+ST_Laenderkennzeichen;CAM;Kamerun
+ST_Laenderkennzeichen;CDN;Kanada
+ST_Laenderkennzeichen;ZRE;Demokratische Republik Kongo
+ST_Laenderkennzeichen;CH;Schweiz
+ST_Laenderkennzeichen;CI;Elfenbeinküste
+ST_Laenderkennzeichen;CL;Sri Lanka
+ST_Laenderkennzeichen;CO;Kolumbien
+ST_Laenderkennzeichen;CR;Costa Rica
+ST_Laenderkennzeichen;CY;Zypern
+ST_Laenderkennzeichen;CZ;Tschechien
+ST_Laenderkennzeichen;D;Deutschland
+ST_Laenderkennzeichen;DK;Dänemark
+ST_Laenderkennzeichen;DOM;Dominikanische Republik
+ST_Laenderkennzeichen;DZ;Algerien
+ST_Laenderkennzeichen;E;Spanien
+ST_Laenderkennzeichen;EAK;Kenia
+ST_Laenderkennzeichen;EAT;Tansania
+ST_Laenderkennzeichen;EAZ;Sansibar
+ST_Laenderkennzeichen;EAU;Uganda
+ST_Laenderkennzeichen;EC;Ecuador
+ST_Laenderkennzeichen;ER;Eritrea
+ST_Laenderkennzeichen;ES;El Salvador
+ST_Laenderkennzeichen;EST;Estland
+ST_Laenderkennzeichen;ET;Ägypten
+ST_Laenderkennzeichen;ETH;Äthiopien
+ST_Laenderkennzeichen;F;Frankreich
+ST_Laenderkennzeichen;FIN;Finnland
+ST_Laenderkennzeichen;FJI;Fidschi
+ST_Laenderkennzeichen;FL;Liechtenstein
+ST_Laenderkennzeichen;FR;Färöer
+ST_Laenderkennzeichen;G;Gabun
+ST_Laenderkennzeichen;GB;Vereinigtes Königreich
+ST_Laenderkennzeichen;GBA;Alderney
+ST_Laenderkennzeichen;GBG;Guernsey
+ST_Laenderkennzeichen;GBJ;Jersey
+ST_Laenderkennzeichen;GBM;Insel Man
+ST_Laenderkennzeichen;GBZ;Gibraltar
+ST_Laenderkennzeichen;GCA;Guatemala
+ST_Laenderkennzeichen;GE;Georgien
+ST_Laenderkennzeichen;GH;Ghana
+ST_Laenderkennzeichen;GR;Griechenland
+ST_Laenderkennzeichen;GUY;Guyana
+ST_Laenderkennzeichen;H;Ungarn
+ST_Laenderkennzeichen;HR;Kroatien
+ST_Laenderkennzeichen;HKJ;Jordanien
+ST_Laenderkennzeichen;HN;Honduras
+ST_Laenderkennzeichen;I;Italien
+ST_Laenderkennzeichen;IL;Israel
+ST_Laenderkennzeichen;IND;Indien
+ST_Laenderkennzeichen;IR;Iran
+ST_Laenderkennzeichen;IRL;Irland
+ST_Laenderkennzeichen;IRQ;Irak
+ST_Laenderkennzeichen;IS;Island
+ST_Laenderkennzeichen;J;Japan
+ST_Laenderkennzeichen;JA;Jamaika
+ST_Laenderkennzeichen;K;Kambodscha
+ST_Laenderkennzeichen;KP;Nordkorea
+ST_Laenderkennzeichen;KS;Kirgisistan
+ST_Laenderkennzeichen;KWT;Kuwait
+ST_Laenderkennzeichen;KZ;Kasachstan
+ST_Laenderkennzeichen;L;Luxemburg
+ST_Laenderkennzeichen;LAO;Laos
+ST_Laenderkennzeichen;LAR;Libyen
+ST_Laenderkennzeichen;LB;Liberia
+ST_Laenderkennzeichen;LS;Lesotho
+ST_Laenderkennzeichen;LT;Litauen
+ST_Laenderkennzeichen;LV;Lettland
+ST_Laenderkennzeichen;M;Malta
+ST_Laenderkennzeichen;MA;Marokko
+ST_Laenderkennzeichen;MAL;Malaysia
+ST_Laenderkennzeichen;MC;Monaco
+ST_Laenderkennzeichen;MD;Moldawien
+ST_Laenderkennzeichen;MEX;Mexiko
+ST_Laenderkennzeichen;MGL;Mongolei
+ST_Laenderkennzeichen;MK;Mazedonien
+ST_Laenderkennzeichen;MNE;Montenegro
+ST_Laenderkennzeichen;MOC;Mosambik
+ST_Laenderkennzeichen;MS;Mauritius
+ST_Laenderkennzeichen;MW;Malawi
+ST_Laenderkennzeichen;BUR;Myanmar
+ST_Laenderkennzeichen;N;Norwegen
+ST_Laenderkennzeichen;NA;Niederländische Antillen
+ST_Laenderkennzeichen;NAM;Namibia
+ST_Laenderkennzeichen;NAU;Nauru
+ST_Laenderkennzeichen;NEP;Nepal
+ST_Laenderkennzeichen;WAN;Nigeria
+ST_Laenderkennzeichen;NIC;Nicaragua
+ST_Laenderkennzeichen;NL;Niederlande
+ST_Laenderkennzeichen;NZ;Neuseeland
+ST_Laenderkennzeichen;P;Portugal
+ST_Laenderkennzeichen;PA;Panama
+ST_Laenderkennzeichen;PE;Peru
+ST_Laenderkennzeichen;PK;Pakistan
+ST_Laenderkennzeichen;PL;Polen
+ST_Laenderkennzeichen;PNG;Papua-Neuguinea
+ST_Laenderkennzeichen;PY;Paraguay
+ST_Laenderkennzeichen;Q;Katar
+ST_Laenderkennzeichen;RA;Argentinien
+ST_Laenderkennzeichen;RC;Republik China (Taiwan)
+ST_Laenderkennzeichen;RCA;Zentralafrikanische Republik
+ST_Laenderkennzeichen;RCB;Republik Kongo
+ST_Laenderkennzeichen;RCH;Chile
+ST_Laenderkennzeichen;RG;Guinea
+ST_Laenderkennzeichen;RH;Haiti
+ST_Laenderkennzeichen;RI;Indonesien
+ST_Laenderkennzeichen;RIM;Mauretanien
+ST_Laenderkennzeichen;RL;Libanon
+ST_Laenderkennzeichen;RM;Madagaskar
+ST_Laenderkennzeichen;RMM;Mali
+ST_Laenderkennzeichen;RN;Niger
+ST_Laenderkennzeichen;ROK;Südkorea
+ST_Laenderkennzeichen;RO;Rumänien
+ST_Laenderkennzeichen;ROU;Uruguay
+ST_Laenderkennzeichen;RP;Philippinen
+ST_Laenderkennzeichen;RSM;San Marino
+ST_Laenderkennzeichen;RU;Burundi
+ST_Laenderkennzeichen;RUS;Russland
+ST_Laenderkennzeichen;RWA;Ruanda
+ST_Laenderkennzeichen;S;Schweden
+ST_Laenderkennzeichen;SA;Saudi-Arabien
+ST_Laenderkennzeichen;SD;Swasiland
+ST_Laenderkennzeichen;SGP;Singapur
+ST_Laenderkennzeichen;SK;Slowakei
+ST_Laenderkennzeichen;SLO;Slowenien
+ST_Laenderkennzeichen;SME;Suriname
+ST_Laenderkennzeichen;SN;Senegal
+ST_Laenderkennzeichen;SO;Somalia
+ST_Laenderkennzeichen;SRB;Serbien
+ST_Laenderkennzeichen;SUD;Sudan
+ST_Laenderkennzeichen;SY;Seychellen
+ST_Laenderkennzeichen;SYR;Syrien
+ST_Laenderkennzeichen;T;Thailand
+ST_Laenderkennzeichen;TD;Tschad
+ST_Laenderkennzeichen;TG;Togo
+ST_Laenderkennzeichen;TJ;Tadschikistan
+ST_Laenderkennzeichen;TM;Turkmenistan
+ST_Laenderkennzeichen;TN;Tunesien
+ST_Laenderkennzeichen;TR;Türkei
+ST_Laenderkennzeichen;TT;Trinidad und Tobago
+ST_Laenderkennzeichen;UA;Ukraine
+ST_Laenderkennzeichen;UAE;Vereinigte Arabische Emirate
+ST_Laenderkennzeichen;USA;Vereinigte Staaten von Amerika
+ST_Laenderkennzeichen;UZ;Usbekistan
+ST_Laenderkennzeichen;V;Vatikanstaat
+ST_Laenderkennzeichen;VN;Vietnam
+ST_Laenderkennzeichen;WAG;Gambia
+ST_Laenderkennzeichen;WAL;Sierra Leone
+ST_Laenderkennzeichen;WD;Dominica
+ST_Laenderkennzeichen;WG;Grenada
+ST_Laenderkennzeichen;WL;St. Lucia
+ST_Laenderkennzeichen;WS;Samoa
+ST_Laenderkennzeichen;WV;St. Vincent und die Grenadinen
+ST_Laenderkennzeichen;YAR;Jemen
+ST_Laenderkennzeichen;YV;Venezuela
+ST_Laenderkennzeichen;RNR;Sambia
+ST_Laenderkennzeichen;ZA;Südafrika
+ST_Laenderkennzeichen;ZW;Simbabwe
+ST_Laenderkennzeichen;SU;Sowjetunion
+ST_Laenderkennzeichen;YU;Jugoslawien
+ST_LageDerVersicherungsraeume;ErdObergeschoss;Oberhalb oder gleich der Erdgleiche.
+ST_LageDerVersicherungsraeume;Keller;Unterhalb der Erdgleiche.
+ST_LageDerWohnung;Erdgeschoss;
+ST_LageDerWohnung;Obergeschoss;
+ST_LageDerWohnung;Untergeschoss;
+ST_LageDerWohnung;Dachgeschoss;
+ST_LagePhotovoltaik;Fassade;
+ST_LagePhotovoltaik;Dach;
+ST_LagePhotovoltaik;FreiflaecheBodeninstallation;
+ST_LagePhotovoltaik;Sonstiges;
+ST_Lastschriftart;Basislastschrift;Alle SEPA-Lastschriften, sofern es sich nicht um eine Firmenlastschrift handelt.
+ST_Lastschriftart;Firmenlastschrift;Die SEPA-Firmenlastschrift (SEPA Business to Business Direct Debit) ist auf den Zahlungsverkehr zwischen Unternehmen ausgelegt. Dementsprechend darf es sich beim Debitor nicht um einen privaten Endkunden handeln, sondern ausschließlich um einen Geschäfts- oder Firmenkunden. Nach der Einlösung der SEPA-Firmenlastschrift ist keine Rückbuchung durch den Zahlungspflichtigen mehr möglich.
+ST_LeistungsartBereich;Privat;
+ST_LeistungsartBereich;Verkehr;
+ST_LeistungsartBereich;Immobilie;
+ST_LeistungsartBereich;Beruf;
+ST_LeistungsartBereich;Gewerbe;Enthält auch Sonder und Spezial
+ST_LeistungsartTyp;Versicherungsleistung;Vertraglich zugesicherte, einklagbare Leistung gemäß §2 ARB. Verwendung nur im Kontext BiPRO Rechtsschutz.
+ST_LeistungsartTyp;Serviceleistung;Zusätzliche Leistungen in Ergänzung zu §2 ARB.
+ST_LeistungsdauerTodesfallAbsicherung;Lebenslaenglich;
+ST_LeistungsdauerTodesfallAbsicherung;Wiederheirat;
+ST_Leistungserbringung;01;Kapital
+ST_Leistungserbringung;02;Rente
+ST_Leistungserbringung;03;Sachleistung
+ST_Leistungserbringung;04;Beitragsfreistellung
+ST_Leistungserbringung;05;Assistanceleistung
+ST_Leistungsfall;Todesfall;Zahlung bei Tod der VP
+ST_Leistungsfall;Erlebensfall;Zahlung zum Auszahlungstermin der Versicherung
+ST_Leistungsfall;Leistungsfall;z.B. Selbständige BU
+ST_Leistungsstatus;1;keine Leistung gewünscht/vereinbart/möglich
+ST_Leistungsstatus;2;Leistung gewünscht
+ST_Leistungsstatus;3;Leistung erforderlich
+ST_Leistungsstatus;4;Leistung vereinbart
+ST_Leistungsstatus;5;Auftrag zur Leistungserbringung erteilt
+ST_Leistungsstatus;6;Leistung durchgeführt
+ST_Leitungsart;1;Antenne
+ST_Leitungsart;2;Telefonleitung
+ST_Leitungsart;3;Stromleitung
+ST_Leitungsart;4;LAN-Kabel
+ST_LogischeVerknuepfung;UND;
+ST_LogischeVerknuepfung;ODER;
+ST_LogischeVerknuepfung;NICHT;
+ST_LogischeVerknuepfung;UND NICHT;
+ST_Luftfahrzeugtyp;01;Motorflugzeug (Ein Flugzeug bzw. Motorflugzeug ist ein Luftfahrzeug, das schwerer als Luft ist. Für den zum Fliegen erforderlichen Auftrieb und für die Steuerung werden aerodynamische Effekte genutzt.)
+ST_Luftfahrzeugtyp;02;Drehflügler (Zu der Luftfahrzeugklasse Drehflügler gehören Tragschrauber, Hubschrauber und Flugschrauber.)
+ST_Luftfahrzeugtyp;03;Luftschiff (Ein Luftschiff ist ein lenkbares Luftfahrzeug, dessen Auftrieb auf aerostatischen Kräften beruht und das über einen eigenen Antrieb verfügt.)
+ST_Luftfahrzeugtyp;04;Segelflugzeug (Ein Segelflugzeug ist ein für den Segelflug, also für motorloses Fliegen (Steigen im Aufwind beziehungsweise Gleiten mit geringem Höhenverlust) konstruiertes Luftfahrzeug. In Deutschland werden Segelflugzeuge luftrechtlich als eigene Luftfahrzeugklasse gewertet und dürfen bis zu 850 kg wiegen.)
+ST_Luftfahrzeugtyp;05;Motorsegler (Motorsegelflugzeuge, oft auch kurz Motorsegler genannt, sind Flugzeuge, denen grundsätzlich alternativ die Betriebsarten Motorflug und Segelflug möglich sind. Sie stellen in Deutschland, Österreich und der Schweiz eine eigene Luftfahrzeugklasse dar. Entsprechende Maschinen tragen Kennungen, die mit D-K&hellip;, OE-9&hellip; oder HB-2&hellip; beginnen.)
+ST_Luftfahrzeugtyp;06;Frei- und Fesselballon (Ein Freiballon ist ein freifliegender Ballon. Er muss als Gasballon mit einem Traggas, welches leichter als Luft ist, gefüllt werden oder als Heißluftballon ausgeführt sein. Freiballone werden zusammen mit Fesselballonen (welche durch eine Leine eine ständige Verbindung zum Boden haben) in Deutschland luftrechtlich als eigene Luftfahrzeugklasse angesehen.)
+ST_Luftfahrzeugtyp;07;Drachen (Ein Drachen ist ein Spiel- und Sportgerät, das mit Wind betrieben wird. Er besteht in der einfachsten Ausführung aus einem Segel, das in der Regel durch ein Gestänge aufgespannt wird und einer am Gestänge befestigten Leine, die vom Drachensteigenden (im Drachensport oft: Pilot) gehalten wird.)
+ST_Luftfahrzeugtyp;08;Flugmodell (Ein Flugmodell ist meist eine verkleinerte Nachbildung eines Luftfahrzeuges (Flugzeug, Hubschrauber, Rakete), wobei es weder eine scharfe Abgrenzung zum Spielzeug oder Sportgerät, noch zu kommerziellen, wissenschaftlichen oder militärischen Anwendungen gibt, wie zum Beispiel ferngelenkten Drohnen.)
+ST_Luftfahrzeugtyp;09;Luftsportgerät (Die Luftsportgeräte umfassen eine Gruppe von Fluggeräten, bei denen die Sportausübung als Hauptverwendungsszweck angesehen werden kann.)
+ST_MandatArt;Einmalmandat;Mandat zur einmaligen Nutzung
+ST_MandatArt;Einzelmandat;Mandat über das nur ein Vertrag inkassiert werden kann.
+ST_MandatArt;Rahmenmandat;Mandat, über das mehrere/alle Verträge eines Gläubigers inkassiert werden können.
+ST_Mandatsablageort;1;Das SEPA-Lastschriftmandat liegt dem Vermittler vor Dem Vermittler liegt das vom Kontoinhaber unterschriebene SEPA-Lastschriftmandat vor. Der Vermittler MUSS dem Gläubiger das Mandat NICHT zur Verfügung stellen, wenn er dieses entsprechend verwahrt. Im Falle einer Vorlageverpflichtung (auf Anforderung der einlösenden Bank!) wird der Gläubiger sich mit dem Vermittler in Verbindung setzen und um eine Übermittlung des Mandates bitten.
+ST_Mandatsablageort;2;Der Vermittler verfügt über eine Bankvollmacht des Kontoinhabers Der Kontoinhaber hat dem Vermittler, im Rahmen einer Maklervollmacht oder auch separat, schriftlich eine Bankvollmacht erteilt und den Vermittler damit legitimiert dem Gläubiger gegenüber das SEPA Mandat zu unterzeichnen. Der Vermittler MUSS dem Gläubiger das Mandat NICHT zur Verfügung stellen, wenn er dieses entsprechend verwahrt. Im Falle einer Vorlageverpflichtung (auf Anforderung der einlösenden Bank!) wird der Gläubiger sich mit dem Vermittler in Verbindung setzen und um eine Übermittlung des Mandates bitten.
+ST_Mandatsablageort;3;SEPA-Lastschriftmandat ist beigefügt, wird nachgereicht oder liegt dem Gläubiger vor. SEPA-Lastschriftmandat ist im Original mit Unterschrift des Kontoinhabers beigefügt, wird nachgereicht oder liegt dem Gläubiger vor.
+ST_MandatStatus;Schwebe;Ein Mandat ist dann in Schwebe, wenn noch nicht alle notwendigen Daten vorliegen (z.B. die Unterschrift).
+ST_MandatStatus;Aktiv;Ein unterschriebenes Mandat liegt vor und das Mandat wird genutzt.
+ST_MandatStatus;Ruhend;Ein derzeit nicht genutztes, aber gültiges Mandat. Innerhalb von 36 Monaten nach der letzten Nutzung kann ein ruhend gestelltes Mandat in Abstimmung mit dem Zahler wieder verwendet (aktiv) werden.
+ST_MandatStatus;Ungueltig;Das Mandat wurde vom Zahler explizit gekündigt oder das Mandat wurde 36 Monate nicht mehr aktiv genutzt. Es kann nicht wieder reaktiviert werden.
+ST_Mangelart;01;Bau
+ST_Mangelart;02;Durchnässung
+ST_Mangelart;03;Dach
+ST_Mangelart;99;Sonstige
+ST_Material;01;Stein
+ST_Material;02;Beton
+ST_Material;03;Holz
+ST_Material;04;Metall
+ST_Material;05;Trockenbaukonstruktion
+ST_Material;06;Dämmschicht
+ST_Material;07;Fliesen
+ST_Material;08;Estrich
+ST_Material;09;Parkett / Laminat
+ST_Material;10;Holzdielen
+ST_Material;11;PVC
+ST_Material;12;Ziegel / Pfanne
+ST_Material;13;Schiefer
+ST_Material;14;Blech
+ST_Material;15;Kunststoff
+ST_Material;16;Glas
+ST_Material;17;Glaskeramik
+ST_Material;18;Glasbaustein
+ST_Material;19;Kupfer
+ST_Material;20;Ried, Schilf, Stroh
+ST_Material;99;Sonstiges
+ST_MaterialLeitungswassernetz;Blei;
+ST_MaterialLeitungswassernetz;Edelstahl;
+ST_MaterialLeitungswassernetz;Eisen;
+ST_MaterialLeitungswassernetz;Kunststoff;
+ST_MaterialLeitungswassernetz;Kupfer;
+ST_MaterialLeitungswassernetz;Tec;
+ST_MaterialLeitungswassernetz;Sonstiges;
+ST_Meldeturnus;01;Anmeldung vor Risikobeginn
+ST_Meldeturnus;02;Anmeldung wöchentlich
+ST_Meldeturnus;03;Anmeldung monatlich
+ST_Meldeturnus;04;Anmeldung vierteljährlich
+ST_Meldeturnus;05;Anmeldung halbjährlich
+ST_Meldeturnus;06;Anmeldung jährlich
+ST_Meldung;00001;Die Verarbeitung konnte aufgrund unvollständiger oder fehlerhafter Daten nicht abgeschlossen werden.
+ST_Meldung;00002;Die Verarbeitung konnte aufgrund uneindeutiger Daten nicht abgeschlossen werden.
+ST_Meldung;00007;XML Schema-Validierung fehlgeschlagen. Dieser Schlüssel MUSS geliefert werden, wenn eine Prüfung der BiPRO XML-Strukturen anhand des Service-spezifischen XML-Schemas (einschl. aller Sub-Schemata) fehlgeschlagen ist.
+ST_Meldung;00008;Der Schlüssel 00008 MUSS verwendet werden, wenn Regeln, die in einer WS-Policy beschrieben wurden, verletzt werden. Der Schlüssel DARF NICHT verwendet werden, wenn BiPRO in einer Norm einen spezifischen Fehlercode für die Verletzung einer Regel definiert hat, die Regel jedoch in Form einer WS-Policy beschrieben wurde. Beispiel: Laut Norm 420 ist im Falle einer fehlerhaften Dokumentanforderung bei getOffer() ein Fehlercode 00103 in MeldungID zu liefern. Diese Regel lässt sich als inhaltsbezogene WS-Policy formulieren und prüfen. Im Falle eines Fehlers DARF der Provider NICHT die allgemeine MeldungID 00008 für WS-Policy fehlgeschlagen liefern.
+ST_Meldung;00009;Die Funktion wird nicht unterstützt (nicht implementiert). Dieser Schlüssel wird verwendet, wenn eine in der WSDL-Datei angebotene Funktion vom Service nicht implementiert wurde. In diesem Fall DARF der Service einen SOAP-Fault mit BiproException im detail-Bereich werfen. Im Meldungsobjekt ist dann ein Fehler zu schlüssel und mit dem Schlüssel 00009 zu konkretisieren.
+ST_Meldung;00010;Die übermittelte Feldlänge wird nicht unterstützt, ein Abschneiden von Daten wurde notwendig. Zusätzlich MUSS im Fehlertext (Meldung.Text) die maximale Feldlänge zum Feld angegeben werden.
+ST_Meldung;00101;Die im Attribut Quelle referenzierten Daten wurden ausgewertet und für die Ermittlung und Aufbereitung des Verarbeitungsergebnisses verwendet.
+ST_Meldung;00102;Die im Attribut Quelle referenzierten Daten wurden für die Durchführung der Verarbeitung sowie Ermittlung und Aufbereitung des Verarbeitungsergebnisses verändert und überschrieben.
+ST_Meldung;00103;Die angeforderten Dokumente werden nicht unterstützt.
+ST_Meldung;00104;Die Vorgangsnummer (Geschaeftsvorgang.Vorgangsnummer) ist bereits vergeben.
+ST_Meldung;00105;Fachliche Eingangbestätigung. Der Vorgang konnte ordnungsgemäß erfasst und angelegt werden. Eine fallabschließende Verarbeitung konnte nicht durchgeführt werden (Schwebe).
+ST_Meldung;00106;Antrag policiert. Der Vorgang konnte ordnungsgemäß erfasst und fallabschließend bearbeitet werden.
+ST_Meldung;00107;Verbindliches Angebot im Sinne des Invitatiomodells erstellt. Der Vorgang konnte ordnungsgemäß erfasst und fallabschließend bearbeitet werden.
+ST_Meldung;00108;Die gewünschte Versandart wird nicht unterstützt.
+ST_Meldung;00900;Sicherheitsinformationen im Header nicht vorhanden oder im falschen Format. Ursache beim Consumer. Diese Meldung kann durch Hinweise mit einer MeldungID 00901-00920 ergänzt werden.
+ST_Meldung;00901;SOAP-Header nicht ermittelbar
+ST_Meldung;00905;Kein WS-Security-Header vorhanden
+ST_Meldung;00906;Leerer WS-Security-Header
+ST_Meldung;00907;Unzulässiger WS-Security-Header
+ST_Meldung;00908;Kein wsse:UsernameToken vorhanden
+ST_Meldung;00909;Kein SecurityContext-Identifier vorhanden
+ST_Meldung;00910;wst:TokenType nicht korrekt oder nicht vorhanden
+ST_Meldung;00911;wst:RequestType nicht korrekt oder nicht vorhanden
+ST_Meldung;00912;wst:CancelTarget nicht vorhanden
+ST_Meldung;00913;wsse:SecurityTokenReference nicht vorhanden
+ST_Meldung;00914;wsse:Reference nicht vorhanden
+ST_Meldung;00915;wsse:Reference ohne URI-Attribut
+ST_Meldung;00916;SCT im Header stimmt nicht mit Referenz im Body überein.
+ST_Meldung;00917;WS-Security-Header enthält kein Security-ContextToken
+ST_Meldung;00919;Kein korrekter SecurityContext-Identifier
+ST_Meldung;00920;VDG: Keine Berechtigung für die Web-Anwendung des angegebenen Mandanten
+ST_Meldung;00930;Der Service kann nicht aufgerufen werden. Mögliche Ursachen sind z.B. eine fehlgeschlagene Validierung oder der Aufruf eines ungültigen Services. Diese Meldung kann durch Hinweise mit einer MeldungID 00931-00932 ergänzt werden.
+ST_Meldung;00931;Validierung des Bodys fehlgeschlagen
+ST_Meldung;00932;Fehler bei der Verarbeitung (Technischer Fehler, der bei Service-Abarbeitung auftritt)
+ST_Meldung;00940;Vorübergehende technische Störung auf Seiten des Providers. Diese Meldung kann durch Hinweise mit einer MeldungID 00941-00949 ergänzt werden.
+ST_Meldung;00941;Fehler bei der Erstellung der RequestSecurityTokenResponse
+ST_Meldung;00942;VDG: Zum Benutzer ist beim VDG kein Auth.-Verfahren hinterlegt.
+ST_Meldung;00943;VDG: Technischer Fehler beim Zugriff auf die Mandantendaten
+ST_Meldung;00944;VDG: Auth.-Verfahren weder secovid, securid noch schwach
+ST_Meldung;00945;VDG: Für den Benutzer ist auf dem Server kein Passwort hinterlegt à Vergabe eines Passworts durch den Benutzer über die Webapp. per OTP erforderlich
+ST_Meldung;00946;VDG: Fehler bei der Initialisierung des TicketIssuers
+ST_Meldung;00947;VDG: Es kann kein Ticket erstellt werden.
+ST_Meldung;00948;VDG: Bei der Ticket-Herausgabe ist ein Fehler aufgetreten.
+ST_Meldung;00949;VDG: Fehler beim Zugriff auf die VDG-Datenbanken (i.d.R. technischer Fehler)
+ST_Meldung;00960;Der Benutzer kann mit den übergebenen Credentials nicht authentifiziert werden. Diverse Ursachen: z.B. falsche Kennung, Passwort oder OTP, ungültiges SCT. Diese Meldung kann durch Hinweise mit einer MeldungID 00961-00963 ergänzt werden.
+ST_Meldung;00961;Credentials (Username, Paßwort, OTP) ungültig
+ST_Meldung;00962;Session (SCT) ungültig
+ST_Meldung;00963;Timestamp / Signatur ungültig
+ST_Meldung;00964;Account gesperrt
+ST_Meldung;00965;Zu viele Fehlversuche, Account wurde gesperrt
+ST_Meldung;00966;Passwort abgelaufen
+ST_Meldung;01000;Die Verarbeitung konnte nicht durchgeführt werden. Dieser Schlüssel MUSS im Bereich TAA dann verwendet werden, wenn eine exakte Schlüsselung aufgrund anderer definierter Schlüssel nicht möglich ist.
+ST_Meldung;01001;Eine der angeforderten Zahlungsweisen wird nicht unterstützt.
+ST_Meldung;01002;Das Unterschriftverfahren wird nicht unterstützt
+ST_Meldung;01003;Für die Durchführung einer Tarifierung ist die Beantwortung von Risikofragen notwendig
+ST_Meldung;01004;Die angeforderten Dokumente konnten erfolgreich aufbereitet werden.
+ST_Meldung;01005;Die Tarifierung wurde auf Basis der übermittelten Daten erfolgreich durchgeführt
+ST_Meldung;01006;Das Verarbeitungsergebnis wurde auf Basis der übermittelten Angaben sowie zusätzlicher Annahmen ermittelt und aufbereitet. Die Beantwortung von Risikofragen kann zu einem abweichenden Ergebnis führen
+ST_Meldung;01007;Die für den Kontext relevanten Risikofragen wurden vollständig ermittelt
+ST_Meldung;01008;Die für den Kontext relevanten Risikofragen wurden teilweise ermittelt. Für eine vollständige Ermittlung ist ein erneuter Aufruf einschließlich der Antworten auf die bereits gestellten Fragen erforderlich
+ST_Meldung;01009;Art, Umfang und Qualität reichen für eine Einsendung der Antragsdaten und eine Weiterverarbeitung aus. Für eine fallabschließende Verarbeitung fehlen jedoch weitere Angaben
+ST_Meldung;01010;Mindestens eines der angeforderten Dokumente steht nicht zur Verfügung. Möglicherweise ist eine ID fehlerhaft oder der Bereitstellungszeitraum abgelaufen.
+ST_Meldung;01011;Die unter der Vorgangsnummer gespeicherte Daten stimmen nicht mit den im Request übermittelten Daten überein.
+ST_Meldung;01013;Es liegen nicht alle erforderlichen Unterschriften vor
+ST_Meldung;01014;Die Anforderung mehrerer Zahlungsweisen wird technisch nicht unterstützt
+ST_Meldung;01015;Es konnte kein Tarif ermittelt werden
+ST_Meldung;01016;Tarifierung aufgrund der vorgegebenen Beiträge nicht möglich.
+ST_Meldung;01030;(vorläufige) Deckungszusage erteilt
+ST_Meldung;01100;Auskunft erfolgreich
+ST_Meldung;01101;Objekt mit dem angegebenen Schlüssel konnte nicht identifiziert werden
+ST_Meldung;01102;Provider unterstützt nur den Abruf des aktuellen Zustands
+ST_Meldung;01103;Provider unterstützt keinen Abruf von Daten zu Anträgen
+ST_Meldung;01110;Die gewünschte Auskunft ist nicht möglich.
+ST_Meldung;01111;Der gelieferte Datenumfang entspricht nicht den angefragten Informationsarten.
+ST_Meldung;01112;Die Informationsart ist für den angefragten Vertrag nicht unterstützt.
+ST_Meldung;01113;Die Implementierung unterstützt die angefragte Informationsart nicht.
+ST_Meldung;01200;Änderungsantrag erfolgreich erstellt
+ST_Meldung;01201;Tarifierung nicht möglich, da Tarif zum Gültig-ab-Datum noch nicht bekannt
+ST_Meldung;01202;Änderung im derzeitigen Tarif des Vertrags nicht möglich
+ST_Meldung;01203;Änderung zum gewünschten Datum nicht möglich
+ST_Meldung;01204;Geschäftsvorgangsart (GeVoArt) wird nicht unterstützt
+ST_Meldung;01402;Suchanfrage brachte zu viele möglichen Treffer, bitte konkretisieren. In diesem Fall muss der Filtermechanismus verwendet werden, um die Suchanfrage weiter einzuschränken, damit eine auslieferbare Trefferliste erzeugt werden kann.
+ST_Meldung;01403;Einschränkung auf eine maximale Zeichenanzahl unzulässig. Dieser Schlüssel ist für das Fehlermanagement des Generischen Listenservice (N480.0) relevant.
+ST_Meldung;01404;Der Gültigkeitszeitraum für den Kontext ist abgelaufen. Dieser Schlüssel wird im Fehlermanagement des Generischen Listenservice (N480.0) angwendet. Der Service Consumer darf einen neuen Kontext eröffnen unter Anwendung der Funktion wsen:Enumerate erzeugen.
+ST_Meldung;01405;Der folgende Kontext wird unterstützt. Dieser Schlüssel wird angewendet, um die vom Generischen Listenservice (N480.0) unterstützten fachlichen Kontexte zu melden.
+ST_Meldung;04000;Aufruf des Transferservice erfolgreich.
+ST_Meldung;04001;Zur angefragten Such-Kategorie liegen keine Lieferungen vor.
+ST_Meldung;04002;Bereits bestätigte Lieferungen können nicht angefragt werden.
+ST_Meldung;04003;Zur angefragten ID kann keine Lieferung identifiziert werden.
+ST_Meldung;04004;Quittierung der Lieferung nicht möglich.
+ST_Meldung;04005;Granularität der Such-Kategorie wird nicht unterstützt.
+ST_Meldung;04006;Das in VerfuegbarBis angegebene Datum ist überschritten.
+ST_Meldung;99999;Sonstiges
+ST_Meldung;05000;Ergebnisermittlung erfolgreich
+ST_Meldung;05001;Ergebnisermittlung fehlgeschlagen
+ST_Meldung;05100;Zur Konvertierung genutzte Liste (z.B. Bundesbank oder Swift)
+ST_Meldung;05200;Förderdatenvorprüfung erfolgreich durchgeführt
+ST_Meldung;05201;Förderdatenvorprüfung mit Warnung durchgeführt
+ST_Meldung;05202;Förderdatenantrag angenommen
+ST_Meldung;05203;Förderdatenantrag mit Warnungen angenommen
+ST_Meldung;01406;Gemäß Annahmerichtlinien kann keine eVB ausgestellt werden.
+ST_Meldung;01407;Eine Kfz-Deckung kann nur im gesetzlichen Mindestumfang angeboten werden.
+ST_Meldung;01408;Antrag abgelehnt, es liegt im gegebenen Fall kein Annahmezwang vor.
+ST_Meldungsart;Fehler;Fehler: Die Verarbeitung ist nicht durchgeführt worden. Es liegt ein fachlicher oder technischer Fehler vor. Weitere Informationen siehe MeldungID
+ST_Meldungsart;Hinweis;Hinweis bedeutet kein Fehler, aber weitere Informationen. z.B. Standard OK Meldung. Weitere Informationen siehe MeldungID
+ST_Meldungsart;Warnung;Warnung wiegt schwerer als ein Hinweis und erfordert besondere Aufmerksamkeit. Weitere Informationen siehe MeldungID
+ST_Mitversicherungsart;01;in häuslicher Gemeinschaft mitlebender Partner
+ST_Mitversicherungsart;02;Einzelperson in häuslicher Gemeinschaft mitlebend
+ST_Mitversicherungsart;03;Einzelperson nicht in häuslicher Gemeinschaft mitlebend
+ST_Mitversicherungsart;04;Kinder
+ST_Monat;01;Januar
+ST_Monat;02;Februar
+ST_Monat;03;März
+ST_Monat;04;April
+ST_Monat;05;Mai
+ST_Monat;06;Juni
+ST_Monat;07;Juli
+ST_Monat;08;August
+ST_Monat;09;September
+ST_Monat;10;Oktober
+ST_Monat;11;November
+ST_Monat;12;Dezember
+ST_Motorart;01;Viertakter
+ST_Motorart;02;Diesel-Motor
+ST_Motorart;03;Zweitakter
+ST_Motorart;04;Gas
+ST_Motorart;05;Hybrid
+ST_Motorart;06;Elektro
+ST_Motorart;07;Brennstoffzelle
+ST_Motorart;99;sonstiger Motor
+ST_Nachweisstatus;kommt;Der Vermittler hat den Nachweis vom Antragsteller angefordert und übermittelt den Nachweis an den Versicherer unabhängig von der elektronischen Nachricht.
+ST_Nachweisstatus;anfordern;Der Versicherer soll den Nachweis vom Antragsteller angefordern.
+ST_Nachweisstatus;beigefuegt;Der Vermittler hat den Nachweis vom Antragsteller angefordert und übermittelt den Nachweis an den Versicherer innerhalb der elektronischen Nachricht.
+ST_Nachweisstatus;geprueft;Der Vermittler hat den Nachweis geprüft.
+ST_Nutzerkreis;Versicherungsnehmer;
+ST_Nutzerkreis;Partner;Ehe- / Lebenspartner
+ST_Nutzerkreis;beliebig;undefinierter Nutzerkreis
+ST_Nutzerkreis;Familienfahrer;
+ST_Nutzerkreis;Sohn;
+ST_Nutzerkreis;Tochter;
+ST_Nutzerkreis;unbekannt;sonstige
+ST_Nutzlastklasse;Leicht;Nutzlast bis 2 t
+ST_Nutzlastklasse;Mittelschwer;Nutzlast über 2 bis 4 t
+ST_Nutzlastklasse;Schwer;Nutzlast über 4 t
+ST_Nutzung;fremdgenutzt;fremdgenutzt
+ST_Nutzung;selbstgenutzt;selbstgenutzt
+ST_Nutzungsart;01;Überwiegend geschäftlich
+ST_Nutzungsart;02;Überwiegend privat
+ST_Nutzungsart;03;Taxi
+ST_Nutzungsart;04;Vermietung
+ST_Nutzungsart;05;Sonstige
+ST_Nutzungsart;06;Ausschließlich geschäftlich
+ST_Nutzungsart;07;Ausschließlich privat
+ST_Nutzungsart;08;Privat und geschäftlich
+ST_Operator;gleich;gleich (=)
+ST_Operator;ungleich;ungleich (!=)
+ST_Operator;groesserals;gößer als (>)
+ST_Operator;groesserodergleich;größer oder gleich (>=)
+ST_Operator;kleinerals;kleiner als (<)
+ST_Operator;kleinerodergleich;kleiner oder gleich (<=)
+ST_Operator;in;Ist nur in Verbindung mit einer AntwortWerteliste gültig.
+ST_Phase;Aufschubphase;Portfoliomanagement in der Ansparphase eines Vertrages
+ST_Phase;Ablaufphase;Ablaufmanagement in der Ablaufphase
+ST_Phase;Bezugsphase;Fontportfoliemanegenment während Bezugsphase z.B. Rentenbezugszeit
+ST_PPVHoechstbeitrag;0;Tarifbeitrag
+ST_PPVHoechstbeitrag;5;Beitragsfreie Sonstige (z. B. Arbeitssuchende, Behinderte)
+ST_PPVHoechstbeitrag;6;Beitragsnachlass wegen Hilfebedürftigkeit
+ST_PPVHoechstbeitrag;1;Hoechstbeitrag
+ST_PPVHoechstbeitrag;2;Beitragsfreies Kind
+ST_PPVHoechstbeitrag;3;Ehepaarbegrenzung
+ST_PPVHoechstbeitrag;4;Student
+ST_Praxisform;01;Einzelpraxis
+ST_Praxisform;02;fachgleiche Berufsausübungsgemeinschaft
+ST_Praxisform;03;fachgleiche überörtliche Berufsausübungsgemeinschaft
+ST_Praxisform;04;fachgebietsübergreifende Berufsausübungsgemeinschaft
+ST_Praxisform;05;fachgebietsübergreifende überörtliche Berufsausübungsgemeinschaft
+ST_Produktattribut;01;fondsgebunden
+ST_Produktattribut;02;Todesfallleistung steigend
+ST_Produktattribut;03;Todesfallleistung fallend
+ST_Produktattribut;04;dynamisch
+ST_Produktattribut;05;fester Ablauftermin
+ST_Produktattribut;06;Kinderversorgung
+ST_Produktattribut;07;Bestattungsversorgung
+ST_Produktattribut;08;Teilauszahlung
+ST_Produktattribut;09;verbundene Leben
+ST_Produktattribut;10;vermögenswirksame Leistung
+ST_Produktattribut;11;flexible Auszahlphase
+ST_Produktattribut;12;Gruppenvertragskonditionen
+ST_Produktattribut;13;ohne Gesundheitsfragen
+ST_Produktattribut;14;unterschiedliche Beitragsverläufe
+ST_Produktattribut;15;niedriger Granatiezins
+ST_Produktattribut;16;lebenslang
+ST_Produktattribut;17;abgekürzt
+ST_Produktattribut;18;sofortbeginnend
+ST_Produktattribut;19;privat
+ST_Produktattribut;20;Riesterrente
+ST_Produktattribut;21;Basisrente
+ST_Produktattribut;22;mit Beitragsrückgewähr
+ST_Produktattribut;23;mit Rentengarantiezeit
+ST_Produktattribut;24;mit Rentenauszahlung
+ST_Produktattribut;25;Nichtraucher
+ST_Produktattribut;26;Umtauschoption
+ST_Produktattribut;27;fallende Leistung
+ST_Produktattribut;28;abweichende Leistungsdauer
+ST_Produktattribut;29;Ausprägung Erwerbsunfähigkeit
+ST_Produktattribut;30;Ausprägung Berufsunfähigkeit
+ST_Produktattribut;31;Ausprägung Erwerbsminderung
+ST_Produktattribut;32;Nachversicherungsgarantie
+ST_Produktattribut;33;Karenzzeit
+ST_Produktattribut;34;Einmalleistung
+ST_Produktattribut;35;Pflegestufe 1 (ab 2017 werden die Pflegestufen durch Pflegegrade ersetzt.)
+ST_Produktattribut;36;Leistungsart Kapital
+ST_Produktattribut;37;Leistungsart Rente
+ST_Produktattribut;38;Leistungsart gemischt
+ST_Produktattribut;39;Beitragsbefreiung
+ST_Produktattribut;40;Erlebensfallleistung niedriger
+ST_Produktattribut;41;Erlebensfallleistung höher
+ST_Produktattribut;42;Leistung bei Heirat
+ST_Produktattribut;43;Hinterbliebenenrente
+ST_Produktattribut;44;Verfügungsoption
+ST_Produktattribut;45;Pflegestufe 2 (ab 2017 werden die Pflegestufen durch Pflegegrade ersetzt.)
+ST_Produktattribut;46;Pflegestufe 3 (ab 2017 werden die Pflegestufen durch Pflegegrade ersetzt.)
+ST_Produktattribut;47;Beitragserhaltungsgarantie
+ST_Produktattribut;48;Beitragserhaltungsgarantie Investment
+ST_Produktattribut;49;öffentlicher Dienst
+ST_Produktattribut;50;klassisch (nicht fondsgebunden)
+ST_Produktattribut;51;konstante Todesfallleistung
+ST_Produktattribut;52;Leistungsstaffel
+ST_Produktattribut;53;Pflegegrad 1
+ST_Produktattribut;54;Pflegegrad 2
+ST_Produktattribut;55;Pflegegrad 3
+ST_Produktattribut;56;Pflegegrad 4
+ST_Produktattribut;57;Pflegegrad 5
+ST_Produktgruppe;Kapitallebensversicherung;Kapitallebensversicherung
+ST_Produktgruppe;Rentenversicherung;Rentenversicherung
+ST_Produktgruppe;Risikoversicherung;Risikoversicherung
+ST_Produktgruppe;Berufsunfaehigkeitsversicherung;BU
+ST_Produktgruppe;Pflegeversicherung;Pflegeversicherung
+ST_Produktgruppe;Dread disease;Dread Disease
+ST_Produktgruppe;Taetigkeitsunfaehigkeitsversicherung;Taetigkeitsunfaehigkeitsversicherung
+ST_Produktgruppe;Unfallversicherung;Unfallversicherung
+ST_Produktgruppe;Todesfallversicherung;Todesfallversicherung
+ST_Produktgruppe;Hinterbliebenenversicherung;Hinterbliebenenversicherung
+ST_Produktgruppe;Waisenrenteversicherung;Waisenrenteversicherung
+ST_Produktgruppe;Kapitalisierungsprodukt;Kapitalisierungsprodukt
+ST_Provisionsart;01;Abschlussprovision
+ST_Provisionsart;02;Bestands- / Folgeprovision
+ST_Pruefsummetyp;MD5;MD5-Algorithmus
+ST_Pruefsummetyp;SHA1;SHA1-Algorithmus
+ST_Radposition;links;
+ST_Radposition;rechts;
+ST_Radposition;Reserve;
+ST_Rechtsform;01;Natuerliche Person
+ST_Rechtsform;02;GBR
+ST_Rechtsform;03;OHG
+ST_Rechtsform;04;KG
+ST_Rechtsform;05;GmbH
+ST_Rechtsform;06;gGmbH
+ST_Rechtsform;07;GmbH & Co KG
+ST_Rechtsform;08;KGaA
+ST_Rechtsform;09;AG
+ST_Rechtsform;10;e.V.
+ST_Rechtsform;11;Verein nach BGB
+ST_Rechtsform;12;e.G.
+ST_Rechtsform;13;Ges. d. oeffentl. Rechts
+ST_Rechtsform;14;e.K., e.Kfm., e.Kffr. (eingetragener Kaufmann / eigentragene Kauffrau)
+ST_Rechtsform;15;PartG (Partnerschaftsgesellschaft)
+ST_Rechtsform;16;Partnerreederei
+ST_Rechtsform;17;AG & Co. KG
+ST_Rechtsform;18;VAG (Versicherung auf Gegenseitigkeit)
+ST_Rechtsform;19;Unternehmergesellschaft (haftungsbeschränkt)
+ST_Rechtsform;20;GmbH & Co. KGaA;
+ST_Rechtsform;21;AG & Co. KGaA
+ST_Rechtsform;22;Stiftung & Co. KGaA
+ST_Rechtsform;23;gAG (gemeinützige Aktiengesellschaft)
+ST_Rechtsform;24;InvAG (Investmentaktiengesellschaft)
+ST_Rechtsform;25;Ltd (Private Company Limited by Shares)
+ST_Rechtsform;26;Inc (Incorporated)
+ST_Rechtsform;27;Juristische Person nach altem hamburgischen Recht (eigentümerlos, z.B. HASPA Finanzholding)
+ST_Rechtsform;28;KdöR (Körperschaft des öffentlichen Rechts, darunter fallen: - Gebietskörperschaften (Bund, Länder, Gemeinden); - (staatliche) Universitäten; - Berufsständische Körperschaften (Kammern); - Weltanschauungs- und Religionsgemeinschaften mit Körperschaftsstatus; - Deutschlandradio)
+ST_Rechtsform;29;AdöR (Anstalt des öffentlichen Rechts darunter fallen: - Landesrundfunkanstalten; - Sparkassen; - Kommunalunternehmen)
+ST_Rechtsform;30;Stiftung des privaten Rechts
+ST_Rechtsform;31;Stiftung des öffentlichen Rechts
+ST_Rechtsform;32;Gemeinnützige Stiftung
+ST_Rechtsform;33;Regiebetrieb
+ST_Rechtsform;34;Eigenbetrieb
+ST_Rechtsform;35;Zweckverband
+ST_Rechtsform;36;Gewerkschaften
+ST_Rechtsform;37;Politische Parteien
+ST_Rechtsform;38;Kolonialgesellschaft nach deutschem Schutzgebietsrecht
+ST_Rechtsform;39;Bergrechtliche Gewerkschaft nach preußischem Recht
+ST_Rechtsform;40;ARGE (Bietergemeinschaft / Arbeitsgemeinschaft)
+ST_Rechtsform;41;IG (Interessengemeinschaft / Strategische Allianz)
+ST_Rechtsform;42;Joint-Venture
+ST_Rechtsform;43;nicht eingetragener Verein
+ST_Rechtsform;44;Altrechtlicher Verein
+ST_Rechtsform;99;Sonstiges
+ST_Regulierungsart;1;Versicherungsunternehmen
+ST_Regulierungsart;2;Vermittler
+ST_Regulierungsart;3;bevollmächtigter Dienstleister
+ST_Regulierungsstatus;1;Regulierung gewünscht.
+ST_Regulierungsstatus;2;Regulierung erfolgt.
+ST_Reparaturstatus;1;teilrepariert
+ST_Reparaturstatus;2;repariert
+ST_Reparaturstatus;3;notrepariert
+ST_Reserveradart;0;kein Reserverad
+ST_Reserveradart;1;Reserverad
+ST_Reserveradart;2;Notrad
+ST_Reserveradart;9;sonstiges (z.B. ein im Fahrzeug mitgeliefertes Pannenset/Kompressor)
+ST_RetouregrundBank;0;Sonstige Gründe
+ST_RetouregrundBank;1;Konto erloschen
+ST_RetouregrundBank;2;Angaben unklar
+ST_RetouregrundBank;3;Kein LEV-Auftrag
+ST_RetouregrundBank;4;Rückruf Produktgeber
+ST_RetouregrundBank;5;Widerspruch
+ST_RetouregrundBank;10;IBAN fehlerhaft (Incorrect Account Number)
+ST_RetouregrundBank;11;Konto aufgelöst (Closed Account Number)
+ST_RetouregrundBank;12;Konto gesperrt (Blocked Account)
+ST_RetouregrundBank;13;Die Begleichung der Transaktion ist fehlgeschlagen. (Settlement Failed)
+ST_RetouregrundBank;14;Kein gültiges Mandat (No Mandate)
+ST_RetouregrundBank;15;Die Daten zum Mandat fehlen oder sind nicht korrekt. (Missing Mandatory Information Mandate)
+ST_RetouregrundBank;16;Widerspruch durch den Zahler (Zahlungspflichtigen) (Refund Request By End Customer)
+ST_RetouregrundBank;17;Rückgabe durch den Zahler (Zahlungspflichtigen) vor Fälligkeit (Refusal) (Not Specified Reason Customer Generated)
+ST_RetouregrundBank;18;BIC ungültig (Bank Identifier Incorrect)
+ST_RetouregrundBank;19;Sonstige externe Gründe
+ST_RisikokennzifferHausrat;0010;Hausrat in staendig bewohnter Wohnung
+ST_RisikokennzifferHausrat;0011;Hausrat in staendig bewohnter Wohnung im Mehrfamilienhaus
+ST_RisikokennzifferHausrat;0012;Hausrat in staendig bewohnter Wohnung im Einfamilienhaus
+ST_RisikokennzifferHausrat;0013;Hausrat in staendig bewohnter Wohnung im Zweifamilienhaus
+ST_RisikokennzifferHausrat;0020;Hausrat in nicht staendig bewohnter Wohnung.
+ST_RisikokennzifferHausrat;0021;Hausrat in nicht staendig bewohnter Wohnung in von Dritten staendig bewohntem Gebaeude.
+ST_RisikokennzifferHausrat;0023;Hausrat bei voruebergehendem Wohnsitz im Ausland
+ST_RisikokennzifferHausrat;0029;Hausart eingelagert
+ST_RisikokennzifferHausrat;0030;Hausrat in nicht staendig bewohntem Gebaeude
+ST_RisikokennzifferHausrat;0037;Hausrat in nicht staendig bewohntem Gebaeude innerhalb eines geschlossenen Wohngebietes
+ST_RisikokennzifferHausrat;0038;Hausrat in nicht staendig bewohntem Gebaeude ausserhalb eines geschlossenen Wohngebietes
+ST_RisikokennzifferHausrat;0000;Unbekannt, nicht geschluesselt
+ST_RisikokennzifferWohngebaeude;0051;Reine Wohngebaeude
+ST_RisikokennzifferWohngebaeude;0052;Gemischt genutzte Wohngebaeude
+ST_RisikokennzifferWohngebaeude;0053;Reine Wohngebaeude Einfamilienhaeuser (ggf. inkl. Einliegerwohnung)
+ST_RisikokennzifferWohngebaeude;0054;Reine Wohngebaeude Zweifamilienhaeuser (ggf. inkl. Einliegerwohnung)
+ST_RisikokennzifferWohngebaeude;0055;Reine Wohngebaeude Mehrfamilienhaeuser
+ST_RisikokennzifferWohngebaeude;0059;Nicht staendig bewohnte Wochenend-, Ferienhaeuser sowie aehnliche Gebaeude
+ST_RolleBeteiligter;01;Versicherungsnehmer
+ST_RolleBeteiligter;02;versicherte Person
+ST_RolleBeteiligter;03;Anspruchsteller
+ST_RolleBeteiligter;04;Reparaturfirma
+ST_RolleBeteiligter;05;Sachverständiger
+ST_RolleBeteiligter;06;Zeuge
+ST_RolleBeteiligter;07;Rechtsanwalt
+ST_RolleBeteiligter;08;Sicherungsgläubiger
+ST_RolleBeteiligter;09;Versicherungsunternehmen
+ST_RolleBeteiligter;10;Dienstleister
+ST_RolleBeteiligter;11;Arzt
+ST_RolleBeteiligter;12;Krankenhaus
+ST_RollladenStatus;1;geschlossen
+ST_RollladenStatus;2;nicht geschlossen
+ST_RollladenStatus;3;nicht vorhanden
+ST_Rueckzahlungsart;Einmalzahlung;
+ST_Rueckzahlungsart;Herabsetzung;
+ST_Rueckzahlungsart;Ratenzahlung;
+ST_Rueckzahlungsart;Ueberschussanteile;
+ST_Saldoart;Anfangssaldo;
+ST_Saldoart;Endsaldo;
+ST_Saldoart;Abrechnungssaldo;
+ST_Sanierungsart;Dach;Dachsanierung
+ST_Sanierungsart;Elektrik;Erneuerung der Elektroinstallation
+ST_Sanierungsart;Leitungswassernetz;Sanierung des Leitungswassernetzes
+ST_Sanierungsart;Heizungsanlage;Sanierung der Heizungsanlage
+ST_SBGiltFuer;001;Abschreibedeckungssumme für Personenschäden
+ST_SBGiltFuer;002;Abschreibedeckungssumme für sonstige Schäden
+ST_SBGiltFuer;003;Abhandenkommen / Vermögensschäden
+ST_SBGiltFuer;004;Brand/Explosion
+ST_SBGiltFuer;005;Brand/Explosion Personen
+ST_SBGiltFuer;006;Brand/Explosion Sach
+ST_SBGiltFuer;007;Brillenschäden (Augenarzt)
+ST_SBGiltFuer;008;Erfüllungsschäden (Zahnarzt)
+ST_SBGiltFuer;009;Feuerhaftung
+ST_SBGiltFuer;010;Selbstbeteiligung auf alle Deckungssummen
+ST_SBGiltFuer;011;
+ST_SBGiltFuer;012;
+ST_SBGiltFuer;013;UHV pauschale Störfalldeckungssumme
+ST_SBGiltFuer;014;UHV Rettungskosten
+ST_SBGiltFuer;015;Selbstbeteiligung auf alle Deckungssummen außer Personen
+ST_SBGiltFuer;016;Selbstbeteiligung auf alle Summenbegrenzungen
+ST_SBGiltFuer;017;Störfalldeckung
+ST_SBGiltFuer;018;sonstige Summenarten
+ST_SBGiltFuer;019;sonstige Schäden (Sach- und Vermögensschäden)
+ST_SBGiltFuer;020;Schäden an fremden Kfz
+ST_SBGiltFuer;021;Schäden an fremden Hilfsmitteln
+ST_SBGiltFuer;022;Abhandenkommen von fremden Schlüsseln und Codekarten
+ST_SBGiltFuer;023;Mietsachschäden
+ST_SBGiltFuer;024;Tätigkeitsschäden an fremden Hilfsmitteln
+ST_SBGiltFuer;025;Mietsachschäden durch sonstige Ursachen (außer Brand und Explosion)
+ST_SBGiltFuer;026;Be- und Entladeschäden
+ST_SBGiltFuer;027;erweiterte Produkthaftpflicht
+ST_SBGiltFuer;028;Nachbesserungsschäden
+ST_Schaden;1;Personenschaden
+ST_Schaden;2;Sachschaden
+ST_Schaden;3;Vermögensschaden
+ST_Schadenabrechnungsform;1;konkrete Schadenregulierung
+ST_Schadenabrechnungsform;2;fiktive Schadenregulierung
+ST_Schadenabrechnungsform;3;Regulierung als Totalschaden
+ST_Schadenart;401;Bauherrenhaftpflicht
+ST_Schadenart;402;Berufshaftpflicht
+ST_Schadenart;403;Betriebshaftpflicht
+ST_Schadenart;404;Heilwesenhaftpflicht
+ST_Schadenart;405;Planungshaftpflicht
+ST_Schadenart;406;Privatrisiko
+ST_Schadenart;407;Produkthaftpflicht
+ST_Schadenart;408;Tierhalterhaftpflicht
+ST_Schadenart;409;Umwelthaftpflicht
+ST_Schadenart;410;Vermögenshaftpflicht
+ST_Schadenart;411;Haus- und Grundbesitzerhaftpflicht
+ST_Schadenart;451;Sozialgerichtsrechtsschutz
+ST_Schadenart;452;Arbeitsrechtsschutz
+ST_Schadenart;453;Familien- und Erbrechtsschutz / Beratungsrechtsschutz
+ST_Schadenart;454;Mietrechtsschutz
+ST_Schadenart;455;Steuergerichtsrechtsschutz
+ST_Schadenart;456;Ordnungswidrigkeitenrechtsschutz (ohne Verkehrsbereich)
+ST_Schadenart;457;Ordnungswidrigkeitenrechtsschutz (Verkehrsbereich)
+ST_Schadenart;458;Schadenersatzrechtsschutz (Verkehrsbereich)
+ST_Schadenart;459;Strafrechtsschutz (ohne Verkehrsbereich)
+ST_Schadenart;460;Strafrechtsschutz (Verkehrsbereich)
+ST_Schadenart;461;Vertragsrechtsschutz (ohne Verkehrsbereich)
+ST_Schadenart;462;Vertragsrechtsschutz (Verkehrsbereich)
+ST_Schadenart;463;Rechtsschutz für Grundstücks- und Wohneigentum
+ST_Schadenart;510;Kfz-Schaden mit/ohne sonstigem Sachschaden
+ST_Schadenart;520;Sachschaden ohne Kfz-Schaden
+ST_Schadenart;580;Ladungsschaden Fernverkehr
+ST_Schadenart;590;Ladungsschaden Nahverkehr
+ST_Schadenart;610;Todesfall mit Kfz-Schaden und Sachschaden
+ST_Schadenart;620;Todesfall ohne Kfz-Schaden jedoch mit Sachschaden
+ST_Schadenart;710;Verletztenfall mit Kfz-Schaden und Sachschaden
+ST_Schadenart;720;Verletztenfall ohne Kfz-Schaden jedoch mit Sachschaden
+ST_Schadenart;800;Passives Beteiligungsgeschäft Vollkasko
+ST_Schadenart;801;Aktives Beteiligungsgeschäft Vollkasko
+ST_Schadenart;810;Unfall/Kollision mit anderen KFZ (VK-Tatbestand)
+ST_Schadenart;850;Unfall ohne Berührung mit anderen KFZ (VK-Tatbestand)
+ST_Schadenart;860;Mut- und böswillige Beschädigung
+ST_Schadenart;861;Einbruchdiebstahl
+ST_Schadenart;862;Kfz-Einbruch mit Diebstahl persönlicher Gegenstände
+ST_Schadenart;863;Fahrraddiebstahl
+ST_Schadenart;870;Garantiefall (Reparaturkostenversicherung)
+ST_Schadenart;871;Passives Beteiligungsgeschäft Rep.kostenversicherung
+ST_Schadenart;872;Aktives Beteiligungsgeschäft Rep.kostenversicherung
+ST_Schadenart;875;Zusatzhaftpflichtversicherung für Handel/Handwerk
+ST_Schadenart;900;Passives Beteiligungsgeschäft Teilkasko
+ST_Schadenart;901;Aktives Beteiligungsgeschäft Teilkasko
+ST_Schadenart;911;Brand
+ST_Schadenart;912;Explosion
+ST_Schadenart;913;Seng- und Schmorschäden, auch Schäden an Verkabelung
+ST_Schadenart;914;Leitungswasser
+ST_Schadenart;915;Elementarschaden
+ST_Schadenart;916;Vermögensschaden
+ST_Schadenart;917;Mietverlustschaden
+ST_Schadenart;918;Brems-, Betriebs- und Bruchschäden
+ST_Schadenart;919;IT-Schäden
+ST_Schadenart;920;Diebstahl von Fahrzeuginnenteilen
+ST_Schadenart;921;versuchter Totaldiebstahl
+ST_Schadenart;922;Diebstahl von Fahrzeugaußenteilen
+ST_Schadenart;930;Totaldiebstahl
+ST_Schadenart;950;Glasschaden
+ST_Schadenart;951;Sturmschaden
+ST_Schadenart;962;Hagelschaden
+ST_Schadenart;963;Blitz
+ST_Schadenart;970;Überschwemmungsschaden
+ST_Schadenart;980;Wildschaden
+ST_Schadenart;981;Marderbiss
+ST_Schadenart;990;Ladungsschaden ohne Fahrzeugschaden
+ST_Schadenart;999;Sonstige Schadenart
+ST_SchadenartUnfall;01;Wegeunfall (Unfall auf dem Weg zur oder von der Arbeitsstätte/Schule)
+ST_SchadenartUnfall;02;Berufs-/Schulunfall (ohne Wegeunfall) im privaten häuslichen Bereich
+ST_SchadenartUnfall;03;Berufs-/Schulunfall (ohne Wegeunfall) außerhalb des privaten häuslichen Bereiches
+ST_SchadenartUnfall;04;Unfall bei Tätigkeit für den Haushalt und Einkäufen - im privaten häusllichen Bereich
+ST_SchadenartUnfall;05;Unfall bei Tätigkeit für den Haushalt und Einkäufen - außerhalb des privaten häuslichen Bereiches
+ST_SchadenartUnfall;06;Sonstige Unfälle im privaten häuslichen Bereich ohne Beziehung zur Tätigkeit für Haushalt
+ST_SchadenartUnfall;07;Sonstige Unfälle außerhalb des privaten häuslichen Bereichs ohne Beziehung zur Tätigkeit für Haushalt
+ST_SchadenartUnfall;08;Unfallart noch nicht bekannt
+ST_SchadenartUnfall;99;Sonstiges
+ST_Schadenstatus;01;offen
+ST_Schadenstatus;02;geschlossen
+ST_Schadenstelle;1;innerhalb Gebäude
+ST_Schadenstelle;2;innerhalb Grundstück
+ST_Schadenstelle;3;außerhalb Grundstück
+ST_Schadenverursacher;0;unbekannt
+ST_Schadenverursacher;1;Versicherungsnehmer
+ST_Schadenverursacher;2;Anspruchsteller
+ST_Schadenverursacher;3;Mitarbeiter
+ST_Schadenverursacher;4;Ehegatte
+ST_Schadenverursacher;5;eingetragener Lebenspartner
+ST_Schadenverursacher;6;Kind, ohne Altersangabe
+ST_Schadenverursacher;7;Kind kleiner 7 Jahre
+ST_Schadenverursacher;8;Kind größer/gleich 7 Jahre und kleiner 10 Jahre
+ST_Schadenverursacher;9;Kind größer/gleich 10 Jahre
+ST_Schadenverursacher;10;Subunternehmer
+ST_Schadenverursacher;11;Berechtigter Fahrer
+ST_Schadenverursacher;99;Sonstiger
+ST_Schliessungsart;01;Schließung mit Zahlung
+ST_Schliessungsart;02;Ablehnung
+ST_Schliessungsart;03;Schließung ohne Zahlung (z.B. unterhalb Selbstbehalt)
+ST_Schliessungsart;04;Kulanz Ist aufgrund von Compliance nicht mehr zu verwenden.
+ST_Schliessungsart;05;Falschanlage
+ST_Sicherungseinrichtung;00010;Alarmanlage (Einbruchmeldeanlage)
+ST_Sicherungseinrichtung;00011;Ueberfallmeldeanlage
+ST_Sicherungseinrichtung;00020;Brandschutzmeldeanlage
+ST_Sicherungseinrichtung;00021;Rauchmeldeanlage
+ST_Sicherungseinrichtung;00022;Feuerloeschanlage
+ST_Sicherungseinrichtung;00030;Fenster
+ST_Sicherungseinrichtung;00031;Fenster gegen Aufhebeln geschützt
+ST_Sicherungseinrichtung;00032;Lichtschächte und Kellerfenster geschützt
+ST_Sicherungseinrichtung;00040;Tueren
+ST_Sicherungseinrichtung;00041;Tore
+ST_Sicherungseinrichtung;00042;Zyinderschloss außen nicht überstehend und mit mind. 5 Zuhaltungen
+ST_Sicherungseinrichtung;00043;Türen gegen Aufhebeln geschützt
+ST_Sicherungseinrichtung;99999;Sonstige
+ST_Sitzbezug;1;Stoff
+ST_Sitzbezug;2;Kunstleder
+ST_Sitzbezug;3;Leder
+ST_Sparte;010;Leben
+ST_Sparte;020;Krankenversicherung
+ST_Sparte;030;Allgemeine Unfallversicherung
+ST_Sparte;040;Haftpflicht
+ST_Sparte;050;Kraftfahrt
+ST_Sparte;051;Kfz-Haftpflicht
+ST_Sparte;052;Kfz-Fahrzeugvoll
+ST_Sparte;053;Kfz-Fahrzeugteil
+ST_Sparte;054;Kfz-Unfall
+ST_Sparte;055;Kfz-Baustein
+ST_Sparte;060;Luftfahrtversicherung
+ST_Sparte;070;Rechtsschutz
+ST_Sparte;080;Feuerversicherung
+ST_Sparte;081;Feuer-Industrie-Versicherung
+ST_Sparte;082;landwirtschaftliche Feuer-Versicherung
+ST_Sparte;083;sonstige Feuerversicherung
+ST_Sparte;089;uebrige und nicht aufgegliederte Feuer-Versicherung
+ST_Sparte;090;Einbruch-Diebstahl- und Raub(ED)-Versicherung
+ST_Sparte;099;uebrige und nicht aufgegliederte ED-Versicherung
+ST_Sparte;100;Leitungswasser(LW)-Versicherung
+ST_Sparte;109;uebrige und nicht aufgegliederte LW-Versicherung
+ST_Sparte;110;Glasversicherung
+ST_Sparte;015;Geschäfte der Verwaltung von Versorgungseinrichtungen
+ST_Sparte;120;Sturm-Versicherung
+ST_Sparte;130;Verbundene Hausrat
+ST_Sparte;140;Verbundene Gebaeude
+ST_Sparte;150;Hagel-Versicherung
+ST_Sparte;160;Tierversicherung
+ST_Sparte;171;Maschinen-Versicherung
+ST_Sparte;172;Elektronik-Versicherung
+ST_Sparte;174;Montage-Versicherung
+ST_Sparte;175;Haushaltsgeraeteversicherung
+ST_Sparte;176;Bauleistungs-Versicherung
+ST_Sparte;179;uebrige Technische Versicherungen
+ST_Sparte;180;Einheits-Versicherung
+ST_Sparte;181;Allgemeine Einheitsversicherung
+ST_Sparte;210;Extend Coverage(EC)-Versicherung
+ST_Sparte;231;Feuer-(Gross)Betriebsunterbrechungs-Versicherung
+ST_Sparte;232;Technische-Betriebsunterbrechungs-Versicherung/ MBU Elektronik
+ST_Sparte;233;sonstige Betriebsunterbrechungsversicherungen
+ST_Sparte;290;sonstige Schadenversicherung, z. B. Maschinen-Garantie-Versicherung
+ST_Sparte;293;sonstige Vermoegensschadenversicherungen
+ST_Sparte;294;sonstige gemischte Versicherungen
+ST_Sparte;299;uebrige und nicht aufgegliederte sonstige Schadenversicherungen
+ST_Sparte;510;Verkehrsservice
+ST_Sparte;550;Investmentfonds
+ST_Sparte;580;Bausparkassen
+ST_Sparte;600;Moped 2.
+ST_Sparte;630;Rahmen- und Sammelvertraege
+ST_Sparte;650;Handel und Handwerk 2.
+ST_Sparte;011;Einzelversicherung (ohne Zusatzversicherung) mit Überschussbeteiligung, bei der das Anlagerisiko vom Versicherungsunternehmen getragen wird.
+ST_Sparte;012;Kollektivversicherung (ohne Zusatzversicherung) mit Überschussbeteiligung, bei der das Anlagerisiko vom Versicherungsunternehmen getragen wird.
+ST_Sparte;013;Zusatzversicherung (einschließlich der für Kollektivversicherungen)
+ST_Sparte;014;Sonstige Lebensversicherung
+ST_Sparte;021;Einzel- Krankheitskostenvollversicherung (ambulant und stationär)
+ST_Sparte;022;selbstständige Einzel- Krankheitskostenversicherung (ambulant)
+ST_Sparte;023;selbstständige Einzel- Krankheitskostenversicherung (stationär)
+ST_Sparte;024;Einzel- Krankentagegeldversicherung
+ST_Sparte;025;selbstständige Einzel- Krankenhaustagegeldversicherung
+ST_Sparte;026;sonstige selbstständige Einzel- Teilversicherung
+ST_Sparte;027;Gruppen- Krankenversicherung (nach Einzel- und Sondertarifen)
+ST_Sparte;028;Pflegekrankenversicherung
+ST_Sparte;029;übrige und nicht aufgegliederte Krankenversicherung (einschließlich der Beihilfeablöseversicherung)
+ST_Sparte;031;Einzelunfallversicherung ohne Beitragsrückgewähr
+ST_Sparte;033;Gruppen- Unfallversicherung ohne Beitragsrückgewähr
+ST_Sparte;034;Probandenversicherung
+ST_Sparte;038;Unfallversicherung mit Beitragsrückgewähr
+ST_Sparte;039;übrige und nicht aufgegliederte Allgemeine Unfallversicherung
+ST_Sparte;041;Privathaftpflichtversicherung (einschließlich Sportboot- und Hundehalterhaftpflichtversicherung)
+ST_Sparte;042;Betriebs- und Berufshaftpflichtversicherung
+ST_Sparte;043;Umwelt- Haftpflichtversicherung
+ST_Sparte;044;Vermögensschaden- Haftpflichtversicherung
+ST_Sparte;045;Verkehrshaftungsversicherung (einschließlich der Speditions- und Rollfuhrversicherung)
+ST_Sparte;046;Strahlen- und Atomanlagen-Haftpflichtversicherung
+ST_Sparte;047;Feuerhaftungsversicherung
+ST_Sparte;048;See-, Binnensee- und Flussschifffahrtshaftpflichtversicherung (ohne Kollisionshaftpflichtrisiko) sowie Haftpflichtversicherung für nichtversicherungspflichtige Landfahrzeuge)
+ST_Sparte;049;übrige und nicht aufgegliederte Haftpflichtversicherung
+ST_Sparte;059;Kfz-Gepäck
+ST_Sparte;063;Luftfahrzeug-Kaskoversicherung
+ST_Sparte;065;Raumfahrzeug-Kaskoversicherung
+ST_Sparte;069;übrige und nicht aufgegliederte Luftfahrtversicherung (einschließlich der Raumfahrtversicherung)
+ST_Sparte;071;Rechtsschutzversicherung nach ARB
+ST_Sparte;072;Vermögensschaden-Rechtsschutzversicherung für Aufsichtsräte, Beiräte, Vorstände (VRB)
+ST_Sparte;073;Rechtsschutzversicherung für Träger öffentlicher Aufgaben (ÖRB)
+ST_Sparte;075;Kraftfahrt-Strafrechtsschutzversicherung mit Auslands-Zivilrechtsschutzversicherung
+ST_Sparte;076;Spezial-Strafrechtsschutzversicherung der Unternehmen
+ST_Sparte;079;übrige und nicht aufgegliederte Rechtsschutzversicherung
+ST_Sparte;123;Gärtnerei-Sturmversicherung
+ST_Sparte;124;Versicherung weiterer Elementarschäden bei gewerblichen Risiken
+ST_Sparte;131;Verbundene Hausratversicherung ohne Einschluss weiterer Elementarschäden
+ST_Sparte;132;Verbundene Hausratversicherung unter Einschluss weiterer Elementarschäden
+ST_Sparte;141;Verbundene Wohngebäudeversicherung ohne Einfluss weiterer Elementarschäden
+ST_Sparte;142;Verbundene Wohngebäudeversicherung unter Einfluss weiterer Elementarschäden
+ST_Sparte;161;langfristige Tierlebensversicherung
+ST_Sparte;162;kurzfristige Tierversicherung
+ST_Sparte;169;übrige und nicht aufgegliederte Tierversicherung
+ST_Sparte;170;Technische Versicherung
+ST_Sparte;182;Juwelierwaren-Einheitsversicherung
+ST_Sparte;183;Rauchwaren-Einheitsversicherung
+ST_Sparte;184;Textilveredlungs-Einheitsversicherung
+ST_Sparte;185;Wäscheschutz-Einheitsversicherung
+ST_Sparte;189;übrige und nicht aufgegliederte Einheitsversicherung
+ST_Sparte;190;Transport
+ST_Sparte;191;Kaskoversicherung
+ST_Sparte;192;Transportgüterversicherung
+ST_Sparte;193;Valorenversicherung (gewerblich)
+ST_Sparte;194;Filmversicherung
+ST_Sparte;197;Kriegsrisikoversicherung
+ST_Sparte;199;übrige und nicht aufgegliederte Transportversicherung (einschließlich Versicherung von Offshore-Risiken)
+ST_Sparte;200;Kredit- und Kautionsversicherung
+ST_Sparte;201;Kautionsversicherung (einschließlich Baugarantieversicherung)
+ST_Sparte;202;Delkredereversicherung
+ST_Sparte;209;übrige und nicht aufgegliederte Kredit- und Kautionsversicherung
+ST_Sparte;230;Betriebsunterbrechungs-Versicherung
+ST_Sparte;240;Beistandsleistungsversicherung
+ST_Sparte;241;Schutzbriefversicherung
+ST_Sparte;242;Sportboot-Serviceversicherung
+ST_Sparte;243;Flugrückholkostenversicherung
+ST_Sparte;244;Schutzbriefversicherung unter Einschluss der sog. Mallorca-Police
+ST_Sparte;249;übrige und nicht aufgegliederte Beistandsleistungsversicherung
+ST_Sparte;250;Luft- und Raumfahrzeug-Haftpflichtversicherung
+ST_Sparte;251;Luftfahrt- Haftpflichtversicherung (einschließlich der Luftfrachtführer-Haftpflichtversicherung)
+ST_Sparte;252;Raumfahrzeug-Haftpflichtversicherung
+ST_Sparte;291;sonstige Sachschadenversicherung
+ST_Sparte;296;Vertrauensschadenversicherung
+ST_Sparte;300;Schaden- und Unfallversicherung insgesamt
+ST_Sparte;560;Kapitalanlagen
+ST_Sparte;570;Baufinanzierungen
+ST_Sparte;684;Tierkrankenversicherung
+ST_Sparte;590;Konsumentenkredit
+ST_Staerkegrad;01;leicht
+ST_Staerkegrad;02;mittel
+ST_Staerkegrad;03;schwer
+ST_Status;OK;Die Verarbeitung konnte fehlerfrei abgeschlossen werden.
+ST_Status;NOK;Die Verarbeitung konnte aufgrund eines Fehlers nicht abgeschlossen werden.
+ST_Steuerart;1;Versicherungsteuer
+ST_Steuerart;2;Feuersteuer
+ST_Steuerart;3;Umsatzsteuer
+ST_Steuerbefreiungsart;01;Nichtveranlagungsbescheinigung NV-Art 01A
+ST_Steuerbefreiungsart;02;Nichtveranlagungsbescheinigung NV-Art 02A
+ST_Steuerbefreiungsart;03;Nichtveranlagungsbescheinigung NV-Art 03A
+ST_Steuerbefreiungsart;04;Freistellungsauftrag
+ST_SteuerlicheFoerderung;0;irrelevant
+ST_SteuerlicheFoerderung;1;pauschal besteuerte Direktversicherung nach §40b EStG
+ST_SteuerlicheFoerderung;2;Beiträge steuerfrei nach §3 Ziff.63 EStG
+ST_SteuerlicheFoerderung;3;zulagengeförderte Direktversicherung nach §10a EStG
+ST_SteuerlicheFoerderung;4;Beiträge steuerfrei nach §3 Ziff.66 EstG
+ST_SteuerlicheFoerderung;5;keine
+ST_SteuerlicheFoerderung;6;Zulagegeförderte Privatversicherung nach §10 a EStG
+ST_SteuerlicheFoerderung;7;Basis-/Rürup-Rente nach § 10 Abs. 1 Nr. 2 Buchstabe b EStG
+ST_Stichtagswert;01;Beitragsfreie Erlebensfallleistung
+ST_Stichtagswert;02;Beitragsfreie Rente
+ST_Stichtagswert;03;Beitragsfreie Todesfallleistung
+ST_Stichtagswert;04;Entnahmemöglichkeit
+ST_Stichtagswert;05;Garantierte Erlebensfallleistung
+ST_Stichtagswert;06;Garantierte Rente
+ST_Stichtagswert;07;Garantierte Todesfallleistung
+ST_Stichtagswert;08;Gesamte Erlebensfallleistung
+ST_Stichtagswert;09;Gesamter Beleihungswert
+ST_Stichtagswert;10;Gesamte Rente
+ST_Stichtagswert;11;Gesamte Todesfallleistung
+ST_Stichtagswert;12;Letzte erhaltene Zulage
+ST_Stichtagswert;13;Letzte Sonderzuzahlung
+ST_Stichtagswert;14;Rückkaufswert
+ST_Stichtagswert;15;Summe erhaltene Zulagen
+ST_Stichtagswert;16;Summe gezahlter Beiträge
+ST_Stichtagswert;17;Summe der Sonderzuzahlungen
+ST_Stichtagswert;18;Ueberschussguthaben
+ST_Stichtagswert;19;Verfuegbarer Beleihungswert
+ST_Stichtagswert;20;Vertragswert
+ST_Stichtagswert;21;Rückgewährsumme
+ST_Stichtagswert;22;Ablaufleistung
+ST_Stichtagswert;23;Kapitalertragssteuer
+ST_Stichtagswert;24;Solidaritätszuschlag
+ST_Szenario;1;Szenario 1
+ST_Szenario;2;Szenario 2
+ST_Szenario;3;Szenario 3
+ST_Szenario;4;Szenario 4
+ST_Szenario;5;Szenario 5
+ST_Teilungsabkommen;0;kein Teilungsabkommen
+ST_Teilungsabkommen;1;Teilungsabkommen nicht vertragsbelastend
+ST_Teilungsabkommen;2;Teilungsabkommen vertragsbelastend
+ST_Tierart;001;Hund
+ST_Tierart;002;Pferd
+ST_Tierart;003;Pony
+ST_Tierart;004;Esel
+ST_Tierart;005;Maultier
+ST_Tierart;006;Maulesel
+ST_Tierart;007;Frettchen
+ST_Tierart;008;Vogel
+ST_TierGeschlecht;1;männlich
+ST_TierGeschlecht;2;weiblich
+ST_TierGeschlecht;3;männlich kastriert
+ST_TierGeschlecht;4;weiblich kastriert
+ST_TierNutzungsart;01;Fohlen
+ST_TierNutzungsart;02;Gnadenbrotpferd
+ST_TierNutzungsart;03;Zuchttier
+ST_TierNutzungsart;04;Turnierpferd
+ST_TierNutzungsart;05;Dienstpferd
+ST_TierNutzungsart;06;Zugpferd
+ST_TierNutzungsart;07;Jagdhund mit Hundeprüfung
+ST_TierNutzungsart;08;Blindenhund
+ST_TierNutzungsart;09;Wachhund
+ST_TierNutzungsart;10;Beizvogel
+ST_Tiersteuer;Hundesteuer;Tier ist hundesteuerpflichtig.
+ST_Tiersteuer;KeineSteuerpflicht;Tier ist nicht steuerpflichtig.
+ST_TransportierteGueter;Eigene;Eigene Güter
+ST_TransportierteGueter;Fremde;Fremde Güter
+ST_TransportmittelSchluessel;01;Gewerbl. LKW-Verkehr, nicht WVK
+ST_TransportmittelSchluessel;02;Bahn
+ST_TransportmittelSchluessel;03;Combined Transport, kein Spediteursammelgut. Transport des Transportgutes in einem Container (oder anderer verschlossener Transporteinheit) vom Sender zum Empfänger, ohne dass der Container auf der Reise ausgepackt wird. Dadurch wird die Gefahr für das Transportgut reduziert. Hinweis: In der GDV-Anlage 57 werden die Schlüssel 03 Combined Transport und 90 multimodal fachlich synonym verwendet werden.
+ST_TransportmittelSchluessel;04;Messe, Ausstellung
+ST_TransportmittelSchluessel;05;Flussschiff, Lagerschiff, Leichter
+ST_TransportmittelSchluessel;06;PKW, private Verkehrsmittel
+ST_TransportmittelSchluessel;07;Kran und alle Hebevorgänge
+ST_TransportmittelSchluessel;08;Flugzeuge
+ST_TransportmittelSchluessel;09;Magazin, fremdes Lager
+ST_TransportmittelSchluessel;10;Post
+ST_TransportmittelSchluessel;11;Seeschiff, auch Kümo
+ST_TransportmittelSchluessel;12;Träger, Bote, Mensch
+ST_TransportmittelSchluessel;90;"multimodal" (verschiedenartige Transportmittel). Multimodal bedeutet, dass mehrere Transportmittel und ein Umladen bei einem Transport vorkommen, also z.B. LKW zum Hafen, dann Umladen des Transportgutes in einen Container und Weitertransport auf einem Schiff, und am Zielhafen Ausladen aus dem Container und wieder mit dem LKW zum Empfänger. Hinweis: Nicht in GDV-Anlage 57 enthalten, dort werden die Schlüssel 03 Combined Transport und 90 multimodal fachlich synonym verwendet werden.
+ST_TransportmittelSchluessel;99;Sonstige
+ST_TuerschlossArt;01;Bartschloss
+ST_TuerschlossArt;02;Zylinder, nicht bündig
+ST_TuerschlossArt;03;Zylinder, bündig
+ST_TuerschlossArt;04;Sicherheitsschloss
+ST_TuerschlossArt;05;Kastenschloss mit Sperrbügel
+ST_TuerschlossArt;06;Querriegelschloss
+ST_TuerschlossArt;07;Fingerprintschloss
+ST_TuerschlossArt;08;Kartenleserschloss
+ST_TuerschlossArt;09;Hakenschwenkriegelschloss
+ST_TuerschlossArt;99;Sonstiges
+ST_TypDerBankverbindung;01;Praemienzahlungskonto
+ST_TypDerBankverbindung;02;Auszahlungskonto (Schaden, Leistung)
+ST_TypDerBankverbindung;03;ohne Spezifikation
+ST_Unfallursache;01;Sportunfall
+ST_Unfallursache;02;Verkehrsunfall
+ST_Unfallursache;03;Fall/Sturz infolge Glatteis
+ST_Unfallursache;04;Fall/Sturz wegen sonstiger Ursachen
+ST_Unfallursache;05;Elektrischer Strom
+ST_Unfallursache;06;Brand
+ST_Unfallursache;07;Explosion
+ST_Unfallursache;08;Dämpfe, Flüssigkeiten, Gase
+ST_Unfallursache;09;Naturereignis: Blitzschlag
+ST_Unfallursache;10;Naturereignis: Erdbeben
+ST_Unfallursache;11;Naturereignis: Flutkatastrophe
+ST_Unfallursache;12;Unfälle durch Tiere
+ST_Unfallursache;13;Feuer-/Schusswaffen
+ST_Unfallursache;14;Maschinen
+ST_Unfallursache;15;Werkzeug: schneidende Werkzeuge
+ST_Unfallursache;16;Werkzeug: stechende Werkzeuge
+ST_Unfallursache;17;sonstige Werkzeuge
+ST_Unfallursache;18;Kraftanstrengung
+ST_Unfallursache;19;Stoß an Gegenständen
+ST_Unfallursache;20;Röntgenstrahlen im Rahmen der Röntgenklausel
+ST_Unfallursache;21;Infektionen im Rahmen der Infektionsklausel
+ST_Unfallursache;22;Strahlung von außen durch Geräte
+ST_Unfallursache;23;Strahlung von außen durch Stoffe
+ST_Unfallursache;24;Inkorporation strahlender Stoffe
+ST_Unfallursache;99;sonstige Unfallursachen
+ST_Unterkellerung;voll;
+ST_Unterkellerung;keine;
+ST_Unterkellerung;teilweise;
+ST_Unternehmensnummernart;AGIK;Identifikation gem. der Nummer der Arbeitsgemeinschaft Institutionskennzeichen
+ST_Unternehmensnummernart;BaFin;Identifikation gem. der Nummer der Bundesanstalt für Finanzdienstleistungsaufsicht
+ST_Unternehmensnummernart;AnbNr;Riesteranbieternummer der ZfA
+ST_Unternehmensnummernart;IHK;IHK-Nummer des Vermittlers bzw. Assekuradeurs.
+ST_Unterschriftsverfahren;00;Keine Unterschrift; Abgabe der Willenserklärung erfolgt z. B. mündlich
+ST_Unterschriftsverfahren;01;Elektronische Unterzeichnung eines Dokumentes mittels fortgeschrittener elektronischer Signatur z. B. ePen oder DigiPad
+ST_Unterschriftsverfahren;02;Elektronische Unterzeichnung eines Dokumentes mittels qualifizierter elektronischer Signatur z. B. nPA
+ST_Unterschriftsverfahren;03;Handschriftliche Unterzeichnung auf ausgedrucktem Papier
+ST_VbArt;1;VB gilt fuer einmalige Zulassung
+ST_VbArt;2;VB ist eine Dauer-VB
+ST_VbAusgegebenDurch;VM;Vermittler
+ST_VbAusgegebenDurch;VU;Versicherer
+ST_Verbleib;01;Vorfahrzeug ist abgemeldet und verkauft
+ST_Verbleib;02;Vorfahrzeug wird abgemeldet und verkauft
+ST_Verbleib;03;Vorfahrzeug wird Zweitfahrzeug
+ST_Vereinbarung;01;Nominal (feste, nicht gestaffelte Vereinbarung)
+ST_Vereinbarung;02;Staffel (nach bestimmten Kriterien gestaffelte Vereinbarung)
+ST_VereinbarungKategorieID;Bonus;
+ST_VereinbarungKategorieID;Gebuehr;
+ST_VereinbarungKategorieID;Zins;
+ST_Vereinbarungsbedingung;01;Bestand
+ST_Vereinbarungsbedingung;02;Zuzahlung
+ST_Verfahrensstadium;01;Erstberatung
+ST_Verfahrensstadium;02;Beratung
+ST_Verfahrensstadium;03;Vorverfahren
+ST_Verfahrensstadium;04;Vorermittlungen
+ST_Verfahrensstadium;05;Widerspruchsverfahren
+ST_Verfahrensstadium;06;Vorverfahren inkl. 1. Instanz
+ST_Verfahrensstadium;07;Außergerichtliche Interessenvertretung
+ST_Verfahrensstadium;08;Förmliches Verfahren
+ST_Verfahrensstadium;09;Beweisverfahren
+ST_Verfahrensstadium;10;1. Instanz
+ST_Verfahrensstadium;11;2. Instanz
+ST_Verfahrensstadium;12;3. Instanz
+ST_Verfahrensstadium;13;Zwangsvollstreckung
+ST_Verfahrensstadium;14;Gnadenverfahren/Strafvollstreckungsverfahren
+ST_Verfahrensstadium;15;Deckungsklage
+ST_Verfahrensstadium;16;Einstweilige Verfügung
+ST_Verfahrensstadium;17;Arrest
+ST_Vermittlerart;01;Angestellter im Innendienst des Produktgebers
+ST_Vermittlerart;02;Generalagent
+ST_Vermittlerart;03;Hauptagent
+ST_Vermittlerart;04;Makler
+ST_Vermittlerart;05;Mehrfachagent
+ST_Vermittlerart;06;Vertriebsorganisation
+ST_Vermittlerart;07;Agentur
+ST_Vermittlerart;08;Assekuradeur
+ST_Vermittlerart;09;Vermittelndes Unternehmen, das ein Produkt an einen anderen Risikoträger weitergibt.
+ST_Vermittlerart;99;Sonstiger Vermittler
+ST_Vermittlerrolle;01;Hauptvermittler
+ST_Vermittlerrolle;02;Untervermittler
+ST_Vermittlerrolle;03;Uebermittelnder Vermittler
+ST_Vermittlerrolle;10;Filialnummer
+ST_Vermittlertyp;01;Abschlussvermittler
+ST_Vermittlertyp;02;Betreuungsvermittler
+ST_Versandart;001;Brief
+ST_Versandart;002;Telefax
+ST_Versandart;003;E-Mail
+ST_Versandart;004;SMS
+ST_Versandart;010;Download
+ST_Versandart;011;Datensatz
+ST_Versandart;999;kein Versand (Dokument im Response erwartet bzw. geliefert)
+ST_Versichertenkreis;Single;Versichert ist eine Einzelperson
+ST_Versichertenkreis;Familie;Versichert ist eine Familie
+ST_Versicherungsbestaetigung;01;Sicherungsschein
+ST_Versicherungsbestaetigung;02;Deckungsbestätigung
+ST_Versicherungsbestaetigung;03;Versicherungsbestätigung für Leasinggesellschaften
+ST_Versicherungsbestaetigung;04;Pflichtversicherungsbestätigung
+ST_Versicherungsbestaetigung;05;Sicherungsbestätigung
+ST_Versicherungsbestaetigung;06;Grundstücksbelastung
+ST_Versicherungsbestaetigung;07;Hypothekengläubigersicherungsschein
+ST_Versicherungsbestaetigung;08;Zertifikat
+ST_Versicherungsbestaetigung;99;Sonstige Bestätigung
+ST_Versicherungsteuerabfuehrung;1;Versicherungsunternehmen
+ST_Versicherungsteuerabfuehrung;2;Vermittler
+ST_Versicherungsteuerabfuehrung;3;Versicherungsnehmer
+ST_Vertragsart;01;Kaufvertrag
+ST_Vertragsart;02;Werkvertrag
+ST_Vertragsart;03;Dienstvertrag
+ST_Vertragsart;04;Arbeitsvertrag
+ST_Vertragsart;05;Mietvertrag
+ST_Vertragsart;06;Pachtvertrag
+ST_Vertragsart;07;Leasingvertrag
+ST_Vertragsart;99;Sonstiger Vertrag
+ST_Vertragsentstehung;1;Neuantrag
+ST_Vertragsentstehung;2;Zuwachsgarantie
+ST_Vertragsentstehung;3;Abtrennung Gruppenversicherung
+ST_Vertragsentstehung;4;Umtausch Risiko
+ST_Vertragsentstehung;5;Übernahme von anderer Gesellschaft
+ST_Vertragsentstehung;6;Nachträglicher Einschluss
+ST_Vertragsentstehung;7;Änderungen bzw. Anpassungen des alten Vertrags führen zu einem neuen Vertrag (gehört zur neuen Ausprägung 43 von ST_Abgangsgrund)
+ST_Vertragsform;0;Einzel
+ST_Vertragsform;1;Firmengruppen
+ST_Vertragsform;2;Vereinsgruppen
+ST_Vertragsform;3;Verbandsgruppen
+ST_Vertragsform;4;Sammelversicherung
+ST_Vertragsform;5;Rahmenvertrag / Generalvertrag / Maklervertrag
+ST_Vertragsform;9;Sonstiges
+ST_Vertragsstatus;1;lebend
+ST_Vertragsstatus;2;lebend / kurzfristig / unterjährig
+ST_Vertragsstatus;3;ruhend / Anwartschaft
+ST_Vertragsstatus;4;storniert
+ST_Vertragsstatus;5;ruhend / beitragsfrei
+ST_Vertragsstatus;6;beitragsfrei
+ST_Vertragsstatus;7;"beitragsfrei durch Leistung": Vertrag/Vertragsbestandteil ist durch einen eingetretenen Leistungsfall beitragsfrei.
+ST_Vertragsstatus;8;Beitragsstundung
+ST_Vertragsstatus;9;Sonstiges
+ST_Vertragsstatus;A;"in Leistung": Vertrag/Vertragsbestandteil befindet final sich in der Leistungsphase, z.B. Rentenphase.
+ST_Vertragsstatus;B;in Abrufphase
+ST_Vertraulich;01;Aufgrund einer Vereinbarung zwischen Consumer und Provider besonders schützenswert.
+ST_Vertraulich;02;Aufgrund einer Vereinbarung zwischen Consumer und Provider nicht besonders schützenswert.
+ST_VorfahrzeugVersichertFuer;Antragsteller;
+ST_VorfahrzeugVersichertFuer;Ehegatte;
+ST_VorfahrzeugVersichertFuer;Eltern;
+ST_VorfahrzeugVersichertFuer;Sonstiger;
+ST_VorlaeufigeDeckung;01;durch VM erteilt
+ST_VorlaeufigeDeckung;02;bei VU angefordert
+ST_VorlaeufigeDeckung;03;durch VU ohne Aenderung erteilt
+ST_VorlaeufigeDeckung;04;durch VU mit Aenderung erteilt
+ST_VorlaeufigeDeckung;05;durch VU abgelehnt
+ST_VorsorgeFoerderungsart;Keine;
+ST_VorsorgeFoerderungsart;BasisRente;
+ST_VorsorgeFoerderungsart;PauschalversteuerteBAV;
+ST_VorsorgeFoerderungsart;Riester;
+ST_VorsorgeFoerderungsart;SteuerfreieBAV;
+ST_Waehrungsschluessel;ADF;Andorran Franc
+ST_Waehrungsschluessel;ADP;Andorran Peseta
+ST_Waehrungsschluessel;AED;Utd. Arab Emir. Dirham
+ST_Waehrungsschluessel;AFA;Afghanistan Afghani
+ST_Waehrungsschluessel;ALL;Albanischer Lek
+ST_Waehrungsschluessel;ANG;NL Antillian Guilder
+ST_Waehrungsschluessel;AON;Angolanischer New Kwanza
+ST_Waehrungsschluessel;ARS;Argentinischer Peso
+ST_Waehrungsschluessel;ATS;Oesterreichischer Schilling
+ST_Waehrungsschluessel;AUD;Australischer Dollar
+ST_Waehrungsschluessel;AWG;Aruban Florin
+ST_Waehrungsschluessel;BBD;Barbados Dollar
+ST_Waehrungsschluessel;BDT;Bangladeshi Taka
+ST_Waehrungsschluessel;BEF;Belgischer Franc
+ST_Waehrungsschluessel;BGL;Bulgarischer Lev
+ST_Waehrungsschluessel;BHD;Bahraini Dinar
+ST_Waehrungsschluessel;BIF;Burundi Franc
+ST_Waehrungsschluessel;BMD;Bermudian Dollar
+ST_Waehrungsschluessel;BND;Brunei Dollar
+ST_Waehrungsschluessel;BOB;Bolivianischer Boliviano
+ST_Waehrungsschluessel;BRL;Brasilianischer Real
+ST_Waehrungsschluessel;BSD;Bahamian Dollar
+ST_Waehrungsschluessel;BTN;Bhutan Ngultrum
+ST_Waehrungsschluessel;BWP;Botswana Pula
+ST_Waehrungsschluessel;BZD;Belize Dollar
+ST_Waehrungsschluessel;CAD;Kanadischer Dollar
+ST_Waehrungsschluessel;CHF;Schweizer Franken
+ST_Waehrungsschluessel;CLP;Chilean Peso
+ST_Waehrungsschluessel;CNY;Chinese Yuan Renminbi
+ST_Waehrungsschluessel;COP;Colombian Peso
+ST_Waehrungsschluessel;CRC;Costa Rican Colon
+ST_Waehrungsschluessel;CSK;Tchchischer Koruna
+ST_Waehrungsschluessel;CUP;Kubanischer Peso
+ST_Waehrungsschluessel;CVE;Cape Verde Escudo
+ST_Waehrungsschluessel;CYP;Zyprisches Pfund
+ST_Waehrungsschluessel;DEM;Deutsche Mark
+ST_Waehrungsschluessel;DJF;Djibouti Franc
+ST_Waehrungsschluessel;DKK;Daenische Krone
+ST_Waehrungsschluessel;DOP;Dominican Peso
+ST_Waehrungsschluessel;DZD;Algerian Dinar
+ST_Waehrungsschluessel;ECS;Ecuador Sucre
+ST_Waehrungsschluessel;EEK;Estonian Kroon
+ST_Waehrungsschluessel;EGP;Egyptian Pound
+ST_Waehrungsschluessel;ESP;Spanische Peseta
+ST_Waehrungsschluessel;ETB;Ethiopian Birr
+ST_Waehrungsschluessel;EUR;Euro
+ST_Waehrungsschluessel;FIM;Finnish Markka
+ST_Waehrungsschluessel;FJD;Fiji Dollar
+ST_Waehrungsschluessel;FKP;Falkland Islands Pound
+ST_Waehrungsschluessel;FRF;Franzoesische Franc
+ST_Waehrungsschluessel;GBP;Britisches Pfund
+ST_Waehrungsschluessel;GHC;Ghanaian Cedi
+ST_Waehrungsschluessel;GIP;Gibraltar Pound
+ST_Waehrungsschluessel;GMD;Gambian Dalasi
+ST_Waehrungsschluessel;GNF;Guinea Franc
+ST_Waehrungsschluessel;GRD;Griechische Drachmen
+ST_Waehrungsschluessel;GTQ;Guatemalan Quetzal
+ST_Waehrungsschluessel;GYD;Guyanan Dollar
+ST_Waehrungsschluessel;HKD;Hong Kong Dollar
+ST_Waehrungsschluessel;HNL;Honduran Lempira
+ST_Waehrungsschluessel;HRK;Kroatische Kuna
+ST_Waehrungsschluessel;HTG;Haitian Gourde
+ST_Waehrungsschluessel;HUF;Ungarischer Forint
+ST_Waehrungsschluessel;IDR;Indonesian Rupiah
+ST_Waehrungsschluessel;IEP;Irisches Punt
+ST_Waehrungsschluessel;ILS;Israelisches Neuer Shekel
+ST_Waehrungsschluessel;INR;Indian Rupee
+ST_Waehrungsschluessel;IQD;Irakischer Dinar
+ST_Waehrungsschluessel;IRR;Iranischer Rial
+ST_Waehrungsschluessel;ISK;Iceland Krona
+ST_Waehrungsschluessel;ITL;Italienische Lira
+ST_Waehrungsschluessel;JMD;Jamaican Dollar
+ST_Waehrungsschluessel;JOD;Jordanian Dinar
+ST_Waehrungsschluessel;JPY;Japanischer Yen
+ST_Waehrungsschluessel;KES;Kenyan Shilling
+ST_Waehrungsschluessel;KHR;Cambodian Riel
+ST_Waehrungsschluessel;KMF;Comoros Franc
+ST_Waehrungsschluessel;KPW;Nord- Koreanischer Won
+ST_Waehrungsschluessel;KRW;Koreanischer Won
+ST_Waehrungsschluessel;KWD;Kuwaiischeri Dinar
+ST_Waehrungsschluessel;KYD;Cayman Islands Dollar
+ST_Waehrungsschluessel;KZT;Kazakhstan Tenge
+ST_Waehrungsschluessel;LAK;Lao Kip
+ST_Waehrungsschluessel;LBP;Lebanese Pound
+ST_Waehrungsschluessel;LKR;Sri Lanka Rupee
+ST_Waehrungsschluessel;LRD;Liberian Dollar
+ST_Waehrungsschluessel;LSL;Lesotho Loti
+ST_Waehrungsschluessel;LTL;Lithuanian Litas
+ST_Waehrungsschluessel;LUF;Luxemburger Franc
+ST_Waehrungsschluessel;LVL;Latvian Lats
+ST_Waehrungsschluessel;LYD;Libyscher Dinar
+ST_Waehrungsschluessel;MAD;Moroccan Dirham
+ST_Waehrungsschluessel;MGF;Malagasy Franc
+ST_Waehrungsschluessel;MMK;Myanmar Kyat
+ST_Waehrungsschluessel;MNT;Mongolian Tugrik
+ST_Waehrungsschluessel;MOP;Macau Pataca
+ST_Waehrungsschluessel;MRO;Mauritanian Ouguiya
+ST_Waehrungsschluessel;MTL;Maltese Lira
+ST_Waehrungsschluessel;MUR;Mauritius Rupee
+ST_Waehrungsschluessel;MVR;Maldive Rufiyaa
+ST_Waehrungsschluessel;MWK;Malawi Kwacha
+ST_Waehrungsschluessel;MXP;Mexikanischer Peso
+ST_Waehrungsschluessel;MYR;Malaysian Ringgit
+ST_Waehrungsschluessel;MZM;Mozambique Metical
+ST_Waehrungsschluessel;NAD;Namibia Dollar
+ST_Waehrungsschluessel;NGN;Nigerian Naira
+ST_Waehrungsschluessel;NIO;Nicaraguan Cordoba Oro
+ST_Waehrungsschluessel;NLG;Niederlaendischer Guilder
+ST_Waehrungsschluessel;NOK;Norwegische Krone
+ST_Waehrungsschluessel;NPR;Nepalese Rupee
+ST_Waehrungsschluessel;NZD;Neu Sealaendischer Dollar
+ST_Waehrungsschluessel;OMR;Omani Rial
+ST_Waehrungsschluessel;PAB;Panamanian Balboa
+ST_Waehrungsschluessel;PEN;Peruvian Nuevo Sol
+ST_Waehrungsschluessel;PGK;Papua New Guinea Kina
+ST_Waehrungsschluessel;PHP;Philippinischer Peso
+ST_Waehrungsschluessel;PKR;Pakistan Rupee
+ST_Waehrungsschluessel;PLZ;Polnischer Zloty
+ST_Waehrungsschluessel;PTE;Portugisiescher Escudo
+ST_Waehrungsschluessel;PYG;Paraguay Guarani
+ST_Waehrungsschluessel;QAR;Qatari Rial
+ST_Waehrungsschluessel;ROL;Rumaenischer Leu
+ST_Waehrungsschluessel;RUB;Russischer Rubel
+ST_Waehrungsschluessel;SAR;Saudi Riyal
+ST_Waehrungsschluessel;SBD;Solomon Islands Dollar
+ST_Waehrungsschluessel;SCR;Seychelles Rupee
+ST_Waehrungsschluessel;SDD;Sudanese Dinar
+ST_Waehrungsschluessel;SDP;Sudanese Pound
+ST_Waehrungsschluessel;SEK;Schwedische Krone
+ST_Waehrungsschluessel;SGD;Singapore Dollar
+ST_Waehrungsschluessel;SHP;St. Helena Pound
+ST_Waehrungsschluessel;SIT;Sloveniischer Tolar
+ST_Waehrungsschluessel;SKK;Slovak Koruna
+ST_Waehrungsschluessel;SLL;Sierra Leone Leone
+ST_Waehrungsschluessel;SOS;Somali Shilling
+ST_Waehrungsschluessel;SRG;Suriname Guilder
+ST_Waehrungsschluessel;STD;Sao Tome/Principe Dobra
+ST_Waehrungsschluessel;SVC;El Salvador Colon
+ST_Waehrungsschluessel;SYP;Syrian Pound
+ST_Waehrungsschluessel;SZL;Swaziland Lilangeni
+ST_Waehrungsschluessel;THB;Thai Baht
+ST_Waehrungsschluessel;TND;Tunisian Dinar
+ST_Waehrungsschluessel;TOP;Tongan Pa"anga
+ST_Waehrungsschluessel;TRL;Tuerkische Lira
+ST_Waehrungsschluessel;TTD;Trinidad/Tobago Dollar
+ST_Waehrungsschluessel;TWD;Taiwan Dollar
+ST_Waehrungsschluessel;TZS;Tanzanian Shilling
+ST_Waehrungsschluessel;UAH;Ukraine Hryvnia
+ST_Waehrungsschluessel;UGS;Uganda Shilling
+ST_Waehrungsschluessel;USD;US Dollar
+ST_Waehrungsschluessel;UYP;Uruguayan Peso
+ST_Waehrungsschluessel;VEB;Venezuelan Bolivar
+ST_Waehrungsschluessel;VND;Vietnamese Dong
+ST_Waehrungsschluessel;VUV;Vanuatu Vatu
+ST_Waehrungsschluessel;WST;Samoan Tala
+ST_Waehrungsschluessel;XAF;CFA Franc BEAC
+ST_Waehrungsschluessel;XAG;Silver (oz.)
+ST_Waehrungsschluessel;XAU;Gold (oz.)
+ST_Waehrungsschluessel;XEU;ECU
+ST_Waehrungsschluessel;XOF;CFA Franc BCEAO
+ST_Waehrungsschluessel;XPD;Palladium (oz.)
+ST_Waehrungsschluessel;XPT;Platinum (oz.)
+ST_Waehrungsschluessel;YUN;Yugoslav Dinar
+ST_Waehrungsschluessel;ZAR;South African Rand
+ST_Waehrungsschluessel;ZMK;Zambian Kwacha
+ST_Waehrungsschluessel;ZWD;Zimbabwe Dollar
+ST_Wartezeiterlass;0;nein
+ST_Wartezeiterlass;1;Übertritt aus GKV
+ST_Wartezeiterlass;2;ärztliche Untersuchung
+ST_Wartezeiterlass;3;Kindernachversicherung
+ST_Wartezeiterlass;4;Ehegattennachversicherung
+ST_Wartezeiterlass;5;Befreiungsversicherung
+ST_Wartezeiterlass;9;Sonstiges
+ST_Wasserart;01;Kaltwasser
+ST_Wasserart;02;Warmwasser
+ST_Wasserart;03;Heizungswasser
+ST_Wasserart;04;Abwasser
+ST_Wasserart;05;Regenwasser
+ST_Wasserart;99;Sonstiges
+ST_Wasserfahrzeugtyp;01;Motorboote und Motorsegler (Ein Motorboot ist ein von einem oder mehreren Verbrennungsmotoren oder Elektromotoren angetriebenes Wasserfahrzeug. Motorsegelschiffe, meistens kurz als Motorsegler oder Fifty-Fifty bezeichnet, sind Yachten, die sowohl mit Segeln als auch unter Motor zufriedenstellend angetrieben werden.)
+ST_Wasserfahrzeugtyp;02;Motor-Wasserfahrzeug (Ein Motor-Wasserfahrzeug ist ein von einem oder mehreren Verbrennungsmotoren oder Elektromotoren angetriebenes Wasserfahrzeug, welches z.B. als Fahrgastschiffe und Fährboote der Binnen Schifffahrt, Wattfahrt und kleinen Küstenfahrt genutzt wird.)
+ST_Wasserfahrzeugtyp;03;Dampf- oder Motorgüterschiff (Ein Motor-Wasserfahrzeug ist ein von einem oder mehreren Verbrennungsmotoren oder Elektromotoren angetriebenes Wasserfahrzeug, welches vorrangig zum Gütertransport genutzt wird. Nicht dazu gehören Tankschiffe.)
+ST_Wasserfahrzeugtyp;04;Tankschiff (Ein Tankschiff, oder kurz Tanker, ist ein Schiff zum Transport von flüssigen Stoffen, wie Wasser, Rohöl, Ölen, Kraftstoffen, Flüssiggas oder petrochemischen Erzeugnissen.)
+ST_Wasserfahrzeugtyp;05;Schlepper (Schlepper, auch Schleppschiffe genannt,sind Schiffe mit leistungsstarker Antriebsanlage, die zum Ziehen und Schieben anderer Schiffe oder großer schwimmfähiger Objekte eingesetzt werden.)
+ST_Wasserfahrzeugtyp;06;Schleppkahn (Ein Schleppkahn (oder auch Schute) ist ein Schiff ohne eigenen Antrieb, mit dem Frachtgut auf Flüssen und Kanälen transportiert werden.)
+ST_Wasserfahrzeugtyp;07;Schubboot (Als Schubboot, umgangssprachlich auch Schuber / Schieber, bezeichnet man ein schiebendes Schiff in der Binnenschifffahrt, welches selbst keine Ladung befördert und ein oder mehrere Schubleichter schiebt. Die sog. Schubleichter gehören zu der gleichen Klasse/Ausprägung wie Schubboote.)
+ST_Wasserfahrzeugtyp;08;Fischereifahrzeug für Binnenschifffahrt (Als Fischereifahrzeuge werden alle (Wasser-)Fahrzeuge bezeichnet, die auf den Fang von Wassertieren in Binnengewässern spezialisiert sind.)
+ST_Wasserfahrzeugtyp;09;Fischereifahrzeug für Wattfahrt oder kleine Küstenfahrt (Als Fischereifahrzeuge werden alle (Wasser-)Fahrzeuge bezeichnet, die auf den Fang von Wassertieren in Watt- oder Küstenfahrt spezialisiert sind.)
+ST_Wasserfahrzeugtyp;10;Spezialschiffe mit eigenen Antrieb (Hierunter werden alle nicht klassifizierbaren Schiffe spezieller Funktion und/oder Ausführung gezählt, welche einen eigenen Antrieb besitzen.)
+ST_Wasserfahrzeugtyp;11;Spezialschiffe ohne eigenen Antrieb (Hierunter werden alle nicht klassifizierbaren Schiffe spezieller Funktion und/oder Ausführung gezählt, welche keinen eigenen Antrieb besitzen.)
+ST_Wasserfahrzeugtyp;12;Segelboot oder -jacht (Ein Segelboot ist ein Sportboot, das in erster Linie durch Windkraft betrieben wird. Vom Segelschiff unterscheidet es sich durch seine geringere Größe. Der Begriff Segelyacht (auch Segeljacht) bezeichnet ein Segelschiff, das hauptsächlich für Freizeit- oder Sportaktivitäten verwendet wird oder gelegentlich auch repräsentativen Zwecken dient.)
+ST_Wasserfahrzeugtyp;13;Jetboot (Wassermotorräder, auch bekannt als Jet-Ski oder Jet-Boot, sind relativ kleine, aus glasfaserverstärktem Kunststoff bestehende Wasserfahrzeuge ohne Bordwand. Man unterscheidet Steher für eine Person von Sitzern, Modellen mit Sitzbank, für zwei bis vier Personen. Im Wettkampfbetrieb werden diese beiden Grundmodelle als Ski und Runabout bezeichnet.)
+ST_Wasserfahrzeugtyp;14;Ruderboot (Ruderboote sind Wasserfahrzeuge, die mit Hilfe von Riemen oder Skulls bewegt werden.
+ST_Wasserfahrzeugtyp;15;Surfbrett (Ein Surfbrett ist ein aus einem schwimmfähigen Material hergestelltes Brett, das als Sportgerät zum Wellenreiten oder zum Windsurfen dient.)
+ST_Werteinheit;01;Stueck
+ST_Werteinheit;02;Plätze
+ST_Werteinheit;10;Prozent
+ST_Werteinheit;11;Promille
+ST_Werteinheit;20;Waehrung gem. Waehrungsschluessel. Wenn diese Werteinheit genutzt wird, MUSS die Währung im zugehörigen Attribut Waehrung angegeben werden.
+ST_Werteinheit;21;Mark 1914
+ST_Werteinheit;30;cm
+ST_Werteinheit;31;mm (Millimeter)
+ST_Werteinheit;32;m (Meter)
+ST_Werteinheit;33;km (Kilometer)
+ST_Werteinheit;34;Meilen
+ST_Werteinheit;40;qm
+ST_Werteinheit;41;ha (Hektar)
+ST_Werteinheit;50;Liter
+ST_Werteinheit;51;ccm
+ST_Werteinheit;52;qbm (Kubikmeter)
+ST_Werteinheit;53;BRT (Bruttoregistertonnen)
+ST_Werteinheit;54;BRZ (Bruttoraumzahl)
+ST_Werteinheit;56;ts (Ton Standard (Maßeinheit für die Standardverdrängung, zivil auch "ton long" genannt) 1ts = 1016 kg )
+ST_Werteinheit;60;Kalendertage
+ST_Werteinheit;61;Arbeitstage
+ST_Werteinheit;62;Jahre
+ST_Werteinheit;63;Stunden
+ST_Werteinheit;70;KW (Kilowatt)
+ST_Werteinheit;71;PS (Pferdestärke)
+ST_Werteinheit;80;kg (Kilogramm)
+ST_Werteinheit;81;t (Tonnen)
+ST_Wohneigentum;1;Selbstgenutzes Ein-/Zweifamilienhaus
+ST_Wohneigentum;2;Mehrfamilienhaus
+ST_Wohneigentum;3;Eigentumswohnung
+ST_Wohneigentum;4;sonstiges
+ST_Wohneigentum;5;kein Wohneigentum
+ST_Wohneigentum;6;Fremdgenutzes Ein-/Zweifamilienhaus
+ST_Wohneigentum;7;Reihenhaus/Doppelhaushälfte
+ST_Zahlungsart;1;Lastschrift
+ST_Zahlungsart;2;Rechnung (Überweisung)
+ST_Zahlungsart;3;Dauerauftrag
+ST_Zahlungsart;4;Depot
+ST_Zahlungsart;5;Gehaltsabzug
+ST_Zahlungsart;6;Kreditkarte
+ST_Zahlungsart;7;Sammeleinzug/Sammelinkasso
+ST_Zahlungsart;8;Scheck
+ST_Zahlungsart;9;sonstige
+ST_Zahlungsart;10;Barzahlung
+ST_ZahlungsStatus;bezahlt;
+ST_ZahlungsStatus;teilbezahlt;
+ST_ZahlungsStatus;unbezahlt;
+ST_ZahlungsStatus;inArbeit;Die Zahlung befindet sich in Arbeit.
+ST_Zahlungsweise;1;jaehrlich
+ST_Zahlungsweise;2;halbjaehrlich
+ST_Zahlungsweise;3;dreijaehrig
+ST_Zahlungsweise;4;vierteljaehrlich
+ST_Zahlungsweise;5;sonstiges
+ST_Zahlungsweise;6;einmalig
+ST_Zahlungsweise;8;monatlich
+ST_Zahlungsweise;9;beitragsfrei
+ST_Zahlungsweise;7;taeglich
+ST_Zerlegung;1;unzerlegt
+ST_Zerlegung;2;zerlegt
+ST_Zerlegung;3;teilzerlegt
+ST_ZertifizierungsArt;1;Riester-Zertifizierungsnummer der ZfA
+ST_Zinstyp;fix;
+ST_Zinstyp;variabel;
+ST_Zulagenberechtigungsart;mittelbar;mittelbar zulagenberechtigt
+ST_Zulagenberechtigungsart;unmittelbar;unmittelbar zulagenberechtigt
+ST_Zusageform;01;Beitragszusage mit Mindestleistung
+ST_Zusageform;02;Beitragsorientierte Leistungszusage
+ST_Zusageform;03;Leistungszusage
+ST_ZustandSchadenobjekt;1;abhanden
+ST_ZustandSchadenobjekt;2;beschädigt (Reparatur möglich)
+ST_ZustandSchadenobjekt;3;zerstört (Reparatur nicht möglich)
+ST_ZustandSchadenobjekt;4;bereits entsorgt

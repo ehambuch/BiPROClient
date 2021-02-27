@@ -1,0 +1,45 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://www.bipro.net/namespace/prozesse/schaden" xmlns:bas="http://www.bipro.net/namespace/basis" xmlns:nac="http://www.bipro.net/namespace/nachrichten" xmlns:all="http://www.bipro.net/namespace/allgemein" xmlns:sch1="http://www.bipro.net/namespace/schaden-leistung" xmlns:par="http://www.bipro.net/namespace/partner" xmlns:bet="http://www.bipro.net/namespace/beteiligungsverhaeltnis" xmlns:ver="http://www.bipro.net/namespace/vertrag" xmlns:prod="http://www.bipro.net/namespace/produktmodell">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <sch:getDataResponse>
+            <sch:Response>
+                <nac:BiPROVersion>2.6.0.1.0</nac:BiPROVersion>
+                <nac:Status>
+                    <nac:StatusID>OK</nac:StatusID>
+                    <nac:Meldung>
+                        <nac:ArtID>Hinweis</nac:ArtID>
+                        <nac:MeldungID>04000</nac:MeldungID>
+                        <nac:Text>Auskunft (Test) erfolgreich</nac:Text>
+                    </nac:Meldung>
+                </nac:Status>
+                <sch:Schadenauskunft>
+                    <sch:Schadennummer>
+                        <all:Nummer>12345</all:Nummer>
+                    </sch:Schadennummer>
+                    <sch:Ereignis>
+                        <sch1:Schadendatum>2021-02-27</sch1:Schadendatum>
+                        <sch1:KenntniserlangungVN>2021-02-28</sch1:KenntniserlangungVN>
+                        <sch1:TaeterPolizeilichErmittelt>false</sch1:TaeterPolizeilichErmittelt>
+                        <sch1:PolizeilichGemeldet>false</sch1:PolizeilichGemeldet>
+                        <sch1:ZeugenVorhanden>false</sch1:ZeugenVorhanden>
+                        <sch1:Verursacher>
+                            <par:PartnerID>4811</par:PartnerID>
+                            <sch1:InErstausbildung>false</sch1:InErstausbildung>
+                            <sch1:InHaeuslicherGemeinschaft>true</sch1:InHaeuslicherGemeinschaft>
+                        </sch1:Verursacher>
+                        <sch1:Schadenhergang>
+                            <sch1:Beschreibung>Wasserschaden in der Küche</sch1:Beschreibung>
+                        </sch1:Schadenhergang>
+                        <sch1:Schaden>
+                            <sch1:ArtID>?</sch1:ArtID>
+                            <sch1:Schadenhoehe>
+                                <all:Betrag>10000</all:Betrag>
+                                <all:Waehrung>EUR</all:Waehrung>
+                            </sch1:Schadenhoehe>
+                        </sch1:Schaden>
+                    </sch:Ereignis>
+                </sch:Schadenauskunft>
+            </sch:Response>
+        </sch:getDataResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

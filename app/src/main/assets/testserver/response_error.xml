@@ -1,0 +1,17 @@
+<soap:Fault xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <faultcode>soap-env:Server</faultcode>
+    <faultstring>Fehler beim Aufruf des Testservers</faultstring>
+    <detail>
+        <nachr:BiproException
+        xmlns:nachr="http://www.bipro.net/namespace/nachrichten">
+        <nachr:BiPROVersion>2.6.0.1.0</nachr:BiPROVersion>
+        <nachr:Status>
+            <nachr:StatusID>NOK</nachr:StatusID>
+            <nachr:Meldung>
+                <nachr:ArtID>Fehler</nachr:ArtID>
+                <nachr:Text>${msg}</nachr:Text>
+            </nachr:Meldung>
+        </nachr:Status>
+        </nachr:BiproException>
+</detail>
+</soap:Fault>

@@ -1,0 +1,15 @@
+<soapenv:Envelope xmlns:nam="http://www.bipro.net/namespace"
+    xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+${soapHeader}
+    <soapenv:Body>
+        <nam:getLinks>
+            <nam:Request Version="1.4.1.0">
+                <nam:Extranetsuche>
+                    <nam:Vertragsuche>
+                        <nam:Versicherungsscheinnummer>${vsnr}</nam:Versicherungsscheinnummer>
+                    </nam:Vertragsuche>
+                </nam:Extranetsuche>
+            </nam:Request>
+        </nam:getLinks>
+    </soapenv:Body>
+</soapenv:Envelope>

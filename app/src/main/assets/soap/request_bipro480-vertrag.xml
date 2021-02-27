@@ -1,0 +1,20 @@
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://www.w3.org/2011/03/ws-enu" xmlns:add="http://www.w3.org/2005/08/addressing" xmlns:bas="http://www.bipro.net/namespace/basis" xmlns:vt="http://www.bipro.net/namespace/kontext/vertrag" xmlns:all="http://www.bipro.net/namespace/allgemein">
+${soapHeader}
+    <soapenv:Body>
+        <ws:Enumerate>
+            <ws:NewContext>
+                <ws:Filter Dialect="http://www.bipro.net/namespace/kontext/vertrag">
+                    <vt:Filter xsi:type="vt:CT_Vertragssuche">
+                        <vt:Partnernummer>${partner}</vt:Partnernummer>
+                        <vt:Versicherungsscheinnummer>${vsnr}</vt:Versicherungsscheinnummer>
+                        <vt:Vorgangsnummer>${vorgang}</vt:Vorgangsnummer>
+                        <vt:Unternehmen>
+                            <all:Nummer>${vunr}</all:Nummer>
+                        </vt:Unternehmen>
+                    </vt:Filter>
+                </ws:Filter>
+            </ws:NewContext>
+            <ws:MaxItems>100</ws:MaxItems>
+        </ws:Enumerate>
+    </soapenv:Body>
+</soapenv:Envelope>

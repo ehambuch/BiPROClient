@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.vertrag.VertragServiceFragment">
+
+    <TextView
+        android:id="@+id/textviewVertragServiceIntro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mit dem Vertragsservice (Norm 502) können Sie den aktuellen Stand eines Versicherungsvertrags abrufen."
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextVsnrLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="VSNR"
+        android:layout_margin="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textviewVertragServiceIntro">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextVsnrVertrag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:maxLength="17"
+            android:singleLine="true"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textviewVertragService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Risikoträger auswählen"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextVsnrLayout"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:id="@+id/selectVuNrVertragRadioGroup"
+        android:hint="VU-Schlüssel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textviewVertragService">
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonStartVertragSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
+        android:text="Anzeigen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectVuNrVertragRadioGroup" />
+</androidx.constraintlayout.widget.ConstraintLayout>

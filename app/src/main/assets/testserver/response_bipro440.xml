@@ -1,0 +1,28 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nam="http://www.bipro.net/namespace">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <nam:getLinksResponse>
+            <nam:Response Version="1.0.1.0">
+                <nam:Status>
+                    <nam:StatusID>00000</nam:StatusID>
+                    <nam:Meldung>
+                        <nam:MeldungID>03000</nam:MeldungID>
+                        <nam:Text>Es wurden einige Testweise Links bereitgestellt.</nam:Text>
+                    </nam:Meldung>
+                </nam:Status>
+                <nam:Links>
+                    <nam:Link>
+                        <nam:URL>https://www.bipro.net</nam:URL>
+                        <nam:ZielID>001</nam:ZielID>
+                        <nam:Beschreibung>BiPRO Startseite</nam:Beschreibung>
+                    </nam:Link>
+                    <nam:Link>
+                        <nam:URL>https://bipro.net/rclassic-normen/#normen</nam:URL>
+                        <nam:ZielID>999</nam:ZielID>
+                        <nam:Beschreibung>BiPRO RClassic Normen</nam:Beschreibung>
+                    </nam:Link>
+                </nam:Links>
+            </nam:Response>
+        </nam:getLinksResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

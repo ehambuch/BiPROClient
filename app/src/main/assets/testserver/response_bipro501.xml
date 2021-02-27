@@ -1,0 +1,33 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://www.bipro.net/namespace/prozesse/partner" xmlns:bas="http://www.bipro.net/namespace/basis" xmlns:nac="http://www.bipro.net/namespace/nachrichten" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:all="http://www.bipro.net/namespace/allgemein" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:par1="http://www.bipro.net/namespace/partner">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <par:getDataResponse>
+            <par:Response>
+                <nac:BiPROVersion>2.6.1.1.0</nac:BiPROVersion>
+                <nac:Status>
+                    <nac:StatusID>OK</nac:StatusID>
+                    <nac:Meldung>
+                        <nac:ArtID>Hinweis</nac:ArtID>
+                        <nac:MeldungID>04000</nac:MeldungID>
+                        <nac:Text>Auskunft (Test) erfolgreich</nac:Text>
+                    </nac:Meldung>
+                </nac:Status>
+                <par:Partnerauskunft>
+                    <par:Partnernummer>1234</par:Partnernummer>
+                    <par:Partner>
+                        <par1:Anrede>1</par1:Anrede>
+                        <par1:Name>Mustermann</par1:Name>
+                        <par1:PartnerID>id123</par1:PartnerID>
+                        <par1:Anschrift>
+                            <par1:Strasse>Am Kölner Dom 5</par1:Strasse>
+                            <par1:Postleitzahl>50648</par1:Postleitzahl>
+                            <par1:Ort>Koelle</par1:Ort>
+                        </par1:Anschrift>
+                        <par1:Vorname>Max</par1:Vorname>
+                        <par1:Geburtsdatum>1964-01-01</par1:Geburtsdatum>
+                    </par:Partner>
+                </par:Partnerauskunft>
+            </par:Response>
+        </par:getDataResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

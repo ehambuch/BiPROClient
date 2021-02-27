@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp"
+    android:orientation="vertical"
+    android:gravity="fill_horizontal">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listenResultResponseMessage"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/listenResultsList"
+        android:name="de.erichambuch.biproclient.ListenResultItemsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        app:layoutManager="LinearLayoutManager"
+        tools:context=".ui.listen.ListenResultItemsFragment"
+        tools:listitem="@layout/fragment_listen_result_item" />
+</LinearLayout>

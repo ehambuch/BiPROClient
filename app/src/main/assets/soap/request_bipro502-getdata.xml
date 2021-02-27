@@ -1,0 +1,19 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://www.bipro.net/namespace/prozesse/vertrag" xmlns:bas="http://www.bipro.net/namespace/basis" xmlns:nac="http://www.bipro.net/namespace/nachrichten" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:all="http://www.bipro.net/namespace/allgemein" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:ver1="http://www.bipro.net/namespace/vertrag" xmlns:prod="http://www.bipro.net/namespace/produktmodell" xmlns:par="http://www.bipro.net/namespace/partner">
+    ${soapHeader}
+    <soapenv:Body>
+        <ver:getData>
+            <ver:Request>
+                <nac:BiPROVersion>2.6.1.1.0</nac:BiPROVersion>
+                <nac:ConsumerID>BiPRO Client</nac:ConsumerID>
+                <ver:Vertragsauskunft>
+                    <ver:Vertragsnummer>
+                        <all:Versicherungsscheinnummer>${vsnr}</all:Versicherungsscheinnummer>
+                    </ver:Vertragsnummer>
+                    <ver:Unternehmen>
+                        <all:Nummer>${vunr}</all:Nummer>
+                    </ver:Unternehmen>
+                </ver:Vertragsauskunft>
+            </ver:Request>
+        </ver:getData>
+    </soapenv:Body>
+</soapenv:Envelope>
