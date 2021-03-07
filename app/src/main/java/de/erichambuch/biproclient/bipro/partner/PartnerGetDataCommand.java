@@ -20,8 +20,10 @@ public class PartnerGetDataCommand extends AbstractDataCommand {
 
     @Override
     public void execute(BiproAuthentication authentication, Map<String, String> parameters, final CommandCallback commandCallback)  {
-        super.completeParameters(parameters, PARAM_PARTNERNR, PARAM_VUNR);
-        super.executePOST(authentication, getUrl(), XmlUtils.replace(getConfiguration().getPartnerServiceGetDataTemplate(), parameters), commandCallback);
+        cleanupEmptyParameters(parameters);
+        super.executePOST(authentication, getUrl(),
+                XmlUtils.replace(XmlUtils.processIfs(getConfiguration().getPartnerServiceGetDataTemplate(), parameters), parameters),
+                commandCallback);
     }
 
     @Override

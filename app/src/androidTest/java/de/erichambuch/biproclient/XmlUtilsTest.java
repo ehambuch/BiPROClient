@@ -15,6 +15,14 @@ public class XmlUtilsTest {
     }
 
     @Test
+    public void testProcessIfs() {
+        Assert.assertEquals("ja", XmlUtils.processIfs("<!--#IFDEF {token}-->ja<!--/#IFDEF-->", Collections.singletonMap("{token}", "ersatz")));
+        Assert.assertEquals("anfangjaende", XmlUtils.processIfs("anfang<!--#IFDEF {token}-->ja<!--/#IFDEF-->ende", Collections.singletonMap("{token}", "ersatz")));
+        Assert.assertEquals("", XmlUtils.processIfs("<!--#IFDEF {token} -->ja<!--/#IFDEF-->", Collections.singletonMap("{tokennein}", "ersatz")));
+        Assert.assertEquals("anfangende", XmlUtils.processIfs("anfang<!--#IFDEF {token}-->ja<!--/#IFDEF-->ende", Collections.singletonMap("{tokennein}", "ersatz")));
+    }
+
+    @Test
     public void testGetValueFromElement1() {
         Assert.assertEquals("test", XmlUtils.getValueFromElement("<xml>test</xml>", "xml"));
     }

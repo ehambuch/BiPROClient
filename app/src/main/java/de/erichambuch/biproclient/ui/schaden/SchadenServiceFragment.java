@@ -84,10 +84,13 @@ public class SchadenServiceFragment extends MyBaseFragment {
             parameters.put(VertragGetDataCommand.PARAM_VUNR, (String)v.findViewById(id).getTag());
         }
         final SchadenGetDataCommand command = new SchadenGetDataCommand(mainViewModel.getConfiguration(), mainViewModel.getRequestLogger());
+        final View progressView = v.findViewById(R.id.progressSchadenService);
+        progressView.setVisibility(View.VISIBLE);
         command.execute(mainViewModel.getAuthenticationManager().getAuthentication(), parameters, new CommandCallback() {
             @Override
             public void onSuccess(Object data) {
                 try {
+                    finishProgressBar(progressView);
                     mainViewModel.setXml((String)data);
                     mainViewModel.setTree(command.createTreeView((String)data));
                     mainViewModel.setResponseMessage(command.getMessage());
@@ -100,15 +103,11 @@ public class SchadenServiceFragment extends MyBaseFragment {
 
             @Override
             public void onFailure(Exception e) {
+                finishProgressBar(progressView);
                 Log.e(AppInfo.APP_NAME, "Fehler beim Aufruf des Service", e);
                 showError(e);
             }
         });
 
-    }
-
-    private String getText(final View mainView, int resId) {
-        String text = ((TextView)mainView.findViewById(resId)).getText().toString();
-        return text.trim();
     }
 }

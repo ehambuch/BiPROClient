@@ -6,12 +6,12 @@ ${soapHeader}
             <nam:Request Version="1.4.1.0">
                 <nam:Extranetsuche>
                     <nam:Partnersuche>
-                        <nam:PartnernummerVu>${partnernummerVu}</nam:PartnernummerVu>
-                        <nam:Name>${name}</nam:Name>
-                        <nam:Vorname>${vorname}</nam:Vorname>
-                        <nam:Strasse>${strasse}</nam:Strasse>
-                        <nam:Postleitzahl>${plz}</nam:Postleitzahl>
-                        <nam:Ort>${ort}</nam:Ort>
+                        <!--#IFDEF ${partnernummerVu}--><nam:PartnernummerVu>${partnernummerVu}</nam:PartnernummerVu><!--/#IFDEF-->
+                        <!--#IFDEF ${name}--><nam:Name>${name}</nam:Name><!--/#IFDEF-->
+                        <!--#IFDEF ${vorname}--><nam:Vorname>${vorname}</nam:Vorname><!--/#IFDEF-->
+                        <!--#IFDEF ${strasse}--><nam:Strasse>${strasse}</nam:Strasse><!--/#IFDEF-->
+                        <!--#IFDEF ${plz}--><nam:Postleitzahl>${plz}</nam:Postleitzahl><!--/#IFDEF-->
+                        <!--#IFDEF ${ort}--><nam:Ort>${ort}</nam:Ort><!--/#IFDEF-->
                     </nam:Partnersuche>
                 </nam:Extranetsuche>
             </nam:Request>

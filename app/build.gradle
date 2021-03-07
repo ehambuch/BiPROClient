@@ -10,11 +10,10 @@ android {
         applicationId "de.erichambuch.biproclient"
         minSdkVersion 24
         targetSdkVersion 30
-        versionCode 7
-        versionName '0.7'
+        versionCode 10
+        versionName '1.0'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        versionNameSuffix 'beta'
     }
 
     buildTypes {
@@ -47,7 +46,6 @@ dependencies {
     implementation 'androidx.preference:preference:1.1.1'
     implementation 'org.nanohttpd:nanohttpd:2.3.1'
     implementation 'com.github.TellH:RecyclerTreeView:1.2.0'
-    implementation 'org.freemarker:freemarker:2.3.31'
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

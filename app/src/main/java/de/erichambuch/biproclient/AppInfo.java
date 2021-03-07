@@ -4,12 +4,10 @@ package de.erichambuch.biproclient;
  * Autor: Eric Hambuch (erichambuch@googlemail.com)
  * Lizenz: Proprietär
  * <p>
- *     Versionen: beta
+ *     Versionen: 1.0 (07.03.2021) erstes Release
  * </p>
  * <p>
  *     Offene Themen:<ol>
- *         <li>Integration TGIC/mTan-Authentifizierung</li>
- *         <li>Nutzung Template-Generator</li>
  *         <li>VU-spezifische Befüllung BiPRO</li>
  *     </ol>
  * </p>

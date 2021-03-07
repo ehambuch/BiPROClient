@@ -90,7 +90,7 @@ public class AuthenticationManager {
                     ContextCompat.getMainExecutor(context).execute(new Runnable() {
                         @Override
                         public void run() {
-                            authentication = new BiproTokenAuthentication(String.valueOf(data));
+                            authentication = new BiproTokenAuthentication((BiproTokenAuthentication.BiproToken) data);
                             successCallback.run();
                         }
                     });

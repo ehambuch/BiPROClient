@@ -7,9 +7,7 @@
                 <nac:ConsumerID>BiPRO Client</nac:ConsumerID>
                 <par:Partnerauskunft>
                     <par:Partnernummer>${partnernr}</par:Partnernummer>
-                    <par:Unternehmen>
-                        <all:Nummer>${vunr}</all:Nummer>
-                    </par:Unternehmen>
+                    <!--#IFDEF ${vunr}--><par:Unternehmen><all:Nummer>${vunr}</all:Nummer></par:Unternehmen><!--/#IFDEF-->
                 </par:Partnerauskunft>
             </par:Request>
         </par:getData>

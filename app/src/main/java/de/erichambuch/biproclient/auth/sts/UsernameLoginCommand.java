@@ -1,8 +1,13 @@
 package de.erichambuch.biproclient.auth.sts;
 
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,11 +36,16 @@ public class UsernameLoginCommand extends SOAPCommand {
         try {
             executeCommand(stsURL, XmlUtils.replace(requestXml, valueMap),
                     new Callback() {
+                @RequiresApi(api = Build.VERSION_CODES.O)
                 @Override
                 public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
-                    if (response.isSuccessful())
-                        commandCallback.onSuccess(XmlUtils.getValueFromElement(createResponse(response), "Identifier")); // BiPro Token);
-                    else {
+                    if (response.isSuccessful()) {
+                        final String responseXml = createResponse(response);
+                        final String token = XmlUtils.getValueFromElement(responseXml, "Identifier");
+                        final String expires = XmlUtils.getValueFromElement(responseXml, "Expires");
+                        commandCallback.onSuccess(
+                                new BiproTokenAuthentication.BiproToken(token, parseExpires(expires)));
+                    } else {
                         commandCallback.onFailure(new IOException("Authentifizierung nicht erfolgreich: HTTP: " + response.code()));
                     }
                 }
@@ -53,5 +63,13 @@ public class UsernameLoginCommand extends SOAPCommand {
     @Override
     protected String getSOAPAction() {
         return "urn:RequestSecurityToken";
+    }
+
+    private LocalDateTime parseExpires(String expires) {
+        if (expires != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O )
+            return LocalDateTime.parse(expires); // 2021-03-07T01:11:59
+        else {
+            return null;
+        }
     }
 }

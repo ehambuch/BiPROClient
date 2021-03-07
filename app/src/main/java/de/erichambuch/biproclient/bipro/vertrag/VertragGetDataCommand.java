@@ -19,8 +19,10 @@ public class VertragGetDataCommand extends AbstractDataCommand {
 
     @Override
     public void execute(BiproAuthentication authentication, Map<String, String> parameters, final CommandCallback commandCallback)  {
-        super.completeParameters(parameters, PARAM_VSNR, PARAM_VUNR);
-        super.executePOST(authentication, getUrl(), XmlUtils.replace(getConfiguration().getVertragServiceGetDataTemplate(), parameters), commandCallback);
+        cleanupEmptyParameters(parameters);
+        super.executePOST(authentication, getUrl(),
+                XmlUtils.replace(XmlUtils.processIfs(getConfiguration().getVertragServiceGetDataTemplate(), parameters), parameters),
+                commandCallback);
     }
 
     @Override

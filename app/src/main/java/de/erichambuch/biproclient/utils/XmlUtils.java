@@ -8,9 +8,16 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.util.Map;
 
-// TODO: Ersetzen durch Template Engine (z.B. https://de.wikipedia.org/wiki/FreeMarker)
-// und XPath bzw. DOM-Parser,
+/**
+ * Diese Klasse enthält einige Hilfsmethoden zum Umgang mit XML.
+ * <p>Eigentlich sollte ein richtiges Web-Service-Framework (JAX-WS, KSOAP2) eingesetzt werden; oder eine Template-Engine zum Erzeugen der Dateien
+ * (analog JSP). Leider funktioniert z.B. <a href="https://de.wikipedia.org/wiki/FreeMarker">FreeMarker</a> unter Android nicht.</a></p>
+ */
 public class XmlUtils {
+
+    private static final String IFDEF_START_TOKEN = "<!--#IFDEF ";
+    private static final String IFDEF_CLOSE_TOKEN = "-->";
+    private static final String IFDEF_END_TOKEN = "<!--/#IFDEF-->";
 
     /**
      * Ersetzt Tokens in einem String durch vorgegebene Werte. Dabei darf jedes Token nur 1x vorkommen.
@@ -26,6 +33,32 @@ public class XmlUtils {
     }
 
     /**
+     * Prozessiert die <code>IFDEF</code> Kommandos und löscht ggf. Teile aus dem XML heraus.
+     * @param input Template
+     * @param valueMap Map mit Token, Wert
+     * @return das Ergebnis
+     */
+    public static String processIfs(String input, Map<String,String> valueMap) {
+        StringBuilder output = new StringBuilder(input.length());
+        int startIndex = -1;
+        int lastIndex = 0;
+        while((startIndex = input.indexOf(IFDEF_START_TOKEN, lastIndex)) >= 0) {
+            output.append(input.substring(lastIndex, startIndex)); // alles bis zum if
+            lastIndex = input.indexOf(IFDEF_CLOSE_TOKEN, startIndex) + IFDEF_CLOSE_TOKEN.length();
+            int endIndexIf = input.indexOf(IFDEF_END_TOKEN, lastIndex);
+            String theIfToken = input.substring(startIndex+IFDEF_START_TOKEN.length(), lastIndex-IFDEF_CLOSE_TOKEN.length()).trim();
+            if(valueMap.get(theIfToken) != null) { // token ist definiert -> true
+                output.append(input.substring(lastIndex, endIndexIf)); // alles im If-Block
+                lastIndex = endIndexIf+IFDEF_END_TOKEN.length();
+            } else { // if-block loeschen
+                lastIndex = endIndexIf+IFDEF_END_TOKEN.length();
+            }
+        }
+        output.append(input.substring(lastIndex));
+        return output.toString();
+    }
+
+    /**
      * Einfache Methode, um den Wert eines XML-Elements auszulesen.
      *
      * @param input XML-Datenstrom
@@ -38,7 +71,7 @@ public class XmlUtils {
             xmlFactoryObject.setNamespaceAware(true);
             XmlPullParser myParser = xmlFactoryObject.newPullParser();
             myParser.setInput(new StringReader(input));
-            int event = myParser.getEventType();;
+            int event = myParser.getEventType();
             while (event != XmlPullParser.END_DOCUMENT) {
                 String name = myParser.getName();
                 if (event == XmlPullParser.START_TAG) {

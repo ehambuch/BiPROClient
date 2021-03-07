@@ -60,6 +60,7 @@ public class ExtranetServiceSearchFragment extends MyBaseFragment {
         // vorbelegen
         ((TextView)view.findViewById(R.id.editTextVsnr)).setText(mainViewModel.getVsnr());
         ((TextView)view.findViewById(R.id.editTextPartnerId)).setText(mainViewModel.getPartnerId());
+        view.findViewById(R.id.progressExtranetSearch).setVisibility(View.GONE);
     }
 
     public void callService(final View v) {
@@ -72,10 +73,13 @@ public class ExtranetServiceSearchFragment extends MyBaseFragment {
         parameters.put(ExtranetGetLinksCommand.PARAM_PLZ, getText(v, R.id.editTextPersonPLZ));
         parameters.put(ExtranetGetLinksCommand.PARAM_STRASSE, getText(v, R.id.editTextPersonStrasse));
         final ExtranetGetLinksCommand command = new ExtranetGetLinksCommand(mainViewModel.getConfiguration(), mainViewModel.getRequestLogger());
+        final View progressView = v.findViewById(R.id.progressExtranetSearch);
+        progressView.setVisibility(View.VISIBLE);
         command.execute(mainViewModel.getAuthenticationManager().getAuthentication(), parameters, new CommandCallback() {
             @Override
             public void onSuccess(Object data) {
                 try {
+                    finishProgressBar(progressView);
                     mainViewModel.setURLs(command.parseData((String)data));
                     mainViewModel.setResponseMessage(command.getMessage());
                     findNavController(v).navigate(R.id.action_extranetServiceSearchFragment_to_extranetItemFragment);
@@ -87,15 +91,11 @@ public class ExtranetServiceSearchFragment extends MyBaseFragment {
 
             @Override
             public void onFailure(Exception e) {
+                finishProgressBar(progressView);
                 Log.e(AppInfo.APP_NAME, "Fehler beim Aufruf des Service", e);
                 showError(e);
             }
         });
 
-    }
-
-    private String getText(final View mainView, int resId) {
-        String text = ((TextView)mainView.findViewById(resId)).getText().toString();
-        return text.trim();
     }
 }

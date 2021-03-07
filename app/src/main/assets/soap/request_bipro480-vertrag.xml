@@ -5,12 +5,10 @@ ${soapHeader}
             <ws:NewContext>
                 <ws:Filter Dialect="http://www.bipro.net/namespace/kontext/vertrag">
                     <vt:Filter xsi:type="vt:CT_Vertragssuche">
-                        <vt:Partnernummer>${partner}</vt:Partnernummer>
-                        <vt:Versicherungsscheinnummer>${vsnr}</vt:Versicherungsscheinnummer>
-                        <vt:Vorgangsnummer>${vorgang}</vt:Vorgangsnummer>
-                        <vt:Unternehmen>
-                            <all:Nummer>${vunr}</all:Nummer>
-                        </vt:Unternehmen>
+                        <!--#IFDEF ${partner}--><vt:Partnernummer>${partner}</vt:Partnernummer><!--/#IFDEF-->
+                        <!--#IFDEF ${vsnr}--><vt:Versicherungsscheinnummer>${vsnr}</vt:Versicherungsscheinnummer><!--/#IFDEF-->
+                        <!--#IFDEF ${vorgang}--><vt:Vorgangsnummer>${vorgang}</vt:Vorgangsnummer><!--/#IFDEF-->
+                        <!--#IFDEF ${vunr}--><vt:Unternehmen><all:Nummer>${vunr}</all:Nummer></vt:Unternehmen><!--/#IFDEF-->
                     </vt:Filter>
                 </ws:Filter>
             </ws:NewContext>

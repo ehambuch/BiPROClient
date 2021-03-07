@@ -5,6 +5,7 @@ import android.util.Log;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.Map;
 
 import de.erichambuch.biproclient.AppInfo;
@@ -52,14 +53,27 @@ public abstract class BiproServiceCommand extends SOAPCommand {
 
     /**
      * Complete the HashMap so that for every key there is a value stored (even if "").
-     * @param map
-     * @param keys
+     * @param map Parameter
+     * @param keys notwendige Schlüssel
      */
     protected void completeParameters(Map<String,String> map, String... keys) {
         for(String k : keys) {
             String v = map.get(k);
             if (v == null)
                 map.put(k, "");
+        }
+    }
+
+    /**
+     * Löscht überflüssige Paramter, die mit einem NULL belegt sind heraus.
+     * @param map Parameter
+     */
+    protected void cleanupEmptyParameters(Map<String,String> map) {
+        for(Iterator<Map.Entry<String,String>> iterator = map.entrySet().iterator(); iterator.hasNext(); ) {
+            Map.Entry<String,String> entry = iterator.next();
+            if (entry.getValue() == null) {
+                iterator.remove();
+            }
         }
     }
 

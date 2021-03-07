@@ -9,9 +9,7 @@
                     <ver:Vertragsnummer>
                         <all:Versicherungsscheinnummer>${vsnr}</all:Versicherungsscheinnummer>
                     </ver:Vertragsnummer>
-                    <ver:Unternehmen>
-                        <all:Nummer>${vunr}</all:Nummer>
-                    </ver:Unternehmen>
+                    <!--#IFDEF ${vunr}--><ver:Unternehmen><all:Nummer>${vunr}</all:Nummer></ver:Unternehmen><!--/#IFDEF-->
                 </ver:Vertragsauskunft>
             </ver:Request>
         </ver:getData>

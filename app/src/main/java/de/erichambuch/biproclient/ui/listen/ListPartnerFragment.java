@@ -5,7 +5,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,8 +25,6 @@ import static androidx.navigation.Navigation.findNavController;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ListPartnerFragment#newInstance} factory method to
- * create an instance of this fragment.
  */
 public class ListPartnerFragment extends MyBaseFragment {
 
@@ -70,10 +67,13 @@ public class ListPartnerFragment extends MyBaseFragment {
         parameters.put(ListPartnerCommand.PARAM_PLZ, getText(v, R.id.editListPartnerPersonPLZ));
         parameters.put(ListPartnerCommand.PARAM_STRASSE, getText(v, R.id.editListPartnerPersonStrasse));
         final ListPartnerCommand command = new ListPartnerCommand(mainViewModel.getConfiguration(), mainViewModel.getRequestLogger());
+        final View progressView = v.findViewById(R.id.progressListPartnerService);
+        progressView.setVisibility(View.VISIBLE);
         command.execute(mainViewModel.getAuthenticationManager().getAuthentication(), parameters, new CommandCallback() {
             @Override
             public void onSuccess(Object data) {
                 try {
+                    finishProgressBar(progressView);
                     mainViewModel.setListenResultData(command.parseData((String)data));
                     mainViewModel.setResponseMessage(command.getMessage());
                     findNavController(v).navigate(R.id.action_listPartnerFragment_to_listenResultItemsFragment);
@@ -85,15 +85,11 @@ public class ListPartnerFragment extends MyBaseFragment {
 
             @Override
             public void onFailure(Exception e) {
+                finishProgressBar(progressView);
                 Log.e(AppInfo.APP_NAME, "Fehler beim Aufruf des Service", e);
                 showError(e);
             }
         });
 
-    }
-
-    private String getText(final View mainView, int resId) {
-        String text = ((TextView)mainView.findViewById(resId)).getText().toString();
-        return text.trim();
     }
 }

@@ -29,8 +29,6 @@ import static androidx.navigation.Navigation.findNavController;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link VertragServiceFragment#newInstance} factory method to
- * create an instance of this fragment.
  */
 public class VertragServiceFragment extends MyBaseFragment {
 
@@ -85,10 +83,13 @@ public class VertragServiceFragment extends MyBaseFragment {
             parameters.put(VertragGetDataCommand.PARAM_VUNR, (String)v.findViewById(id).getTag());
         }
         final VertragGetDataCommand command = new VertragGetDataCommand(mainViewModel.getConfiguration(), mainViewModel.getRequestLogger());
+        final View progressView = v.findViewById(R.id.progressVertragService);
+        progressView.setVisibility(View.VISIBLE);
         command.execute(mainViewModel.getAuthenticationManager().getAuthentication(), parameters, new CommandCallback() {
             @Override
             public void onSuccess(Object data) {
                 try {
+                    finishProgressBar(progressView);
                     mainViewModel.setXml((String)data);
                     mainViewModel.setTree(command.createTreeView((String)data));
                     mainViewModel.setResponseMessage(command.getMessage());
@@ -101,15 +102,11 @@ public class VertragServiceFragment extends MyBaseFragment {
 
             @Override
             public void onFailure(Exception e) {
+                finishProgressBar(progressView);
                 Log.e(AppInfo.APP_NAME, "Fehler beim Aufruf des Service", e);
                 showError(e);
             }
         });
 
-    }
-
-    private String getText(final View mainView, int resId) {
-        String text = ((TextView)mainView.findViewById(resId)).getText().toString();
-        return text.trim();
     }
 }

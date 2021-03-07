@@ -38,14 +38,14 @@ public class ExtranetGetLinksCommand extends BiproServiceCommand {
 
     @Override
     public void execute(BiproAuthentication authentication, Map<String, String> parameters, final CommandCallback commandCallback)  {
-        super.completeParameters(parameters, PARAM_PARTNERNR, PARAM_NAME, PARAM_VORNAME, PARAM_STRASSE, PARAM_PLZ, PARAM_ORT, PARAM_GEBURTSDATUM, PARAM_VSNR);
         final String template;
-        if (parameters.get(PARAM_VSNR).length() > 1) {
+        cleanupEmptyParameters(parameters); // wir löschen leere Parameter ganz raus
+        if (parameters.get(PARAM_VSNR) != null && parameters.get(PARAM_VSNR).length() > 1) {
             template = getConfiguration().getBipro440VertragsucheServiceTemplate();
         } else {
             template = getConfiguration().getBipro440KundensucheServiceTemplate();
         }
-        String request = XmlUtils.replace(template, parameters);
+        String request = XmlUtils.replace(XmlUtils.processIfs(template, parameters), parameters);
         super.executePOST(authentication, getUrl(), request, commandCallback);
     }
 

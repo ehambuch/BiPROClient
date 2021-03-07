@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -63,7 +62,7 @@ public class ListVertragFragment extends MyBaseFragment {
         });
         RadioGroup spinner = (RadioGroup)view.findViewById(R.id.selectVuNrListVertragRadioGroup);
         for(String gdv : mainViewModel.getConfiguration().getGDVNummern()) {
-            MaterialRadioButton rationButton = new MaterialRadioButton(getContext());
+            MaterialRadioButton rationButton = new MaterialRadioButton(requireContext());
             rationButton.setText(gdv);
             rationButton.setTag(gdv);
             ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -82,10 +81,13 @@ public class ListVertragFragment extends MyBaseFragment {
             parameters.put(VertragGetDataCommand.PARAM_VUNR, (String)v.findViewById(id).getTag());
         }
         final ListVertragCommand command = new ListVertragCommand(mainViewModel.getConfiguration(), mainViewModel.getRequestLogger());
+        final View progressView = v.findViewById(R.id.progressListVertragService);
+        progressView.setVisibility(View.VISIBLE);
         command.execute(mainViewModel.getAuthenticationManager().getAuthentication(), parameters, new CommandCallback() {
             @Override
             public void onSuccess(Object data) {
                 try {
+                    finishProgressBar(progressView);
                     mainViewModel.setListenResultData(command.parseData((String)data));
                     mainViewModel.setResponseMessage(command.getMessage());
                     findNavController(v).navigate(R.id.action_listVertragFragment_to_listenResultItemsFragment);
@@ -97,15 +99,11 @@ public class ListVertragFragment extends MyBaseFragment {
 
             @Override
             public void onFailure(Exception e) {
+                finishProgressBar(progressView);
                 Log.e(AppInfo.APP_NAME, "Fehler beim Aufruf des Service", e);
                 showError(e);
             }
         });
 
-    }
-
-    private String getText(final View mainView, int resId) {
-        String text = ((TextView)mainView.findViewById(resId)).getText().toString();
-        return text.trim();
     }
 }

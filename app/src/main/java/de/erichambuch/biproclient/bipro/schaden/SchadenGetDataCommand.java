@@ -20,8 +20,10 @@ public class SchadenGetDataCommand extends AbstractDataCommand {
 
     @Override
     public void execute(BiproAuthentication authentication, Map<String, String> parameters, final CommandCallback commandCallback)  {
-        super.completeParameters(parameters, PARAM_SCHADENNR, PARAM_VUNR);
-        super.executePOST(authentication, getUrl(), XmlUtils.replace(getConfiguration().getSchadenServiceGetDataTemplate(), parameters), commandCallback);
+        cleanupEmptyParameters(parameters);
+        super.executePOST(authentication, getUrl(),
+                XmlUtils.replace(XmlUtils.processIfs(getConfiguration().getSchadenServiceGetDataTemplate(), parameters), parameters),
+                commandCallback);
     }
 
     @Override

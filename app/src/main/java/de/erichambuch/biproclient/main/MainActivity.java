@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void showLog() {
         final MainViewModel viewModel = new ViewModelProvider(this).get(MainViewModel.class);
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_singlechoice);
+        final ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.select_dialog_singlechoice);
         if (viewModel.getRequestLogger() != null) {
             adapter.addAll();
             MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this)

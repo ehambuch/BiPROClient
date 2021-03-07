@@ -5,12 +5,12 @@ ${soapHeader}
             <ws:NewContext>
                 <ws:Filter Dialect="http://www.bipro.net/namespace/kontext/partner">
                     <par:Filter xsi:type="par:CT_Partnersuche">
-                        <par:Name>${name}</par:Name>
-                        <par:Vorname>${vorname}</par:Vorname>
-                        <par:Strasse>${strasse}</par:Strasse>
-                        <par:Ort>${ort}</par:Ort>
-                        <par:Postleitzahl>${plz}</par:Postleitzahl>
-                        <par:Versicherungsscheinnummer>${vsnr}</par:Versicherungsscheinnummer>
+                        <!--#IFDEF ${name}--><par:Name>${name}</par:Name><!--/#IFDEF-->
+                        <!--#IFDEF ${vorname}--><par:Vorname>${vorname}</par:Vorname><!--/#IFDEF-->
+                    <!--#IFDEF ${strasse}--><par:Strasse>${strasse}</par:Strasse><!--/#IFDEF-->
+                    <!--#IFDEF ${ort}--><par:Ort>${ort}</par:Ort><!--/#IFDEF-->
+                    <!--#IFDEF ${plz}--><par:Postleitzahl>${plz}</par:Postleitzahl><!--/#IFDEF-->
+                    <!--#IFDEF ${vsnr}--><par:Versicherungsscheinnummer>${vsnr}</par:Versicherungsscheinnummer><!--/#IFDEF-->
                     </par:Filter>
                 </ws:Filter>
             </ws:NewContext>
