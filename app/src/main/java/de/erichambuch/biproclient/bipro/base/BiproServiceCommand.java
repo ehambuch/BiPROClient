@@ -91,21 +91,28 @@ public abstract class BiproServiceCommand extends SOAPCommand {
         return new Callback() {
             @Override
             public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
-                final String responseXml = createResponse(response);
-                Log.d(AppInfo.APP_NAME, responseXml);
-                if (response.isSuccessful() && isOK(responseXml)) {
-                    BiproServiceCommand.this.message = getErrorMessage(responseXml, 200);
-                    commandCallback.onSuccess(responseXml);
-                } else {
-                    final int code = response.code();
-                    if (code == 401 || code == 403)
-                        authentication.invalidate();
-                    commandCallback.onFailure(new IOException(getErrorMessage(responseXml, code)));
+                try {
+                    final String responseXml = createResponse(response);
+                    Log.d(AppInfo.APP_NAME, responseXml);
+                    if (response.isSuccessful() && isOK(responseXml)) {
+                        BiproServiceCommand.this.message = getErrorMessage(responseXml, 200);
+                        commandCallback.onSuccess(responseXml);
+                    } else {
+                        final int code = response.code();
+                        if (code == 401 || code == 403)
+                            authentication.invalidate();
+                        commandCallback.onFailure(new IOException(getErrorMessage(responseXml, code)));
+                    }
+                } catch(IOException e) {
+                    onFailure(call, e); // falls bei der Response was schief ging
+                } catch(IllegalArgumentException e) { // fehler beim XML Parsing
+                    onFailure(call, new IOException("Fehler im XML", e));
                 }
             }
 
             @Override
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                Log.e(AppInfo.APP_NAME, "Fehler beim Aufruf", e);
                 commandCallback.onFailure(new IOException("Aufruf des Service nicht erfolgreich: " + e.getMessage(), e));
             }
         };

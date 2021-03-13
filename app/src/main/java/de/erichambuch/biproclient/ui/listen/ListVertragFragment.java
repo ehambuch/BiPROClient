@@ -82,7 +82,7 @@ public class ListVertragFragment extends MyBaseFragment {
         }
         final ListVertragCommand command = new ListVertragCommand(mainViewModel.getConfiguration(), mainViewModel.getRequestLogger());
         final View progressView = v.findViewById(R.id.progressListVertragService);
-        progressView.setVisibility(View.VISIBLE);
+        startProgressBar(progressView);
         command.execute(mainViewModel.getAuthenticationManager().getAuthentication(), parameters, new CommandCallback() {
             @Override
             public void onSuccess(Object data) {

@@ -86,7 +86,7 @@ public class PartnerServiceFragment extends MyBaseFragment {
         final PartnerGetDataCommand command = new PartnerGetDataCommand
                 (mainViewModel.getConfiguration(), mainViewModel.getRequestLogger());
         final View progressView = v.findViewById(R.id.progressPartnerService);
-        progressView.setVisibility(View.VISIBLE);
+        startProgressBar(progressView);
         command.execute(mainViewModel.getAuthenticationManager().getAuthentication(), parameters, new CommandCallback() {
             @Override
             public void onSuccess(Object data) {

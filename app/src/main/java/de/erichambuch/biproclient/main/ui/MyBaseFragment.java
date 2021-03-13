@@ -25,6 +25,12 @@ public class MyBaseFragment extends Fragment {
         });
     }
 
+    protected void startProgressBar(final View view) {
+        requireActivity().runOnUiThread(() -> {
+            view.setVisibility(View.VISIBLE);
+        });
+    }
+
     protected void finishProgressBar(final View view) {
         requireActivity().runOnUiThread(() -> {
             view.setVisibility(View.GONE);

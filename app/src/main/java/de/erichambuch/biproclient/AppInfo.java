@@ -5,6 +5,7 @@ package de.erichambuch.biproclient;
  * Lizenz: Proprietär
  * <p>
  *     Versionen: 1.0 (07.03.2021) erstes Release
+ *     1.0.1 (11) (13.03.2021) - Bugfix für Scrollbar
  * </p>
  * <p>
  *     Offene Themen:<ol>

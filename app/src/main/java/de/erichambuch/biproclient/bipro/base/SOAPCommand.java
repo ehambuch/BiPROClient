@@ -76,8 +76,9 @@ public abstract class SOAPCommand {
             } catch(MessagingException e) {
                 throw new IOException(e);
             }
-        } else
+        } else {
             return logResponse(response.body().string()); // text/xml
+        }
     }
 
     private String logResponse(String response) {

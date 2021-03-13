@@ -64,8 +64,9 @@ public class XmlUtils {
      * @param input XML-Datenstrom
      * @param element Name des XML-Elements (ohne Namespace)
      * @return der Wert oder null
+     * @throws IllegalArgumentException fehlerhaftes XML
      */
-    public static String getValueFromElement(String input, String element) {
+    public static String getValueFromElement(String input, String element) throws IllegalArgumentException{
         try {
             XmlPullParserFactory xmlFactoryObject = XmlPullParserFactory.newInstance();
             xmlFactoryObject.setNamespaceAware(true);

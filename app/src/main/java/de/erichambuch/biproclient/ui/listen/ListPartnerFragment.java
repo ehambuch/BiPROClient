@@ -68,7 +68,7 @@ public class ListPartnerFragment extends MyBaseFragment {
         parameters.put(ListPartnerCommand.PARAM_STRASSE, getText(v, R.id.editListPartnerPersonStrasse));
         final ListPartnerCommand command = new ListPartnerCommand(mainViewModel.getConfiguration(), mainViewModel.getRequestLogger());
         final View progressView = v.findViewById(R.id.progressListPartnerService);
-        progressView.setVisibility(View.VISIBLE);
+        startProgressBar(progressView);
         command.execute(mainViewModel.getAuthenticationManager().getAuthentication(), parameters, new CommandCallback() {
             @Override
             public void onSuccess(Object data) {

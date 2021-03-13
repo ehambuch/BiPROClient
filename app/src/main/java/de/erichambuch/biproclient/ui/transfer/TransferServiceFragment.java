@@ -67,7 +67,7 @@ public class TransferServiceFragment extends MyBaseFragment {
         parameters.put(ListShipmentsCommand.PARAM_ACKNOWLEDGED, Boolean.valueOf(v.findViewById(R.id.checkBoxAcknowledgedDocs).isSelected()).toString());
         final ListShipmentsCommand command = new ListShipmentsCommand(mainViewModel.getConfiguration(), mainViewModel.getRequestLogger());
         final View progressView = v.findViewById(R.id.progressTransferService);
-        progressView.setVisibility(View.VISIBLE);
+        startProgressBar(progressView);
         command.execute(mainViewModel.getAuthenticationManager().getAuthentication(), parameters, new CommandCallback() {
             @Override
             public void onSuccess(Object data) {
