@@ -3,7 +3,7 @@
     <soapenv:Body>
         <sch:getData>
             <sch:Request>
-                <nac:BiPROVersion>2.6.1.1.0</nac:BiPROVersion>
+                <nac:BiPROVersion>${version}</nac:BiPROVersion>
                 <nac:ConsumerID>BiPRO Client</nac:ConsumerID>
                 <sch:Schadenauskunft>
                     <sch:Schadennummer>

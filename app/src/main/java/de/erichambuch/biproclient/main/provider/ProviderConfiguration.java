@@ -32,11 +32,35 @@ public abstract class ProviderConfiguration {
 
     public abstract String[] getGDVNummern();
 
+    public abstract String getVuPortalURL();
+
     public abstract String getSTServiceURL();
 
     public abstract String getBipro440ServiceURL();
 
     public abstract String getTgicProviderServiceId();
+
+    public abstract String getVertragServiceURL();
+
+    public abstract String getTransferServiceURL();
+
+    public abstract String getListServiceURL();
+
+    public abstract String getPartnerServiceURL();
+
+    public abstract String getSchadenServiceURL();
+
+    public abstract String getBipro440ServiceVersion();
+
+    public abstract String getVertragServiceVersion();
+
+    public abstract String getTransferServiceVersion();
+
+    public abstract String getListServiceVersion();
+
+    public abstract String getPartnerServiceVersion();
+
+    public abstract String getSchadenServiceVersion();
 
     public String getBipro440KundensucheServiceTemplate() {
         try(InputStream inputStream = resources.getAssets().open("soap/request_bipro440-kunde.xml")) {
@@ -92,16 +116,6 @@ public abstract class ProviderConfiguration {
             throw new RuntimeException(e);
         }
     }
-
-    public abstract String getVertragServiceURL();
-
-    public abstract String getTransferServiceURL();
-
-    public abstract String getListServiceURL();
-
-    public abstract String getPartnerServiceURL();
-
-    public abstract String getSchadenServiceURL();
 
     public String getVertragServiceGetDataTemplate() {
         try (InputStream inputStream = resources.getAssets().open("soap/request_bipro502-getdata.xml")) {

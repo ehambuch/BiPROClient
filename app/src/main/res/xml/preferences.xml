@@ -43,15 +43,35 @@
     <PreferenceCategory app:title="Services">
 
         <EditTextPreference
+            app:key="prefs_vuportal_url"
+            app:summary="URL des VU-Extranet-Portals"
+            app:title="VU Extranet Portal URL"
+            app:useSimpleSummaryProvider="true" app:isPreferenceVisible="false" />
+
+        <EditTextPreference
             app:key="prefs_extranetservice_url"
             app:summary="URL des Extranet Service (440)"
             app:title="Extranet Service URL"
             app:useSimpleSummaryProvider="true" />
 
         <EditTextPreference
+            app:key="prefs_extranetservice_version"
+            app:summary="Version des Extranet Service (440)"
+            app:title="Extranet Service Version"
+            app:defaultValue="1.4.1.0"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
             app:key="prefs_transferservice_url"
-            app:summary="URL des Security Token Service (430)"
+            app:summary="URL des Transfer Service (430)"
             app:title="Transfer Service URL"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="prefs_transferservice_version"
+            app:summary="Version des Transfer Service (430)"
+            app:title="Transfer Service Version"
+            app:defaultValue="2.6.0.1.0"
             app:useSimpleSummaryProvider="true" />
 
         <EditTextPreference
@@ -59,25 +79,53 @@
             app:summary="URL des List Service (480)"
             app:title="List Service URL"
             app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="prefs_listservice_version"
+            app:summary="Version des List Service (480)"
+            app:title="List Service Version"
+            app:defaultValue="2.6.0.1.0"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="prefs_partnerservice_url"
+            app:summary="URL des Partner Service (501)"
+            app:title="Partner Service URL"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="prefs_partnerservice_version"
+            app:summary="Version des Partner Service (501)"
+            app:title="Partner Service Version"
+            app:defaultValue="2.6.0.1.0"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="prefs_vertragservice_url"
+            app:summary="URL des Vertrag Service (502)"
+            app:title="Vertrag Service URL"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="prefs_vertragservice_version"
+            app:summary="Version des Vertrag Service (502)"
+            app:title="Vertrag Service Version"
+            app:defaultValue="2.6.0.1.0"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="prefs_schadenservice_url"
+            app:summary="URL des Schaden Service (503)"
+            app:title="Schaden Service URL"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="prefs_schadenservice_version"
+            app:summary="Version des Schaden Service (503)"
+            app:title="Schaden Service Version"
+            app:defaultValue="2.6.0.1.0"
+            app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
-
-    <EditTextPreference
-        app:key="prefs_partnerservice_url"
-        app:summary="URL des Partner Service (501)"
-        app:title="Partner Service URL"
-        app:useSimpleSummaryProvider="true" />
-    <EditTextPreference
-        app:key="prefs_vertragservice_url"
-        app:summary="URL des Vertrag Service (502)"
-        app:title="Vertrag Service URL"
-        app:useSimpleSummaryProvider="true" />
-
-    <EditTextPreference
-        app:key="prefs_schadenservice_url"
-        app:summary="URL des Schaden Service (503)"
-        app:title="Schaden Service URL"
-        app:useSimpleSummaryProvider="true" />
-
 
     <PreferenceCategory app:title="Laden und Speichern">
         <Preference

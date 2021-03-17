@@ -30,9 +30,13 @@ public class VertragGetDataCommand extends AbstractDataCommand {
         return "urn:getData";
     }
 
-    private String getUrl() {
+    @Override
+    protected String getUrl() {
         return getConfiguration().getVertragServiceURL();
     }
 
-
+    @Override
+    protected String getVersion() {
+        return getConfiguration().getVertragServiceVersion();
+    }
 }

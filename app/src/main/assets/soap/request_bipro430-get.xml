@@ -3,7 +3,7 @@
     <soapenv:Body>
         <tran:getShipment>
                 <tran:Request>
-                    <nac:BiPROVersion>2.6.0.1.0</nac:BiPROVersion>
+                    <nac:BiPROVersion>${version}</nac:BiPROVersion>
                     <nac:ConsumerID>Android BiPRO Client</nac:ConsumerID>
                     <tran:ID>${id}</tran:ID>
                 </tran:Request>

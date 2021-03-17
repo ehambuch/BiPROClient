@@ -19,6 +19,11 @@ public class PfefferminziaConfiguration extends ProviderConfiguration {
     public String[] getGDVNummern() { return new String[]{"0000"};}
 
     @Override
+    public String getVuPortalURL() {
+        return "https://sites.google.com/site/erichambuch";
+    }
+
+    @Override
     public String getSTServiceURL() {
         return "http://localhost:55433/service?service=sts";
     }
@@ -55,5 +60,35 @@ public class PfefferminziaConfiguration extends ProviderConfiguration {
     @Override
     public String getSchadenServiceURL() {
         return "http://localhost:55433/service?service=schaden";
+    }
+
+    @Override
+    public String getBipro440ServiceVersion() {
+        return "1.0.1.0";
+    }
+
+    @Override
+    public String getVertragServiceVersion() {
+        return "2.6.0.1.0";
+    }
+
+    @Override
+    public String getTransferServiceVersion() {
+        return "2.6.0.1.0";
+    }
+
+    @Override
+    public String getListServiceVersion() {
+        return "2.6.0.1.0";
+    }
+
+    @Override
+    public String getPartnerServiceVersion() {
+        return "2.6.0.1.0";
+    }
+
+    @Override
+    public String getSchadenServiceVersion() {
+        return "2.6.0.1.0";
     }
 }

@@ -31,8 +31,19 @@ public class ListPartnerCommand extends BiproServiceCommand {
     @Override
     public void execute(BiproAuthentication authentication, Map<String, String> parameters, final CommandCallback commandCallback)  {
         cleanupEmptyParameters(parameters); // wir löschen leere Parameter ganz raus
+
         String request = XmlUtils.replace(XmlUtils.processIfs(getConfiguration().getListServiceEnumPartnerTemplate(), parameters), parameters);
-        super.executePOST(authentication, getConfiguration().getListServiceURL(), request, commandCallback);
+        super.executePOST(authentication, getUrl(), request, commandCallback);
+    }
+
+    @Override
+    protected String getUrl() {
+        return  getConfiguration().getListServiceURL();
+    }
+
+    @Override
+    protected String getVersion() {
+        return getConfiguration().getListServiceVersion();
     }
 
     @Override

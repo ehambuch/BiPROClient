@@ -25,6 +25,7 @@ public class TestServer extends NanoHTTPD {
     private static String response260 = "<Identifier>bipro:testserver</Identifier>";
     private static String response440 = "";
     private static String response430list = "";
+    private static String response430get= "";
     private static String response501get = "";
     private static String response503get = "";
     private static String response502get = "";
@@ -54,6 +55,7 @@ public class TestServer extends NanoHTTPD {
                     case "urn:listShipments":
                         return newFixedLengthResponse(Response.Status.OK, "text/xml", response430list);
                     case "urn:getShipment":
+                        //return newFixedLengthResponse(Response.Status.OK, "text/xml", response430get);
                         response430get_stream.reset();
                         return newChunkedResponse(Response.Status.OK, "Multipart/Related; start-info=\"text/xml\"; type=\"application/xop+xml\"; boundary=\"uuid:_Startxml\"",
                                 response430get_stream);
@@ -105,6 +107,11 @@ public class TestServer extends NanoHTTPD {
         }
         try(InputStream inputStream = resources.getAssets().open("testserver/response_bipro430_list.xml")) {
             response430list = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
+        } catch(IOException e) {
+            throw new RuntimeException(e);
+        }
+        try(InputStream inputStream = resources.getAssets().open("testserver/response_bipro430_get.xml")) {
+            response430get = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
         } catch(IOException e) {
             throw new RuntimeException(e);
         }

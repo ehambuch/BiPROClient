@@ -54,8 +54,12 @@ public class ExtranetGetLinksCommand extends BiproServiceCommand {
         return "urn:getLinks";
     }
 
-    private String getUrl() {
+    protected String getUrl() {
         return getConfiguration().getBipro440ServiceURL();
+    }
+
+    protected String getVersion() {
+        return getConfiguration().getBipro440ServiceVersion();
     }
 
     /**

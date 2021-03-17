@@ -42,6 +42,9 @@
         <action
             android:id="@+id/action_selectServiceFragment_to_schadenServiceFragment"
             app:destination="@id/schadenServiceFragment" />
+        <action
+            android:id="@+id/action_selectServiceFragment_to_vuPortalFragment"
+            app:destination="@id/vuPortalFragment" />
     </fragment>
     <fragment
         android:id="@+id/extranetServiceSearchFragment"
@@ -138,4 +141,9 @@
             android:id="@+id/action_schadenServiceFragment_to_dataFullViewFragment"
             app:destination="@id/dataFullViewFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/vuPortalFragment"
+        android:name="de.erichambuch.biproclient.ui.vuportal.VuPortalFragment"
+        android:label="Extranet des VU"
+        tools:layout="@layout/fragment_vuportal"/>
 </navigation>

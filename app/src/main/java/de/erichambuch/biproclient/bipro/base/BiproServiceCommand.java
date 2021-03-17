@@ -24,6 +24,8 @@ public abstract class BiproServiceCommand extends SOAPCommand {
 
     private final ProviderConfiguration config;
 
+    protected final static String PARAM_VERSION = "${version}";
+
     protected String message = "";
 
     public BiproServiceCommand(ProviderConfiguration configuration, RequestLogger logger) {
@@ -42,6 +44,10 @@ public abstract class BiproServiceCommand extends SOAPCommand {
     protected ProviderConfiguration getConfiguration() {
         return config;
     }
+
+    protected abstract String getUrl();
+
+    protected abstract String getVersion();
 
     /**
      * Liefert eine eventuelle Nachricht.
@@ -78,7 +84,7 @@ public abstract class BiproServiceCommand extends SOAPCommand {
     }
 
     protected void executePOST(BiproAuthentication authentication, final String url, final String soapRequest, final CommandCallback commandCallback) {
-        String finalRequest = soapRequest.replace("${soapHeader}", authentication.createSOAPHeader());
+        String finalRequest = soapRequest.replace("${soapHeader}", authentication.createSOAPHeader()).replace(PARAM_VERSION, getVersion());
         Log.d(AppInfo.APP_NAME, finalRequest);
         try {
             executeCommand(url, finalRequest, createCallback(authentication, commandCallback));

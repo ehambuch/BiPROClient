@@ -1,5 +1,6 @@
 package de.erichambuch.biproclient.bipro.transfer;
 
+import android.util.Base64;
 import android.util.Log;
 
 import org.apache.commons.io.IOUtils;
@@ -52,8 +53,13 @@ public class GetShipmentCommand extends AbstractDataCommand {
         return "urn:getShipment";
     }
 
-    private String getUrl() {
+    protected String getUrl() {
         return getConfiguration().getTransferServiceURL();
+    }
+
+    @Override
+    protected String getVersion() {
+        return getConfiguration().getTransferServiceVersion();
     }
 
     @Override
@@ -81,8 +87,17 @@ public class GetShipmentCommand extends AbstractDataCommand {
             } catch(MessagingException e) {
                 throw new IOException(e);
             }
-        } else
-            return response.body().string(); // text/xml
+        } else {
+            final String xml = response.body().string(); // text/xml
+            String base64Daten = XmlUtils.getValueFromElement(xml, "Daten");
+            if ( base64Daten != null && base64Daten.length() > 36 ) {
+                Attachment attachment = new Attachment();
+                attachment.data = Base64.decode(base64Daten, Base64.DEFAULT);
+                attachment.contentType = "application/pdf"; // best guess
+                attachmentList.add(attachment);
+            }
+            return xml;
+        }
     }
 
     public synchronized List<Attachment> getAttachments() {

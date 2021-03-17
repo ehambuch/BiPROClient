@@ -31,7 +31,12 @@ public class SchadenGetDataCommand extends AbstractDataCommand {
         return "urn:getData";
     }
 
-    private String getUrl() {
+    protected String getUrl() {
         return getConfiguration().getSchadenServiceURL();
+    }
+
+    @Override
+    protected String getVersion() {
+        return getConfiguration().getSchadenServiceVersion();
     }
 }

@@ -33,6 +33,11 @@ public class SettingsConfiguration extends ProviderConfiguration {
     public String[] getGDVNummern() { return dataStore.getString("prefs_provider_gdvnr", "0000").split(",");}
 
     @Override
+    public String getVuPortalURL() {
+         return dataStore.getString("prefs_vuportal_url", "");
+    }
+
+    @Override
     public String getSTServiceURL() {
         return dataStore.getString("prefs_sts_url", "");
     }
@@ -70,5 +75,35 @@ public class SettingsConfiguration extends ProviderConfiguration {
     @Override
     public String getSchadenServiceURL() {
         return dataStore.getString("prefs_schadenservice_url", "");
+    }
+
+    @Override
+    public String getBipro440ServiceVersion() {
+        return dataStore.getString("prefs_extranetservice_version", "");
+    }
+
+    @Override
+    public String getVertragServiceVersion() {
+        return dataStore.getString("prefs_vertragservice_version", "");
+    }
+
+    @Override
+    public String getTransferServiceVersion() {
+        return dataStore.getString("prefs_transferservice_version", "");
+    }
+
+    @Override
+    public String getListServiceVersion() {
+        return dataStore.getString("prefs_listservice_version", "");
+    }
+
+    @Override
+    public String getPartnerServiceVersion() {
+        return dataStore.getString("prefs_partnerservice_version", "");
+    }
+
+    @Override
+    public String getSchadenServiceVersion() {
+        return dataStore.getString("prefs_schadenservice_version", "");
     }
 }

@@ -21,6 +21,11 @@ public class GothaerTestConfiguration extends ProviderConfiguration {
     }
 
     @Override
+    public String getVuPortalURL() {
+        return null;
+    }
+
+    @Override
     public String getSTServiceURL() {
         return "https://basicauthsecure.gothaer.de/n410/v1-0/services/UserPasswordLogin";
         // bzw. https://exttest-ists-v2.tgic.de/RST/Issue bzw. PROD https://ists-v2.tgic.de/
@@ -59,5 +64,35 @@ public class GothaerTestConfiguration extends ProviderConfiguration {
     @Override
     public String getSchadenServiceURL() {
         return null;
+    }
+
+    @Override
+    public String getBipro440ServiceVersion() {
+        return "1.0.1.0";
+    }
+
+    @Override
+    public String getVertragServiceVersion() {
+        return "2.6.0.1.0";
+    }
+
+    @Override
+    public String getTransferServiceVersion() {
+        return "2.6.0.1.0";
+    }
+
+    @Override
+    public String getListServiceVersion() {
+        return "2.6.0.1.0";
+    }
+
+    @Override
+    public String getPartnerServiceVersion() {
+        return "2.6.0.1.0";
+    }
+
+    @Override
+    public String getSchadenServiceVersion() {
+        return "2.6.0.1.0";
     }
 }

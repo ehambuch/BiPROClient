@@ -76,6 +76,27 @@ public class SettingsDataStore extends PreferenceDataStore {
                 case "schadenServiceUrl":
                     this.putString("prefs_schadenservice_url", json.nextString());
                     break;
+                case "extranetServiceVersion":
+                    this.putString("prefs_extranetservice_version", json.nextString());
+                    break;
+                case "transferServiceVersion":
+                    this.putString("prefs_transferservice_version", json.nextString());
+                    break;
+                case "vertragServiceVersion":
+                    this.putString("prefs_vertragservice_version", json.nextString());
+                    break;
+                case "listServiceVersion":
+                    this.putString("prefs_listservice_version", json.nextString());
+                    break;
+                case "parterServiceVersion":
+                    this.putString("prefs_partnerservice_version", json.nextString());
+                    break;
+                case "schadenServiceVersion":
+                    this.putString("prefs_schadenservice_version", json.nextString());
+                    break;
+                case "vuPortalUrl":
+                    this.putString("prefs_vuportal_url", json.nextString());
+                    break;
                 case "gdvNummern":
                     this.putString("prefs_provider_gdvnr", json.nextString());
                     break;
@@ -91,6 +112,7 @@ public class SettingsDataStore extends PreferenceDataStore {
     }
 
     public void writeToJSON(OutputStream outputStream) throws IOException {
+        // TODO: umstrukturieren service { name, url, version }
         Writer writer = new OutputStreamWriter(outputStream, StandardCharsets.UTF_8);
         JsonWriter json = new JsonWriter(writer);
         json.beginObject().name("name").value(this.getString("prefs_provider_name", ""))
@@ -101,6 +123,13 @@ public class SettingsDataStore extends PreferenceDataStore {
                 .name("listServiceUrl").value(this.getString("prefs_listservice_url", ""))
                 .name("partnerServiceUrl").value(this.getString("prefs_partnerservice_url", ""))
                 .name("schadenServiceUrl").value(this.getString("prefs_schadenservice_url", ""))
+                .name("extranetServiceVersion").value(this.getString("prefs_extranetservice_version", ""))
+                .name("transferServiceVersion").value(this.getString("prefs_transferservice_version", ""))
+                .name("vertragServiceVersion").value(this.getString("prefs_vertragservice_version", ""))
+                .name("listServiceVersion").value(this.getString("prefs_listservice_version", ""))
+                .name("partnerServiceVersion").value(this.getString("prefs_partnerservice_version", ""))
+                .name("schadenServiceVersion").value(this.getString("prefs_schadenservice_version", ""))
+                .name("vuPortalUrl").value(this.getString("prefs_vuportal_url", ""))
                 .name("samlServiceId").value(this.getString("prefs_saml_service_id", ""))
                 .name("gdvNummern").value(this.getString("prefs_provider_gdvnr", "")).endObject();
         json.flush();

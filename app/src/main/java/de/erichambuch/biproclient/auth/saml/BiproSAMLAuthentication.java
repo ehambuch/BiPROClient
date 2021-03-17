@@ -28,4 +28,8 @@ public class BiproSAMLAuthentication implements BiproAuthentication {
     public boolean requiresReauthentication() {
         return (samlArtefact == null); // TODO expiry
     }
+
+    public String getSamlArtefact() {
+        return samlArtefact;
+    }
 }

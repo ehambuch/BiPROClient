@@ -31,7 +31,13 @@ public class PartnerGetDataCommand extends AbstractDataCommand {
         return "urn:getData";
     }
 
-    private String getUrl() {
+    @Override
+    protected String getUrl() {
         return getConfiguration().getPartnerServiceURL();
+    }
+
+    @Override
+    protected String getVersion() {
+        return getConfiguration().getPartnerServiceVersion();
     }
 }

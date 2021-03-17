@@ -39,9 +39,16 @@ public class ListShipmentsCommand extends BiproServiceCommand {
         return "urn:listShipments";
     }
 
-    private String getUrl() {
+    @Override
+    protected String getUrl() {
         return getConfiguration().getTransferServiceURL();
     }
+
+    @Override
+    protected String getVersion() {
+        return getConfiguration().getTransferServiceVersion();
+    }
+
 
     public List<TransferEntry> parseData(String xmlResponse) throws Exception {
         List<TransferEntry> urlList = new ArrayList<>();

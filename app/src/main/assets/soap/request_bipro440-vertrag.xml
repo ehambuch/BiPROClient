@@ -3,7 +3,7 @@
 ${soapHeader}
     <soapenv:Body>
         <nam:getLinks>
-            <nam:Request Version="1.4.1.0">
+            <nam:Request Version="${version}">
                 <nam:Extranetsuche>
                     <nam:Vertragsuche>
                         <nam:Versicherungsscheinnummer>${vsnr}</nam:Versicherungsscheinnummer>
