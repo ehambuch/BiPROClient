@@ -10,8 +10,8 @@ android {
         applicationId "de.erichambuch.biproclient"
         minSdkVersion 24
         targetSdkVersion 30
-        versionCode 12
-        versionName '1.1.0'
+        versionCode 13
+        versionName '1.1.1'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

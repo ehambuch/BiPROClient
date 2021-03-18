@@ -33,7 +33,6 @@ public class SelectServiceFragment extends Fragment {
         MainViewModel mainViewModel = new ViewModelProvider(requireActivity()).get(MainViewModel.class);
         ProviderConfiguration configuration = mainViewModel.getConfiguration();
         setNavigation(view, R.id.buttonServiceExtranet, R.id.action_selectServiceFragment_to_extranetServiceFragment, configuration.getBipro440ServiceURL());
-        setNavigation(view, R.id.buttonServiceVuPortal, R.id.action_selectServiceFragment_to_vuPortalFragment, configuration.getVuPortalURL());
         setNavigation(view, R.id.buttonServiceTransfer, R.id.action_selectServiceFragment_to_transferServiceFragment, configuration.getTransferServiceURL());
         setNavigation(view, R.id.buttonServiceListPartner, R.id.action_selectServiceFragment_to_listPartnerFragment, configuration.getListServiceURL());
         setNavigation(view, R.id.buttonServiceListVertrag, R.id.action_selectServiceFragment_to_listVertragFragment, configuration.getListServiceURL());

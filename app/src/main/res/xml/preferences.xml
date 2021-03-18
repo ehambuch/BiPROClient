@@ -43,12 +43,6 @@
     <PreferenceCategory app:title="Services">
 
         <EditTextPreference
-            app:key="prefs_vuportal_url"
-            app:summary="URL des VU-Extranet-Portals"
-            app:title="VU Extranet Portal URL"
-            app:useSimpleSummaryProvider="true" app:isPreferenceVisible="false" />
-
-        <EditTextPreference
             app:key="prefs_extranetservice_url"
             app:summary="URL des Extranet Service (440)"
             app:title="Extranet Service URL"

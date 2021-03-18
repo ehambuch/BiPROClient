@@ -32,8 +32,6 @@ public abstract class ProviderConfiguration {
 
     public abstract String[] getGDVNummern();
 
-    public abstract String getVuPortalURL();
-
     public abstract String getSTServiceURL();
 
     public abstract String getBipro440ServiceURL();

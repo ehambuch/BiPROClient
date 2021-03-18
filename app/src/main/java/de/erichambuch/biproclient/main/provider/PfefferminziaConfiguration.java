@@ -19,11 +19,6 @@ public class PfefferminziaConfiguration extends ProviderConfiguration {
     public String[] getGDVNummern() { return new String[]{"0000"};}
 
     @Override
-    public String getVuPortalURL() {
-        return "https://sites.google.com/site/erichambuch";
-    }
-
-    @Override
     public String getSTServiceURL() {
         return "http://localhost:55433/service?service=sts";
     }

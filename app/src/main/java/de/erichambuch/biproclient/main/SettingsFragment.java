@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.preference.EditTextPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.io.InputStream;
@@ -18,6 +20,12 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
     private static final int REQUEST_CODE_LOAD = 432;
     private static final int REQUEST_CODE_SAVE = 433;
+
+    /**
+     * Versionsnummer a.b.c.d.e
+     */
+    private static final String VERSION_REGEX = "\\d\\.\\d.\\d.\\d.\\d";
+    private static final String VERSION_TEXT = "a.b.c.d.e";
 
     private final SettingsDataStore myDataStore;
 
@@ -52,6 +60,14 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 return true;
             }
         });
+
+        setValidator("prefs_provider_gdvnr", "(\\d\\d\\d\\d)?(,\\d\\d\\d\\d)*", "nnnn,nnnn,...");
+        setValidator("prefs_extranetservice_version", "\\d\\.\\d.\\d.\\d", "a.b.c.d");
+        setValidator("prefs_transferservice_version", VERSION_REGEX, VERSION_TEXT);
+        setValidator("prefs_listservice_version", VERSION_REGEX, VERSION_TEXT);
+        setValidator("prefs_partnerservice_version", VERSION_REGEX, VERSION_TEXT);
+        setValidator("prefs_vertragservice_version", VERSION_REGEX, VERSION_TEXT);
+        setValidator("prefs_schadenservice_version", VERSION_REGEX, VERSION_TEXT);
     }
 
     @Override
@@ -77,6 +93,24 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                         }).show();
             }
         }
+    }
+
+    private void setValidator(String key, String regExPattern, String errorMsg) {
+        EditTextPreference prefs = (EditTextPreference) findPreference(key);
+        prefs.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                if (newValue != null && !"".equals(newValue) && !String.valueOf(newValue).matches(regExPattern)) {
+                    final MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(requireActivity());
+                    builder.setTitle("Ungültige Eingabe");
+                    builder.setMessage(newValue + " entspricht nicht dem erforderlichen Format "+errorMsg);
+                    builder.setPositiveButton(android.R.string.ok, null);
+                    builder.show();
+                    return false;
+                } else
+                    return true;
+            }
+        });
     }
 
     private void loadSettings() {

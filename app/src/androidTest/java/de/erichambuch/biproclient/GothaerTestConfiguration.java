@@ -21,14 +21,9 @@ public class GothaerTestConfiguration extends ProviderConfiguration {
     }
 
     @Override
-    public String getVuPortalURL() {
-        return null;
-    }
-
-    @Override
     public String getSTServiceURL() {
         return "https://basicauthsecure.gothaer.de/n410/v1-0/services/UserPasswordLogin";
-        // bzw. https://exttest-ists-v2.tgic.de/RST/Issue bzw. PROD https://ists-v2.tgic.de/
+        // bzw. https://exttest-ists-v2.tgic.de/RST/Issue bzw. PROD https://ists-v2.tgic.de/RST/Issue
     }
 
     @Override

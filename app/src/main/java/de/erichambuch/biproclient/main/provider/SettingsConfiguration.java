@@ -33,11 +33,6 @@ public class SettingsConfiguration extends ProviderConfiguration {
     public String[] getGDVNummern() { return dataStore.getString("prefs_provider_gdvnr", "0000").split(",");}
 
     @Override
-    public String getVuPortalURL() {
-         return dataStore.getString("prefs_vuportal_url", "");
-    }
-
-    @Override
     public String getSTServiceURL() {
         return dataStore.getString("prefs_sts_url", "");
     }

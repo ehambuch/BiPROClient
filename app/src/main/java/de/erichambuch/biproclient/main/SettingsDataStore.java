@@ -94,9 +94,6 @@ public class SettingsDataStore extends PreferenceDataStore {
                 case "schadenServiceVersion":
                     this.putString("prefs_schadenservice_version", json.nextString());
                     break;
-                case "vuPortalUrl":
-                    this.putString("prefs_vuportal_url", json.nextString());
-                    break;
                 case "gdvNummern":
                     this.putString("prefs_provider_gdvnr", json.nextString());
                     break;
@@ -129,7 +126,6 @@ public class SettingsDataStore extends PreferenceDataStore {
                 .name("listServiceVersion").value(this.getString("prefs_listservice_version", ""))
                 .name("partnerServiceVersion").value(this.getString("prefs_partnerservice_version", ""))
                 .name("schadenServiceVersion").value(this.getString("prefs_schadenservice_version", ""))
-                .name("vuPortalUrl").value(this.getString("prefs_vuportal_url", ""))
                 .name("samlServiceId").value(this.getString("prefs_saml_service_id", ""))
                 .name("gdvNummern").value(this.getString("prefs_provider_gdvnr", "")).endObject();
         json.flush();

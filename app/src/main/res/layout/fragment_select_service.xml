@@ -19,18 +19,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonServiceVuPortal"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Extranet-Portal"
-        android:layout_width="0dp"
-        android:visibility="gone"
-        app:icon="@drawable/ic_web_black_24dp"
-        app:layout_constraintEnd_toEndOf="@id/buttonServiceExtranet"
-        app:layout_constraintStart_toStartOf="@id/buttonServiceExtranet"
-        app:layout_constraintTop_toBottomOf="@id/buttonServiceExtranet" />
-
-    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonServiceTransfer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -39,7 +27,7 @@
         app:icon="@drawable/ic_mail_outline_black_24dp"
         app:layout_constraintEnd_toEndOf="@id/buttonServiceExtranet"
         app:layout_constraintStart_toStartOf="@id/buttonServiceExtranet"
-        app:layout_constraintTop_toBottomOf="@id/buttonServiceVuPortal" />
+        app:layout_constraintTop_toBottomOf="@id/buttonServiceExtranet" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonServiceListPartner"
