@@ -4,6 +4,7 @@
     <string name="email">erichambuch@googlemail.com</string>
     <string name="login">Login</string>
     <string name="cancel">Abbruch</string>
+    <string name="default_version" translatable="false">2.6.0.1.0</string>
     <string name="message_welcome"><![CDATA[Willkommen zum ersten mobilen BiPRO Test-Client.<p>Mit den <a href="https://www.bipro.net">BiPRO-Standard</a> können Sie als Vertriebspartner Daten ihrer Kunden von verschiedenen Versicherern einfach, sicher und schnell abrufen. Dazu benötigen Sie einen Zugang, den Sie bei den jeweiligen Unternehmen beantragen können. Bitte berücksichtigen Sie, dass diese App nur zum Test
     der verschiedenen Services vorgesehen ist, nicht für eine (dauerhafte) produktive Nutzung.</p><br/><p>Zu Demozwecken enthält die Anwendung einfache Beispiel-Services der fiktiven <i>Pfefferminzia Test-Versicherung</i>, mit der Sie einen ersten Eindruck erhalten können.</p>
 <p>Über Feedback freue ich mich: <a href="mailto:erichambuch@googlemail.com">erichambuch@googlemail.com</a>.]]></string>

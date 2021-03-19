@@ -8,6 +8,7 @@ package de.erichambuch.biproclient;
  *     1.0.1 (11) (13.03.2021) - Bugfix für Scrollbar
  *     1.1.0 (12) (17.03.2021) - Transferservice nimmt auch Base64-Encoding, Versionsnummern für alle Services
  *     1.1.1 (13) (18.03.2021) - Validierung des Inputs
+ *     1.2.0 (14) (19.03.2021) - Fehlerkorrekturen, Expand All bei TreeView
  * </p>
  * <p>
  *     Offene Themen:<ol>

@@ -2,6 +2,7 @@ package de.erichambuch.biproclient.main.provider;
 
 import android.content.Context;
 
+import de.erichambuch.biproclient.R;
 import de.erichambuch.biproclient.main.SettingsDataStore;
 
 /**
@@ -10,10 +11,12 @@ import de.erichambuch.biproclient.main.SettingsDataStore;
 public class SettingsConfiguration extends ProviderConfiguration {
 
     private final SettingsDataStore dataStore;
+    private final String defaultVersion;
 
     public SettingsConfiguration(SettingsDataStore dataStore, Context context) {
         super(context.getResources());
         this.dataStore = dataStore;
+        defaultVersion = context.getString(R.string.default_version);
     }
 
     @Override
@@ -74,31 +77,31 @@ public class SettingsConfiguration extends ProviderConfiguration {
 
     @Override
     public String getBipro440ServiceVersion() {
-        return dataStore.getString("prefs_extranetservice_version", "");
+        return dataStore.getString("prefs_extranetservice_version", "1.4.1.0");
     }
 
     @Override
     public String getVertragServiceVersion() {
-        return dataStore.getString("prefs_vertragservice_version", "");
+        return dataStore.getString("prefs_vertragservice_version", defaultVersion);
     }
 
     @Override
     public String getTransferServiceVersion() {
-        return dataStore.getString("prefs_transferservice_version", "");
+        return dataStore.getString("prefs_transferservice_version", defaultVersion);
     }
 
     @Override
     public String getListServiceVersion() {
-        return dataStore.getString("prefs_listservice_version", "");
+        return dataStore.getString("prefs_listservice_version", defaultVersion);
     }
 
     @Override
     public String getPartnerServiceVersion() {
-        return dataStore.getString("prefs_partnerservice_version", "");
+        return dataStore.getString("prefs_partnerservice_version", defaultVersion);
     }
 
     @Override
     public String getSchadenServiceVersion() {
-        return dataStore.getString("prefs_schadenservice_version", "");
+        return dataStore.getString("prefs_schadenservice_version", defaultVersion);
     }
 }

@@ -90,12 +90,12 @@ public class DataFullViewFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_vertrag_full_view, container, false);
+        final View view = inflater.inflate(R.layout.fragment_vertrag_full_view, container, false);
 
         mainViewModel = new ViewModelProvider(requireActivity()).get(MainViewModel.class);
-        TreeViewAdapter adapter = new TreeViewAdapter(Collections.singletonList(mainViewModel.getTree()),
+        final TreeViewAdapter adapter = new TreeViewAdapter(Collections.singletonList(mainViewModel.getTree()),
                 Collections.singletonList(new TreeNodeBinder(mainViewModel.getStaticData())));
-        RecyclerView tView = view.findViewById(R.id.dataFullViewFragment);
+        final RecyclerView tView = view.findViewById(R.id.dataFullViewFragment);
         tView.setLayoutManager(new LinearLayoutManager(this.getContext()));
         tView.setAdapter(adapter);
         adapter.ifCollapseChildWhileCollapseParent(true);
@@ -113,9 +113,31 @@ public class DataFullViewFragment extends Fragment {
                 TreeNodeBinder.ViewHolder dirViewHolder = (TreeNodeBinder.ViewHolder) holder;
                 final ImageView ivArrow = dirViewHolder.getIvArrow();
                 int rotateDegree = isExpand ? 90 : 0;
-                ivArrow.animate().rotationBy(rotateDegree).start();
+                ivArrow.animate().rotation(rotateDegree).start();
+            }
+        });
+        view.findViewById(R.id.floating_action_button_vertrag_expand_all).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if ( mainViewModel.getTree().isExpand() ) {
+                    adapter.collapseAll();
+                } else {
+                    expand(mainViewModel.getTree());
+                    adapter.refresh(Collections.singletonList(mainViewModel.getTree()));
+                }
             }
         });
         return view;
+    }
+
+    private void expand(final TreeNode node) {
+        if ( node != null ) {
+            if ( !node.isExpand() && !node.isLeaf() )
+                node.toggle();
+            if(node.getChildList() != null) {
+                for (Object t : node.getChildList())
+                    expand((TreeNode) t);
+            }
+        }
     }
 }

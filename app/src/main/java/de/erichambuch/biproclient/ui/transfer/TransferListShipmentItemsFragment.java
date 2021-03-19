@@ -111,14 +111,13 @@ public class TransferListShipmentItemsFragment extends MyBaseFragment implements
                 public void onSuccess(Object data) {
                     String xmlResponse = (String) data;
                     try {
+                        if ( command.getAttachments().isEmpty() )
+                            showError("TransferService - Dokument", "Kein Dokument in dieser Lieferung vorhanden.");
                         for(GetShipmentCommand.Attachment attachment : command.getAttachments()) {
                             String dateiname = XmlUtils.getValueFromElement(xmlResponse, "Dateiname" ); // TODO geht nur beim 1. Dokument
-                            String dateityp = XmlUtils.getValueFromElement(xmlResponse, "Dateityp");
                             if (dateiname == null)
-                                dateiname = "Attachment"+XmlUtils.getValueFromElement(xmlResponse, "ID");
-                            if (dateityp == null)
-                                dateityp = "pdf";
-                            File temp = new File(getContext().getFilesDir(), dateiname+ "."+dateityp );
+                                dateiname = "Attachment"+XmlUtils.getValueFromElement(xmlResponse, "ID") + ".pdf";
+                            File temp = new File(getContext().getFilesDir(), dateiname );
                             try(FileOutputStream out = new FileOutputStream(temp)) {
                                 out.write(attachment.data);
                             }

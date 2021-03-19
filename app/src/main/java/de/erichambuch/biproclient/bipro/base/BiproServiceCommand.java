@@ -147,7 +147,7 @@ public abstract class BiproServiceCommand extends SOAPCommand {
             text = XmlUtils.getValueFromElement(xmlResponse, "faultstring");
             return text != null ? text : ("Unbekannter Fehler: HTTP "+httpCode);
         } else {
-            return meldungId+": "+text;
+            return meldungId + (text != null ? (": "+text) : "");
         }
 
     }
