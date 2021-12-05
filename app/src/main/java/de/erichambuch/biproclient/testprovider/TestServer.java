@@ -85,7 +85,7 @@ public class TestServer extends NanoHTTPD {
 
     private boolean peekIntoBody(IHTTPSession session, String stringToLookFor) {
         try {
-            Map<String,String> body = new HashMap();
+            Map<String,String> body = new HashMap<>();
             session.parseBody(body);
             return body.values().size() > 0 && body.values().iterator().next().contains(stringToLookFor);
         } catch (ResponseException | IOException e) {

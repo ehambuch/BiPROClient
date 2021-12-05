@@ -1,5 +1,7 @@
 package de.erichambuch.biproclient.ui.listen;
 
+import static androidx.navigation.Navigation.findNavController;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,8 +22,6 @@ import de.erichambuch.biproclient.bipro.base.CommandCallback;
 import de.erichambuch.biproclient.bipro.listen.ListPartnerCommand;
 import de.erichambuch.biproclient.main.MainViewModel;
 import de.erichambuch.biproclient.main.ui.MyBaseFragment;
-
-import static androidx.navigation.Navigation.findNavController;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -74,9 +74,11 @@ public class ListPartnerFragment extends MyBaseFragment {
             public void onSuccess(Object data) {
                 try {
                     finishProgressBar(progressView);
-                    mainViewModel.setListenResultData(command.parseData((String)data));
+                    mainViewModel.setListenResultData(command.parseData((String) data));
                     mainViewModel.setResponseMessage(command.getMessage());
-                    findNavController(v).navigate(R.id.action_listPartnerFragment_to_listenResultItemsFragment);
+                    requireActivity().runOnUiThread(() -> {
+                        findNavController(v).navigate(R.id.action_listPartnerFragment_to_listenResultItemsFragment);
+                    });
                 } catch (Exception e) {
                     Log.e(AppInfo.APP_NAME, "Fehler beim Parsen", e);
                     showError("Interner Fehler", e.getMessage());

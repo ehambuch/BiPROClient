@@ -1,5 +1,7 @@
 package de.erichambuch.biproclient.ui.extranet;
 
+import static androidx.navigation.Navigation.findNavController;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,8 +23,6 @@ import de.erichambuch.biproclient.bipro.extranet.ExtranetGetLinksCommand;
 import de.erichambuch.biproclient.main.MainViewModel;
 import de.erichambuch.biproclient.main.ui.MyBaseFragment;
 
-import static androidx.navigation.Navigation.findNavController;
-
 /**
  */
 public class ExtranetServiceSearchFragment extends MyBaseFragment {
@@ -39,7 +39,7 @@ public class ExtranetServiceSearchFragment extends MyBaseFragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public synchronized View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View theView = inflater.inflate(R.layout.fragment_extranet_service_search, container, false);
@@ -82,7 +82,9 @@ public class ExtranetServiceSearchFragment extends MyBaseFragment {
                     finishProgressBar(progressView);
                     mainViewModel.setURLs(command.parseData((String)data));
                     mainViewModel.setResponseMessage(command.getMessage());
-                    findNavController(v).navigate(R.id.action_extranetServiceSearchFragment_to_extranetItemFragment);
+                    requireActivity().runOnUiThread(() -> {
+                        findNavController(v).navigate(R.id.action_extranetServiceSearchFragment_to_extranetItemFragment);
+                    });
                 } catch (Exception e) {
                     Log.e(AppInfo.APP_NAME, "Fehler beim Parsen", e);
                     showError("Interner Fehler", e.getMessage());

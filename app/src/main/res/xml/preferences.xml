@@ -125,10 +125,10 @@
         <Preference
             app:key="loadsettings"
             app:summary="Einstellungen eines VU laden"
-            app:title="Einstellungen laden"></Preference>
+            app:title="Einstellungen laden" />
         <Preference
             app:key="savesettings"
             app:summary="Einstellungen exportieren"
-            app:title="Einstellungen exportieren"></Preference>
+            app:title="Einstellungen exportieren" />
     </PreferenceCategory>
 </PreferenceScreen>

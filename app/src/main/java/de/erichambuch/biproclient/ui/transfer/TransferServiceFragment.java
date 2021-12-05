@@ -1,5 +1,7 @@
 package de.erichambuch.biproclient.ui.transfer;
 
+import static androidx.navigation.Navigation.findNavController;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,8 +23,6 @@ import de.erichambuch.biproclient.bipro.base.CommandCallback;
 import de.erichambuch.biproclient.bipro.transfer.ListShipmentsCommand;
 import de.erichambuch.biproclient.main.MainViewModel;
 import de.erichambuch.biproclient.main.ui.MyBaseFragment;
-
-import static androidx.navigation.Navigation.findNavController;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -52,12 +52,8 @@ public class TransferServiceFragment extends MyBaseFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        view.findViewById(R.id.buttonStartTransferSearch).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mainViewModel.getAuthenticationManager().startAuthenticate(getContext(), () -> callService(view));
-            }
-        });
+        view.findViewById(R.id.buttonStartTransferSearch).setOnClickListener(
+                v -> mainViewModel.getAuthenticationManager().startAuthenticate(getContext(), () -> callService(view)));
     }
 
     public void callService(final View v) {
@@ -75,7 +71,9 @@ public class TransferServiceFragment extends MyBaseFragment {
                     finishProgressBar(progressView);
                     mainViewModel.setShipmentList(command.parseData((String)data));
                     mainViewModel.setResponseMessage(command.getMessage());
-                    findNavController(v).navigate(R.id.action_transferServiceFragment_to_transferListShipmentItemsFragment);
+                    requireActivity().runOnUiThread(() -> {
+                        findNavController(v).navigate(R.id.action_transferServiceFragment_to_transferListShipmentItemsFragment);
+                    });
                 } catch (Exception e) {
                     Log.e(AppInfo.APP_NAME, "Fehler beim Parsen", e);
                     showError("Interner Fehler", e.getMessage());

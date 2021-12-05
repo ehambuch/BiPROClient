@@ -1,5 +1,7 @@
 package de.erichambuch.biproclient.ui.transfer;
 
+import static androidx.navigation.Navigation.findNavController;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,8 +28,6 @@ import de.erichambuch.biproclient.bipro.transfer.GetShipmentCommand;
 import de.erichambuch.biproclient.main.MainViewModel;
 import de.erichambuch.biproclient.main.ui.MyBaseFragment;
 import de.erichambuch.biproclient.utils.XmlUtils;
-
-import static androidx.navigation.Navigation.findNavController;
 
 /**
  * A fragment representing a list of Items.
@@ -86,7 +86,9 @@ public class TransferListShipmentItemsFragment extends MyBaseFragment implements
                         mainViewModel.setXml((String) data);
                         mainViewModel.setTree(command.createTreeView((String) data));
                         mainViewModel.setResponseMessage(command.getMessage());
-                        findNavController(v).navigate(R.id.action_transferListShipmentItemsFragment_to_vertragFullViewFragment);
+                        requireActivity().runOnUiThread(() -> {
+                            findNavController(v).navigate(R.id.action_transferListShipmentItemsFragment_to_vertragFullViewFragment);
+                        });
                     } catch (Exception e) {
                         Log.e(AppInfo.APP_NAME, "Fehler beim Parsen", e);
                         showError("Interner Fehler", e.getMessage());

@@ -16,9 +16,9 @@ public class MainApplication extends Application implements StaticData  {
 
     private final ExecutorService executorService = Executors.newFixedThreadPool(2);
 
-    private Map<String,String> gevoMap = Collections.EMPTY_MAP;
+    private Map<String,String> gevoMap = Collections.emptyMap();
 
-    private Map<String,Map<String,String>> datentypenMap = Collections.EMPTY_MAP;
+    private Map<String,Map<String,String>> datentypenMap = Collections.emptyMap();
 
     /**
      * Lade statische Daten im Hintergrund.

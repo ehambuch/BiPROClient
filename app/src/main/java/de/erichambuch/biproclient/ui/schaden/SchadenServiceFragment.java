@@ -1,5 +1,7 @@
 package de.erichambuch.biproclient.ui.schaden;
 
+import static androidx.navigation.Navigation.findNavController;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -25,8 +27,6 @@ import de.erichambuch.biproclient.bipro.schaden.SchadenGetDataCommand;
 import de.erichambuch.biproclient.bipro.vertrag.VertragGetDataCommand;
 import de.erichambuch.biproclient.main.MainViewModel;
 import de.erichambuch.biproclient.main.ui.MyBaseFragment;
-
-import static androidx.navigation.Navigation.findNavController;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -94,7 +94,9 @@ public class SchadenServiceFragment extends MyBaseFragment {
                     mainViewModel.setXml((String)data);
                     mainViewModel.setTree(command.createTreeView((String)data));
                     mainViewModel.setResponseMessage(command.getMessage());
-                    findNavController(v).navigate(R.id.action_schadenServiceFragment_to_dataFullViewFragment);
+                    requireActivity().runOnUiThread(() -> {
+                        findNavController(v).navigate(R.id.action_schadenServiceFragment_to_dataFullViewFragment);
+                    });
                 } catch (Exception e) {
                     Log.e(AppInfo.APP_NAME, "Fehler beim Parsen", e);
                     showError("Interner Fehler", e.getMessage());

@@ -13,7 +13,8 @@
         android:theme="@style/Theme.BiPROClient"
         android:networkSecurityConfig="@xml/network_security_config"
         android:fullBackupContent="true">
-        <activity android:name=".main.MainActivity">
+        <activity android:name=".main.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
