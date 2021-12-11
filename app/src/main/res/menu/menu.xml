@@ -5,6 +5,6 @@
     <item android:id="@+id/menu_log" android:title="Logfile"/>
 
     <item android:id="@+id/menu_about" android:title="Infos"/>
-
+    <item android:id="@+id/menu_licenses" android:title="OSS Lizenzen"/>
     <item android:id="@+id/menu_feedback" android:title="Feedback"/>
 </menu>

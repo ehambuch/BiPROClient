@@ -1,5 +1,10 @@
 package de.erichambuch.biproclient.main;
 
+import static androidx.navigation.Navigation.findNavController;
+import static de.erichambuch.biproclient.R.id;
+import static de.erichambuch.biproclient.R.layout;
+import static de.erichambuch.biproclient.R.string;
+
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -21,6 +26,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.preference.PreferenceManager;
 
+import com.google.android.gms.oss.licenses.OssLicensesMenuActivity;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.io.IOException;
@@ -29,11 +35,6 @@ import de.erichambuch.biproclient.AppInfo;
 import de.erichambuch.biproclient.R;
 import de.erichambuch.biproclient.main.provider.PfefferminziaConfiguration;
 import de.erichambuch.biproclient.testprovider.TestServer;
-
-import static androidx.navigation.Navigation.findNavController;
-import static de.erichambuch.biproclient.R.id;
-import static de.erichambuch.biproclient.R.layout;
-import static de.erichambuch.biproclient.R.string;
 
 /**
  * Main Activity.
@@ -84,8 +85,15 @@ public class MainActivity extends AppCompatActivity {
         } else if (id == R.id.menu_log) {
             showLog();
             return true;
+        } else if (id == R.id.menu_licenses) {
+            showLicenses();
+            return true;
         } else
             return super.onOptionsItemSelected(item);
+    }
+
+    private void  showLicenses()  {
+        startActivity(new Intent(this, OssLicensesMenuActivity.class));
     }
 
     private void showLog() {

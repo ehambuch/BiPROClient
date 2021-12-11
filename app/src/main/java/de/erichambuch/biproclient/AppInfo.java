@@ -12,6 +12,7 @@ package de.erichambuch.biproclient;
  *     1.3.0 (15) () - Updated Google Libs
  *     1.3.1 (16) (15.08.2021) - Inkompatibilität behoben bzgl. appcompat
  *     1.4.0 (17) - Update Android 12
+ *     1.4.1 (18) - Anzeige OSS Lizenzen
  * </p>
  * <p>
  *     Offene Themen:<ol>
