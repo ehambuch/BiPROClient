@@ -13,10 +13,14 @@ package de.erichambuch.biproclient;
  *     1.3.1 (16) (15.08.2021) - Inkompatibilität behoben bzgl. appcompat
  *     1.4.0 (17) - Update Android 12
  *     1.4.1 (18) - Anzeige OSS Lizenzen
+ *     1.4.2 (19) - Update Libs, Bugfixes
  * </p>
  * <p>
  *     Offene Themen:<ol>
  *         <li>VU-spezifische Befüllung BiPRO</li>
+ *         <li>Timeout erhöhen</li>
+ *         <li>k2SOAP einsetzen</li>
+ *         <li>Fehler beim Einstellung laden</li>
  *     </ol>
  * </p>
  */

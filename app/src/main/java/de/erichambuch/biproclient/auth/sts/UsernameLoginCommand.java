@@ -65,10 +65,14 @@ public class UsernameLoginCommand extends SOAPCommand {
         return "urn:RequestSecurityToken";
     }
 
-    private LocalDateTime parseExpires(String expires) {
-        if (expires != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O )
-            return LocalDateTime.parse(expires); // 2021-03-07T01:11:59
-        else {
+    private LocalDateTime parseExpires(String expires) throws IOException {
+        if (expires != null && expires.length() > 0 && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            try {
+                return LocalDateTime.parse(expires); // 2021-03-07T01:11:59
+            } catch (java.time.format.DateTimeParseException e) {
+                throw new IOException("Fehler beim Lesen des Expires: " + expires + " : " + e.getMessage());
+            }
+        } else {
             return null;
         }
     }

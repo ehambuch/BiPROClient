@@ -6,6 +6,7 @@ import org.apache.commons.io.IOUtils;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.concurrent.TimeUnit;
 
 import javax.mail.BodyPart;
 import javax.mail.MessagingException;
@@ -20,6 +21,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import okhttp3.ResponseBody;
 
 public abstract class SOAPCommand {
 
@@ -35,12 +37,18 @@ public abstract class SOAPCommand {
 
     /**
      * Liefert die SOAP-Action.
-     * @return
+     * @return SOAP Action
      */
     protected abstract String getSOAPAction();
 
     protected void executeCommand(final String url, final String soapRequest, final Callback commandCallback) throws Exception {
-        OkHttpClient client = new OkHttpClient();
+        OkHttpClient client =  new OkHttpClient.Builder() // Längere Timeouts falls über Mobilnetz
+
+
+                .connectTimeout(30, TimeUnit.SECONDS)
+                .writeTimeout(10, TimeUnit.SECONDS)
+                .readTimeout(60, TimeUnit.SECONDS)
+                .build();
         Log.d(AppInfo.APP_NAME, soapRequest);
         if (logger != null)
             logger.logRequest(soapRequest);
@@ -62,23 +70,32 @@ public abstract class SOAPCommand {
      * @throws IOException
      */
     protected String createResponse(Response response) throws IOException {
-        Log.d(AppInfo.APP_NAME, "Response with "+response.body().contentType().toString());
-        if (response.body().contentType().toString().startsWith("multipart/related")) { // MTOM application/xop+xml
+        final ResponseBody body = response.body();
+        if (body != null) {
             try {
-                StringBuilder buffer = new StringBuilder(10240);
-                MimeMultipart mp = new MimeMultipart(new ByteArrayDataSource(response.body().byteStream(), response.body().contentType().toString()));
-                int count = mp.getCount();
-                for (int i = 0; i < count; i++) {
-                    BodyPart bp = mp.getBodyPart(i);
-                    buffer.append(new String(IOUtils.toByteArray(bp.getInputStream()), StandardCharsets.UTF_8));
+                final String contentType = body.contentType() != null ? body.contentType().toString() : "";
+                Log.d(AppInfo.APP_NAME, "Response with " + contentType);
+                if (contentType.startsWith("multipart")) { // MTOM application/xop+xml
+                    try {
+                        StringBuilder buffer = new StringBuilder(10240);
+                        MimeMultipart mp = new MimeMultipart(new ByteArrayDataSource(response.body().byteStream(), response.body().contentType().toString()));
+                        int count = mp.getCount();
+                        for (int i = 0; i < count; i++) {
+                            BodyPart bp = mp.getBodyPart(i);
+                            buffer.append(new String(IOUtils.toByteArray(bp.getInputStream()), StandardCharsets.UTF_8));
+                        }
+                        return logResponse(buffer.toString());
+                    } catch (MessagingException e) {
+                        throw new IOException(e);
+                    }
+                } else {
+                    return logResponse(body.string()); // text/xml
                 }
-                return logResponse(buffer.toString());
-            } catch(MessagingException e) {
-                throw new IOException(e);
+            } finally {
+                body.close();
             }
-        } else {
-            return logResponse(response.body().string()); // text/xml
-        }
+        } else
+            throw new IOException("Leere Response mit HTTP Code "+response.code());
     }
 
     private String logResponse(String response) {
