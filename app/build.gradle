@@ -9,10 +9,10 @@ android {
 
     defaultConfig {
         applicationId "de.erichambuch.biproclient"
-        minSdkVersion 24
+        minSdk 26
         targetSdkVersion 31
-        versionCode 19
-        versionName '1.4.2'
+        versionCode 20
+        versionName '1.5.0'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

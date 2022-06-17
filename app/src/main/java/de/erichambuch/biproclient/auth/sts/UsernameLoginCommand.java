@@ -1,9 +1,5 @@
 package de.erichambuch.biproclient.auth.sts;
 
-import android.os.Build;
-
-import androidx.annotation.RequiresApi;
-
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
@@ -13,6 +9,7 @@ import java.util.Map;
 
 import de.erichambuch.biproclient.bipro.base.CommandCallback;
 import de.erichambuch.biproclient.bipro.base.SOAPCommand;
+import de.erichambuch.biproclient.main.RequestLogger;
 import de.erichambuch.biproclient.main.provider.ProviderConfiguration;
 import de.erichambuch.biproclient.utils.XmlUtils;
 import okhttp3.Call;
@@ -24,7 +21,8 @@ public class UsernameLoginCommand extends SOAPCommand {
     private final String requestXml;
     private final String stsURL;
 
-    public UsernameLoginCommand(ProviderConfiguration configuration) {
+    public UsernameLoginCommand(ProviderConfiguration configuration, RequestLogger logger) {
+        super(logger);
         stsURL = configuration.getSTServiceURL();
         requestXml = configuration.getRequestSTSTemplate();
     }
@@ -36,15 +34,15 @@ public class UsernameLoginCommand extends SOAPCommand {
         try {
             executeCommand(stsURL, XmlUtils.replace(requestXml, valueMap),
                     new Callback() {
-                @RequiresApi(api = Build.VERSION_CODES.O)
                 @Override
                 public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                     if (response.isSuccessful()) {
                         final String responseXml = createResponse(response);
                         final String token = XmlUtils.getValueFromElement(responseXml, "Identifier");
                         final String expires = XmlUtils.getValueFromElement(responseXml, "Expires");
+                        final LocalDateTime expiresDate = parseExpires(expires);
                         commandCallback.onSuccess(
-                                new BiproTokenAuthentication.BiproToken(token, parseExpires(expires)));
+                                new BiproTokenAuthentication.BiproToken(token, expiresDate));
                     } else {
                         commandCallback.onFailure(new IOException("Authentifizierung nicht erfolgreich: HTTP: " + response.code()));
                     }
@@ -66,7 +64,7 @@ public class UsernameLoginCommand extends SOAPCommand {
     }
 
     private LocalDateTime parseExpires(String expires) throws IOException {
-        if (expires != null && expires.length() > 0 && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        if (expires != null && expires.length() > 0 ) {
             try {
                 return LocalDateTime.parse(expires); // 2021-03-07T01:11:59
             } catch (java.time.format.DateTimeParseException e) {

@@ -20,6 +20,7 @@ import de.erichambuch.biproclient.auth.saml.Username2FACommand;
 import de.erichambuch.biproclient.auth.sts.BiproTokenAuthentication;
 import de.erichambuch.biproclient.auth.sts.UsernameLoginCommand;
 import de.erichambuch.biproclient.bipro.base.CommandCallback;
+import de.erichambuch.biproclient.main.RequestLogger;
 import de.erichambuch.biproclient.main.provider.ProviderConfiguration;
 
 /**
@@ -29,10 +30,13 @@ public class AuthenticationManager {
 
     private final ProviderConfiguration configuration;
 
+    private final RequestLogger requestLogger;
+
     private BiproAuthentication authentication = null;
 
-    public AuthenticationManager(ProviderConfiguration configuration) {
+    public AuthenticationManager(ProviderConfiguration configuration, RequestLogger requestLogger) {
         this.configuration = configuration;
+        this.requestLogger = requestLogger;
     }
 
     /**
@@ -78,13 +82,14 @@ public class AuthenticationManager {
 
     /**
      * Login mit User/Passwort bei STS des VU. Liefert ein BiPRO-Token.
+     *
      * @param context
      * @param user
      * @param pw
      * @param successCallback
      */
     private void loginSTS(Context context, String user, String pw, final Runnable successCallback) {
-           new UsernameLoginCommand(configuration).execute(user, pw, new CommandCallback() {
+           new UsernameLoginCommand(configuration, requestLogger).execute(user, pw, new CommandCallback() {
                 @Override
                 public void onSuccess(final Object data) {
                     ContextCompat.getMainExecutor(context).execute(new Runnable() {
@@ -125,7 +130,7 @@ public class AuthenticationManager {
      * @param successCallback
      */
     private void loginSAML(final Context context, String user, String pw, final String serviceId, final Runnable successCallback) {
-        new Username2FACommand(configuration).execute(user, pw, serviceId, new CommandCallback() {
+        new Username2FACommand(configuration, requestLogger).execute(user, pw, serviceId, new CommandCallback() {
             @Override
             public void onSuccess(final Object data) {
                 ContextCompat.getMainExecutor(context).execute(new Runnable() {

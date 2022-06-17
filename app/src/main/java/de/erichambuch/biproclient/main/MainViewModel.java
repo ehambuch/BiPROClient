@@ -88,8 +88,8 @@ public class MainViewModel extends ViewModel {
 
     public void initConfiguration(ProviderConfiguration configuration) {
         this.configuration = configuration;
-        this.authenticationManager = new AuthenticationManager(configuration);
         this.requestLogger = new StandardRequestLogger();
+        this.authenticationManager = new AuthenticationManager(configuration, getRequestLogger());
     }
 
     public AuthenticationManager getAuthenticationManager() {

@@ -14,6 +14,7 @@ import java.util.Map;
 import de.erichambuch.biproclient.AppInfo;
 import de.erichambuch.biproclient.bipro.base.CommandCallback;
 import de.erichambuch.biproclient.bipro.base.SOAPCommand;
+import de.erichambuch.biproclient.main.RequestLogger;
 import de.erichambuch.biproclient.main.provider.ProviderConfiguration;
 import de.erichambuch.biproclient.utils.XmlUtils;
 import okhttp3.Call;
@@ -30,7 +31,8 @@ public class Username2FACommand extends SOAPCommand {
 
     private final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX", Locale.US);
 
-    public Username2FACommand(ProviderConfiguration configuration) {
+    public Username2FACommand(ProviderConfiguration configuration, RequestLogger logger) {
+        super(logger);
         stsURL = configuration.getSTServiceURL();
         requestXml = configuration.getRequestTGICUserPasswordTemplate();
     }

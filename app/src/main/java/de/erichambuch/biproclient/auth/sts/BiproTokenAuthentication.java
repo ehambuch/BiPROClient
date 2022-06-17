@@ -1,9 +1,6 @@
 package de.erichambuch.biproclient.auth.sts;
 
-import android.os.Build;
-
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 
 import java.time.LocalDateTime;
 
@@ -48,7 +45,6 @@ public class BiproTokenAuthentication implements BiproAuthentication {
         biproToken = null;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public boolean requiresReauthentication() {
         return biproToken == null || (biproToken.expires != null && biproToken.expires.isBefore(LocalDateTime.now()));

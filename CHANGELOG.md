@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.5.0 (20) 
+
+Verbessertes Logging bei Authentifizierung, Android 8 als Minimum
+
+## 1.4.2 (19)
+
+Update Google Libs, Bugfixes
+ 
 ## Version 1.4.1 (11.12.2021)
 
 Ausführlichere Anzeige der OSS Lizenzen von Google Play
