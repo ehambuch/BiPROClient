@@ -8,7 +8,7 @@ ${soapHeader}
                         <!--#IFDEF ${partner}--><vt:Partnernummer>${partner}</vt:Partnernummer><!--/#IFDEF-->
                         <!--#IFDEF ${vsnr}--><vt:Versicherungsscheinnummer>${vsnr}</vt:Versicherungsscheinnummer><!--/#IFDEF-->
                         <!--#IFDEF ${vorgang}--><vt:Vorgangsnummer>${vorgang}</vt:Vorgangsnummer><!--/#IFDEF-->
-                        <!--#IFDEF ${vunr}--><vt:Unternehmen><all:Nummer>${vunr}</all:Nummer></vt:Unternehmen><!--/#IFDEF-->
+                        <!--#IFDEF ${vunr}--><vt:Unternehmen><all:Nummer>${vunr}</all:Nummer><all:Nummernart>BaFin</all:Nummernart></vt:Unternehmen><!--/#IFDEF-->
                     </vt:Filter>
                 </ws:Filter>
             </ws:NewContext>

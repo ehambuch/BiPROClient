@@ -15,7 +15,7 @@ package de.erichambuch.biproclient;
  *     1.4.1 (18) - Anzeige OSS Lizenzen
  *     1.4.2 (19) - Update Libs, Bugfixes
  *     1.5.0 (20) - Verbessertes Logging bei Anmeldung, Android 8 als Minimum
- *     1.5.1 (21) - NetworkPolicy lässt auch HTTP zu
+ *     1.5.1 (21/22) - NetworkPolicy lässt auch HTTP zu
  * </p>
  * <p>
  *     Offene Themen:<ol>

@@ -52,6 +52,6 @@ public class BiproTokenAuthentication implements BiproAuthentication {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             return biproToken == null || (biproToken.expires != null && biproToken.expires.isBefore(LocalDateTime.now()));
         } else
-            return true;
+            return false;
     }
 }

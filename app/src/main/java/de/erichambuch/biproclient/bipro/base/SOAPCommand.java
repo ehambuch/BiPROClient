@@ -27,15 +27,6 @@ public abstract class SOAPCommand {
 
     private final RequestLogger logger;
 
-    /**
-     * Static client: wird von allen Verbindungen genutzt.
-     */
-    private static final OkHttpClient client = new OkHttpClient.Builder() // Längere Timeouts falls über Mobilnetz
-            .connectTimeout(30, TimeUnit.SECONDS)
-            .writeTimeout(10, TimeUnit.SECONDS)
-            .readTimeout(60, TimeUnit.SECONDS)
-            .build();
-
     protected SOAPCommand(RequestLogger logger) {
         this.logger = logger;
     }
@@ -56,6 +47,11 @@ public abstract class SOAPCommand {
                 .addHeader("User-Agent", "Android BiPRO Client")
                 .addHeader("SOAPAction", getSOAPAction())
                 .post(body)
+                .build();
+        final OkHttpClient client = new OkHttpClient.Builder() // Längere Timeouts falls über Mobilnetz
+                .connectTimeout(30, TimeUnit.SECONDS)
+                .writeTimeout(10, TimeUnit.SECONDS)
+                .readTimeout(60, TimeUnit.SECONDS)
                 .build();
         client.newCall(request).enqueue(commandCallback);
     }
@@ -97,6 +93,7 @@ public abstract class SOAPCommand {
     }
 
     private String logResponse(String response) {
+        Log.d(AppInfo.APP_NAME, response);
         if (logger != null)
             logger.logResponse(response);
         return response;

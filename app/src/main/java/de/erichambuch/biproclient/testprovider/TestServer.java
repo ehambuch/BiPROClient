@@ -43,8 +43,8 @@ public class TestServer extends NanoHTTPD {
         Map<String, List<String>> parms = session.getParameters();
         List<String> p = parms.get("service");
         String service = p != null && p.size() > 0 ? p.get(0) : "service?";
-        String method = session.getHeaders().getOrDefault("soapaction", "soapaction?");
-        Log.d(AppInfo.APP_NAME, "TestServer: "+service+", "+method);
+        String method = session.getHeaders().getOrDefault("soapaction", "soapaction?"); // Klein!
+        Log.d(AppInfo.APP_NAME, "TestServer: "+service+","+session.getMethod()+","+method);
         switch(service) {
             case "sts":
                 return newFixedLengthResponse(Response.Status.OK, "text/xml", response260);
@@ -55,7 +55,8 @@ public class TestServer extends NanoHTTPD {
                     case "urn:listShipments":
                         return newFixedLengthResponse(Response.Status.OK, "text/xml", response430list);
                     case "urn:getShipment":
-                        //return newFixedLengthResponse(Response.Status.OK, "text/xml", response430get);
+                        // Einfaches base64-Dokument
+                        // return newFixedLengthResponse(Response.Status.OK, "text/xml", response430get);
                         response430get_stream.reset();
                         return newChunkedResponse(Response.Status.OK, "Multipart/Related; start-info=\"text/xml\"; type=\"application/xop+xml\"; boundary=\"uuid:_Startxml\"",
                                 response430get_stream);

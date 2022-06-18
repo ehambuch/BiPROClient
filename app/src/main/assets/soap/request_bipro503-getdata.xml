@@ -9,7 +9,7 @@
                     <sch:Schadennummer>
                         <all:Nummer>${schadennr}</all:Nummer>
                     </sch:Schadennummer>
-                    <!--#IFDEF ${vunr}--><sch:Unternehmen><all:Nummer>${vunr}</all:Nummer></sch:Unternehmen><!--/#IFDEF-->
+                    <!--#IFDEF ${vunr}--><sch:Unternehmen><all:Nummer>${vunr}</all:Nummer><all:Nummernart>BaFin</all:Nummernart></sch:Unternehmen><!--/#IFDEF-->
                 </sch:Schadenauskunft>
             </sch:Request>
         </sch:getData>
