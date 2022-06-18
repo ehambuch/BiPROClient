@@ -27,12 +27,17 @@ public abstract class SOAPCommand {
 
     private final RequestLogger logger;
 
+    /**
+     * Static client: wird von allen Verbindungen genutzt.
+     */
+    private static final OkHttpClient client = new OkHttpClient.Builder() // Längere Timeouts falls über Mobilnetz
+            .connectTimeout(30, TimeUnit.SECONDS)
+            .writeTimeout(10, TimeUnit.SECONDS)
+            .readTimeout(60, TimeUnit.SECONDS)
+            .build();
+
     protected SOAPCommand(RequestLogger logger) {
         this.logger = logger;
-    }
-
-    protected SOAPCommand() {
-        this(null);
     }
 
     /**
@@ -42,13 +47,6 @@ public abstract class SOAPCommand {
     protected abstract String getSOAPAction();
 
     protected void executeCommand(final String url, final String soapRequest, final Callback commandCallback) throws Exception {
-        OkHttpClient client =  new OkHttpClient.Builder() // Längere Timeouts falls über Mobilnetz
-
-
-                .connectTimeout(30, TimeUnit.SECONDS)
-                .writeTimeout(10, TimeUnit.SECONDS)
-                .readTimeout(60, TimeUnit.SECONDS)
-                .build();
         Log.d(AppInfo.APP_NAME, soapRequest);
         if (logger != null)
             logger.logRequest(soapRequest);
@@ -78,7 +76,7 @@ public abstract class SOAPCommand {
                 if (contentType.startsWith("multipart")) { // MTOM application/xop+xml
                     try {
                         StringBuilder buffer = new StringBuilder(10240);
-                        MimeMultipart mp = new MimeMultipart(new ByteArrayDataSource(response.body().byteStream(), response.body().contentType().toString()));
+                        MimeMultipart mp = new MimeMultipart(new ByteArrayDataSource(body.byteStream(), contentType));
                         int count = mp.getCount();
                         for (int i = 0; i < count; i++) {
                             BodyPart bp = mp.getBodyPart(i);

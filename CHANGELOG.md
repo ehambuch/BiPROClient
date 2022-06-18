@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.1 (21)
+
+NetworkPolicy lässt nun auch plain HTTP zu
+
 ## 1.5.0 (20) 
 
 Verbessertes Logging bei Authentifizierung, Android 8 als Minimum

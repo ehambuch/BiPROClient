@@ -1,9 +1,12 @@
 package de.erichambuch.biproclient.auth.sts;
 
+import android.os.Build;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeParseException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -64,14 +67,17 @@ public class UsernameLoginCommand extends SOAPCommand {
     }
 
     private LocalDateTime parseExpires(String expires) throws IOException {
-        if (expires != null && expires.length() > 0 ) {
-            try {
-                return LocalDateTime.parse(expires); // 2021-03-07T01:11:59
-            } catch (java.time.format.DateTimeParseException e) {
-                throw new IOException("Fehler beim Lesen des Expires: " + expires + " : " + e.getMessage());
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            if (expires != null && expires.length() > 0 ) {
+                try {
+                    return LocalDateTime.parse(expires); // 2021-03-07T01:11:59
+                } catch (DateTimeParseException e) {
+                    throw new IOException("Fehler beim Lesen des Expires: " + expires + " : " + e.getMessage());
+                }
+            } else {
+                return null;
             }
-        } else {
+        } else
             return null;
-        }
     }
 }
