@@ -1,11 +1,21 @@
 package de.erichambuch.biproclient.utils;
 
+import android.os.Build;
+
+import androidx.annotation.Nullable;
+
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.IOException;
 import java.io.StringReader;
+import java.time.DateTimeException;
+import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
 import java.util.Map;
 
 /**
@@ -121,5 +131,27 @@ public class XmlUtils {
         if (to2 < 0 )
             return null;
         return input.substring(from, to2+1); // <node>...</node>
+    }
+
+    /**
+     * Liest ein XS:DateTime nach ISO 8601 mit/ohne Zeitzone.
+     *
+     * <p>Bei einer Zeitzone wird die Zeit in die Systemzeit konvertiert.</p>
+     * @param input
+     * @return das Datum oder null
+     * @throws DateTimeException
+     */
+    @Nullable
+    public static LocalDateTime parseDateTime(String input) throws DateTimeException {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            TemporalAccessor temp = DateTimeFormatter.ISO_DATE_TIME.parseBest(input, OffsetDateTime::from, LocalDateTime::from);
+            if (temp  instanceof LocalDateTime)
+                return (LocalDateTime) temp;
+            else if (temp instanceof OffsetDateTime)
+                return  ((OffsetDateTime)temp).atZoneSameInstant(ZoneId.systemDefault()).toLocalDateTime();
+            else
+                throw new DateTimeException("Unbekannter Typ: "+temp);
+        } else
+            return null;
     }
 }

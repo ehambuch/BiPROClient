@@ -16,6 +16,7 @@ package de.erichambuch.biproclient;
  *     1.4.2 (19) - Update Libs, Bugfixes
  *     1.5.0 (20) - Verbessertes Logging bei Anmeldung, Android 8 als Minimum
  *     1.5.1 (21/22) - NetworkPolicy lässt auch HTTP zu
+ *     1.5.2 (23) - Fehlerkorrektur Parsing von ISO 8601 Datum
  * </p>
  * <p>
  *     Offene Themen:<ol>

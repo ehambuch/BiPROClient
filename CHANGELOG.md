@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.2 (22)
+
+Fehlerkorrektur beim Parsing des ISO 8601 Datums
+
 ## 1.5.1 (21)
 
 NetworkPolicy lässt nun auch plain HTTP zu

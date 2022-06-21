@@ -70,7 +70,7 @@ public class UsernameLoginCommand extends SOAPCommand {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             if (expires != null && expires.length() > 0 ) {
                 try {
-                    return LocalDateTime.parse(expires); // 2021-03-07T01:11:59
+                    return XmlUtils.parseDateTime(expires); // XML DateTime, kann ohne oder mit Zeitzone sein
                 } catch (DateTimeParseException e) {
                     throw new IOException("Fehler beim Lesen des Expires: " + expires + " : " + e.getMessage());
                 }

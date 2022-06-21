@@ -3,6 +3,7 @@ package de.erichambuch.biproclient;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.time.ZoneId;
 import java.util.Collections;
 
 import de.erichambuch.biproclient.utils.XmlUtils;
@@ -41,4 +42,22 @@ public class XmlUtilsTest {
     public void testGetValueFromElement4() {
         Assert.assertNull(XmlUtils.getValueFromElement("<voll><xml></xml></voll>", "unbekannt"));
     }
+
+    @Test
+    public void testParseDateTime() {
+        // sicherstellen, dass Emulator in der deutschen Zeitzone läuft
+        Assert.assertEquals("Europe/Berlin", ZoneId.systemDefault().getId());
+        // TODO: funktioniert das auch zur Sommer/Winterzeit? NEIN
+        Assert.assertEquals("2021-03-07T01:11:59", XmlUtils.parseDateTime("2021-03-07T01:11:59").toString());
+        Assert.assertEquals("2021-03-07T01:11:59.123450", XmlUtils.parseDateTime("2021-03-07T01:11:59.12345").toString());
+        Assert.assertEquals("2021-03-07T02:11:59", XmlUtils.parseDateTime("2021-03-07T01:11:59Z").toString());
+        Assert.assertEquals("2021-03-07T02:11:59.123450", XmlUtils.parseDateTime("2021-03-07T01:11:59.12345Z").toString());
+        // Zeitzone
+        Assert.assertEquals("2022-06-21T12:37:58", XmlUtils.parseDateTime("2022-06-21T12:37:58+02:00").toString());
+        Assert.assertEquals("2022-06-21T12:37:58.219",XmlUtils.parseDateTime("2022-06-21T12:37:58.219+02:00").toString());
+
+        // und mit verschiedener Zeitzone
+        Assert.assertEquals("2022-06-21T10:37:58",XmlUtils.parseDateTime("2022-06-21T12:37:58+04:00").toString());
+    }
+
 }
