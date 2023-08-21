@@ -11,11 +11,22 @@
     tools:context="de.erichambuch.biproclient.ui.vertrag.DataFullViewFragment" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-    android:id="@+id/floating_action_button_vertrag_expand_all"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="bottom|end"
-    android:layout_margin="16dp"
-    android:contentDescription="Expand All"
-    app:srcCompat="@drawable/ic_expand_black_24dp"/>
+        android:id="@+id/floating_action_button_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="16dp"
+        android:contentDescription="Change"
+        app:srcCompat="@drawable/ic_edit_24"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action_button_vertrag_expand_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="Expand All"
+        app:srcCompat="@drawable/ic_expand_black_24dp"/>
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

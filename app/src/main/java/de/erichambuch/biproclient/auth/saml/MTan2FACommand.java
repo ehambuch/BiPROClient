@@ -38,17 +38,20 @@ public class MTan2FACommand extends SOAPCommand {
         valueMap.put("${requestId}", requestId);
         valueMap.put("${messageId}", "uuid:"+java.util.UUID.randomUUID().toString());
         try {
-            executeCommand(stsURL, XmlUtils.replace(requestXml, valueMap), new Callback() {
+            executeCommand(stsURL, XmlUtils.replace(requestXml, valueMap), null, new Callback() {
                 @Override
                 public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                     String xml = createResponse(response);
                     Log.d(AppInfo.APP_NAME, xml);
                     if (response.isSuccessful()) {
+                        response.close();
                         commandCallback.onSuccess(XmlUtils.getXmlBlock(xml, "saml2:EncryptedAssertion"));
                     }
                     else {
                         String reason = XmlUtils.getValueFromElement(xml, "Reason");
-                        commandCallback.onFailure(new IOException("Authentifizierung nicht erfolgreich: "+reason+" (HTTP: " + response.code()+")"));
+                        final int code = response.code();
+                        response.close();
+                        commandCallback.onFailure(new IOException("Authentifizierung nicht erfolgreich: "+reason+" (HTTP: " + code+")"));
                     }
                 }
 

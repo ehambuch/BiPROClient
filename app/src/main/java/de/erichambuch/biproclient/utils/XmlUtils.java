@@ -1,9 +1,9 @@
 package de.erichambuch.biproclient.utils;
 
-import android.os.Build;
-
 import androidx.annotation.Nullable;
 
+import org.w3c.dom.Node;
+import org.xml.sax.InputSource;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
@@ -17,6 +17,13 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAccessor;
 import java.util.Map;
+
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathException;
+import javax.xml.xpath.XPathFactory;
+
+import de.erichambuch.biproclient.bipro.base.BiproNamespaceContext;
 
 /**
  * Diese Klasse enthält einige Hilfsmethoden zum Umgang mit XML.
@@ -120,6 +127,20 @@ public class XmlUtils {
         }
     }
 
+    public static String getXmlPathValue(String xml, String path) throws XPathException {
+        XPathFactory factory = XPathFactory.newInstance();
+        Node node = (Node) factory.newXPath().evaluate(path, new InputSource(new StringReader(xml)), XPathConstants.NODE);
+        return node != null ? node.getTextContent() : null;
+    }
+
+    public static String getXmlPathNSValue(String xml, String path) throws XPathException {
+        XPathFactory factory = XPathFactory.newInstance();
+        XPath xpath = factory.newXPath();
+        xpath.setNamespaceContext(new BiproNamespaceContext());
+        Node node = (Node) xpath.evaluate(path, new InputSource(new StringReader(xml)), XPathConstants.NODE);
+        return node != null ? node.getTextContent() : null;
+    }
+
     public static String getXmlBlock(String input, String node) {
         int from = input.indexOf("<"+node);
         if (from < 0 )
@@ -143,15 +164,12 @@ public class XmlUtils {
      */
     @Nullable
     public static LocalDateTime parseDateTime(String input) throws DateTimeException {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            TemporalAccessor temp = DateTimeFormatter.ISO_DATE_TIME.parseBest(input, OffsetDateTime::from, LocalDateTime::from);
-            if (temp  instanceof LocalDateTime)
-                return (LocalDateTime) temp;
-            else if (temp instanceof OffsetDateTime)
-                return  ((OffsetDateTime)temp).atZoneSameInstant(ZoneId.systemDefault()).toLocalDateTime();
-            else
-                throw new DateTimeException("Unbekannter Typ: "+temp);
-        } else
-            return null;
+        TemporalAccessor temp = DateTimeFormatter.ISO_DATE_TIME.parseBest(input, OffsetDateTime::from, LocalDateTime::from);
+        if (temp  instanceof LocalDateTime)
+            return (LocalDateTime) temp;
+        else if (temp instanceof OffsetDateTime)
+            return  ((OffsetDateTime)temp).atZoneSameInstant(ZoneId.systemDefault()).toLocalDateTime();
+        else
+            throw new DateTimeException("Unbekannter Typ: "+temp);
     }
 }

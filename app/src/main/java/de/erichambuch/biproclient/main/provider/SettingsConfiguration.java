@@ -13,10 +13,16 @@ public class SettingsConfiguration extends ProviderConfiguration {
     private final SettingsDataStore dataStore;
     private final String defaultVersion;
 
+    private final String defaultConsumerID;
+
+    private final Context appContext;
+
     public SettingsConfiguration(SettingsDataStore dataStore, Context context) {
         super(context.getResources());
+        this.appContext = context.getApplicationContext();
         this.dataStore = dataStore;
         defaultVersion = context.getString(R.string.default_version);
+        defaultConsumerID = "BiPRO Android Client";
     }
 
     @Override
@@ -57,7 +63,7 @@ public class SettingsConfiguration extends ProviderConfiguration {
 
     @Override
     public String getTransferServiceURL() {
-        return dataStore.getString("prefs_transferservice_url", "");
+        return dataStore.getString(appContext.getString(R.string.prefs_transferservice_url), "");
     }
 
     @Override
@@ -103,5 +109,26 @@ public class SettingsConfiguration extends ProviderConfiguration {
     @Override
     public String getSchadenServiceVersion() {
         return dataStore.getString("prefs_schadenservice_version", defaultVersion);
+    }
+
+    @Override
+    public String getConsumerID() {
+        return dataStore.getString("prefs_consumer_id", defaultConsumerID);
+    }
+
+    @Override
+    public String getAPIKey() {
+        return dataStore.getString(appContext.getString(R.string.prefs_biprohub_apikey), "unbekannt");
+    }
+
+    @Override
+    public void saveAuthentication(String auth) {
+        super.saveAuthentication(auth);
+        dataStore.putString(appContext.getString(R.string.prefs_biprohub_auth), auth);
+    }
+
+    @Override
+    public String getHubAuthentication() {
+        return dataStore.getString(appContext.getString(R.string.prefs_biprohub_auth), "");
     }
 }

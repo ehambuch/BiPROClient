@@ -17,14 +17,21 @@ import java.io.OutputStreamWriter;
 import java.io.Reader;
 import java.io.Writer;
 import java.nio.charset.StandardCharsets;
+import java.util.HashSet;
+import java.util.Set;
+
+import de.erichambuch.biproclient.R;
 
 public class SettingsDataStore extends PreferenceDataStore {
 
     private final String prefix;
     private final SharedPreferences sharedPreferences;
 
+    private final Context appContext;
+
     public SettingsDataStore(Context context, int index) {
         super();
+        this.appContext = context.getApplicationContext();
         this.prefix = String.valueOf(index);
         this.sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
     }
@@ -38,6 +45,39 @@ public class SettingsDataStore extends PreferenceDataStore {
     @Nullable
     public String getString(String key, @Nullable String defValue) {
         return sharedPreferences.getString(key(key), defValue);
+    }
+
+    public String getMapValue(String prefsKey, String mapKey, char separator, @Nullable String defValue) {
+        Set<String> set = sharedPreferences.getStringSet(prefsKey, new HashSet<>());
+        for(String s : set) {
+            int idx = s.indexOf(separator);
+            if(idx > 0) {
+                if(s.substring(0, idx).equals(mapKey)) {
+                    return s.substring(idx+1);
+                }
+            }
+        }
+        return defValue;
+    }
+
+    public void putMapValue(String prefsKey, String mapKey, String mapValue, char separator) {
+        Set<String> set = sharedPreferences.getStringSet(prefsKey, new HashSet<>());
+        for(String s : set) {
+            int idx = s.indexOf(separator);
+            if(idx > 0) {
+                if(s.substring(0, idx).equals(mapKey)) {
+                    Set<String> newSet = new HashSet<>(set);
+                    newSet.remove(s);
+                    newSet.add(mapKey + separator + mapValue);
+                    sharedPreferences.edit().putStringSet(prefsKey, newSet).apply();
+                    return;
+                }
+            }
+        }
+        // new
+        Set<String> newSet = new HashSet<>(set);
+        newSet.add(mapKey + separator + mapValue);
+        sharedPreferences.edit().putStringSet(prefsKey, newSet).apply();
     }
 
     private String key(String key) {
@@ -62,7 +102,7 @@ public class SettingsDataStore extends PreferenceDataStore {
                     this.putString("prefs_extranetservice_url", json.nextString());
                     break;
                 case "transferServiceUrl":
-                    this.putString("prefs_transferservice_url", json.nextString());
+                    this.putString(appContext.getString(R.string.prefs_transferservice_url), json.nextString());
                     break;
                 case "vertragServiceUrl":
                     this.putString("prefs_vertragservice_url", json.nextString());
@@ -100,6 +140,8 @@ public class SettingsDataStore extends PreferenceDataStore {
                 case "samlServiceId":
                     this.putString("prefs_saml_service_id", json.nextString());
                     break;
+                case "biproHubApiKey":
+                    this.putString(appContext.getString(R.string.prefs_biprohub_apikey), json.nextString());
                 default:
                     json.skipValue();
                     break;
@@ -127,7 +169,9 @@ public class SettingsDataStore extends PreferenceDataStore {
                 .name("partnerServiceVersion").value(this.getString("prefs_partnerservice_version", ""))
                 .name("schadenServiceVersion").value(this.getString("prefs_schadenservice_version", ""))
                 .name("samlServiceId").value(this.getString("prefs_saml_service_id", ""))
-                .name("gdvNummern").value(this.getString("prefs_provider_gdvnr", "")).endObject();
+                .name("gdvNummern").value(this.getString("prefs_provider_gdvnr", ""))
+                .name("biproHubApiKey").value(this.getString(appContext.getString(R.string.prefs_biprohub_apikey), ""))
+                .endObject();
         json.flush();
     }
 }

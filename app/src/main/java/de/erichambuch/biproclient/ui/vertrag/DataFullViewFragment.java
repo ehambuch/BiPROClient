@@ -1,11 +1,12 @@
 package de.erichambuch.biproclient.ui.vertrag;
 
+import static androidx.navigation.Navigation.findNavController;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
@@ -13,15 +14,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.Collections;
-import java.util.Map;
 
 import de.erichambuch.biproclient.R;
-import de.erichambuch.biproclient.bipro.vertrag.VertragGetDataCommand;
 import de.erichambuch.biproclient.main.MainViewModel;
-import de.erichambuch.biproclient.main.StaticData;
+import de.erichambuch.biproclient.ui.base.TreeNodeBinder;
 import tellh.com.recyclertreeview_lib.TreeNode;
 import tellh.com.recyclertreeview_lib.TreeViewAdapter;
-import tellh.com.recyclertreeview_lib.TreeViewBinder;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,58 +27,6 @@ import tellh.com.recyclertreeview_lib.TreeViewBinder;
 public class DataFullViewFragment extends Fragment {
 
     protected MainViewModel mainViewModel;
-
-    public static class TreeNodeBinder extends TreeViewBinder<TreeNodeBinder.ViewHolder> {
-        private final StaticData staticData;
-        public TreeNodeBinder(StaticData staticData) {
-            this.staticData = staticData;
-        }
-
-        @Override
-        public ViewHolder provideViewHolder(View itemView) {
-            return new ViewHolder(itemView);
-        }
-
-        @Override
-        public void bindView(ViewHolder holder, int position, TreeNode node) {
-            holder.ivArrow.setRotation(node.isExpand() ? 90 : 0);
-            if (node.isLeaf())
-                holder.ivArrow.setVisibility(View.INVISIBLE);
-            else
-                holder.ivArrow.setVisibility(View.VISIBLE);
-            VertragGetDataCommand.TreeNodeElement fileNode = (VertragGetDataCommand.TreeNodeElement) node.getContent();
-            holder.tvName.setText(fileNode.elementName);
-            holder.tvValue.setText(fileNode.value);
-            Map<String, String> dtMap = staticData.getDatentypMap("ST_" + fileNode.elementName); // aus Namen des Elements wird der Datentyp abgeleitet
-            if (fileNode.value != null && fileNode.value.length() > 0 && dtMap != null)
-                holder.tvDesc.setText(dtMap.get(fileNode.value));
-            else
-                holder.tvDesc.setText(null);
-        }
-
-        @Override
-        public int getLayoutId() {
-            return R.layout.item_treenode;
-        }
-
-        public static class ViewHolder extends TreeViewBinder.ViewHolder {
-            final TextView tvName;
-            final TextView tvValue;
-            final ImageView ivArrow;
-            final TextView tvDesc;
-
-            public ViewHolder(View rootView) {
-                super(rootView);
-                this.tvName = (TextView) rootView.findViewById(R.id.tv_name);
-                this.tvValue = (TextView) rootView.findViewById(R.id.tv_value);
-                this.ivArrow = (ImageView) rootView.findViewById(R.id.iv_arrow);
-                this.tvDesc = (TextView) rootView.findViewById(R.id.tv_desc);
-            }
-            public ImageView getIvArrow() {
-                return ivArrow;
-            }
-        }
-    }
 
     public DataFullViewFragment() {
         // Required empty public constructor
@@ -122,22 +68,21 @@ public class DataFullViewFragment extends Fragment {
                 if ( mainViewModel.getTree().isExpand() ) {
                     adapter.collapseAll();
                 } else {
-                    expand(mainViewModel.getTree());
+                    TreeNodeBinder.expand(mainViewModel.getTree());
                     adapter.refresh(Collections.singletonList(mainViewModel.getTree()));
                 }
+            }
+        });
+        // enable Edit Button or not
+        view.findViewById(R.id.floating_action_button_change).setVisibility(mainViewModel.isChange() ? View.VISIBLE : View.GONE);
+        view.findViewById(R.id.floating_action_button_change).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findNavController(v).navigate(R.id.action_dataFullViewChange_to_partnerChangeDataFragment);
             }
         });
         return view;
     }
 
-    private void expand(final TreeNode node) {
-        if ( node != null ) {
-            if ( !node.isExpand() && !node.isLeaf() )
-                node.toggle();
-            if(node.getChildList() != null) {
-                for (Object t : node.getChildList())
-                    expand((TreeNode) t);
-            }
-        }
-    }
+
 }

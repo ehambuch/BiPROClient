@@ -12,4 +12,7 @@
     <domain-config cleartextTrafficPermitted="false">
         <domain includeSubdomains="true">gothaer.de</domain>
     </domain-config>
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">de</domain>
+    </domain-config>
 </network-security-config>

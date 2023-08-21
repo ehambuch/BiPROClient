@@ -2,6 +2,8 @@ package de.erichambuch.biproclient.main;
 
 import android.app.Application;
 
+import com.google.android.material.color.DynamicColors;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collections;
@@ -19,6 +21,13 @@ public class MainApplication extends Application implements StaticData  {
     private Map<String,String> gevoMap = Collections.emptyMap();
 
     private Map<String,Map<String,String>> datentypenMap = Collections.emptyMap();
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        // setup Material 3
+        DynamicColors.applyToActivitiesIfAvailable(this);
+    }
 
     /**
      * Lade statische Daten im Hintergrund.

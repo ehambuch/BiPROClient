@@ -4,7 +4,7 @@
         <ver:getData>
             <ver:Request>
                 <nac:BiPROVersion>${version}</nac:BiPROVersion>
-                <nac:ConsumerID>BiPRO Client</nac:ConsumerID>
+                <nac:ConsumerID>${consumerId}</nac:ConsumerID>
                 <ver:Vertragsauskunft>
                     <ver:Vertragsnummer>
                         <all:Versicherungsscheinnummer>${vsnr}</all:Versicherungsscheinnummer>

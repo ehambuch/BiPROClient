@@ -86,6 +86,9 @@ public class MainViewModel extends ViewModel {
 
     private String xml;
 
+    private boolean isChange;
+
+
     public void initConfiguration(ProviderConfiguration configuration) {
         this.configuration = configuration;
         this.requestLogger = new StandardRequestLogger();
@@ -131,5 +134,13 @@ public class MainViewModel extends ViewModel {
 
     public void setStaticData(StaticData staticData) {
         this.staticData = staticData;
+    }
+
+    public boolean isChange() {
+        return isChange;
+    }
+
+    public void setChange(boolean change) {
+        isChange = change;
     }
 }

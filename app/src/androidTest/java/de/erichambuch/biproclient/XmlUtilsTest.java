@@ -60,4 +60,20 @@ public class XmlUtilsTest {
         Assert.assertEquals("2022-06-21T10:37:58",XmlUtils.parseDateTime("2022-06-21T12:37:58+04:00").toString());
     }
 
+    @Test
+    public void testXmlPath() throws  Exception {
+        Assert.assertEquals("wert", XmlUtils.getXmlPathValue("<test><pfad attr=\"xx\">wert</pfad><pfad/></test>", "/test/pfad"));
+    }
+
+    @Test
+    public void testXmlPathNS() throws  Exception {
+        Assert.assertEquals("wert", XmlUtils.getXmlPathNSValue("<head xmlns:dt=\"http://www.bipro.net/namespace/datentypen\"><dt:test><dt:pfad attr=\"xx\">wert</dt:pfad><dt:pfad/></dt:test></head>", "/head/dt:test/dt:pfad"));
+    }
+
+
+    @Test
+    public void testXmlPathNotFound() throws  Exception {
+        Assert.assertNull(XmlUtils.getXmlPathValue("<test><pfad attr=\"xx\">wert</pfad><pfad/></test>", "/test/xx"));
+    }
+
 }

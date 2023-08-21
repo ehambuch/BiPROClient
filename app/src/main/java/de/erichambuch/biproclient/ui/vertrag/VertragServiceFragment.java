@@ -93,6 +93,7 @@ public class VertragServiceFragment extends MyBaseFragment {
                     mainViewModel.setXml((String)data);
                     mainViewModel.setTree(command.createTreeView((String)data));
                     mainViewModel.setResponseMessage(command.getMessage());
+                    mainViewModel.setChange(false);
                     requireActivity().runOnUiThread(() -> {
                         findNavController(v).navigate(R.id.action_vertragServiceFragment_to_vertragFullViewFragment);
                     });

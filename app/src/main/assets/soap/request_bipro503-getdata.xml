@@ -4,7 +4,7 @@
         <sch:getData>
             <sch:Request>
                 <nac:BiPROVersion>${version}</nac:BiPROVersion>
-                <nac:ConsumerID>BiPRO Client</nac:ConsumerID>
+                <nac:ConsumerID>${consumerId}</nac:ConsumerID>
                 <sch:Schadenauskunft>
                     <sch:Schadennummer>
                         <all:Nummer>${schadennr}</all:Nummer>

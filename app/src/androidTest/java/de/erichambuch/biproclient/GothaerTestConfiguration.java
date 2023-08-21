@@ -90,4 +90,9 @@ public class GothaerTestConfiguration extends ProviderConfiguration {
     public String getSchadenServiceVersion() {
         return "2.6.0.1.0";
     }
+
+    @Override
+    public String getAPIKey() {
+        return "unbekannt";
+    }
 }

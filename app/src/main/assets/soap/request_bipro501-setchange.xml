@@ -1,0 +1,29 @@
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://www.bipro.net/namespace/prozesse/partner" xmlns:bas="http://www.bipro.net/namespace/basis" xmlns:nac="http://www.bipro.net/namespace/nachrichten" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:all="http://www.bipro.net/namespace/allgemein" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:prod="http://www.bipro.net/namespace/produktmodell" xmlns:par1="http://www.bipro.net/namespace/partner">
+    ${soapHeader}
+    <soapenv:Body>
+        <par:setChange>
+            <par:Request>
+                <nac:BiPROVersion>${version}</nac:BiPROVersion>
+                <nac:ConsumerID>${consumerId}</nac:ConsumerID>
+                <par:AenderungsantragPartner>
+                    <par:GueltigAb>${gueltigAb}</par:GueltigAb>
+                    <par:Unterschriftsverfahren>00</par:Unterschriftsverfahren>
+                    <!--#IFDEF ${vunr}--><par:Unternehmen><all:Nummer>${vunr}</all:Nummer><all:Nummernart>BaFin</all:Nummernart></par:Unternehmen><!--/#IFDEF-->
+                    <par:AenderungPartner xsi:type="par:CT_AenderungPartnerBankverbindung">
+                        <par:ArtID>${artId}</par:ArtID>
+                        <par:Partner>
+                            <par:Partnernummer>${partnernr}</par:Partnernummer>
+                            <par:Bankverbindung>
+                                <par1:Bankverbindung>01</par1:Bankverbindung>
+                                <par1:IBAN>${iban}</par1:IBAN>
+                                <par1:BIC>${bic}</par1:BIC>
+                                <par1:Kontoinhaber>${kontoInhaber}</par1:Kontoinhaber>
+                                <par1:Referenz>${referenz}</par1:Referenz>
+                            </par:Bankverbindung>
+                        </par:Partner>
+                    </par:AenderungPartner>
+                </par:AenderungsantragPartner>
+            </par:Request>
+        </par:setChange>
+    </soapenv:Body>
+</soapenv:Envelope>

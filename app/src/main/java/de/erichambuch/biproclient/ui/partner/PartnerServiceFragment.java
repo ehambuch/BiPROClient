@@ -95,8 +95,9 @@ public class PartnerServiceFragment extends MyBaseFragment {
                     mainViewModel.setXml((String)data);
                     mainViewModel.setTree(command.createTreeView((String)data));
                     mainViewModel.setResponseMessage(command.getMessage());
+                    mainViewModel.setChange(true); // activate Change Button
                     requireActivity().runOnUiThread(() -> {
-                        findNavController(v).navigate(R.id.action_partnerServiceFragment_to_dataFullViewFragment);
+                        findNavController(v).navigate(R.id.action_partnerServiceFragment_to_dataFullViewPartnerFragment);
                     });
                 } catch (Exception e) {
                     Log.e(AppInfo.APP_NAME, "Fehler beim Parsen", e);

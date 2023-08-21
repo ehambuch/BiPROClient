@@ -4,7 +4,7 @@
         <tran:listShipments>
             <tran:Request>
                 <nac:BiPROVersion>${version}</nac:BiPROVersion>
-                <nac:ConsumerID>Android BiPRO Client</nac:ConsumerID>
+                <nac:ConsumerID>${consumerId}</nac:ConsumerID>
                 <tran:KategorieDerLieferung>${geVo}</tran:KategorieDerLieferung>
                 <tran:BestaetigeLieferungen>${acks}</tran:BestaetigeLieferungen>
             </tran:Request>

@@ -14,10 +14,12 @@ import java.nio.charset.StandardCharsets;
 public abstract class ProviderConfiguration {
 
     public enum AuthMethode {
-        STS, SAML
+        STS, SAML, VDG
     }
 
     private final Resources resources;
+
+    private String hubAuthentication;
 
     public ProviderConfiguration(Resources resources)
     {
@@ -59,6 +61,20 @@ public abstract class ProviderConfiguration {
     public abstract String getPartnerServiceVersion();
 
     public abstract String getSchadenServiceVersion();
+
+    public String getConsumerID() {
+        return "Android BiPRO Client";
+    }
+
+    public abstract String getAPIKey();
+
+    public void saveAuthentication(String auth) {
+        this.hubAuthentication = auth;
+    }
+
+    public String getHubAuthentication() {
+        return hubAuthentication;
+    }
 
     public String getBipro440KundensucheServiceTemplate() {
         try(InputStream inputStream = resources.getAssets().open("soap/request_bipro440-kunde.xml")) {
@@ -149,6 +165,22 @@ public abstract class ProviderConfiguration {
 
     public String getListServiceEnumVertragTemplate() {
         try (InputStream inputStream = resources.getAssets().open("soap/request_bipro480-vertrag.xml")) {
+            return IOUtils.toString(inputStream, StandardCharsets.UTF_8);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public String getPartnerServiceGetChangeTemplate() {
+        try (InputStream inputStream = resources.getAssets().open("soap/request_bipro501-getchange.xml")) {
+            return IOUtils.toString(inputStream, StandardCharsets.UTF_8);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public String getPartnerServiceSetChangeTemplate() {
+        try (InputStream inputStream = resources.getAssets().open("soap/request_bipro501-setchange.xml")) {
             return IOUtils.toString(inputStream, StandardCharsets.UTF_8);
         } catch (IOException e) {
             throw new RuntimeException(e);

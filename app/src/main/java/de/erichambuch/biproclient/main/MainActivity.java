@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
             dataStore.putString("prefs_auth_verfahren", "sts");
             dataStore.putString("prefs_sts_url", configuration.getSTServiceURL());
             dataStore.putString("prefs_extranetservice_url", configuration.getBipro440ServiceURL());
-            dataStore.putString("prefs_transferservice_url", configuration.getTransferServiceURL());
+            dataStore.putString(getString(R.string.prefs_transferservice_url), configuration.getTransferServiceURL());
             dataStore.putString("prefs_vertragservice_url", configuration.getVertragServiceURL());
             dataStore.putString("prefs_partnerservice_url", configuration.getPartnerServiceURL());
             dataStore.putString("prefs_schadenservice_url", configuration.getSchadenServiceURL());

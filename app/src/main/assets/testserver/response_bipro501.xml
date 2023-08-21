@@ -1,8 +1,15 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://www.bipro.net/namespace/prozesse/partner" xmlns:bas="http://www.bipro.net/namespace/basis" xmlns:nac="http://www.bipro.net/namespace/nachrichten" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:all="http://www.bipro.net/namespace/allgemein" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:par1="http://www.bipro.net/namespace/partner">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:pz-partner="http://www.bipro.net/namespace/prozesse/partner"
+    xmlns:bas="http://www.bipro.net/namespace/basis"
+    xmlns:nac="http://www.bipro.net/namespace/nachrichten"
+    xmlns:gevo="http://www.bipro.net/namespace/gevo"
+    xmlns:all="http://www.bipro.net/namespace/allgemein"
+    xmlns:xmime="http://www.w3.org/2005/05/xmlmime"
+    xmlns:partner="http://www.bipro.net/namespace/partner">
     <soapenv:Header/>
     <soapenv:Body>
-        <par:getDataResponse>
-            <par:Response>
+        <pz-partner:getDataResponse>
+            <pz-partner:Response>
                 <nac:BiPROVersion>2.6.1.1.0</nac:BiPROVersion>
                 <nac:Status>
                     <nac:StatusID>OK</nac:StatusID>
@@ -12,22 +19,29 @@
                         <nac:Text>Auskunft (Test) erfolgreich</nac:Text>
                     </nac:Meldung>
                 </nac:Status>
-                <par:Partnerauskunft>
-                    <par:Partnernummer>1234</par:Partnernummer>
-                    <par:Partner>
-                        <par1:Anrede>1</par1:Anrede>
-                        <par1:Name>Mustermann</par1:Name>
-                        <par1:PartnerID>id123</par1:PartnerID>
-                        <par1:Anschrift>
-                            <par1:Strasse>Am Kölner Dom 5</par1:Strasse>
-                            <par1:Postleitzahl>50648</par1:Postleitzahl>
-                            <par1:Ort>Koelle</par1:Ort>
-                        </par1:Anschrift>
-                        <par1:Vorname>Max</par1:Vorname>
-                        <par1:Geburtsdatum>1964-01-01</par1:Geburtsdatum>
-                    </par:Partner>
-                </par:Partnerauskunft>
-            </par:Response>
-        </par:getDataResponse>
+                <pz-partner:Partnerauskunft>
+                    <pz-partner:Partnernummer>1234</pz-partner:Partnernummer>
+                    <pz-partner:Partner>
+                        <partner:Anrede>1</partner:Anrede>
+                        <partner:Name>Mustermann</partner:Name>
+                        <partner:PartnerID>id123</partner:PartnerID>
+                        <partner:Anschrift>
+                            <partner:Strasse>Am Kölner Dom 5</partner:Strasse>
+                            <partner:Postleitzahl>50648</partner:Postleitzahl>
+                            <partner:Ort>Koelle</partner:Ort>
+                        </partner:Anschrift>
+                        <partner:Vorname>Max</partner:Vorname>
+                        <partner:Geburtsdatum>1964-01-01</partner:Geburtsdatum>
+                        <partner:Bankverbindung>
+                            <partner:IBAN>DE123456789012345</partner:IBAN>
+                            <partner:BIC>COE1234XXX</partner:BIC>
+                            <partner:Institut>Koelner Bank</partner:Institut>
+                            <partner:Kontoinhaber>Max Mustermann</partner:Kontoinhaber>
+                            <partner:Referenz>123456789122354</partner:Referenz>
+                        </partner:Bankverbindung>
+                    </pz-partner:Partner>
+                </pz-partner:Partnerauskunft>
+            </pz-partner:Response>
+        </pz-partner:getDataResponse>
     </soapenv:Body>
 </soapenv:Envelope>

@@ -5,6 +5,7 @@ import android.util.Log;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -22,6 +23,7 @@ import okhttp3.Response;
  */
 public abstract class BiproServiceCommand extends SOAPCommand {
 
+    private static final String PARAM_CONSUMER_ID = "${consumerId}";
     private final ProviderConfiguration config;
 
     protected final static String PARAM_VERSION = "${version}";
@@ -84,10 +86,18 @@ public abstract class BiproServiceCommand extends SOAPCommand {
     }
 
     protected void executePOST(BiproAuthentication authentication, final String url, final String soapRequest, final CommandCallback commandCallback) {
-        String finalRequest = soapRequest.replace("${soapHeader}", authentication.createSOAPHeader()).replace(PARAM_VERSION, getVersion());
+        String finalRequest = soapRequest.
+                replace("${soapHeader}", authentication.createSOAPHeader()).
+                replace(PARAM_VERSION, getVersion()).
+                replace(PARAM_CONSUMER_ID, config.getConsumerID());
         Log.d(AppInfo.APP_NAME, finalRequest);
+        Map headers = null;
         try {
-            executeCommand(url, finalRequest, createCallback(authentication, commandCallback));
+            if(getHubAuthentication() != null) {
+                headers = new HashMap<>();
+                headers.put("Authorization", getHubAuthentication());
+            }
+            executeCommand(url, finalRequest, headers, createCallback(authentication, commandCallback));
         } catch(Exception e) {
             commandCallback.onFailure(e);
         }
@@ -113,6 +123,8 @@ public abstract class BiproServiceCommand extends SOAPCommand {
                     onFailure(call, e); // falls bei der Response was schief ging
                 } catch(IllegalArgumentException e) { // fehler beim XML Parsing
                     onFailure(call, new IOException("Fehler im XML", e));
+                } finally {
+                    response.close();
                 }
             }
 
@@ -149,6 +161,10 @@ public abstract class BiproServiceCommand extends SOAPCommand {
         } else {
             return meldungId + (text != null ? (": "+text) : "");
         }
+    }
 
+    protected String getHubAuthentication() {
+        String auth = config.getHubAuthentication();
+        return (auth != null && auth.length() > 1) ? auth : null;
     }
 }

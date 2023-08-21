@@ -23,7 +23,7 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="Geschäftsvorfall, der sehr sehr lang werden kann"
-            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textAppearance="?attr/textAppearanceTitleLarge"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toStartOf="@id/listShipmentArt"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/listShipmentGevoDesc"
             android:text="9999999999"
-            android:textAppearance="?attr/textAppearanceBody2"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
             android:textColor="?android:attr/textColorSecondary" />
 
         <TextView
@@ -54,7 +54,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:text="1004"
-            android:textAppearance="?attr/textAppearanceHeadline6" />
+            android:textAppearance="?attr/textAppearanceTitleLarge" />
 
 
     <TextView
@@ -68,7 +68,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/listShipmentGevo"
         android:text="122345"
-        android:textAppearance="?attr/textAppearanceBody2"
+        android:textAppearance="?attr/textAppearanceBodyMedium"
         android:textColor="?android:attr/textColorSecondary" />
 
         <com.google.android.material.button.MaterialButton

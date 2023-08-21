@@ -4,7 +4,7 @@
         <par:getData>
             <par:Request>
                 <nac:BiPROVersion>${version}</nac:BiPROVersion>
-                <nac:ConsumerID>BiPRO Client</nac:ConsumerID>
+                <nac:ConsumerID>${consumerId}</nac:ConsumerID>
                 <par:Partnerauskunft>
                     <par:Partnernummer>${partnernr}</par:Partnernummer>
                     <!--#IFDEF ${vunr}--><par:Unternehmen><all:Nummer>${vunr}</all:Nummer><all:Nummernart>BaFin</all:Nummernart></par:Unternehmen><!--/#IFDEF-->

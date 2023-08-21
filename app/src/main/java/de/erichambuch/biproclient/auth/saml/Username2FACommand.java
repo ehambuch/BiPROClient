@@ -47,7 +47,7 @@ public class Username2FACommand extends SOAPCommand {
         valueMap.put("${createdDate}", formatter.format(new Date(System.currentTimeMillis())));
         valueMap.put("${expiresDate}", formatter.format(new Date(System.currentTimeMillis() + 5*60*1000))); // 5min
         try {
-            executeCommand(stsURL, XmlUtils.replace(requestXml, valueMap), new Callback() {
+            executeCommand(stsURL, XmlUtils.replace(requestXml, valueMap), null, new Callback() {
                 @Override
                 public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                     final String xml = createResponse(response);
@@ -55,11 +55,14 @@ public class Username2FACommand extends SOAPCommand {
                     if (response.isSuccessful()) {
                         String messageId = XmlUtils.getValueFromElement(xml,"MessageID");
                         String titleId = XmlUtils.getValueFromElement(xml,"Title");
+                        response.close();
                         commandCallback.onSuccess(new String[]{messageId,titleId});
                     }
                     else {
                         String reason = XmlUtils.getValueFromElement(xml, "Reason");
-                        commandCallback.onFailure(new IOException("Authentifizierung nicht erfolgreich: "+reason+" (HTTP: " + response.code()+")"));
+                        final int code = response.code();
+                        response.close();
+                        commandCallback.onFailure(new IOException("Authentifizierung nicht erfolgreich: "+reason+" (HTTP: " + code+")"));
                     }
                 }
 

@@ -2,7 +2,7 @@ package de.erichambuch.biproclient;
 
 /**
  * Autor: Eric Hambuch (erichambuch@googlemail.com)
- * Lizenz: Apache License 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+ * Lizenz: <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>
  * <p>
  *     Versionen: 1.0 (07.03.2021) erstes Release
  *     1.0.1 (11) (13.03.2021) - Bugfix für Scrollbar
@@ -17,6 +17,8 @@ package de.erichambuch.biproclient;
  *     1.5.0 (20) - Verbessertes Logging bei Anmeldung, Android 8 als Minimum
  *     1.5.1 (21/22) - NetworkPolicy lässt auch HTTP zu
  *     1.5.2 (23) - Fehlerkorrektur Parsing von ISO 8601 Datum
+ *     1.6.0 (24) - Update Android 13/Libs
+ *     1.7.0 (25/26) - BiPRO Hub (für Tests), Neues Material3 Design
  * </p>
  * <p>
  *     Offene Themen:<ol>

@@ -4,7 +4,7 @@
         <tran:getShipment>
                 <tran:Request>
                     <nac:BiPROVersion>${version}</nac:BiPROVersion>
-                    <nac:ConsumerID>Android BiPRO Client</nac:ConsumerID>
+                    <nac:ConsumerID>${consumerId}</nac:ConsumerID>
                     <tran:ID>${id}</tran:ID>
                 </tran:Request>
         </tran:getShipment>

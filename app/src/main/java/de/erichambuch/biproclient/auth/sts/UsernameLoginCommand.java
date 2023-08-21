@@ -1,7 +1,5 @@
 package de.erichambuch.biproclient.auth.sts;
 
-import android.os.Build;
-
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
@@ -35,7 +33,7 @@ public class UsernameLoginCommand extends SOAPCommand {
         valueMap.put("${authUser}", userName);
         valueMap.put("${authPassword}", password);
         try {
-            executeCommand(stsURL, XmlUtils.replace(requestXml, valueMap),
+            executeCommand(stsURL, XmlUtils.replace(requestXml, valueMap), null,
                     new Callback() {
                 @Override
                 public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
@@ -44,10 +42,13 @@ public class UsernameLoginCommand extends SOAPCommand {
                         final String token = XmlUtils.getValueFromElement(responseXml, "Identifier");
                         final String expires = XmlUtils.getValueFromElement(responseXml, "Expires");
                         final LocalDateTime expiresDate = parseExpires(expires);
+                        response.close();
                         commandCallback.onSuccess(
                                 new BiproTokenAuthentication.BiproToken(token, expiresDate));
                     } else {
-                        commandCallback.onFailure(new IOException("Authentifizierung nicht erfolgreich: HTTP: " + response.code()));
+                        int code = response.code();
+                        response.close();
+                        commandCallback.onFailure(new IOException("Authentifizierung nicht erfolgreich: HTTP: " + code));
                     }
                 }
 
@@ -67,17 +68,14 @@ public class UsernameLoginCommand extends SOAPCommand {
     }
 
     private LocalDateTime parseExpires(String expires) throws IOException {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            if (expires != null && expires.length() > 0 ) {
-                try {
-                    return XmlUtils.parseDateTime(expires); // XML DateTime, kann ohne oder mit Zeitzone sein
-                } catch (DateTimeParseException e) {
-                    throw new IOException("Fehler beim Lesen des Expires: " + expires + " : " + e.getMessage());
-                }
-            } else {
-                return null;
+        if (expires != null && expires.length() > 0 ) {
+            try {
+                return XmlUtils.parseDateTime(expires); // XML DateTime, kann ohne oder mit Zeitzone sein
+            } catch (DateTimeParseException e) {
+                throw new IOException("Fehler beim Lesen des Expires: " + expires + " : " + e.getMessage());
             }
-        } else
+        } else {
             return null;
+        }
     }
 }

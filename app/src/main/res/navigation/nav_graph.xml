@@ -79,7 +79,17 @@
         android:id="@+id/dataFullViewFragment"
         android:name="de.erichambuch.biproclient.ui.vertrag.DataFullViewFragment"
         android:label="fragment_vertrag_full_view"
-        tools:layout="@layout/fragment_vertrag_full_view" />
+        tools:layout="@layout/fragment_vertrag_full_view" >
+    </fragment>
+    <fragment
+        android:id="@+id/dataFullViewPartnerFragment"
+        android:name="de.erichambuch.biproclient.ui.vertrag.DataFullViewFragment"
+        android:label="fragment_vertrag_full_view"
+        tools:layout="@layout/fragment_vertrag_full_view" >
+        <action
+            android:id="@+id/action_dataFullViewChange_to_partnerChangeDataFragment"
+            app:destination="@id/partnerSelectChangeDataFragment" />
+    </fragment>
     <fragment
         android:id="@+id/transferListShipmentItemsFragment"
         android:name="de.erichambuch.biproclient.ui.transfer.TransferListShipmentItemsFragment"
@@ -126,8 +136,8 @@
         android:label="fragment_partner_service"
         tools:layout="@layout/fragment_partner_service" >
         <action
-            android:id="@+id/action_partnerServiceFragment_to_dataFullViewFragment"
-            app:destination="@id/dataFullViewFragment" />
+            android:id="@+id/action_partnerServiceFragment_to_dataFullViewPartnerFragment"
+            app:destination="@id/dataFullViewPartnerFragment" />
     </fragment>
     <fragment
         android:id="@+id/schadenServiceFragment"
@@ -137,5 +147,29 @@
         <action
             android:id="@+id/action_schadenServiceFragment_to_dataFullViewFragment"
             app:destination="@id/dataFullViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/partnerSelectChangeDataFragment"
+        android:name="de.erichambuch.biproclient.ui.partner.SelectPartnerChangeFragment"
+        android:label="fragment_select_partner_change"
+        tools:layout="@layout/fragment_select_change_partner" >
+        <action
+            android:id="@+id/action_partnerSelectChangeFragment_to_partnerGetChangeBankverbindungFragment"
+            app:destination="@id/partnerGetChangeBankverbindungFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/partnerGetChangeBankverbindungFragment"
+        android:name="de.erichambuch.biproclient.ui.partner.PartnerGetChangeFragment"
+        android:label="fragment_select_partner_change"
+        tools:layout="@layout/fragment_change_partner_bankverbindung" >
+        <action
+            android:id="@+id/action_partnerGetChange_to_dataViewSetChangePartnerFragment"
+            app:destination="@id/partnerSetChangeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/partnerSetChangeFragment"
+        android:name="de.erichambuch.biproclient.ui.partner.PartnerSetChangeFragment"
+        android:label="fragment_select_partner_change"
+        tools:layout="@layout/fragment_partner_setchange_view" >
     </fragment>
 </navigation>

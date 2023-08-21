@@ -6,6 +6,7 @@ import org.apache.commons.io.IOUtils;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import javax.mail.BodyPart;
@@ -37,23 +38,26 @@ public abstract class SOAPCommand {
      */
     protected abstract String getSOAPAction();
 
-    protected void executeCommand(final String url, final String soapRequest, final Callback commandCallback) throws Exception {
+    protected void executeCommand(final String url, final String soapRequest, Map<String,String> headers, final Callback commandCallback) throws Exception {
         Log.d(AppInfo.APP_NAME, soapRequest);
         if (logger != null)
             logger.logRequest(soapRequest);
         RequestBody body = RequestBody.create(soapRequest, MediaType.parse("text/xml"));
-        Request request = new Request.Builder()
+        Request.Builder requestBuilder = new Request.Builder()
                 .url(url)
                 .addHeader("User-Agent", "Android BiPRO Client")
                 .addHeader("SOAPAction", getSOAPAction())
-                .post(body)
-                .build();
+                .post(body);
+        if(headers != null) {
+            for(Map.Entry<String,String> entry : headers.entrySet())
+                requestBuilder.addHeader(entry.getKey(), entry.getValue());
+        }
         final OkHttpClient client = new OkHttpClient.Builder() // Längere Timeouts falls über Mobilnetz
                 .connectTimeout(30, TimeUnit.SECONDS)
                 .writeTimeout(10, TimeUnit.SECONDS)
                 .readTimeout(60, TimeUnit.SECONDS)
                 .build();
-        client.newCall(request).enqueue(commandCallback);
+        client.newCall(requestBuilder.build()).enqueue(commandCallback);
     }
 
     /**

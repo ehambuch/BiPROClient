@@ -3,7 +3,6 @@ package de.erichambuch.biproclient.main;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.DocumentsContract;
@@ -19,6 +18,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import de.erichambuch.biproclient.R;
+import de.erichambuch.biproclient.bipro.hub.BiPROHubAuthenticator;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
 
@@ -56,6 +56,15 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 return true;
             }
         });
+
+        findPreference("prefs_biprohub_getauth").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                requestBiPROHubAuth();
+                return true;
+            }
+        });
+
         // SAML Tgic ServiceId freischalten wenn TGIC ausgewählt ist
         findPreference("prefs_auth_verfahren").setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
@@ -80,7 +89,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         if (requestCode == REQUEST_CODE_LOAD && resultCode == Activity.RESULT_OK) {
             try(InputStream inputStream = getActivity().getContentResolver().openInputStream(data.getData())) {
                 myDataStore.readFromJSON(inputStream);
-                Snackbar.make(getActivity().findViewById(android.R.id.content), "Einstellungen geladen", Snackbar.LENGTH_LONG).show();
+                Snackbar.make(getActivity().findViewById(android.R.id.content), "Einstellungen geladen - Bitte App neu starten", Snackbar.LENGTH_LONG).show();
             }
             catch(Exception e) {
                     Snackbar.make(getActivity().findViewById(android.R.id.content), e.getLocalizedMessage(), Snackbar.LENGTH_LONG)
@@ -121,9 +130,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.setType("*/*"); // fester MIME-Type funktioniert nicht beim Download von Dateien
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, Uri.fromFile(Environment.getDownloadCacheDirectory()));
-        }
+        intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, Uri.fromFile(Environment.getDownloadCacheDirectory()));
         startActivityForResult(intent, REQUEST_CODE_LOAD);
     }
 
@@ -131,10 +138,21 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
         intent.setType("application/json");
         intent.putExtra(Intent.EXTRA_TITLE, "biproconfig.json");
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, Uri.fromFile(Environment.getDownloadCacheDirectory()));
-        }
+        intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, Uri.fromFile(Environment.getDownloadCacheDirectory()));
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         startActivityForResult(intent, REQUEST_CODE_SAVE);
+    }
+
+    private void requestBiPROHubAuth() {
+        final String key = myDataStore.getString("prefs_biprohub_apikey", "").trim();
+        int idx = key.indexOf(':');
+        if (idx > 1) {
+            String clientId = key.substring(0, idx);
+            String clientSecret = key.substring(idx+1);
+            new BiPROHubAuthenticator(requireContext(), myDataStore).
+                    authenticateOAuth2(clientId, clientSecret);
+        } else
+            new BiPROHubAuthenticator(requireContext(), myDataStore).
+                    authenticateAPIKey(key);
     }
 }

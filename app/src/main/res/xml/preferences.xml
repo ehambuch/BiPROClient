@@ -11,8 +11,8 @@
         <EditTextPreference
             app:defaultValue="4711"
             app:key="prefs_provider_gdvnr"
-            app:summary="GDV-Nummern des Anbieters (komma-separiert)"
-            app:title="Risikoträger (GDV-Nr., komma-separiert)"
+            app:summary="BaFin-Nummern des Anbieters (komma-separiert)"
+            app:title="Risikoträger (BaFin-Nr., komma-separiert)"
             app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
 
@@ -38,6 +38,7 @@
             app:summary="SAML Service Identifier des Services"
             app:title="SAML Service Id"
             app:useSimpleSummaryProvider="true" />
+
     </PreferenceCategory>
 
     <PreferenceCategory app:title="Services">
@@ -56,7 +57,7 @@
             app:useSimpleSummaryProvider="true" />
 
         <EditTextPreference
-            app:key="prefs_transferservice_url"
+            app:key="@string/prefs_transferservice_url"
             app:summary="URL des Transfer Service (430)"
             app:title="Transfer Service URL"
             app:useSimpleSummaryProvider="true" />
@@ -101,26 +102,55 @@
             app:useSimpleSummaryProvider="true" />
 
         <EditTextPreference
-            app:key="prefs_vertragservice_version"
+            app:key="@string/prefs_vertragservice_version"
             app:summary="Version des Vertrag Service (502)"
             app:title="Vertrag Service Version"
             app:defaultValue="@string/default_version"
             app:useSimpleSummaryProvider="true" />
 
         <EditTextPreference
-            app:key="prefs_schadenservice_url"
+            app:key="@string/prefs_schadenservice_url"
             app:summary="URL des Schaden Service (503)"
             app:title="Schaden Service URL"
             app:useSimpleSummaryProvider="true" />
 
         <EditTextPreference
-            app:key="prefs_schadenservice_version"
+            app:key="@string/prefs_schadenservice_version"
             app:summary="Version des Schaden Service (503)"
             app:title="Schaden Service Version"
             app:defaultValue="@string/default_version"
             app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
 
+    <PreferenceCategory app:title="BiPRO Hub (experimentell)">
+        <EditTextPreference
+            app:key="@string/prefs_biprohub_apikey"
+            app:summary="API-Key der Subscription"
+            app:title="API Key"
+            app:useSimpleSummaryProvider="true" />
+
+        <Preference
+            app:key="@string/prefs_biprohub_getauth"
+            app:summary="BiPRO Hub Authentifizierung anfordern für Aufruf der Services"
+            app:title="BiPRO Hub Authentifizierung anfordern" />
+
+        <EditTextPreference
+            app:key="@string/prefs_biprohub_auth"
+            app:persistent="true"
+            app:selectable="false"
+            app:defaultValue="unset"
+            app:title="BiPRO Authentication Header"
+            app:useSimpleSummaryProvider="true"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Zusätzliche Einstellungen">
+        <EditTextPreference
+            app:key="prefs_consumer_id"
+            app:summary="ConsumerID für Aufrufe"
+            app:title="ConsumerID"
+            app:defaultValue="Android BiPRO Client"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
     <PreferenceCategory app:title="Laden und Speichern">
         <Preference
             app:key="loadsettings"
