@@ -2,17 +2,17 @@ package de.erichambuch.biproclient.main.provider;
 
 import android.content.res.Resources;
 
-public class PfefferminziaConfiguration extends ProviderConfiguration {
+public class TestVersicherungConfiguration extends ProviderConfiguration {
 
     public static final int PORT = 55433;
 
-    public PfefferminziaConfiguration(Resources resources) {
+    public TestVersicherungConfiguration(Resources resources) {
         super(resources);
     }
 
     @Override
     public String getProviderName() {
-        return "Pfefferminzia";
+        return "Testversicherung";
     }
 
     @Override

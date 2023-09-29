@@ -33,7 +33,7 @@ import java.io.IOException;
 
 import de.erichambuch.biproclient.AppInfo;
 import de.erichambuch.biproclient.R;
-import de.erichambuch.biproclient.main.provider.PfefferminziaConfiguration;
+import de.erichambuch.biproclient.main.provider.TestVersicherungConfiguration;
 import de.erichambuch.biproclient.testprovider.TestServer;
 
 /**
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(layout.main_activity);
 
         try {
-            new TestServer(PfefferminziaConfiguration.PORT).loadMessages(getResources());
+            new TestServer(TestVersicherungConfiguration.PORT).loadMessages(getResources());
         } catch (IOException e) {
             Log.e(AppInfo.APP_NAME, "Fehler beim Start des Testservers", e);
             Toast.makeText(this, "Fehler beim Start des Testservers", Toast.LENGTH_LONG).show();
@@ -162,8 +162,8 @@ public class MainActivity extends AppCompatActivity {
     private void initDefaultConfig() {
         if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean("prefs_firstrun", true)) {
             SettingsDataStore dataStore = new SettingsDataStore(getApplicationContext(), 0);
-            PfefferminziaConfiguration configuration = new PfefferminziaConfiguration(getResources());
-            dataStore.putString("prefs_provider_name", "Pfefferminzia (Demo)");
+            TestVersicherungConfiguration configuration = new TestVersicherungConfiguration(getResources());
+            dataStore.putString("prefs_provider_name", "Testversicherung (Demo)");
             dataStore.putString("prefs_provider_gdvnr", "0000");
             dataStore.putString("prefs_auth_verfahren", "sts");
             dataStore.putString("prefs_sts_url", configuration.getSTServiceURL());

@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/menu_log" android:title="Logfile"/>
+    <item android:id="@+id/menu_log" android:title="@string/menu_logfile"/>
 
-    <item android:id="@+id/menu_about" android:title="Infos"/>
-    <item android:id="@+id/menu_licenses" android:title="OSS Lizenzen"/>
-    <item android:id="@+id/menu_feedback" android:title="Feedback"/>
+    <item android:id="@+id/menu_about" android:title="@string/menu_infos_kontakt"/>
+    <item android:id="@+id/menu_licenses" android:title="@string/menu_oss_lizenzen"/>
+    <item android:id="@+id/menu_feedback" android:title="@string/menu_feedback"/>
 </menu>

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 
 import org.jetbrains.annotations.NotNull;
@@ -38,10 +39,10 @@ public class BiPROHubAuthenticator {
 
     private final SettingsDataStore configuration;
 
-    private Context context; // TODO: leak
+    private final Context context; // TODO: leak
 
     public BiPROHubAuthenticator(Context context, SettingsDataStore configuration) {
-        this.authUrl = configuration.getString(context.getString(R.string.prefs_transferservice_url), "https://localhost") + "/login";
+        this.authUrl = cutLastPath(configuration.getString(context.getString(R.string.prefs_transferservice_url), "https://localhost/TransferService")) + "/login";
         this.configuration = configuration;
         this.context = context;
     }
@@ -159,5 +160,12 @@ public class BiPROHubAuthenticator {
                 builder.create().show();
             }
         });
+    }
+
+    private @NonNull String cutLastPath(@NonNull String path) {
+        int idx = path.lastIndexOf('/');
+        if(idx > 0)
+            return path.substring(0, idx);
+        else return path;
     }
 }

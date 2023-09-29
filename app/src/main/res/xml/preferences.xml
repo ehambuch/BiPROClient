@@ -3,7 +3,7 @@
 
     <PreferenceCategory app:title="Allgemein">
         <EditTextPreference
-            app:defaultValue="Pfefferminzia"
+            app:defaultValue="Testversicherung"
             app:key="prefs_provider_name"
             app:summary="Name des Anbieters"
             app:title="Provider (VU)"
