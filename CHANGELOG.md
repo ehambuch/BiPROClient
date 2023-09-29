@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.8.0 
+
+Android 14 
+
+## 1.7.0
+
+BiPRO Hub und Material Design 3
+
+## 1.6.0
+
+Android 13
+
 ## 1.5.2 (22)
 
 Fehlerkorrektur beim Parsing des ISO 8601 Datums
