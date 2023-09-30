@@ -4,15 +4,19 @@ plugins {
 
 }
 
+// impressum muss in local.properties definiert sein
+def localProperties = new Properties()
+localProperties.load(new FileInputStream(rootProject.file("local.properties")))
+
 android {
     compileSdkVersion 34
     defaultConfig {
         applicationId "de.erichambuch.biproclient"
         minSdk 26
         targetSdk 34
-        versionCode 27
+        versionCode 28
         versionName '1.8.0'
-
+        buildConfigField "String", "IMPRESSUM",localProperties['impressum']
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 

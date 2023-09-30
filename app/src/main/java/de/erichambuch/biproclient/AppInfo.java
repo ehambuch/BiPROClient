@@ -19,7 +19,7 @@ package de.erichambuch.biproclient;
  *     1.5.2 (23) - Fehlerkorrektur Parsing von ISO 8601 Datum
  *     1.6.0 (24) - Update Android 13/Libs
  *     1.7.0 (25/26) - BiPRO Hub (für Tests), Neues Material3 Design
- *     1.8.0 (27) - Android 14, Hub, Pfefferminzia nun Test-Versicherung
+ *     1.8.0 (27/28) - Android 14, Hub, Pfefferminzia nun Test-Versicherung, Impressum als local.config
  * </p>
  * <p>
  *     Offene Themen:<ol>
