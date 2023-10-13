@@ -1,11 +1,14 @@
 package de.erichambuch.biproclient.main;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import de.erichambuch.biproclient.BuildConfig;
 import de.erichambuch.biproclient.R;
@@ -18,7 +21,7 @@ public class ContactActivity extends Activity {
     @Override
     public void onStart() {
         super.onStart();
-        AlertDialog.Builder builder = new AlertDialog.Builder(ContactActivity.this);
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(ContactActivity.this);
         builder.setTitle(R.string.impressum_title);
         builder.setMessage(Html.fromHtml(BuildConfig.IMPRESSUM, Html.FROM_HTML_MODE_COMPACT));
         builder.setNeutralButton(R.string.cancel, new DialogInterface.OnClickListener() {

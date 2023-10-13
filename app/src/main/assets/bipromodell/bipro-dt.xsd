@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.bipro.net/namespace/datentypen"
+    elementFormDefault="qualified"
+    attributeFormDefault="qualified">
+    <xsd:simpleType name="ST_XYZ">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="de">Test 1</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="01">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="de">Wert 01</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="02">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="de">Wert 02</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="DT_OtherType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="de">Test 1</xsd:documentation>
+        </xsd:annotation>
+    </xsd:simpleType>
+</xsd:schema>

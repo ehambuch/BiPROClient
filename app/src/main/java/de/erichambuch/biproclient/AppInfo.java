@@ -20,6 +20,7 @@ package de.erichambuch.biproclient;
  *     1.6.0 (24) - Update Android 13/Libs
  *     1.7.0 (25/26) - BiPRO Hub (für Tests), Neues Material3 Design
  *     1.8.0 (27/28) - Android 14, Hub, Pfefferminzia nun Test-Versicherung, Impressum als local.config
+ *     1.9.0 - Laden des BiPRO-Modells (XSD, CSV)
  * </p>
  * <p>
  *     Offene Themen:<ol>

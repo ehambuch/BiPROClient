@@ -150,6 +150,14 @@
             app:title="ConsumerID"
             app:defaultValue="Android BiPRO Client"
             app:useSimpleSummaryProvider="true" />
+        <Preference
+            app:key="loadkeys"
+            app:summary="Schlüssel/Datentypen aus BiPRO-Modell aktualisieren (bipro-datentypen.xsd)"
+            app:title="BiPRO-Datentypen laden" />
+        <Preference
+            app:key="loadgevos"
+            app:summary="Geschäftsvorfall-Kennzeichen aus BiPRO-Modell aktualisieren (Anlage 1 Gesamtliste GeVo-Arten.csv)"
+            app:title="BiPRO-GeVos laden" />
     </PreferenceCategory>
     <PreferenceCategory app:title="Laden und Speichern">
         <Preference

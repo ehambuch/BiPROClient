@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9.0
+
+Aktualisierung des BiPRO-Modells durch Laden der XSD und GeVo-CSV
+
 ## 1.8.0 
 
 Android 14 

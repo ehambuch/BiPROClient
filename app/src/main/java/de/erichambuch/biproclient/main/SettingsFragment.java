@@ -16,20 +16,28 @@ import com.google.android.material.snackbar.Snackbar;
 
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Map;
 
 import de.erichambuch.biproclient.R;
 import de.erichambuch.biproclient.bipro.hub.BiPROHubAuthenticator;
+import de.erichambuch.biproclient.utils.BiPROModelLoader;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
 
     private static final int REQUEST_CODE_LOAD = 432;
     private static final int REQUEST_CODE_SAVE = 433;
 
+    private static final int REQUEST_CODE_LOADKEYS = 434;
+
+    private static final int REQUEST_CODE_LOADGEVOS = 435;
+
     /**
      * Versionsnummer a.b.c.d.e
      */
     private static final String VERSION_REGEX = "\\d\\.\\d.\\d.\\d.\\d";
     private static final String VERSION_TEXT = "a.b.c.d.e";
+
+
 
     private final SettingsDataStore myDataStore;
 
@@ -53,6 +61,22 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             @Override
             public boolean onPreferenceClick(Preference preference) {
                 exportSettings();
+                return true;
+            }
+        });
+
+        findPreference("loadkeys").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                loadBiPROKeys();
+                return true;
+            }
+        });
+
+        findPreference("loadgevos").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                loadBiPROGeVos();
                 return true;
             }
         });
@@ -101,6 +125,34 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 myDataStore.writeToJSON(out);
                 Snackbar.make(getActivity().findViewById(android.R.id.content), "Einstellungen gespeichert", Snackbar.LENGTH_LONG).show();
             } catch(Exception e) {
+                Snackbar.make(getActivity().findViewById(android.R.id.content), e.getLocalizedMessage(), Snackbar.LENGTH_LONG)
+                        .setAction("Abbruch", v -> {
+                        }).show();
+            }
+        } else if (requestCode == REQUEST_CODE_LOADGEVOS && resultCode == Activity.RESULT_OK) {
+            try(InputStream inputStream = getActivity().getContentResolver().openInputStream(data.getData())) {
+                Map<String,String> gevos = new BiPROModelLoader().loadGeVosFromCSV(inputStream);
+                if(gevos.size() > 2) {
+                    ((MainApplication)getActivity().getApplication()).setGeVoMap(gevos);
+                    Snackbar.make(getActivity().findViewById(android.R.id.content), "BiPRO-GeVos geladen", Snackbar.LENGTH_LONG).show();
+                } else
+                    Snackbar.make(getActivity().findViewById(android.R.id.content), "Keine BiPRO-GeVos geladen (falsches Format?)", Snackbar.LENGTH_LONG).show();
+            }
+            catch(Exception e) {
+                Snackbar.make(getActivity().findViewById(android.R.id.content), e.getLocalizedMessage(), Snackbar.LENGTH_LONG)
+                        .setAction("Abbruch", v -> {
+                        }).show();
+            }
+        } else if (requestCode == REQUEST_CODE_LOADKEYS && resultCode == Activity.RESULT_OK) {
+            try(InputStream inputStream = getActivity().getContentResolver().openInputStream(data.getData())) {
+                Map<String, Map<String,String>> datentypen = new BiPROModelLoader().loadDatentypenXML(inputStream);
+                if(datentypen.size() > 2) {
+                    ((MainApplication)getActivity().getApplication()).setDatentypenMap(datentypen);
+                    Snackbar.make(getActivity().findViewById(android.R.id.content), "BiPRO-Datentypen geladen", Snackbar.LENGTH_LONG).show();
+                } else
+                    Snackbar.make(getActivity().findViewById(android.R.id.content), "Keine BiPRO-Datentypen geladen (falsches Format?)", Snackbar.LENGTH_LONG).show();
+            }
+            catch(Exception e) {
                 Snackbar.make(getActivity().findViewById(android.R.id.content), e.getLocalizedMessage(), Snackbar.LENGTH_LONG)
                         .setAction("Abbruch", v -> {
                         }).show();
@@ -154,5 +206,23 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         } else
             new BiPROHubAuthenticator(requireContext(), myDataStore).
                     authenticateAPIKey(key);
+    }
+
+    private void loadBiPROKeys() {
+        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+        intent.addCategory(Intent.CATEGORY_OPENABLE);
+        intent.putExtra(Intent.EXTRA_TITLE, "bipro-datentypen.xsd");
+        intent.setType("*/*"); // fester MIME-Type funktioniert nicht beim Download von Dateien
+        intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, Uri.fromFile(Environment.getDownloadCacheDirectory()));
+        startActivityForResult(intent, REQUEST_CODE_LOADKEYS);
+    }
+
+    private void loadBiPROGeVos() {
+        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+        intent.addCategory(Intent.CATEGORY_OPENABLE);
+        intent.putExtra(Intent.EXTRA_TITLE, "BiPRO allg. Anlage 1 Gesamtliste GeVo-Arten");
+        intent.setType("*/*"); // fester MIME-Type funktioniert nicht beim Download von Dateien
+        intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, Uri.fromFile(Environment.getDownloadCacheDirectory()));
+        startActivityForResult(intent, REQUEST_CODE_LOADGEVOS);
     }
 }

@@ -54,9 +54,7 @@ public class MainApplication extends Application implements StaticData  {
                     Map<String,Map<String,String>> dts = new HashMap<>();
                     for(String[] s: CsvReader.readCsvFile(inputStream)) {
                         if(s.length >= 3) {
-                            Map<String,String> map = dts.get(s[0]);
-                            if (map == null)
-                                dts.put(s[0], map = new HashMap<>());
+                            Map<String, String> map = dts.computeIfAbsent(s[0], k -> new HashMap<>());
                             map.put(s[1],s[2]);
                         }
                     }
